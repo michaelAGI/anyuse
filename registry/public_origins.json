@@ -1,0 +1,30 @@
+{
+  "list_version": 1,
+  "note": [
+    "PUBLIC WEB ORIGINS a map may be exported for. Exact match on the origin",
+    "(https://host, lowercase, no port, no path). An origin that is not listed",
+    "does not travel: a visited host can be the customer",
+    "(mueller-gmbh.shop-vendor.example), and nothing about the string says so",
+    "(guides/projection.py, IDENTITY IS RECOGNISED, NOT DERIVED).",
+    "Edited by the operator only; ANYUSE_REGISTRY_PUBLIC_ORIGINS points at another",
+    "file. Seeded with the public hosts of the discovery bench."
+  ],
+  "origins": [
+    "https://packages.gentoo.org",
+    "https://packages.ubuntu.com",
+    "https://packages.msys2.org",
+    "https://slackbuilds.org",
+    "https://pkgs.racket-lang.org",
+    "https://code.dlang.org",
+    "https://savannah.gnu.org",
+    "https://gitlab.gnome.org",
+    "https://www.freebsd.org",
+    "https://onlinebooks.library.upenn.edu",
+    "https://data.humdata.org",
+    "https://www.freshports.org",
+    "https://formulae.brew.sh",
+    "https://www.mankier.com",
+    "https://ourairports.com",
+    "https://bioconductor.org"
+  ]
+}

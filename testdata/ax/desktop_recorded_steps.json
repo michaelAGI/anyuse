@@ -1,0 +1,686 @@
+{
+ "meta": {
+  "extracted_from": "flows_all.json (guest run, macOS 26.6.2 25G83, de_DE) + testdata/ax/calculator_ax_raw.json",
+  "purpose": "offline fixtures for execution/desktop_compile.py class-inference unit tests — the recorded-selector vocabulary (canonical_role/identifier/cmd/mods), never coordinates",
+  "shape": "{flow_key: {app, recorded_steps: {step_name: {selector, identity}}}} (or recorded_step for the HIL flow)"
+ },
+ "flows": {
+  "1 textedit_write_save": {
+   "app": "TextEdit",
+   "recorded_steps": {
+    "area": {
+     "selector": {
+      "canonical_role": "textarea",
+      "name": "seed",
+      "identifier": "First Text View",
+      "path": "application/window[0]/scrollarea[0]/textarea[0]",
+      "raw_role": "AXTextArea"
+     },
+     "identity": {
+      "role": "AXTextArea",
+      "identifier": "First Text View",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "file_menu": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Ablage",
+      "identifier": "_NS:860",
+      "path": "application/menubar[0]/menuitem[2]",
+      "raw_role": "AXMenuBarItem"
+     },
+     "identity": {
+      "role": "AXMenuBarItem",
+      "identifier": "_NS:860",
+      "cmd": "",
+      "mods": "",
+      "title": "Ablage"
+     }
+    },
+    "save": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Sichern",
+      "identifier": "_NS:358",
+      "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]",
+      "raw_role": "AXMenuItem"
+     },
+     "identity": {
+      "role": "AXMenuItem",
+      "identifier": "_NS:358",
+      "cmd": "S",
+      "mods": "",
+      "title": "Sichern"
+     }
+    }
+   }
+  },
+  "2 textedit_find": {
+   "app": "TextEdit",
+   "recorded_steps": {
+    "area": {
+     "selector": {
+      "canonical_role": "textarea",
+      "name": "Der schnelle braune Fuchs springt über den faulen Hund.\n\nEin Wolkenbruch über dem Hafen ließ alle Kräne stillstehen.\n\nDie Bibliothek öffnet montags erst um elf Uhr.\n\nAm Ende des Ganges brannte noch eine einzige Lampe.\n\nNiemand hatte mit dem Zug um sechs gerechnet.",
+      "identifier": "First Text View",
+      "path": "application/window[0]/scrollarea[0]/textarea[0]",
+      "raw_role": "AXTextArea"
+     },
+     "identity": {
+      "role": "AXTextArea",
+      "identifier": "First Text View",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "edit_menu": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Bearbeiten",
+      "identifier": "_NS:886",
+      "path": "application/menubar[0]/menuitem[3]",
+      "raw_role": "AXMenuBarItem"
+     },
+     "identity": {
+      "role": "AXMenuBarItem",
+      "identifier": "_NS:886",
+      "cmd": "",
+      "mods": "",
+      "title": "Bearbeiten"
+     }
+    },
+    "find_item": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Suchen …",
+      "identifier": "_NS:371",
+      "path": "menubar[0]/menuitem[3]/menu[0]/menuitem[15]/menu[0]/menuitem[0]",
+      "raw_role": "AXMenuItem"
+     },
+     "identity": {
+      "role": "AXMenuItem",
+      "identifier": "_NS:371",
+      "cmd": "F",
+      "mods": "",
+      "title": "Suchen …"
+     }
+    },
+    "search_field": {
+     "selector": {
+      "canonical_role": "textfield",
+      "name": "",
+      "identifier": "_SC_SEARCH_FIELD",
+      "path": "application/menubar[0]/menuitem[7]/menu[0]/menuitem[0]/textfield[0]",
+      "raw_role": "AXTextField"
+     },
+     "identity": {
+      "role": "AXTextField",
+      "identifier": "_SC_SEARCH_FIELD",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "7 calculator_arithmetic": {
+   "app": "Calculator",
+   "recorded_steps": {
+    "AC": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Alles löschen",
+      "identifier": "AllClear",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "AllClear",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "/": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Dividieren",
+      "identifier": "Divide",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Divide",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "7": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "7",
+      "identifier": "Seven",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Seven",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "8": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "8",
+      "identifier": "Eight",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Eight",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "9": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "9",
+      "identifier": "Nine",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Nine",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "*": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Multiplizieren",
+      "identifier": "Multiply",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Multiply",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "4": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "4",
+      "identifier": "Four",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Four",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "5": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "5",
+      "identifier": "Five",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Five",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "6": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "6",
+      "identifier": "Six",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Six",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "-": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Subtrahieren",
+      "identifier": "Subtract",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Subtract",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "1": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "1",
+      "identifier": "One",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "One",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "2": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "2",
+      "identifier": "Two",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Two",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "3": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "3",
+      "identifier": "Three",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Three",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "+": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Addieren",
+      "identifier": "Add",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Add",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "0": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "0",
+      "identifier": "Zero",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Zero",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "=": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Ist gleich",
+      "identifier": "Equals",
+      "path": "",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "Equals",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "3 finder_create_folder": {
+   "app": "Finder",
+   "recorded_steps": {
+    "file_menu": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Ablage",
+      "identifier": "_NS:1115",
+      "path": "application/menubar[0]/menuitem[2]",
+      "raw_role": "AXMenuBarItem"
+     },
+     "identity": {
+      "role": "AXMenuBarItem",
+      "identifier": "_NS:1115",
+      "cmd": "",
+      "mods": "",
+      "title": "Ablage"
+     }
+    },
+    "new_folder": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Neuer Ordner",
+      "identifier": "_NS:685",
+      "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[1]",
+      "raw_role": "AXMenuItem"
+     },
+     "identity": {
+      "role": "AXMenuItem",
+      "identifier": "_NS:685",
+      "cmd": "N",
+      "mods": "1",
+      "title": "Neuer Ordner"
+     }
+    },
+    "name_field": {
+     "selector": {
+      "canonical_role": "textfield",
+      "name": "Neuer Ordner",
+      "identifier": "ShrinkToFit Text Field",
+      "path": "application/textfield[0]",
+      "raw_role": "AXTextField"
+     },
+     "identity": {
+      "role": "AXTextField",
+      "identifier": "ShrinkToFit Text Field",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "4 finder_search": {
+   "app": "Finder",
+   "recorded_steps": {
+    "search_button": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Suchen",
+      "identifier": "",
+      "path": "application/window[0]/toolbar[0]/group[2]/button[0]",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "search_field": {
+     "selector": {
+      "canonical_role": "textfield",
+      "name": "",
+      "identifier": "_NS:122",
+      "path": "application/window[0]/toolbar[0]/group[2]/textfield[0]",
+      "raw_role": "AXTextField"
+     },
+     "identity": {
+      "role": "AXTextField",
+      "identifier": "_NS:122",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "5 notes_create": {
+   "app": "Notes",
+   "recorded_steps": {
+    "file_menu": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Ablage",
+      "identifier": "_NS:403",
+      "path": "application/menubar[0]/menuitem[2]",
+      "raw_role": "AXMenuBarItem"
+     },
+     "identity": {
+      "role": "AXMenuBarItem",
+      "identifier": "_NS:403",
+      "cmd": "",
+      "mods": "8",
+      "title": "Ablage"
+     }
+    },
+    "new_note": {
+     "selector": {
+      "canonical_role": "menuitem",
+      "name": "Neue Notiz",
+      "identifier": "_NS:411",
+      "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[0]",
+      "raw_role": "AXMenuItem"
+     },
+     "identity": {
+      "role": "AXMenuItem",
+      "identifier": "_NS:411",
+      "cmd": "N",
+      "mods": "",
+      "title": "Neue Notiz"
+     }
+    },
+    "body": {
+     "selector": {
+      "canonical_role": "textarea",
+      "name": "",
+      "identifier": "Note Body Text View",
+      "path": "application/window[0]/splitgroup[0]/scrollarea[2]/textarea[0]",
+      "raw_role": "AXTextArea"
+     },
+     "identity": {
+      "role": "AXTextArea",
+      "identifier": "Note Body Text View",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "6 notes_search": {
+   "app": "Notes",
+   "recorded_steps": {
+    "search_button": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Suchen",
+      "identifier": "",
+      "path": "application/window[0]/toolbar[0]/group[1]/button[0]",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "search_field": {
+     "selector": {
+      "canonical_role": "textfield",
+      "name": "",
+      "identifier": "",
+      "path": "application/window[0]/toolbar[0]/group[0]/textfield[0]",
+      "raw_role": "AXTextField"
+     },
+     "identity": {
+      "role": "AXTextField",
+      "identifier": "",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "8 settings_read": {
+   "app": "SystemSettings",
+   "recorded_steps": {
+    "general_entry": {
+     "selector": {
+      "canonical_role": "text",
+      "name": "Allgemein",
+      "identifier": "com.apple.systempreferences.GeneralSettings",
+      "path": "group[0]/scrollarea[0]/outline[0]/row[8]/cell[0]/text[0]",
+      "raw_role": "AXStaticText"
+     },
+     "identity": {
+      "role": "AXStaticText",
+      "identifier": "com.apple.systempreferences.GeneralSettings",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "info_button": {
+     "selector": {
+      "canonical_role": "button",
+      "name": "Info",
+      "identifier": "",
+      "path": "splitgroup[0]/group[2]/group[0]/scrollarea[0]/group[1]/button[0]",
+      "raw_role": "AXButton"
+     },
+     "identity": {
+      "role": "AXButton",
+      "identifier": "",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "9 safari_list": {
+   "app": "Safari",
+   "recorded_steps": {
+    "url_field": {
+     "selector": {
+      "canonical_role": "textfield",
+      "name": "Intelligentes Suchfeld",
+      "identifier": "WEB_BROWSER_ADDRESS_AND_SEARCH_FIELD",
+      "path": "application/window[0]/toolbar[0]/group[2]/textfield[0]",
+      "raw_role": "AXTextField"
+     },
+     "identity": {
+      "role": "AXTextField",
+      "identifier": "WEB_BROWSER_ADDRESS_AND_SEARCH_FIELD",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    },
+    "results_list": {
+     "selector": {
+      "canonical_role": "list",
+      "name": "",
+      "identifier": "",
+      "path": "tabgroup[0]/group[0]/group[0]/scrollarea[0]/webarea[0]/list[0]",
+      "raw_role": "AXList"
+     },
+     "identity": {
+      "role": "AXList",
+      "identifier": "",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "10 safari_detail": {
+   "app": "Safari",
+   "recorded_steps": {
+    "url_field": {
+     "selector": {
+      "canonical_role": "textfield",
+      "name": "Intelligentes Suchfeld",
+      "identifier": "WEB_BROWSER_ADDRESS_AND_SEARCH_FIELD",
+      "path": "application/window[0]/toolbar[0]/group[2]/textfield[0]",
+      "raw_role": "AXTextField"
+     },
+     "identity": {
+      "role": "AXTextField",
+      "identifier": "WEB_BROWSER_ADDRESS_AND_SEARCH_FIELD",
+      "cmd": "",
+      "mods": "",
+      "title": ""
+     }
+    }
+   }
+  },
+  "H hil_delete": {
+   "app": "Finder",
+   "recorded_step": {
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "In den Papierkorb legen",
+     "identifier": "_NS:616",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[33]",
+     "raw_role": "AXMenuItem"
+    },
+    "identity": {
+     "role": "AXMenuItem",
+     "identifier": "_NS:616",
+     "cmd": "\b",
+     "mods": "",
+     "title": "In den Papierkorb legen"
+    }
+   }
+  }
+ }
+}

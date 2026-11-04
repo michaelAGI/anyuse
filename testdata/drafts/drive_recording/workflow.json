@@ -1,0 +1,567 @@
+{
+ "workflow": {
+  "id": "interlock-drive-textedit",
+  "name": "TextEdit: new document, type, save",
+  "description": "",
+  "parameters": [],
+  "steps": [
+   {
+    "intent": "open the Ablage menu",
+    "target_element": "AXMenuBarItem Ablage",
+    "expected_before_state": "s0",
+    "input_type": "press",
+    "input_data": null
+   },
+   {
+    "intent": "create a new document",
+    "target_element": "AXMenuItem Neu",
+    "expected_before_state": "s1",
+    "input_type": "press",
+    "input_data": null
+   },
+   {
+    "intent": "open the Format menu",
+    "target_element": "AXMenuBarItem Format",
+    "expected_before_state": "s2",
+    "input_type": "press",
+    "input_data": null
+   },
+   {
+    "intent": "make the document plain text",
+    "target_element": "AXMenuItem In reinen Text umwandeln",
+    "expected_before_state": "s3",
+    "input_type": "press",
+    "input_data": null
+   },
+   {
+    "intent": "type the text",
+    "target_element": "AXTextArea ",
+    "expected_before_state": "s4",
+    "input_type": "enter_text",
+    "input_data": "AnyUse drive test 2026-10-08: typed by AnyUse inside the Tart guest, HIL-held save."
+   },
+   {
+    "intent": "open the Ablage menu",
+    "target_element": "AXMenuBarItem Ablage",
+    "expected_before_state": "s5",
+    "input_type": "press",
+    "input_data": null
+   },
+   {
+    "intent": "save the document",
+    "target_element": "AXMenuItem Sichern …",
+    "expected_before_state": "s6",
+    "input_type": "press",
+    "input_data": null
+   },
+   {
+    "intent": "name the file",
+    "target_element": "AXTextField ",
+    "expected_before_state": "s7",
+    "input_type": "enter_text",
+    "input_data": "anyuse-test-2026-10-08.txt"
+   },
+   {
+    "intent": "confirm the save",
+    "target_element": "AXButton Sichern",
+    "expected_before_state": "s8",
+    "input_type": "press",
+    "input_data": null
+   }
+  ],
+  "required_app": "TextEdit"
+ },
+ "plan": [
+  {
+   "intent": "open the Ablage menu",
+   "source": "workflow",
+   "target_element": "AXMenuBarItem Ablage",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuBarItem",
+    "title": "Ablage",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Ablage",
+     "identifier": "",
+     "path": "menubar[0]/menuitem[2]",
+     "raw_role": "AXMenuBarItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "create a new document",
+   "source": "workflow",
+   "target_element": "AXMenuItem Neu",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "Neu",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Neu",
+     "identifier": "newDocument:",
+     "path": "",
+     "raw_role": "AXMenuItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "open the Format menu",
+   "source": "workflow",
+   "target_element": "AXMenuBarItem Format",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuBarItem",
+    "title": "Format",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Format",
+     "identifier": "",
+     "path": "menubar[0]/menuitem[4]",
+     "raw_role": "AXMenuBarItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "make the document plain text",
+   "source": "workflow",
+   "target_element": "AXMenuItem In reinen Text umwandeln",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "In reinen Text umwandeln",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "In reinen Text umwandeln",
+     "identifier": "makePlainText:",
+     "path": "",
+     "raw_role": "AXMenuItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "type the text",
+   "source": "workflow",
+   "target_element": "AXTextArea ",
+   "modality": "ax",
+   "command": {
+    "role": "AXTextArea",
+    "title": "",
+    "action": "enter_text",
+    "selector": {
+     "canonical_role": "textarea",
+     "name": "",
+     "identifier": "First Text View",
+     "path": "",
+     "raw_role": "AXTextArea"
+    }
+   },
+   "input_data": "AnyUse drive test 2026-10-08: typed by AnyUse inside the Tart guest, HIL-held save.",
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "open the Ablage menu",
+   "source": "workflow",
+   "target_element": "AXMenuBarItem Ablage",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuBarItem",
+    "title": "Ablage",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Ablage",
+     "identifier": "",
+     "path": "menubar[0]/menuitem[2]",
+     "raw_role": "AXMenuBarItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "save the document",
+   "source": "workflow",
+   "target_element": "AXMenuItem Sichern …",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "Sichern …",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Sichern …",
+     "identifier": "_NS:358",
+     "path": "",
+     "raw_role": "AXMenuItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "name the file",
+   "source": "workflow",
+   "target_element": "AXTextField ",
+   "modality": "ax",
+   "command": {
+    "role": "AXTextField",
+    "title": "",
+    "action": "enter_text",
+    "selector": {
+     "canonical_role": "textfield",
+     "name": "",
+     "identifier": "saveAsNameTextField",
+     "path": "",
+     "raw_role": "AXTextField"
+    }
+   },
+   "input_data": "anyuse-test-2026-10-08.txt",
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  },
+  {
+   "intent": "confirm the save",
+   "source": "workflow",
+   "target_element": "AXButton Sichern",
+   "modality": "ax",
+   "command": {
+    "role": "AXButton",
+    "title": "Sichern",
+    "action": "press",
+    "selector": {
+     "canonical_role": "button",
+     "name": "Sichern",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXButton"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": ""
+  }
+ ],
+ "graph": {
+  "states": {
+   "s0": {
+    "state_id": "s0",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=3,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 3,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s1": {
+    "state_id": "s1",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Neu"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=2,AXMenuItem=1,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 1,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s2": {
+    "state_id": "s2",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=3,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 3,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s3": {
+    "state_id": "s3",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "In reinen Text umwandeln"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=2,AXMenuItem=1,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 1,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s4": {
+    "state_id": "s4",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXTextArea",
+       "title": ""
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=2,AXStaticText=5,AXTextArea=1",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXTextArea": 1,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s5": {
+    "state_id": "s5",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=3,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 3,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s6": {
+    "state_id": "s6",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Sichern …"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=2,AXMenuItem=1,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 1,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s7": {
+    "state_id": "s7",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXTextField",
+       "title": ""
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXGroup=3,AXMenuBarItem=2,AXStaticText=5,AXTextField=1",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXTextField": 1,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   },
+   "s8": {
+    "state_id": "s8",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXButton",
+       "title": "Sichern"
+      }
+     ],
+     "element_count_range": [
+      6,
+      25
+     ],
+     "structural_hash": "fixture:AXButton=1,AXGroup=3,AXMenuBarItem=2,AXStaticText=5",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXButton": 1,
+      "AXStaticText": 5,
+      "AXGroup": 3
+     }
+    }
+   }
+  },
+  "transitions": []
+ },
+ "text": "AnyUse drive test 2026-10-08: typed by AnyUse inside the Tart guest, HIL-held save.",
+ "name": "anyuse-test-2026-10-08.txt",
+ "recorded_at": "2026-10-08T12:00:00+0200"
+}

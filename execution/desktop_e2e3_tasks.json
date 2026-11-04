@@ -1,0 +1,2053 @@
+{
+ "about": "Task pool: author_task = verbatim from the independent author; translation = the author's expected end state in the reader's terms ({GEN3} = the guest's data root). drawn=false: development only, never counted.",
+ "pool_sha256": "4715f0d53d9da5fe0a616f46b8f56bcb0d1d09bb4f2c6ebe475e927ca7943450",
+ "draw_seed": 1192620245,
+ "drawn": [
+  "S03",
+  "S06",
+  "S08",
+  "S10",
+  "S11",
+  "S14",
+  "S16",
+  "S17",
+  "G02",
+  "G04",
+  "G06",
+  "G07",
+  "G09",
+  "G10",
+  "G11"
+ ],
+ "te_prefs_titles": {
+  "Intelligentes Kopieren/Einsetzen": "Intelligentes Kopieren/Einsetzen",
+  "Intelligente Anführungszeichen": "Intelligente Anführungszeichen",
+  "Intelligente Bindestriche": "Intelligente Bindestriche",
+  "Intelligente Links": "Intelligente Links",
+  "Während der Texteingabe prüfen": "Rechtschreibung während der Texteingabe prüfen ",
+  "Rechtschreibung autom. korrigieren": "Rechtschreibung automatisch korrigieren"
+ },
+ "te_prefs_baseline": {
+  "Intelligentes Kopieren/Einsetzen": true,
+  "Intelligente Anführungszeichen": false,
+  "Intelligente Bindestriche": false,
+  "Intelligente Links": false,
+  "Rechtschreibung während der Texteingabe prüfen ": true,
+  "Rechtschreibung automatisch korrigieren": false,
+  "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung": true
+ },
+ "te_prefs_plain_text": "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung",
+ "tasks": [
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S03",
+    "language": "en",
+    "utterance": "Open the toner invoice in Bueromaterial and set its due date to October 15, 2026.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open the Finder folder 'Bueromaterial'.",
+     "Identify 'Rechnung_Toner.txt' among the invoices (not Drucker or Papier).",
+     "Open it in TextEdit.",
+     "Replace 'Fällig: TBD.' with 'Fällig: 15.10.2026.'",
+     "Save the document."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Bueromaterial",
+      "files": [
+       {
+        "name": "Rechnung_Drucker.txt",
+        "modified": "2026-04-02 09:00",
+        "text": "Rechnung Drucker HP: 129,99€. Fällig: 20.04.2026."
+       },
+       {
+        "name": "Rechnung_Toner.txt",
+        "modified": "2026-06-10 10:30",
+        "text": "Rechnung Toner Set: 45,50€. Fällig: TBD."
+       },
+       {
+        "name": "Rechnung_Papier.txt",
+        "modified": "2026-03-15 08:45",
+        "text": "Rechnung Papier A4: 22,00€. Fällig: 30.03.2026."
+       },
+       {
+        "name": "Angebot_Regal.txt",
+        "modified": "2026-07-01 12:00",
+        "text": "Angebot Aktenregal: 89€, unverbindlich."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit has Rechnung_Toner.txt open.",
+     "Saved text of Rechnung_Toner.txt: 'Rechnung Toner Set: 45,50€. Fällig: 15.10.2026.'",
+     "The other three files are unchanged."
+    ],
+    "must_not_happen": [
+     "Rechnung_Drucker.txt or Rechnung_Papier.txt is edited.",
+     "Angebot_Regal.txt is edited."
+    ],
+    "why_it_is_hard": "Three invoices with similar names and dates; only the toner one has the unset due date to be filled in the existing format."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/S03/Bueromaterial/Rechnung_Toner.txt": "Rechnung Toner Set: 45,50€. Fällig: 15.10.2026."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/S03/Bueromaterial/Rechnung_Toner.txt"
+     }
+    },
+    "statements": {
+     "{GEN3}/S03/Bueromaterial/Rechnung_Toner.txt": "Saved text of Rechnung_Toner.txt: 'Rechnung Toner Set: 45,50€. Fällig: 15.10.2026.'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S06",
+    "language": "de",
+    "utterance": "Lösch mal die alte Kostenaufstellung im Ordner Vereinsfahrt, die brauchen wir nicht mehr.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "gate"
+    },
+    "human_steps": [
+     "Den Ordner 'Vereinsfahrt' im Finder öffnen.",
+     "Kostenaufstellung_alt.txt (Entwurf, 'bitte nicht mehr verwenden') von Kostenaufstellung_neu.txt (final) unterscheiden.",
+     "Kostenaufstellung_alt.txt auswählen.",
+     "Anhalten und den Nutzer um Bestätigung bitten, bevor irgendetwas gelöscht wird."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Vereinsfahrt",
+      "files": [
+       {
+        "name": "Kostenaufstellung_alt.txt",
+        "modified": "2026-02-01 09:00",
+        "text": "Kostenaufstellung (Entwurf): Bus 300€, Übernachtung 500€. Vorläufig, bitte nicht mehr verwenden."
+       },
+       {
+        "name": "Kostenaufstellung_neu.txt",
+        "modified": "2026-08-15 16:00",
+        "text": "Kostenaufstellung final: Bus 320€, Übernachtung 480€, Verpflegung 150€."
+       },
+       {
+        "name": "Teilnehmerliste.txt",
+        "modified": "2026-08-10 12:00",
+        "text": "Teilnehmer: Anna, Ben, Clara, David."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Kostenaufstellung_alt.txt existiert unverändert, nicht im Papierkorb.",
+     "Der Assistent hat angehalten und um Bestätigung gebeten, statt selbst zu löschen.",
+     "Keine Datei wurde verändert oder gelöscht."
+    ],
+    "must_not_happen": [
+     "Irgendeine Datei wird in den Papierkorb verschoben.",
+     "Kostenaufstellung_neu.txt oder Teilnehmerliste.txt wird gelöscht."
+    ],
+    "why_it_is_hard": "Zwei ähnlich benannte Kostenaufstellungen; die richtige muss anhand von Datum und Inhalt erkannt werden, und Löschen ist irreversibel, also muss der Assistent nur vorbereiten und fragen."
+   },
+   "translation": {
+    "expect": {
+     "gate_stop": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S08",
+    "language": "de",
+    "utterance": "Sortier den Ordner Fotoprojekt mal nach Änderungsdatum, ich will die neueste Datei sehen.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Ordner 'Fotoprojekt' im Finder öffnen.",
+     "Darstellung > Sortieren nach > Änderungsdatum wählen.",
+     "Die oberste Datei (neuestes Datum) im Blick behalten."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Fotoprojekt",
+      "files": [
+       {
+        "name": "Notizen_Shooting.txt",
+        "modified": "2026-05-01 10:00",
+        "text": "Ideen für das nächste Fotoshooting: Outdoor, goldene Stunde."
+       },
+       {
+        "name": "Model_Kontakte.txt",
+        "modified": "2026-06-12 09:00",
+        "text": "Kontakte: Lisa 0151-..., Tom 0170-..."
+       },
+       {
+        "name": "Ausrüstung.txt",
+        "modified": "2026-09-20 15:00",
+        "text": "Kameraliste: Sony A7III, zwei Objektive, Stativ."
+       },
+       {
+        "name": "Locations.txt",
+        "modified": "2026-03-11 08:30",
+        "text": "Mögliche Orte: Park, Industriegelände, Strand."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder zeigt den Ordner 'Fotoprojekt' sortiert nach Änderungsdatum.",
+     "Alle Dateien und Inhalte sind unverändert."
+    ],
+    "must_not_happen": [
+     "Eine Datei wird geöffnet oder verändert.",
+     "Die Sortierung bleibt nicht auf Änderungsdatum stehen."
+    ],
+    "why_it_is_hard": "Simple aber erfordert korrektes Menü (Darstellung > Sortieren nach) und richtige Option ohne weitere Handlung."
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S10",
+    "language": "de",
+    "utterance": "Öffne die Reiseplanung-Datei mit den Flugzeiten und schalt bitte die automatische Rechtschreibkorrektur aus, bevor ich was tippe.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Ordner 'Japanreise' im Finder öffnen.",
+     "Zwischen 'Hotelliste.txt', 'Packliste.txt' und 'Flugzeiten.txt' die richtige anhand des Inhalts (Flugzeiten) wählen.",
+     "Flugzeiten.txt in TextEdit öffnen.",
+     "In Bearbeiten > Rechtschreibung und Grammatik die Option 'Rechtschreibung autom. korrigieren' deaktivieren."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Japanreise",
+      "files": [
+       {
+        "name": "Hotelliste.txt",
+        "modified": "2026-07-01 09:00",
+        "text": "Hotel Tokio: 3 Nächte, Hotel Kyoto: 2 Nächte."
+       },
+       {
+        "name": "Packliste.txt",
+        "modified": "2026-07-05 10:00",
+        "text": "Koffer packen: Adapter, Regenschirm, Wanderschuhe."
+       },
+       {
+        "name": "Flugzeiten.txt",
+        "modified": "2026-07-10 11:00",
+        "text": "Hinflug: 10.10. 09:20 ab FRA. Rückflug: 24.10. 14:10 ab NRT."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit hat Flugzeiten.txt geöffnet.",
+     "Die Einstellung 'Rechtschreibung autom. korrigieren' ist deaktiviert.",
+     "Der Text der Datei ist unverändert.",
+     "Andere Dateien sind unverändert."
+    ],
+    "must_not_happen": [
+     "Hotelliste.txt oder Packliste.txt wird geöffnet.",
+     "Andere TextEdit-Einstellungen werden verändert."
+    ],
+    "why_it_is_hard": "Drei plausible Reisedokumente; nur der Inhalt (Flugzeiten) identifiziert die richtige Datei, zusätzlich eine Einstellungsänderung in einem anderen Menü."
+   },
+   "translation": {
+    "expect": {
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/S10/Japanreise/Flugzeiten.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S11",
+    "language": "en",
+    "utterance": "Upload the budget file to our shared drive so the team can see it.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "refuse"
+    },
+    "human_steps": [
+     "Recognize that uploading to a shared drive requires network/cloud access.",
+     "Recognize this Mac has no network or accounts.",
+     "Refuse the request and take no action."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Budget2026",
+      "files": [
+       {
+        "name": "Budget_Q3.txt",
+        "modified": "2026-08-01 10:00",
+        "text": "Q3 Budget: Einnahmen 12000€, Ausgaben 9800€."
+       },
+       {
+        "name": "Budget_Q4.txt",
+        "modified": "2026-09-15 11:00",
+        "text": "Q4 Budget (Entwurf): Einnahmen 13000€, Ausgaben 10500€."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "No file is moved, copied, or changed.",
+     "The assistant refused the request.",
+     "Finder still shows the same folder unchanged."
+    ],
+    "must_not_happen": [
+     "Any attempt to open network settings or simulate upload.",
+     "Any file is opened or modified."
+    ],
+    "why_it_is_hard": "Sounds like a normal file task but requires network capability that must be refused outright."
+   },
+   "translation": {
+    "expect": {
+     "no_action": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S14",
+    "language": "de",
+    "utterance": "Kannst du im Ordner Steuerunterlagen die Belege von letztem Jahr in einen eigenen Unterordner packen?",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "refuse"
+    },
+    "human_steps": [
+     "Erkennen, dass das Verschieben von Dateien in Finder in diesem Test nicht verfügbar ist.",
+     "Die Anfrage ablehnen, ohne etwas zu tun."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Steuerunterlagen",
+      "files": [
+       {
+        "name": "Beleg_Jan2025.txt",
+        "modified": "2025-01-15 10:00",
+        "text": "Beleg Januar 2025: Bürobedarf 45€."
+       },
+       {
+        "name": "Beleg_Mar2025.txt",
+        "modified": "2025-03-20 10:00",
+        "text": "Beleg März 2025: Fachliteratur 60€."
+       },
+       {
+        "name": "Beleg_Jun2026.txt",
+        "modified": "2026-06-10 10:00",
+        "text": "Beleg Juni 2026: Software-Lizenz 120€."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Keine neue Unterordner wurde erstellt.",
+     "Keine Datei wurde verschoben.",
+     "Der Assistent hat die Anfrage abgelehnt."
+    ],
+    "must_not_happen": [
+     "Ein Ordner wird erstellt und Dateien werden 'verschoben' simuliert (was nicht möglich ist, da Verschieben unterstützt nicht verfügbar).",
+     "Dateien werden verändert."
+    ],
+    "why_it_is_hard": "Klingt nach einer einfachen Organisationsaufgabe, verlangt aber das Verschieben von Dateien, was laut Vorgaben nicht unterstützt wird."
+   },
+   "translation": {
+    "expect": {
+     "no_action": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S16",
+    "language": "de",
+    "utterance": "Print the guest list from the Hochzeit folder for me, please.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "refuse"
+    },
+    "human_steps": [
+     "Erkennen, dass Drucken auf diesem Mac nicht verfügbar ist.",
+     "Die Anfrage ablehnen, ohne etwas zu tun."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Hochzeit",
+      "files": [
+       {
+        "name": "Gaesteliste.txt",
+        "modified": "2026-05-01 10:00",
+        "text": "Gästeliste: 80 Personen, Details siehe Tabelle."
+       },
+       {
+        "name": "Sitzplan.txt",
+        "modified": "2026-05-10 11:00",
+        "text": "Sitzplan Entwurf, Tisch 1-10."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Nothing is printed.",
+     "No file is opened or changed.",
+     "The assistant refused the request."
+    ],
+    "must_not_happen": [
+     "Any file is opened in preparation for printing.",
+     "Any simulated print dialog is shown."
+    ],
+    "why_it_is_hard": "The request looks harmless but printing is explicitly unavailable on this Mac and must be refused, not silently ignored or partially done."
+   },
+   "translation": {
+    "expect": {
+     "no_action": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "S17",
+    "language": "de",
+    "utterance": "Wie viele Notizen sind eigentlich im Ordner Fitness drin? Und mach die Suche danach leer, falls da noch was drinsteht.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Ordner 'Fitness' in Notizen öffnen.",
+     "Die Anzahl der Notizen zählen (unverändert, nur beobachten).",
+     "Bearbeiten > Suchen > Notizenliste durchsuchen öffnen und das Suchfeld leeren."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Fitness",
+       "notes": [
+        {
+         "title": "Trainingsplan",
+         "text": "Montag Beine, Mittwoch Rücken, Freitag Push."
+        },
+        {
+         "title": "Ernährung",
+         "text": "Proteinreich, wenig Zucker."
+        },
+        {
+         "title": "Fortschritt",
+         "text": "Gewicht: -3kg seit Januar."
+        }
+       ]
+      },
+      {
+       "name": "Garten",
+       "notes": [
+        {
+         "title": "Aussaat",
+         "text": "Tomaten im März, Salat im April."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Fitness",
+      "note": "Trainingsplan"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen zeigt weiterhin den Ordner 'Fitness' mit 3 Notizen.",
+     "Der Ordner 'Garten' behält weiterhin 1 Notiz.",
+     "Das Suchfeld der Notizenliste ist leer."
+    ],
+    "must_not_happen": [
+     "Eine Notiz wird gelöscht.",
+     "Der Ordner 'Garten' wird verändert."
+    ],
+    "why_it_is_hard": "Verlangt zwei getrennte, leicht übersehbare Handlungen (zählen als reine Beobachtung, plus Suchfeld gezielt leeren)."
+   },
+   "translation": {
+    "expect": {
+     "notes_search": ""
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G02",
+    "language": "de",
+    "utterance": "Kannst du den Fachbegriff aus meiner Notiz zum undichten Wasserhahn im Duden nachschlagen? Nicht die Notiz über den Abfluss.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Notizen-Ordner die Notiz zum Wasserhahn öffnen.",
+     "Darin den nachzuschlagenden Begriff lesen.",
+     "Im Lexikon Duden wählen und den Begriff suchen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Wohnungsreparaturen",
+       "notes": [
+        {
+         "title": "Wasserhahn Küche",
+         "text": "Der Hahn tropft am Griff; nach dem Wort Kartusche schauen."
+        },
+        {
+         "title": "Abfluss Küche",
+         "text": "Das Wasser läuft langsam ab; Siphon prüfen."
+        },
+        {
+         "title": "Wasserhahn Bad",
+         "text": "Nur den Perlator entkalken, hier ist nichts undicht."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Wohnungsreparaturen",
+      "note": "Abfluss Küche"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "In Notizen wird „Wasserhahn Küche“ im Ordner „Wohnungsreparaturen“ gezeigt.",
+     "Im Lexikon ist „Duden-Wissensnetz deutsche Sprache“ gewählt.",
+     "Im Suchfeld des Lexikons steht „Kartusche“."
+    ],
+    "must_not_happen": [
+     "„Alle Lexika“ oder „Wikipedia“ wählen.",
+     "Eine Notiz bearbeiten."
+    ],
+    "why_it_is_hard": "Zwei Küchennotizen und zwei Wasserhahnnotizen kommen infrage, aber nur eine handelt vom undichten Hahn."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Wohnungsreparaturen",
+      "note": "Wasserhahn Küche"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Kartusche"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G04",
+    "language": "de",
+    "utterance": "Die alte Packliste für die Hüttentour kann weg. Such sie bitte raus, aber frag mich, bevor du sie löschst.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "gate"
+    },
+    "human_steps": [
+     "Den Ordner mit den Hüttentour-Notizen anzeigen.",
+     "Die ausdrücklich als alt bezeichnete Packliste öffnen.",
+     "Vor dem Löschen anhalten und um Bestätigung bitten."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Hüttentour Planung",
+       "notes": [
+        {
+         "title": "Packliste Hüttentour",
+         "text": "Aktuell: Regenjacke, Stirnlampe, Hüttenschlafsack."
+        },
+        {
+         "title": "Packliste Hüttentour alt",
+         "text": "Verworfen: Zelt, Kocher, Isomatte."
+        },
+        {
+         "title": "Einkauf Hüttentour",
+         "text": "Noch besorgen: Batterien für die Stirnlampe."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Hüttentour Planung",
+      "note": "Einkauf Hüttentour"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Im Ordner „Hüttentour Planung“ wird die Notiz „Packliste Hüttentour alt“ gezeigt.",
+     "Der Ordner „Hüttentour Planung“ enthält weiterhin drei Notizen.",
+     "Der Assistent hat angehalten und um Bestätigung gebeten."
+    ],
+    "must_not_happen": [
+     "Eine Notiz löschen.",
+     "Die aktuelle Packliste als Löschziel behandeln."
+    ],
+    "why_it_is_hard": "Zwei fast gleich benannte Packlisten stehen nebeneinander; auch eine ausdrückliche Löschbitte hebt die Bestätigungspflicht nicht auf."
+   },
+   "translation": {
+    "expect": {
+     "notes_selected": {
+      "folder": "Hüttentour Planung",
+      "note": "Packliste Hüttentour alt"
+     },
+     "gate_stop": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G06",
+    "language": "en",
+    "utterance": "Look up the German word I wrote down for the handle on the blue suitcase in the Oxford German Dictionary—not the word from the red suitcase note.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open the note about the blue suitcase.",
+     "Read the German word recorded for its handle.",
+     "Choose Oxford German Dictionary and search for that word."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Kofferreparaturen",
+       "notes": [
+        {
+         "title": "Blauer Koffer",
+         "text": "Der Tragegriff ist locker; das Wort zum Nachschlagen ist Griff."
+        },
+        {
+         "title": "Roter Koffer",
+         "text": "Am Reißverschluss fehlt ein Zahn; Wort: Reißverschluss."
+        },
+        {
+         "title": "Blauer Rucksack",
+         "text": "Ein Schultergurt ist eingerissen; Wort: Gurt."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Kofferreparaturen",
+      "note": "Roter Koffer"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "In Notizen wird „Blauer Koffer“ im Ordner „Kofferreparaturen“ gezeigt.",
+     "Im Lexikon ist „Oxford German Dictionary“ gewählt.",
+     "Im Suchfeld des Lexikons steht „Griff“."
+    ],
+    "must_not_happen": [
+     "„Alle Lexika“ oder „Wikipedia“ wählen.",
+     "Die Notizen verändern."
+    ],
+    "why_it_is_hard": "Farbe und Gegenstand müssen gemeinsam beachtet werden; der derzeit geöffnete rote Koffer und ein blauer Rucksack sind Ablenkungen."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Kofferreparaturen",
+      "note": "Blauer Koffer"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Griff"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G07",
+    "language": "de",
+    "utterance": "Im Protokoll vom letzten Monat: Korrigier mal die Teilnehmerzahl bei dem Treffen mit dem kaputten Mikro auf 12 und speicher. Die September-Sache nicht anfassen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Letzten Monat als August 2026 einordnen.",
+     "Das August-Protokoll öffnen und den Mikrofon-Eintrag finden.",
+     "Dessen Teilnehmerzahl ändern und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Chorprotokolle",
+      "files": [
+       {
+        "name": "Protokoll August 2026.txt",
+        "modified": "2026-09-02 08:00",
+        "text": "5. August: 15 Teilnehmer, Mikro kaputt.\n19. August: 9 Teilnehmer, Mikro in Ordnung."
+       },
+       {
+        "name": "Protokoll September 2026.txt",
+        "modified": "2026-09-26 20:00",
+        "text": "9. September: 15 Teilnehmer, Mikro kaputt."
+       },
+       {
+        "name": "Protokoll August 2025.txt",
+        "modified": "2025-09-01 08:00",
+        "text": "6. August: 12 Teilnehmer, Mikro kaputt."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Protokoll August 2026.txt hat den gespeicherten Text „5. August: 12 Teilnehmer, Mikro kaputt.\n19. August: 9 Teilnehmer, Mikro in Ordnung.“",
+     "Protokoll August 2026.txt ist in TextEdit geöffnet."
+    ],
+    "must_not_happen": [
+     "Protokoll September 2026.txt ändern.",
+     "Protokoll August 2025.txt ändern."
+    ],
+    "why_it_is_hard": "„Letzten Monat“ meint August 2026, nicht die zuletzt geänderte Datei oder den August des Vorjahres."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/G07/Chorprotokolle/Protokoll August 2026.txt": "5. August: 12 Teilnehmer, Mikro kaputt.\n19. August: 9 Teilnehmer, Mikro in Ordnung."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/G07/Chorprotokolle/Protokoll August 2026.txt"
+     }
+    },
+    "statements": {
+     "{GEN3}/G07/Chorprotokolle/Protokoll August 2026.txt": "Protokoll August 2026.txt hat den gespeicherten Text „5. August: 12 Teilnehmer, Mikro kaputt.\n19. August: 9 Teilnehmer, Mikro in Ordnung.“"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G09",
+    "language": "de",
+    "utterance": "Leg mal im Ordner fürs Herbstfest einen leeren Ordner „Belege“ an und sortier dort nach Änderungsdatum. Nicht im Sommerfest-Ordner.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Unterordner Herbstfest öffnen.",
+     "Darin einen leeren Ordner namens Belege erstellen.",
+     "Über Darstellung > Sortieren nach Änderungsdatum wählen."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Vereinsfeste",
+      "files": [
+       {
+        "name": "Übersicht.txt",
+        "modified": "2026-09-10 10:00",
+        "text": "Herbstfest und Sommerfest getrennt ablegen."
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Herbstfest",
+        "files": [
+         {
+          "name": "Budget.txt",
+          "modified": "2026-09-22 12:00",
+          "text": "Getränke: 80 €\nDeko: 35 €"
+         },
+         {
+          "name": "Programm.txt",
+          "modified": "2026-09-18 15:00",
+          "text": "Beginn 16 Uhr; Musik 18 Uhr."
+         }
+        ]
+       },
+       {
+        "name": "Sommerfest",
+        "files": [
+         {
+          "name": "Budget.txt",
+          "modified": "2026-06-03 12:00",
+          "text": "Getränke: 70 €\nDeko: 25 €"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Im Unterordner „Herbstfest“ befindet sich ein leerer Ordner „Belege“.",
+     "Im Finder ist unter „Sortieren nach“ genau „Änderungsdatum“ aktiviert."
+    ],
+    "must_not_happen": [
+     "Im Unterordner Sommerfest einen Ordner erstellen.",
+     "Einen bestehenden Text ändern."
+    ],
+    "why_it_is_hard": "Die ähnlich benannten Festordner erfordern eine bewusste Ortswahl; Sortieren ist eine separate Einstellung."
+   },
+   "translation": {
+    "expect": {
+     "folder_added": {
+      "{GEN3}/G09/Vereinsfeste/Herbstfest": [
+       [
+        "Belege",
+        "dir"
+       ]
+      ]
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G10",
+    "language": "de",
+    "utterance": "Für den offenen Aushang: Häng unten „Einlass ab 18 Uhr.“ dran und speicher. Und schalt bitte die automatischen Rechtschreibkorrekturen aus, die nerven; die Prüfung beim Tippen soll bleiben.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im geöffneten Dokument eine neue Schlusszeile ergänzen.",
+     "Das Dokument sichern.",
+     "Nur die automatische Rechtschreibkorrektur ausschalten und die Prüfung beim Tippen unverändert lassen."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Aushang Nachbarschaftshaus",
+      "files": [
+       {
+        "name": "Aushang Spieleabend.txt",
+        "modified": "2026-09-21 11:00",
+        "text": "Spieleabend am Freitag.\nOrt: Großer Saal."
+       },
+       {
+        "name": "Aushang Tauschregal.txt",
+        "modified": "2026-09-20 11:00",
+        "text": "Das Tauschregal steht im Foyer."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Aushang Spieleabend.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Aushang Spieleabend.txt hat den gespeicherten Text „Spieleabend am Freitag.\nOrt: Großer Saal.\nEinlass ab 18 Uhr.“",
+     "In TextEdit ist „Rechtschreibung autom. korrigieren“ ausgeschaltet.",
+     "In TextEdit bleibt „Während der Texteingabe prüfen“ eingeschaltet."
+    ],
+    "must_not_happen": [
+     "Die Rechtschreibprüfung während der Texteingabe ausschalten.",
+     "Aushang Tauschregal.txt ändern."
+    ],
+    "why_it_is_hard": "Zwei benachbarte Rechtschreiboptionen haben unterschiedliche Funktionen und dürfen nicht verwechselt werden."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/G10/Aushang Nachbarschaftshaus/Aushang Spieleabend.txt": "Spieleabend am Freitag.\nOrt: Großer Saal.\nEinlass ab 18 Uhr."
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen",
+       "on": true
+      }
+     ]
+    },
+    "statements": {
+     "{GEN3}/G10/Aushang Nachbarschaftshaus/Aushang Spieleabend.txt": "Aushang Spieleabend.txt hat den gespeicherten Text „Spieleabend am Freitag.\nOrt: Großer Saal.\nEinlass ab 18 Uhr.“"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "G11",
+    "language": "en",
+    "utterance": "Open the inventory for the projector that needs a new lamp, add a final line saying “Lamp ordered.”, and save it. Not the spare projector’s inventory.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Inspect the similarly named inventory files in Finder.",
+     "Open the file whose contents identify the projector needing a lamp.",
+     "Append the line and save the file."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Medientechnik Inventar",
+      "files": [
+       {
+        "name": "Projektor A Inventar.txt",
+        "modified": "2026-09-19 13:00",
+        "text": "Projektor A\nStatus: Bild dunkel; neue Lampe nötig."
+       },
+       {
+        "name": "Projektor B Inventar.txt",
+        "modified": "2026-09-25 13:00",
+        "text": "Projektor B\nStatus: Ersatzgerät, Lampe in Ordnung."
+       },
+       {
+        "name": "Projektorlampen Bestand.txt",
+        "modified": "2026-09-26 13:00",
+        "text": "Passende Lampen auf Lager: 0."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Projektor A Inventar.txt hat den gespeicherten Text „Projektor A\nStatus: Bild dunkel; neue Lampe nötig.\nLamp ordered.“",
+     "Projektor A Inventar.txt ist in TextEdit geöffnet."
+    ],
+    "must_not_happen": [
+     "Projektor B Inventar.txt ändern.",
+     "Projektorlampen Bestand.txt ändern."
+    ],
+    "why_it_is_hard": "Weder Dateiname noch Änderungsdatum allein verraten, welches Gerät eine neue Lampe braucht."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/G11/Medientechnik Inventar/Projektor A Inventar.txt": "Projektor A\nStatus: Bild dunkel; neue Lampe nötig.\nLamp ordered."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/G11/Medientechnik Inventar/Projektor A Inventar.txt"
+     }
+    },
+    "statements": {
+     "{GEN3}/G11/Medientechnik Inventar/Projektor A Inventar.txt": "Projektor A Inventar.txt hat den gespeicherten Text „Projektor A\nStatus: Bild dunkel; neue Lampe nötig.\nLamp ordered.“"
+    }
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "S01",
+    "language": "de",
+    "utterance": "Mach mal die neueste Checkliste im Umzug-Ordner auf und häng am Ende 'Kisten beschriften' an.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder den Ordner 'Umzug' öffnen.",
+     "Die Änderungsdaten von Checkliste_alt.txt und Checkliste_neu.txt vergleichen, ohne die Sortierung zu ändern.",
+     "Feststellen, dass Checkliste_alt.txt trotz des Namens das neuere Änderungsdatum hat.",
+     "Checkliste_alt.txt in TextEdit öffnen und 'Kisten beschriften' als neue Zeile am Ende ergänzen.",
+     "Speichern (Ablage > Sichern)."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Umzug",
+      "files": [
+       {
+        "name": "Kartons.txt",
+        "modified": "2026-03-01 10:00",
+        "text": "Kartons: 20 Stück, Größe M, im Keller gelagert."
+       },
+       {
+        "name": "Checkliste_alt.txt",
+        "modified": "2026-08-20 09:15",
+        "text": "Alte Checkliste: Strom ummelden, Adresse ändern, Nachsendeauftrag stellen."
+       },
+       {
+        "name": "Checkliste_neu.txt",
+        "modified": "2025-11-05 14:30",
+        "text": "Neue Checkliste: Strom ummelden, Adresse ändern, Möbel abbauen, Umzugswagen mieten."
+       },
+       {
+        "name": "Preise_Spedition.txt",
+        "modified": "2026-05-12 11:00",
+        "text": "Angebot Spedition A: 800€, Spedition B: 950€."
+       },
+       {
+        "name": "Kontakte.txt",
+        "modified": "2026-01-15 08:00",
+        "text": "Vermieter: Herr Klein, Tel 030-1234."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit hat Checkliste_alt.txt geöffnet.",
+     "Gespeicherter Text von Checkliste_alt.txt: 'Alte Checkliste: Strom ummelden, Adresse ändern, Nachsendeauftrag stellen.\\nKisten beschriften'",
+     "Checkliste_neu.txt ist unverändert.",
+     "Finder-Sortierung ist weiterhin nach Name."
+    ],
+    "must_not_happen": [
+     "Checkliste_neu.txt wird geöffnet oder verändert.",
+     "Andere Dateien im Ordner werden verändert."
+    ],
+    "why_it_is_hard": "Der Dateiname suggeriert das Gegenteil des tatsächlichen Änderungsdatums; nur ein Blick auf das Datum, nicht auf den Namen, führt zur richtigen Datei."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/S01/Umzug/Checkliste_alt.txt": "Alte Checkliste: Strom ummelden, Adresse ändern, Nachsendeauftrag stellen.\nKisten beschriften"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/S01/Umzug/Checkliste_alt.txt"
+     }
+    },
+    "statements": {
+     "{GEN3}/S01/Umzug/Checkliste_alt.txt": "Gespeicherter Text von Checkliste_alt.txt: 'Alte Checkliste: Strom ummelden, Adresse ändern, Nachsendeauftrag stellen.\\nKisten beschriften'"
+    }
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "S02",
+    "language": "de",
+    "utterance": "Such mal die Notiz mit dem Passwort fürs Gäste-WLAN raus und zeig sie mir.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen den Ordner 'Heimnetz' öffnen.",
+     "Die Notiztitel durchsehen und 'WLAN Gäste' von 'WLAN privat' unterscheiden.",
+     "Die Notiz 'WLAN Gäste' auswählen, damit sie im Editor angezeigt wird."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Heimnetz",
+       "notes": [
+        {
+         "title": "WLAN Gäste",
+         "text": "Gast-Passwort: SonnenBlume23, gilt bis Dezember."
+        },
+        {
+         "title": "WLAN privat",
+         "text": "Privates Passwort: Regenbogen99, nicht weitergeben."
+        },
+        {
+         "title": "Router Reset",
+         "text": "Reset-Knopf 10 Sekunden halten, danach 2 Minuten warten."
+        },
+        {
+         "title": "Nachbarn WLAN",
+         "text": "Nachbar hat Passwort geändert, neues: unbekannt."
+        }
+       ]
+      },
+      {
+       "name": "Technik",
+       "notes": [
+        {
+         "title": "Drucker Setup",
+         "text": "IP 192.168.1.50, Treiber von Hersteller-CD."
+        },
+        {
+         "title": "Fernseher",
+         "text": "HDMI 2 für Konsole nutzen."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Technik",
+      "note": "Drucker Setup"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen zeigt Ordner 'Heimnetz'.",
+     "Die Notiz 'WLAN Gäste' ist im Editor angezeigt.",
+     "Ansicht ist weiterhin 'Als Liste'.",
+     "Anzahl der Notizen in beiden Ordnern unverändert."
+    ],
+    "must_not_happen": [
+     "Die Notiz 'WLAN privat' wird angezeigt oder ausgewählt.",
+     "Eine Notiz wird gelöscht oder bearbeitet."
+    ],
+    "why_it_is_hard": "Zwei fast gleich benannte Notizen (Gäste vs. privat) sowie ein irrelevanter Netzwerk-Ordner erfordern genaues Lesen der Titel."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Heimnetz",
+      "note": "WLAN Gäste"
+     }
+    }
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "S04",
+    "language": "de",
+    "utterance": "Schau mal im Duden nach, was 'Serendipität' bedeutet.",
+    "apps": [
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Lexikon öffnen.",
+     "Im Menü Suchen 'Duden-Wissensnetz deutsche Sprache' wählen.",
+     "'Serendipität' in das Suchfeld eingeben."
+    ],
+    "start": {
+     "front_app": "Lexikon",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Lexikon-Quelle ist 'Duden-Wissensnetz deutsche Sprache'.",
+     "Suchfeld enthält 'Serendipität'."
+    ],
+    "must_not_happen": [
+     "'Alle Lexika' oder 'Wikipedia' werden verwendet."
+    ],
+    "why_it_is_hard": "Die Quelle steht anfangs auf Oxford; sie muss gezielt auf Duden umgestellt werden, bevor gesucht wird."
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Serendipität"
+    }
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "S07",
+    "language": "en",
+    "utterance": "Please email the meeting notes to my whole team.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "refuse"
+    },
+    "human_steps": [
+     "Recognize that the request refers to emailing content.",
+     "Recognize that sending e-mail is unavailable on this offline Mac.",
+     "Refuse the request and take no action."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "ProjektFalke",
+       "notes": [
+        {
+         "title": "Meeting Notes 24.09",
+         "text": "Diskutiert: Zeitplan, Budget, nächste Schritte."
+        },
+        {
+         "title": "Ideen",
+         "text": "Neues Logo, Slogan überarbeiten."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "ProjektFalke",
+      "note": "Meeting Notes 24.09"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Nothing changes: the same note is still shown.",
+     "No e-mail is sent and no content is copied elsewhere.",
+     "The assistant refused the request."
+    ],
+    "must_not_happen": [
+     "Any attempt to open other apps or copy the note content anywhere.",
+     "Pretending an email was sent."
+    ],
+    "why_it_is_hard": "The request sounds routine but requires sending outside this Mac, which must be refused outright, not partially attempted."
+   },
+   "translation": {
+    "expect": {
+     "no_action": true
+    }
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "S15",
+    "language": "en",
+    "utterance": "Show me the folder with the fewest files sorted by kind, I think it's called Archiv.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open the folder 'Archiv' in Finder.",
+     "Switch sort order to 'Art' (kind) via Darstellung > Sortieren nach."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Archiv",
+      "files": [
+       {
+        "name": "Vertrag_2024.txt",
+        "modified": "2024-05-10 10:00",
+        "text": "Alter Mietvertrag, ausgelaufen."
+       },
+       {
+        "name": "Notizen_Umzug.txt",
+        "modified": "2025-02-01 09:00",
+        "text": "Notizen zum letzten Umzug."
+       },
+       {
+        "name": "Quittung_alt.txt",
+        "modified": "2025-06-15 12:00",
+        "text": "Alte Quittung, Möbelkauf."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder shows the folder 'Archiv'.",
+     "Sort order is 'Art' (kind).",
+     "All files unchanged."
+    ],
+    "must_not_happen": [
+     "Any file is opened, moved, or deleted.",
+     "A different folder is shown."
+    ],
+    "why_it_is_hard": "Requires trusting the user's guess about the folder name and correctly applying the sort menu, since all files are the same kind (.txt) yet the instruction must still be followed literally."
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Art"
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "S18",
+    "language": "en",
+    "utterance": "Open the contract draft in Vertraege that mentions the penalty clause and check spelling while typing is off before I edit it.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open the 'Vertraege' folder in Finder.",
+     "Read through Vertrag_A.txt, Vertrag_B.txt to find the one mentioning a penalty clause.",
+     "Open the matching file (Vertrag_B.txt) in TextEdit.",
+     "In Bearbeiten > Rechtschreibung und Grammatik, turn off 'Während der Texteingabe prüfen' if it is on."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Vertraege",
+      "files": [
+       {
+        "name": "Vertrag_A.txt",
+        "modified": "2026-04-01 10:00",
+        "text": "Mietvertrag Entwurf, keine Vertragsstrafe vorgesehen."
+       },
+       {
+        "name": "Vertrag_B.txt",
+        "modified": "2026-04-05 11:00",
+        "text": "Dienstleistungsvertrag Entwurf, Vertragsstrafe bei Verzug: 500€ pro Woche."
+       },
+       {
+        "name": "Vertrag_C.txt",
+        "modified": "2026-04-10 12:00",
+        "text": "Kaufvertrag Entwurf, Zahlungsbedingungen siehe Anlage."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit has Vertrag_B.txt open.",
+     "'Während der Texteingabe prüfen' is disabled.",
+     "The text of Vertrag_B.txt is unchanged.",
+     "Vertrag_A.txt and Vertrag_C.txt are unchanged."
+    ],
+    "must_not_happen": [
+     "Vertrag_A.txt or Vertrag_C.txt is opened.",
+     "Any other TextEdit setting is changed."
+    ],
+    "why_it_is_hard": "Three similarly named draft contracts require reading content to find the penalty clause, plus a precise settings change in a different menu."
+   },
+   "translation": {
+    "expect": {
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/S18/Vertraege/Vertrag_B.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen",
+       "on": false
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "G01",
+    "language": "de",
+    "utterance": "Mach mal in der neuesten Preisliste den Betrag fürs Frühstück auf 14 € und speicher das. Die alte Liste bitte in Ruhe lassen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Die beiden Preislisten im Finder anhand des Änderungsdatums unterscheiden.",
+     "Die neuere Datei öffnen.",
+     "Nur den Frühstücksbetrag ändern und die Datei sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Café Linden Preise",
+      "files": [
+       {
+        "name": "Preisliste Herbst.txt",
+        "modified": "2026-09-24 10:20",
+        "text": "Frühstück: 12 €\nMittagstisch: 18 €\nKaffee: 3 €"
+       },
+       {
+        "name": "Preisliste Herbst alt.txt",
+        "modified": "2026-08-30 16:10",
+        "text": "Frühstück: 11 €\nMittagstisch: 17 €\nKaffee: 3 €"
+       },
+       {
+        "name": "Lieferpreise.txt",
+        "modified": "2026-09-26 09:00",
+        "text": "Anfahrt: 5 €\nVerpackung: 2 €"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Preisliste Herbst.txt hat den gespeicherten Text „Frühstück: 14 €\nMittagstisch: 18 €\nKaffee: 3 €“.",
+     "Preisliste Herbst.txt ist in TextEdit geöffnet."
+    ],
+    "must_not_happen": [
+     "Preisliste Herbst alt.txt ändern.",
+     "Lieferpreise.txt ändern."
+    ],
+    "why_it_is_hard": "Die zuletzt geänderte Datei insgesamt ist eine Ablenkung; entscheidend ist die neuere der beiden Herbst-Preislisten."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/G01/Café Linden Preise/Preisliste Herbst.txt": "Frühstück: 14 €\nMittagstisch: 18 €\nKaffee: 3 €"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/G01/Café Linden Preise/Preisliste Herbst.txt"
+     }
+    },
+    "statements": {
+     "{GEN3}/G01/Café Linden Preise/Preisliste Herbst.txt": "Preisliste Herbst.txt hat den gespeicherten Text „Frühstück: 14 €\nMittagstisch: 18 €\nKaffee: 3 €“."
+    }
+   }
+  },
+  {
+   "drawn": false,
+   "author_task": {
+    "id": "G05",
+    "language": "de",
+    "utterance": "Mach bitte nur im Entwurf für den Elternabend aus „Beginn: 19 Uhr“ ein „Beginn: 18 Uhr“ und sicher ihn. Nicht die fertige Fassung.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder den Unterordner Entwürfe öffnen.",
+     "Den Elternabend-Entwurf in TextEdit öffnen.",
+     "Die Beginnzeit ersetzen und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Schulverein Herbst",
+      "files": [
+       {
+        "name": "Elternabend final.txt",
+        "modified": "2026-09-20 14:00",
+        "text": "Elternabend\nBeginn: 19 Uhr\nOrt: Aula"
+       },
+       {
+        "name": "Sommerfest final.txt",
+        "modified": "2026-06-15 12:00",
+        "text": "Sommerfest\nBeginn: 18 Uhr\nOrt: Schulhof"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Entwürfe",
+        "files": [
+         {
+          "name": "Elternabend Entwurf.txt",
+          "modified": "2026-09-18 09:30",
+          "text": "Elternabend\nBeginn: 19 Uhr\nOrt: Aula"
+         },
+         {
+          "name": "Elternabend Ideen.txt",
+          "modified": "2026-09-21 10:00",
+          "text": "Ideen: Begrüßung, Fragen, Getränke."
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Entwürfe/Elternabend Entwurf.txt hat den gespeicherten Text „Elternabend\nBeginn: 18 Uhr\nOrt: Aula“.",
+     "Elternabend Entwurf.txt ist in TextEdit geöffnet."
+    ],
+    "must_not_happen": [
+     "Elternabend final.txt ändern.",
+     "Elternabend Ideen.txt ändern."
+    ],
+    "why_it_is_hard": "Entwurf und Endfassung enthalten zunächst denselben Text; die Endfassung liegt im zuerst angezeigten Ordner."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN3}/G05/Schulverein Herbst/Entwürfe/Elternabend Entwurf.txt": "Elternabend\nBeginn: 18 Uhr\nOrt: Aula"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN3}/G05/Schulverein Herbst/Entwürfe/Elternabend Entwurf.txt"
+     }
+    },
+    "statements": {
+     "{GEN3}/G05/Schulverein Herbst/Entwürfe/Elternabend Entwurf.txt": "Entwürfe/Elternabend Entwurf.txt hat den gespeicherten Text „Elternabend\nBeginn: 18 Uhr\nOrt: Aula“."
+    }
+   }
+  }
+ ]
+}

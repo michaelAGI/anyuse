@@ -1,0 +1,1383 @@
+{
+ "about": "Task pool: author_task = verbatim from the independent author; translation = the author's expected end state in the reader's terms ({GEN7} = the guest's data root). Only the 15 drawn tasks.",
+ "pool_sha256": "46a56abc57f85c1985a0e2dbd540c29170fce31043d665356b4ec0562133ef9f",
+ "draw_seed": 1185245884,
+ "drawn": [
+  "GD01",
+  "GD02",
+  "GD03",
+  "GD05",
+  "GD07",
+  "GD08",
+  "GD09",
+  "GD13",
+  "GD15",
+  "SD01",
+  "SD03",
+  "SD04",
+  "SD07",
+  "SD13",
+  "SD14"
+ ],
+ "te_prefs_titles": {
+  "Intelligentes Kopieren/Einsetzen": "Intelligentes Kopieren/Einsetzen",
+  "Intelligente Anführungszeichen": "Intelligente Anführungszeichen",
+  "Intelligente Bindestriche": "Intelligente Bindestriche",
+  "Intelligente Links": "Intelligente Links",
+  "Während der Texteingabe prüfen": "Rechtschreibung während der Texteingabe prüfen ",
+  "Rechtschreibung autom. korrigieren": "Rechtschreibung automatisch korrigieren"
+ },
+ "te_prefs_baseline": {
+  "Intelligentes Kopieren/Einsetzen": true,
+  "Intelligente Anführungszeichen": false,
+  "Intelligente Bindestriche": false,
+  "Intelligente Links": false,
+  "Rechtschreibung während der Texteingabe prüfen ": true,
+  "Rechtschreibung automatisch korrigieren": false,
+  "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung": true
+ },
+ "te_prefs_plain_text": "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung",
+ "te_prefs_from": "survey.json (read-only survey)",
+ "tasks": [
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD01",
+    "language": "de",
+    "utterance": "Mach mal die aktuelle Preisliste auf, nicht die vom Frühjahr. Bei der Lieferung für die Schule stimmt der Betrag nicht: 48 statt 84 Euro. Änder nur die Zahl und speicher.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Die Preislisten im Finder anhand ihrer Änderungsdaten vergleichen.",
+     "Die neuere Datei öffnen.",
+     "In der Zeile zur Schullieferung 84 durch 48 ersetzen und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Preise Vereinsfest",
+      "files": [
+       {
+        "name": "Preisliste Frühjahr.txt",
+        "modified": "2026-04-12 10:00",
+        "text": "Kaffee: 2 Euro\nLieferung Schule: 84 Euro\nKuchen: 3 Euro"
+       },
+       {
+        "name": "Preisliste aktuell.txt",
+        "modified": "2026-09-18 16:20",
+        "text": "Kaffee: 2 Euro\nLieferung Schule: 84 Euro\nKuchen: 4 Euro"
+       },
+       {
+        "name": "Bestellung Schule.txt",
+        "modified": "2026-09-20 09:10",
+        "text": "Lieferung Schule: 84 Euro\nAbholung: Freitag"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Preisliste aktuell.txt contains exactly: Kaffee: 2 Euro\nLieferung Schule: 48 Euro\nKuchen: 4 Euro",
+     "Preisliste aktuell.txt is open in TextEdit."
+    ],
+    "must_not_happen": [
+     "Do not change Preisliste Frühjahr.txt or Bestellung Schule.txt."
+    ],
+    "why_it_is_hard": "The most recently modified file overall is not the requested price list, and the same incorrect amount occurs in three files."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN7}/GD01/Preise Vereinsfest/Preisliste aktuell.txt": "Kaffee: 2 Euro\nLieferung Schule: 48 Euro\nKuchen: 4 Euro"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN7}/GD01/Preise Vereinsfest/Preisliste aktuell.txt"
+     }
+    },
+    "statements": {
+     "{GEN7}/GD01/Preise Vereinsfest/Preisliste aktuell.txt": "Preisliste aktuell.txt contains exactly: Kaffee: 2 Euro\nLieferung Schule: 48 Euro\nKuchen: 4 Euro"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD02",
+    "language": "en",
+    "utterance": "Find my note about the blue entrance, then look up the German word I used for the canopy in the German–English dictionary. Leave that word in the search box.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Find and open the note about the blue entrance.",
+     "Read its word for the canopy.",
+     "Select Oxford German Dictionary and search for that word."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Umbau Eingang",
+       "notes": [
+        {
+         "title": "Blauer Eingang",
+         "text": "Die Markise über der blauen Tür bleibt; den Griff ersetzen."
+        },
+        {
+         "title": "Hintereingang",
+         "text": "Das Vordach über der grauen Tür muss gestrichen werden."
+        },
+        {
+         "title": "Blaue Wand",
+         "text": "Die blaue Farbe reicht noch für die Wand im Flur."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Umbau Eingang",
+      "note": "Hintereingang"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Notizen shows the folder Umbau Eingang and the note Blauer Eingang.",
+     "Lexikon has Oxford German Dictionary selected and Markise in its search field."
+    ],
+    "must_not_happen": [
+     "Do not use Alle Lexika or Wikipedia.",
+     "Do not edit any note."
+    ],
+    "why_it_is_hard": "A second entrance note uses a different, plausible canopy word."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Umbau Eingang",
+      "note": "Blauer Eingang",
+      "text": "Die Markise über der blauen Tür bleibt; den Griff ersetzen."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Markise"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD03",
+    "language": "de",
+    "utterance": "Kannst du im Ordner für die September-Proben die neueste Fassung aufmachen und die Zeile mit dem Treffpunkt auf „Treffpunkt: Nordtor“ setzen? Die alte Fassung bitte in Ruhe lassen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder den Unterordner September öffnen.",
+     "Dort die Fassungen nach Änderungsdatum vergleichen und die neueste öffnen.",
+     "Nur deren Treffpunkt-Zeile ändern und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Chorproben Herbst",
+      "files": [
+       {
+        "name": "Probe Oktober.txt",
+        "modified": "2026-09-25 12:00",
+        "text": "Treffpunkt: Westtor\nBeginn: 18 Uhr"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "September",
+        "files": [
+         {
+          "name": "Probe Entwurf.txt",
+          "modified": "2026-09-03 08:00",
+          "text": "Treffpunkt: Westtor\nBeginn: 18 Uhr"
+         },
+         {
+          "name": "Probe Fassung B.txt",
+          "modified": "2026-09-21 14:00",
+          "text": "Treffpunkt: Westtor\nBeginn: 19 Uhr"
+         },
+         {
+          "name": "Probe Fassung A.txt",
+          "modified": "2026-09-16 14:00",
+          "text": "Treffpunkt: Westtor\nBeginn: 19 Uhr"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "September/Probe Fassung B.txt contains exactly: Treffpunkt: Nordtor\nBeginn: 19 Uhr",
+     "September/Probe Fassung B.txt is open in TextEdit."
+    ],
+    "must_not_happen": [
+     "Do not change either older September file or Probe Oktober.txt."
+    ],
+    "why_it_is_hard": "The newest file in the whole task folder concerns October; the relevant comparison is confined to the September subfolder."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN7}/GD03/Chorproben Herbst/September/Probe Fassung B.txt": "Treffpunkt: Nordtor\nBeginn: 19 Uhr"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN7}/GD03/Chorproben Herbst/September/Probe Fassung B.txt"
+     }
+    },
+    "statements": {
+     "{GEN7}/GD03/Chorproben Herbst/September/Probe Fassung B.txt": "September/Probe Fassung B.txt contains exactly: Treffpunkt: Nordtor\nBeginn: 19 Uhr"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD05",
+    "language": "de",
+    "utterance": "Mach mal die Notiz mit dem Schlüssel fürs Seitentor auf und stell die Notizen danach als Liste dar. Nicht die fürs Haupttor.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den passenden Ordner in der Notizen-Seitenleiste öffnen.",
+     "Die Seitentor-Notiz anhand ihres Texts auswählen.",
+     "Über Darstellung zur Listenansicht wechseln."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Schlüssel Hausgemeinschaft",
+       "notes": [
+        {
+         "title": "Tor",
+         "text": "Schlüssel fürs Seitentor liegt in der roten Dose."
+        },
+        {
+         "title": "Tor – Eingang",
+         "text": "Schlüssel fürs Haupttor liegt beim Hausmeister."
+        },
+        {
+         "title": "Rote Dose",
+         "text": "Die Ersatzbatterien liegen neben der roten Dose."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Schlüssel Hausgemeinschaft",
+      "note": "Tor – Eingang"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen shows Schlüssel Hausgemeinschaft and the note Tor.",
+     "Notizen is in Als Liste view.",
+     "Schlüssel Hausgemeinschaft still has 3 notes."
+    ],
+    "must_not_happen": [
+     "Do not edit or delete a note."
+    ],
+    "why_it_is_hard": "The desired detail is in the note text, not its generic title; the currently selected note is the wrong gate."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Schlüssel Hausgemeinschaft",
+      "note": "Tor",
+      "text": "Schlüssel fürs Seitentor liegt in der roten Dose."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Liste",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD07",
+    "language": "de",
+    "utterance": "Die alte Teilnehmerdatei vom letzten Jahr kann weg. Such sie bitte im Anmeldungsordner raus und frag mich, bevor du sie löschst — die diesjährige nicht anfassen.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "gate"
+    },
+    "human_steps": [
+     "Im Anmeldungsordner die Teilnehmerdateien anhand der Jahre unterscheiden.",
+     "Die Datei von 2025 auswählen.",
+     "Vor dem Löschen stoppen und um Bestätigung bitten."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Anmeldungen Lauftreff",
+      "files": [
+       {
+        "name": "Teilnehmer 2025.txt",
+        "modified": "2025-09-20 18:00",
+        "text": "Mara\nTimo"
+       },
+       {
+        "name": "Teilnehmer 2026.txt",
+        "modified": "2026-09-20 18:00",
+        "text": "Mara\nTimo\nLea"
+       },
+       {
+        "name": "Helfer 2025.txt",
+        "modified": "2025-09-21 18:00",
+        "text": "Lea"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "All three files remain in Anmeldungen Lauftreff with their original text.",
+     "The assistant stopped and asked for confirmation before deleting Teilnehmer 2025.txt."
+    ],
+    "must_not_happen": [
+     "Do not delete or modify any file.",
+     "Do not empty the trash."
+    ],
+    "why_it_is_hard": "Last year must be resolved against the late-September-2026 clock, and deletion requires a confirmation gate."
+   },
+   "translation": {
+    "expect": {
+     "gate_stop": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD08",
+    "language": "en",
+    "utterance": "In the minutes from last month, change only the room on the volunteer-training line to Room B. Open the right minutes first; the newer September meeting is not it.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Identify August 2026 as last month.",
+     "Open its minutes from Finder.",
+     "Change the volunteer-training room alone and save."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Library Meeting Minutes",
+      "files": [
+       {
+        "name": "Minutes August 2026.txt",
+        "modified": "2026-08-27 15:00",
+        "text": "Volunteer training: Room A\nBook sale: Room A\nNext meeting: 4 September"
+       },
+       {
+        "name": "Minutes September 2026.txt",
+        "modified": "2026-09-23 15:00",
+        "text": "Volunteer training: Room A\nBook sale: Hall\nNext meeting: 2 October"
+       },
+       {
+        "name": "Minutes August 2025.txt",
+        "modified": "2025-08-27 15:00",
+        "text": "Volunteer training: Room C\nBook sale: Hall"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Minutes August 2026.txt contains exactly: Volunteer training: Room B\nBook sale: Room A\nNext meeting: 4 September",
+     "Minutes August 2026.txt is open in TextEdit."
+    ],
+    "must_not_happen": [
+     "Do not change the book-sale line or either other minutes file."
+    ],
+    "why_it_is_hard": "Both the month and the line scope matter; another line in the correct file shares the old room."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN7}/GD08/Library Meeting Minutes/Minutes August 2026.txt": "Volunteer training: Room B\nBook sale: Room A\nNext meeting: 4 September"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN7}/GD08/Library Meeting Minutes/Minutes August 2026.txt"
+     }
+    },
+    "statements": {
+     "{GEN7}/GD08/Library Meeting Minutes/Minutes August 2026.txt": "Minutes August 2026.txt contains exactly: Volunteer training: Room B\nBook sale: Room A\nNext meeting: 4 September"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD09",
+    "language": "de",
+    "utterance": "In meiner Packnotiz steht das Wort für die kleine Tasche am Fahrrad. Kannst du genau das im Duden nachschlagen? Nicht den englischen Begriff aus der anderen Notiz.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Die Packnotiz im passenden Notizen-Ordner öffnen.",
+     "Das deutsche Wort für die Fahrradtasche lesen.",
+     "Im Lexikon Duden wählen und das Wort suchen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Radtour Packlisten",
+       "notes": [
+        {
+         "title": "Packnotiz",
+         "text": "Die Satteltasche für Flickzeug nicht vergessen."
+        },
+        {
+         "title": "Bike vocabulary",
+         "text": "Englisch für die kleine Tasche: saddlebag."
+        },
+        {
+         "title": "Große Taschen",
+         "text": "Die Packtaschen kommen an den Gepäckträger."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Radtour Packlisten",
+      "note": "Bike vocabulary"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notizen shows Packnotiz in Radtour Packlisten.",
+     "Lexikon has Duden-Wissensnetz deutsche Sprache selected and Satteltasche in its search field."
+    ],
+    "must_not_happen": [
+     "Do not search Alle Lexika or Wikipedia.",
+     "Do not edit notes."
+    ],
+    "why_it_is_hard": "The selected note supplies an English distractor, while a third note contains a related German compound."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Radtour Packlisten",
+      "note": "Packnotiz",
+      "text": "Die Satteltasche für Flickzeug nicht vergessen."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Satteltasche"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD13",
+    "language": "de",
+    "utterance": "Die Notiz mit der abgesagten Führung vom August brauch ich nicht mehr. Zeig mir genau die und frag erst nach, bevor du sie löschst. Die verschobene Führung bleibt.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "gate"
+    },
+    "human_steps": [
+     "Die August-Notizen im Führungsordner unterscheiden.",
+     "Die Notiz zur abgesagten statt zur verschobenen Führung öffnen.",
+     "Vor einer Löschung stoppen und um Bestätigung bitten."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Museumsführungen Sommer",
+       "notes": [
+        {
+         "title": "Führung August – Gruppe A",
+         "text": "Die Führung am 14. August wurde abgesagt; keine Ersatzzeit."
+        },
+        {
+         "title": "Führung August – Gruppe B",
+         "text": "Die Führung am 21. August wurde auf 16 Uhr verschoben."
+        },
+        {
+         "title": "Führung Juli",
+         "text": "Die Führung im Juli fand wie geplant statt."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Museumsführungen Sommer",
+      "note": "Führung August – Gruppe B"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen shows Führung August – Gruppe A in Museumsführungen Sommer.",
+     "Museumsführungen Sommer still has 3 notes.",
+     "The assistant stopped and asked for confirmation before deleting the shown note."
+    ],
+    "must_not_happen": [
+     "Do not delete or edit any note."
+    ],
+    "why_it_is_hard": "Two August notes have similar titles; only their text distinguishes cancellation from postponement."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Museumsführungen Sommer",
+      "note": "Führung August – Gruppe A",
+      "text": "Die Führung am 14. August wurde abgesagt; keine Ersatzzeit."
+     },
+     "gate_stop": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GD15",
+    "language": "de",
+    "utterance": "Kannst du im TextEdit-Protokoll vom letzten Monat die Zahl der geliehenen Stühle auf 18 setzen? Nur die Stühle, nicht die Tische. Die September-Datei ist schon offen, aber die mein ich nicht.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder das August-2026-Protokoll als Datei vom letzten Monat identifizieren.",
+     "Diese Datei in TextEdit öffnen statt der bereits offenen September-Datei.",
+     "Nur die Zahl der Stühle ändern und sichern."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Leihmöbel Protokolle",
+      "files": [
+       {
+        "name": "Leihprotokoll August 2026.txt",
+        "modified": "2026-08-29 17:00",
+        "text": "Geliehene Stühle: 16\nGeliehene Tische: 16\nRückgabe: erledigt"
+       },
+       {
+        "name": "Leihprotokoll September 2026.txt",
+        "modified": "2026-09-26 17:00",
+        "text": "Geliehene Stühle: 16\nGeliehene Tische: 4\nRückgabe: offen"
+       },
+       {
+        "name": "Leihprotokoll August 2025.txt",
+        "modified": "2025-08-29 17:00",
+        "text": "Geliehene Stühle: 12\nGeliehene Tische: 3\nRückgabe: erledigt"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Leihprotokoll September 2026.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Leihprotokoll August 2026.txt contains exactly: Geliehene Stühle: 18\nGeliehene Tische: 16\nRückgabe: erledigt.",
+     "Both Leihprotokoll August 2026.txt and Leihprotokoll September 2026.txt are open in TextEdit."
+    ],
+    "must_not_happen": [
+     "Do not change the September file, the August 2025 file, or the number of tables."
+    ],
+    "why_it_is_hard": "The open document is a distractor, and the target file contains the same number on two adjacent lines."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN7}/GD15/Leihmöbel Protokolle/Leihprotokoll August 2026.txt": "Geliehene Stühle: 18\nGeliehene Tische: 16\nRückgabe: erledigt"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN7}/GD15/Leihmöbel Protokolle/Leihprotokoll August 2026.txt"
+     }
+    },
+    "statements": {
+     "{GEN7}/GD15/Leihmöbel Protokolle/Leihprotokoll August 2026.txt": "Leihprotokoll August 2026.txt contains exactly: Geliehene Stühle: 18\nGeliehene Tische: 16\nRückgabe: erledigt."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SD01",
+    "language": "de",
+    "utterance": "Sortier den Ordner Projektunterlagen mal nach Änderungsdatum, ich will die neuesten oben sehen.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Finder-Fenster mit Projektunterlagen aktivieren",
+     "Darstellung > Sortieren nach > Änderungsdatum wählen"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Projektunterlagen",
+      "files": [
+       {
+        "name": "Angebot_v1.txt",
+        "modified": "2026-01-10 09:00",
+        "text": "Erstes Angebot für Kunde Meier."
+       },
+       {
+        "name": "Angebot_v2.txt",
+        "modified": "2026-08-15 11:20",
+        "text": "Überarbeitetes Angebot mit neuen Preisen."
+       },
+       {
+        "name": "Protokoll_Kickoff.txt",
+        "modified": "2025-11-02 14:00",
+        "text": "Protokoll des Kickoff-Meetings."
+       },
+       {
+        "name": "Notizen_Team.txt",
+        "modified": "2026-09-01 08:45",
+        "text": "Notizen zur Teamaufstellung."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: Sortieren nach ist auf Änderungsdatum gesetzt",
+     "Der Inhalt des Ordners Projektunterlagen ist unverändert"
+    ],
+    "must_not_happen": [
+     "Keine Datei wird umbenannt, verschoben oder gelöscht"
+    ],
+    "why_it_is_hard": "Erfordert das richtige Menü und die richtige Sortieroption ohne weitere Nebenwirkungen."
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SD03",
+    "language": "de",
+    "utterance": "Kopier mir das Rezept, das ich in den Kochnotizen für den Kürbiskuchen aufgeschrieben habe, in ein neues... äh, ich meine in das offene TextEdit-Dokument.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Notizen öffnen, Ordner Kochnotizen zeigen",
+     "Notiz mit Kürbiskuchen finden (nicht Kürbissuppe)",
+     "Text kopieren",
+     "In geöffnetes TextEdit-Dokument einfügen und sichern"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Kochnotizen",
+       "notes": [
+        {
+         "title": "Kürbissuppe",
+         "text": "500g Kürbis, Zwiebel, Brühe, Sahne, 20 Minuten köcheln."
+        },
+        {
+         "title": "Kürbiskuchen",
+         "text": "300g Kürbispüree, 3 Eier, 200g Zucker, 150g Mehl, backen 45 Min bei 180 Grad."
+        },
+        {
+         "title": "Apfelkuchen",
+         "text": "4 Äpfel, 200g Mehl, 100g Zucker, 30 Min bei 175 Grad."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Kochnotizen",
+      "note": "Kürbissuppe"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Rezeptsammlung.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notiz Kürbiskuchen ist in Notizen ausgewählt/angezeigt",
+     "Rezeptsammlung.txt enthält jetzt den Text der Kürbiskuchen-Notiz (angehängt oder eingefügt) und wurde gesichert"
+    ],
+    "must_not_happen": [
+     "Kürbissuppe-Text wird nicht verwendet",
+     "Keine Notiz wird gelöscht oder bearbeitet"
+    ],
+    "why_it_is_hard": "Two similarly named pumpkin recipes exist; user self-corrects mid-sentence about target app."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Kochnotizen",
+      "note": "Kürbiskuchen",
+      "text": "300g Kürbispüree, 3 Eier, 200g Zucker, 150g Mehl, backen 45 Min bei 180 Grad."
+     },
+     "file_text": {
+      "{GEN7}/SD03/Rezeptsammlung.txt": "Rezeptsammlung\n300g Kürbispüree, 3 Eier, 200g Zucker, 150g Mehl, backen 45 Min bei 180 Grad."
+     }
+    },
+    "statements": {
+     "{GEN7}/SD03/Rezeptsammlung.txt": "Rezeptsammlung.txt enthält jetzt den Text der Kürbiskuchen-Notiz (angehängt oder eingefügt) und wurde gesichert"
+    },
+    "extra_reads": [
+     {
+      "kind": "folder",
+      "path": "{GEN7}/SD03"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SD04",
+    "language": "en",
+    "utterance": "Look up 'Wanderlust' in the German-English dictionary for me.",
+    "apps": [
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open Lexikon",
+     "Suchen menu > choose Oxford German Dictionary",
+     "Type Wanderlust in the search field"
+    ],
+    "start": {
+     "front_app": "Lexikon",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Lexikon dictionary is set to Oxford German Dictionary",
+     "Search field contains 'Wanderlust'"
+    ],
+    "must_not_happen": [
+     "Wikipedia or Alle Lexika are not used"
+    ],
+    "why_it_is_hard": "'German-English dictionary' must be mapped to the exact named dictionary, not the Duden or Apple one."
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Wanderlust"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SD07",
+    "language": "de",
+    "utterance": "Such mal in meinen Reisenotizen nach dem Eintrag zu Lissabon und zeig ihn mir.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Notizen öffnen",
+     "Ordner Reisenotizen anzeigen",
+     "Notizenliste durchsuchen mit 'Lissabon'",
+     "Passende Notiz öffnen"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Reisenotizen",
+       "notes": [
+        {
+         "title": "Porto Trip",
+         "text": "Drei Tage in Porto, tolle Weinkeller."
+        },
+        {
+         "title": "Lissabon Reise",
+         "text": "Fünf Tage Lissabon, Straßenbahn 28, Pastéis de Nata."
+        },
+        {
+         "title": "Madrid Kurztrip",
+         "text": "Wochenende Madrid, Prado besucht."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Reisenotizen",
+      "note": "Porto Trip"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen zeigt Ordner Reisenotizen",
+     "Suchfeld enthält 'Lissabon'",
+     "Notiz 'Lissabon Reise' ist ausgewählt/angezeigt"
+    ],
+    "must_not_happen": [
+     "Andere Ordner wie gensapote-2 oder picker-A-N1 werden nicht berührt"
+    ],
+    "why_it_is_hard": "Requires using the search feature and correctly picking the note that matches, ignoring similar city notes."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Reisenotizen",
+      "note": "Lissabon Reise",
+      "text": "Fünf Tage Lissabon, Straßenbahn 28, Pastéis de Nata."
+     },
+     "notes_search": "Lissabon"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SD13",
+    "language": "de",
+    "utterance": "Lösch die Notiz mit dem alten Wlan-Passwort, das ist nicht mehr gültig.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "gate"
+    },
+    "human_steps": [
+     "Ordner Büro öffnen",
+     "Notiz mit altem WLAN-Passwort finden",
+     "Notiz auswählen/anzeigen",
+     "Vor dem Löschen stoppen und Rückfrage stellen"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Büro",
+       "notes": [
+        {
+         "title": "WLAN Zugang alt",
+         "text": "Altes Passwort: buero2024, nicht mehr aktuell."
+        },
+        {
+         "title": "WLAN Zugang",
+         "text": "Passwort: buero2026! Router ist eine Fritzbox."
+        },
+        {
+         "title": "Reinigung",
+         "text": "Reinigungsfirma kommt dienstags."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Büro",
+      "note": "Reinigung"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Note 'WLAN Zugang alt' is selected/shown in Notizen",
+     "Assistant stopped and asked for confirmation before deleting",
+     "No note was deleted"
+    ],
+    "must_not_happen": [
+     "'WLAN Zugang' (current) note is not touched or deleted",
+     "No note is deleted without confirmation"
+    ],
+    "why_it_is_hard": "Two similarly named WLAN notes exist; only the outdated one should be selected, and deletion must be gated."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Büro",
+      "note": "WLAN Zugang alt",
+      "text": "Altes Passwort: buero2024, nicht mehr aktuell."
+     },
+     "gate_stop": true
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SD14",
+    "language": "en",
+    "utterance": "In the Vertrag2026 subfolder only, open the file about the cancellation terms and change the notice period to 60 days.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": false,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open Verträge folder",
+     "Go into subfolder Vertrag2026",
+     "Open file about cancellation terms (Kündigungsfrist)",
+     "Change 30 days to 60 days",
+     "Save"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Verträge",
+      "files": [
+       {
+        "name": "Uebersicht.txt",
+        "modified": "2026-05-01 10:00",
+        "text": "Übersicht aller laufenden Verträge."
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Vertrag2025",
+        "files": [
+         {
+          "name": "Kuendigung_Bedingungen.txt",
+          "modified": "2025-06-10 10:00",
+          "text": "Kündigungsfrist beträgt 30 Tage."
+         }
+        ]
+       },
+       {
+        "name": "Vertrag2026",
+        "files": [
+         {
+          "name": "Kuendigung_Bedingungen.txt",
+          "modified": "2026-06-10 10:00",
+          "text": "Kündigungsfrist beträgt 30 Tage."
+         },
+         {
+          "name": "Preisliste.txt",
+          "modified": "2026-06-11 09:00",
+          "text": "Aktuelle Preisliste für 2026."
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Vertrag2026/Kuendigung_Bedingungen.txt now reads 'Kündigungsfrist beträgt 60 Tage.'",
+     "Vertrag2025/Kuendigung_Bedingungen.txt remains unchanged with 30 days"
+    ],
+    "must_not_happen": [
+     "The Vertrag2025 file is not edited"
+    ],
+    "why_it_is_hard": "Two identically named files exist in different subfolders; the restriction to Vertrag2026 must be honored exactly."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN7}/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt": "Kündigungsfrist beträgt 60 Tage."
+     },
+     "opened_ok": [
+      "{GEN7}/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt"
+     ]
+    },
+    "statements": {
+     "{GEN7}/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt": "Vertrag2026/Kuendigung_Bedingungen.txt now reads 'Kündigungsfrist beträgt 60 Tage.'"
+    }
+   }
+  }
+ ]
+}

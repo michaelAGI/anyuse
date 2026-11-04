@@ -1,0 +1,22 @@
+{
+  "list_version": 1,
+  "note": [
+    "Vendor-published application ids for the applications in",
+    "guides/vendor_applications.json. The observed app name selects the vendor",
+    "entry (exact match, projection.recognised_vendor); the 'application' of that",
+    "entry selects the id here. Neither string on a map comes from the machine.",
+    "An application without an id here is not exported."
+  ],
+  "app_ids": {
+    "Microsoft Excel": "com.microsoft.Excel",
+    "Microsoft Word": "com.microsoft.Word",
+    "Microsoft Outlook": "com.microsoft.Outlook",
+    "Google Chrome": "com.google.Chrome",
+    "Firefox": "org.mozilla.firefox",
+    "Safari": "com.apple.Safari",
+    "Visual Studio Code": "com.microsoft.VSCode",
+    "Slack": "com.tinyspeck.slackmacgap",
+    "Finder": "com.apple.finder",
+    "Terminal": "com.apple.Terminal"
+  }
+}

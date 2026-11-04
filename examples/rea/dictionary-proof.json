@@ -1,0 +1,125 @@
+{
+  "backend": "guest_apple_event_dictionary_ax_v1",
+  "candidate_sha256": "2a71b9196f170cc7236eb8caca4ad056ad7f6a2a0267b2862db8c2ee8cb945b6",
+  "cases": [
+    {
+      "before": {
+        "definition": "AirDropEineTechnologievonApple,mitderDateienundInformationensicherzwischenApple-GerätenübereinWLANoderMobilfunknetzgeteiltwerdenkönnen.DukannstzumBeispielschnelleinFoto,einDokumentodereinWebsite-PasswortvondeinemiPhoneaneinnahegelegenesGeräteinerbekanntenPersonsenden.",
+        "dictionary": "Apple",
+        "query": "airdrop"
+      },
+      "before_sha256": "0e87d1357159442a1fbd1ce2b9596282d3ea0a95e9b6016ac30f44c063298eda",
+      "elapsed_s": 0.0364,
+      "expected": {
+        "definition": "FinderEineFunktionvonmacOSzumAuffindenundOrganisierenvonDokumenten,Medien,OrdnernundDateienaufdeinemMacundaufangeschlossenenFestplattenlaufwerken.AlsSymbolfürdenFinderdienteinblaueslächelndesGesichtimDock.SieheauchDock.",
+        "dictionary": "Apple",
+        "query": "Finder"
+      },
+      "inputs": {
+        "query": "Finder"
+      },
+      "inputs_sha256": "671375a5aa5ebb8cd08295d8e6d0ec735c05d45f59b2a867a4d9196aff449a54",
+      "observer": "ax_dictionary",
+      "run": {
+        "elapsed_s": 0.0042,
+        "event_class": "aevt",
+        "event_id": "rapp",
+        "permission": 0,
+        "pid": 1337,
+        "returncode": 0,
+        "timed_out": false
+      },
+      "seen": {
+        "definition": "FinderEineFunktionvonmacOSzumAuffindenundOrganisierenvonDokumenten,Medien,OrdnernundDateienaufdeinemMacundaufangeschlossenenFestplattenlaufwerken.AlsSymbolfürdenFinderdienteinblaueslächelndesGesichtimDock.SieheauchDock.",
+        "dictionary": "Apple",
+        "query": "Finder"
+      },
+      "verdict": "verified"
+    },
+    {
+      "before": {
+        "definition": "FinderEineFunktionvonmacOSzumAuffindenundOrganisierenvonDokumenten,Medien,OrdnernundDateienaufdeinemMacundaufangeschlossenenFestplattenlaufwerken.AlsSymbolfürdenFinderdienteinblaueslächelndesGesichtimDock.SieheauchDock.",
+        "dictionary": "Apple",
+        "query": "Finder"
+      },
+      "before_sha256": "44c48a6dee7755d71f459ff345946e1a5691553d0900cdcd58bb44236cd040d1",
+      "elapsed_s": 0.0287,
+      "expected": {
+        "definition": "SpotlightEineApple-Suchfunktion,mitderduschnellObjekteaufdeinemMac,iPhoneundiPad(z.B.Apps,Dateien,KurzbefehleundObjekteindeinemZwischenablageverlauf)suchenundInformationenausdeinenAppsunddemWebanzeigenkannst.AufdemMackannstduauchAktionenüberAppshinwegausführen.",
+        "dictionary": "Apple",
+        "query": "Spotlight"
+      },
+      "inputs": {
+        "query": "Spotlight"
+      },
+      "inputs_sha256": "d5cfcfd617a57b05f8744b693db4baacaea34637ac3d4236a7b8a703b88099ba",
+      "observer": "ax_dictionary",
+      "run": {
+        "elapsed_s": 0.0039,
+        "event_class": "aevt",
+        "event_id": "rapp",
+        "permission": 0,
+        "pid": 1337,
+        "returncode": 0,
+        "timed_out": false
+      },
+      "seen": {
+        "definition": "SpotlightEineApple-Suchfunktion,mitderduschnellObjekteaufdeinemMac,iPhoneundiPad(z.B.Apps,Dateien,KurzbefehleundObjekteindeinemZwischenablageverlauf)suchenundInformationenausdeinenAppsunddemWebanzeigenkannst.AufdemMackannstduauchAktionenüberAppshinwegausführen.",
+        "dictionary": "Apple",
+        "query": "Spotlight"
+      },
+      "verdict": "verified"
+    },
+    {
+      "before": {
+        "definition": "SpotlightEineApple-Suchfunktion,mitderduschnellObjekteaufdeinemMac,iPhoneundiPad(z.B.Apps,Dateien,KurzbefehleundObjekteindeinemZwischenablageverlauf)suchenundInformationenausdeinenAppsunddemWebanzeigenkannst.AufdemMackannstduauchAktionenüberAppshinwegausführen.",
+        "dictionary": "Apple",
+        "query": "Spotlight"
+      },
+      "before_sha256": "bc5f033e15b5e8e9c29acbafc8ac5d683667a7c978cc9edc5b30bb5374f7bc05",
+      "elapsed_s": 0.0307,
+      "expected": {
+        "definition": "SafariDerWebbrowservonApple,mitdemdusicherimInternetsurfenundeinkaufenkannst.",
+        "dictionary": "Apple",
+        "query": "Safari"
+      },
+      "inputs": {
+        "query": "Safari"
+      },
+      "inputs_sha256": "25e4de611f5d4ff2964423cfcb3869a7c8986f89cd04e3f8dda6afee8946f8d9",
+      "observer": "ax_dictionary",
+      "run": {
+        "elapsed_s": 0.005,
+        "event_class": "aevt",
+        "event_id": "rapp",
+        "permission": 0,
+        "pid": 1337,
+        "returncode": 0,
+        "timed_out": false
+      },
+      "seen": {
+        "definition": "SafariDerWebbrowservonApple,mitdemdusicherimInternetsurfenundeinkaufenkannst.",
+        "dictionary": "Apple",
+        "query": "Safari"
+      },
+      "verdict": "verified"
+    }
+  ],
+  "dictionary": {
+    "bundle_id": "com.apple.dictionary.AppleDictionary",
+    "bytes": 43105166,
+    "label": "Apple",
+    "sha256": "9748eb13dbf95c379eea1d2a1aa68f2479b70cd282d7f6a8262044bcfba28f2b"
+  },
+  "format": "anyuse.rea-proof/1",
+  "model_calls": 0,
+  "status": "verified",
+  "target": {
+    "build": "294",
+    "bundle_id": "com.apple.Dictionary",
+    "bytes": 2669513,
+    "files": 81,
+    "sha256": "2a77c1c0c10f8dd5b6915e865b0b3c24b70fa0c9fb122485318d7e802fc419f1",
+    "version": "2.3.0"
+  }
+}

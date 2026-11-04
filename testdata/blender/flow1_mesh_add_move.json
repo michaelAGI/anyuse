@@ -1,0 +1,129 @@
+{
+  "flow": "mesh_add_move",
+  "app": "Blender",
+  "bundle_id": "org.blenderfoundation.blender",
+  "note": "Real guest recording. Driven via header-menu clicks (Add > Mesh > Cube, Object > Transform > Move) + modal numeric keycodes for the translate value, against base_empty.blend (Camera+Light, no default Cube). Input recorded: (2.5, -1.0, 0.75).",
+  "before_state": {
+    "objects": [
+      {
+        "name": "Camera",
+        "type": "CAMERA",
+        "location": [
+          7.358891,
+          -6.925791,
+          4.958309
+        ]
+      },
+      {
+        "name": "Light",
+        "type": "LIGHT",
+        "location": [
+          4.076245,
+          1.005454,
+          5.903862
+        ]
+      }
+    ],
+    "active_object": null
+  },
+  "ops": [
+    {
+      "idname": "MESH_OT_primitive_cube_add",
+      "label": "Add Cube",
+      "kwargs": {
+        "size": 2.0,
+        "enter_editmode": false,
+        "align": "WORLD",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "idname": "TRANSFORM_OT_translate",
+      "label": "Move",
+      "kwargs": {
+        "value": [
+          2.5,
+          -1.0,
+          0.75
+        ],
+        "orient_type": "GLOBAL",
+        "orient_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "orient_matrix_type": "GLOBAL",
+        "mirror": false,
+        "use_proportional_edit": false,
+        "proportional_edit_falloff": "SMOOTH",
+        "proportional_size": 1.0,
+        "use_proportional_connected": false,
+        "use_proportional_projected": false,
+        "snap": false,
+        "snap_elements": [
+          "INCREMENT"
+        ],
+        "use_snap_project": false,
+        "snap_target": "CLOSEST",
+        "use_snap_self": true,
+        "use_snap_edit": true,
+        "use_snap_nonedit": true,
+        "use_snap_selectable": false
+      }
+    }
+  ],
+  "after_state": {
+    "objects": [
+      {
+        "name": "Camera",
+        "type": "CAMERA",
+        "location": [
+          7.358891,
+          -6.925791,
+          4.958309
+        ]
+      },
+      {
+        "name": "Cube",
+        "type": "MESH",
+        "location": [
+          2.5,
+          -1.0,
+          0.75
+        ],
+        "active_material": null
+      },
+      {
+        "name": "Light",
+        "type": "LIGHT",
+        "location": [
+          4.076245,
+          1.005454,
+          5.903862
+        ]
+      }
+    ],
+    "active_object": "Cube"
+  }
+}

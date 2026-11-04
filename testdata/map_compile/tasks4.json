@@ -1,0 +1,2342 @@
+{
+ "about": "Map-compile task pool: author_task = verbatim from the CLIs (claude -p sonnet: NU..; codex codex: ND..; a fresh seed line) from an empty directory, with the author's caller_values; translation = the author's expected end state in the reader's terms ({GEN2} = the data root). te_prefs from survey (the same guest baseline).",
+ "pool_sha256": "c8be798746e09038b7ae7da5124f0cae10c6ea1d972dd2fd30a8227bd60e15f6",
+ "drawn": [
+  "NU01",
+  "NU02",
+  "NU03",
+  "NU04",
+  "NU05",
+  "NU06",
+  "NU07",
+  "NU08",
+  "NU09",
+  "NU10",
+  "ND01",
+  "ND02",
+  "ND03",
+  "ND04",
+  "ND05",
+  "ND06",
+  "ND07",
+  "ND08",
+  "ND09",
+  "ND10"
+ ],
+ "rejected": [],
+ "te_prefs_titles": {
+  "Intelligentes Kopieren/Einsetzen": "Intelligentes Kopieren/Einsetzen",
+  "Intelligente Anführungszeichen": "Intelligente Anführungszeichen",
+  "Intelligente Bindestriche": "Intelligente Bindestriche",
+  "Intelligente Links": "Intelligente Links",
+  "Während der Texteingabe prüfen": "Rechtschreibung während der Texteingabe prüfen ",
+  "Rechtschreibung autom. korrigieren": "Rechtschreibung automatisch korrigieren"
+ },
+ "te_prefs_baseline": {
+  "Intelligentes Kopieren/Einsetzen": true,
+  "Intelligente Anführungszeichen": true,
+  "Intelligente Bindestriche": true,
+  "Intelligente Links": true,
+  "Rechtschreibung während der Texteingabe prüfen ": true,
+  "Rechtschreibung automatisch korrigieren": false,
+  "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung": false
+ },
+ "te_prefs_plain_text": "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung",
+ "te_prefs_from": "desktop_e2e14_tasks.json",
+ "tasks": [
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU01",
+    "language": "de",
+    "utterance": "Welches Mittel hab ich in meinen Bienen-Notizen für den Herbst gegen die Milbe notiert? Schlag das mal im Duden nach.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen den Ordner 'Bienenstand Hecke' ansehen",
+     "Die Notiz 'Varroa Herbst' öffnen und lesen, dass das Mittel Ameisensäure ist",
+     "Zu Lexikon wechseln",
+     "Im Menü Suchen 'Duden-Wissensnetz deutsche Sprache' wählen",
+     "'Ameisensäure' ins Suchfeld tippen"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Bienenstand Hecke",
+       "notes": [
+        {
+         "title": "Varroa Herbst",
+         "text": "Mittel gegen die Milbe im Herbst: Ameisensäure, Behandlung ab Mitte August."
+        },
+        {
+         "title": "Varroa Frühjahr",
+         "text": "Im Frühjahr kein Mittel: Drohnenbrut ausschneiden, Oxalsäure nur im Winter."
+        },
+        {
+         "title": "Winterfutter",
+         "text": "Zuckerlösung 3:2, 15 kg pro Volk, bis Ende September."
+        },
+        {
+         "title": "Honigernte",
+         "text": "Schleudern am 12. Juli, 38 kg aus drei Völkern."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Bienenstand Hecke",
+      "note": "Winterfutter"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Lexikon: gewähltes Lexikon ist 'Duden-Wissensnetz deutsche Sprache'",
+     "Lexikon: Suchfeld enthält 'Ameisensäure'",
+     "Notizen: Ordner 'Bienenstand Hecke' wird angezeigt, Notiz 'Varroa Herbst' ist im Editor geöffnet",
+     "Notizen: Anzahl der Notizen im Ordner 'Bienenstand Hecke' ist weiterhin 4",
+     "Notizen: Ansicht bleibt 'Als Liste'"
+    ],
+    "must_not_happen": [
+     "Wikipedia oder 'Alle Lexika' wird gewählt",
+     "Es wird 'Oxalsäure' nachgeschlagen",
+     "Eine Notiz wird verändert oder gelöscht"
+    ],
+    "why_it_is_hard": "Zwei Varroa-Notizen sind ähnlich und die zweite nennt ebenfalls eine Säure; das richtige Wort muss aus dem Inhalt der Herbst-Notiz gelesen und im richtigen Lexikon (nicht Apple Dictionary) nachgeschlagen werden."
+   },
+   "caller_values": {
+    "note": "Varroa Herbst",
+    "lookup": "Ameisensäure"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Ameisensäure",
+     "notes_shown": {
+      "folder": "Bienenstand Hecke",
+      "note": "Varroa Herbst",
+      "text": "Mittel gegen die Milbe im Herbst: Ameisensäure, Behandlung ab Mitte August."
+     }
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU02",
+    "language": "en",
+    "utterance": "For this year's Saturday regatta, Anna should sail the Seeadler instead of the Möwe. Update the crew list and save it.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In the Finder list identify the Saturday crew list of this year (not Sonntag, not 2025)",
+     "Open Crew-Regatta-Samstag.txt in TextEdit",
+     "Change the line 'Anna: Möwe' to 'Anna: Seeadler'",
+     "Save with Ablage > Sichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Segelclub Warnow Regatta",
+      "files": [
+       {
+        "name": "Crew-Regatta-Samstag.txt",
+        "modified": "2026-09-21 18:40",
+        "text": "Regatta Samstag, 3. Oktober\nSteuermann: Jonas\nAnna: Möwe\nTim: Kormoran\nLena: Brise"
+       },
+       {
+        "name": "Crew-Regatta-Sonntag.txt",
+        "modified": "2026-09-21 18:55",
+        "text": "Regatta Sonntag, 4. Oktober\nSteuermann: Jonas\nAnna: Möwe\nTim: Brise\nLena: Kormoran"
+       },
+       {
+        "name": "Crew-Regatta-Samstag-2025.txt",
+        "modified": "2025-10-02 17:10",
+        "text": "Regatta Samstag, 4. Oktober 2025\nSteuermann: Jonas\nAnna: Albatros\nTim: Kormoran"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: Crew-Regatta-Samstag.txt hat den Text 'Regatta Samstag, 3. Oktober\\nSteuermann: Jonas\\nAnna: Seeadler\\nTim: Kormoran\\nLena: Brise'",
+     "Finder: Crew-Regatta-Sonntag.txt unverändert (Anna: Möwe)",
+     "Finder: Crew-Regatta-Samstag-2025.txt unverändert",
+     "TextEdit: Crew-Regatta-Samstag.txt ist geöffnet",
+     "Finder: Sortierung bleibt 'Name'"
+    ],
+    "must_not_happen": [
+     "Die Sonntagsdatei wird geändert",
+     "Die 2025er-Datei wird geändert",
+     "Andere Zeilen werden verändert",
+     "Die Änderung bleibt ungespeichert"
+    ],
+    "why_it_is_hard": "Drei ähnlich benannte Crew-Listen; 'this year's Saturday' schließt Sonntag (gleiche Möwe-Zeile) und die 2025er-Datei aus."
+   },
+   "caller_values": {
+    "file": "Crew-Regatta-Samstag.txt",
+    "anchor": "Anna: Möwe"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NU02/Segelclub Warnow Regatta/Crew-Regatta-Samstag.txt": "Regatta Samstag, 3. Oktober\nSteuermann: Jonas\nAnna: Seeadler\nTim: Kormoran\nLena: Brise"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NU02/Segelclub Warnow Regatta/Crew-Regatta-Samstag.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Name"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NU02/Segelclub Warnow Regatta/Crew-Regatta-Samstag.txt": "Finder: Crew-Regatta-Samstag.txt hat den Text 'Regatta Samstag, 3. Oktober\\nSteuermann: Jonas\\nAnna: Seeadler\\nTim: Kormoran\\nLena: Brise'"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU03",
+    "language": "de",
+    "utterance": "Sortier die Liste mal nach Änderungsdatum und mach dann das neueste Brennprotokoll auf. Häng unten 'Abgekühlt nach 24 Std.' dran und speicher es.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Darstellung > Sortieren nach > Änderungsdatum wählen",
+     "In den Unterordner 'Brennprotokolle' gehen",
+     "Die Datei mit dem jüngsten Datum erkennen (Brand-Steingut-B.txt) und öffnen",
+     "Am Ende eine neue Zeile 'Abgekühlt nach 24 Std.' einfügen",
+     "Sichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Keramikwerkstatt Lindner",
+      "files": [
+       {
+        "name": "Preisliste-Keramik.txt",
+        "modified": "2026-05-04 12:00",
+        "text": "Becher: 18 €\nSchale: 24 €\nTeller: 21 €"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Brennprotokolle",
+        "files": [
+         {
+          "name": "Brand-Steingut-A.txt",
+          "modified": "2026-06-02 10:15",
+          "text": "Brennprotokoll Steingut A\nTemperatur: 1240 °C\nHaltezeit: 20 min\nErgebnis: Glasur blasig"
+         },
+         {
+          "name": "Brand-Steingut-B.txt",
+          "modified": "2026-09-20 16:30",
+          "text": "Brennprotokoll Steingut B\nTemperatur: 1260 °C\nHaltezeit: 25 min\nErgebnis: gleichmäßig"
+         },
+         {
+          "name": "Brand-Porzellan.txt",
+          "modified": "2026-08-11 09:00",
+          "text": "Brennprotokoll Porzellan\nTemperatur: 1380 °C\nHaltezeit: 30 min\nErgebnis: leichte Risse"
+         }
+        ]
+       },
+       {
+        "name": "Glasuren",
+        "files": [
+         {
+          "name": "Glasur-Celadon.txt",
+          "modified": "2026-09-25 11:00",
+          "text": "Glasur Celadon\n80 % Feldspat, 15 % Kaolin, 5 % Eisenoxid"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: 'Sortieren nach' hat 'Änderungsdatum' angehakt",
+     "Finder: Brand-Steingut-B.txt hat den Text 'Brennprotokoll Steingut B\\nTemperatur: 1260 °C\\nHaltezeit: 25 min\\nErgebnis: gleichmäßig\\nAbgekühlt nach 24 Std.'",
+     "Finder: Brand-Steingut-A.txt, Brand-Porzellan.txt, Glasur-Celadon.txt und Preisliste-Keramik.txt unverändert",
+     "TextEdit: Brand-Steingut-B.txt ist geöffnet"
+    ],
+    "must_not_happen": [
+     "Glasur-Celadon.txt (neueste Datei insgesamt, aber kein Brennprotokoll) wird geändert",
+     "Eine andere Brennprotokoll-Datei wird geändert",
+     "Die Datei bleibt ungespeichert"
+    ],
+    "why_it_is_hard": "Die insgesamt neueste Datei liegt im Ordner Glasuren und ist kein Brennprotokoll; die Dateinamen verraten die Reihenfolge nicht, nur das Änderungsdatum."
+   },
+   "caller_values": {
+    "folder": "Brennprotokolle",
+    "file": "Brand-Steingut-B.txt"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NU03/Keramikwerkstatt Lindner/Brennprotokolle/Brand-Steingut-B.txt": "Brennprotokoll Steingut B\nTemperatur: 1260 °C\nHaltezeit: 25 min\nErgebnis: gleichmäßig\nAbgekühlt nach 24 Std."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NU03/Keramikwerkstatt Lindner/Brennprotokolle/Brand-Steingut-B.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NU03/Keramikwerkstatt Lindner/Brennprotokolle/Brand-Steingut-B.txt": "Finder: Brand-Steingut-B.txt hat den Text 'Brennprotokoll Steingut B\\nTemperatur: 1260 °C\\nHaltezeit: 25 min\\nErgebnis: gleichmäßig\\nAbgekühlt nach 24 Std.'"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU04",
+    "language": "en",
+    "utterance": "The day-ticket price in this document is out of date. Fix it with the current price from my Boulderhalle notes and save.",
+    "apps": [
+     "TextEdit",
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Switch to Notizen and open the folder 'Boulderhalle Nord'",
+     "Open the note 'Preise' (not the old 2025 one) and read the day ticket price 14 €",
+     "Switch back to TextEdit",
+     "Change 'Tageskarte: 12 €' to 'Tageskarte: 14 €'",
+     "Save"
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Boulderhalle Training",
+      "files": [
+       {
+        "name": "Hallenplan.txt",
+        "modified": "2026-09-10 20:00",
+        "text": "Boulderhalle Nord\nTageskarte: 12 €\nSchuhmiete: 3 €\nKurs Dienstag: 19 Uhr"
+       },
+       {
+        "name": "Hallenplan-Kinder.txt",
+        "modified": "2026-08-30 15:30",
+        "text": "Kinderkurs Mittwoch\nTageskarte: 12 €\nGruppe: 6 bis 9 Jahre"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Boulderhalle Nord",
+       "notes": [
+        {
+         "title": "Öffnungszeiten",
+         "text": "Mo–Fr 10–22 Uhr, Sa/So 9–20 Uhr"
+        },
+        {
+         "title": "Preise",
+         "text": "Tageskarte 14 €, 10er-Karte 120 €, Schuhmiete 3 €"
+        },
+        {
+         "title": "Preise 2025 alt",
+         "text": "Tageskarte 12 €, 10er-Karte 100 €, Schuhmiete 3 €"
+        }
+       ]
+      }
+     ],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Hallenplan.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: Hallenplan.txt hat den Text 'Boulderhalle Nord\\nTageskarte: 14 €\\nSchuhmiete: 3 €\\nKurs Dienstag: 19 Uhr'",
+     "Finder: Hallenplan-Kinder.txt unverändert",
+     "TextEdit: Hallenplan.txt ist geöffnet",
+     "Notizen: Ordner 'Boulderhalle Nord' wird angezeigt, Notiz 'Preise' ist im Editor geöffnet",
+     "Notizen: Anzahl der Notizen im Ordner 'Boulderhalle Nord' ist weiterhin 3"
+    ],
+    "must_not_happen": [
+     "Der alte Preis 12 € bzw. 100 € aus der Notiz 'Preise 2025 alt' wird übernommen",
+     "Hallenplan-Kinder.txt wird geändert",
+     "Schuhmiete oder andere Zeilen werden verändert"
+    ],
+    "why_it_is_hard": "Zwei Preisnotizen mit fast gleichem Titel, wobei die alte denselben Wert hat wie das Dokument; zudem existiert eine zweite Datei mit gleicher Tageskarte-Zeile."
+   },
+   "caller_values": {
+    "note": "Preise",
+    "file": "Hallenplan.txt",
+    "anchor": "Tageskarte: 12 €"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NU04/Boulderhalle Training/Hallenplan.txt": "Boulderhalle Nord\nTageskarte: 14 €\nSchuhmiete: 3 €\nKurs Dienstag: 19 Uhr"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NU04/Boulderhalle Training/Hallenplan.txt"
+     },
+     "notes_shown": {
+      "folder": "Boulderhalle Nord",
+      "note": "Preise",
+      "text": "Tageskarte 14 €, 10er-Karte 120 €, Schuhmiete 3 €"
+     }
+    },
+    "statements": {
+     "{GEN2}/NU04/Boulderhalle Training/Hallenplan.txt": "Finder: Hallenplan.txt hat den Text 'Boulderhalle Nord\\nTageskarte: 14 €\\nSchuhmiete: 3 €\\nKurs Dienstag: 19 Uhr'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU05",
+    "language": "de",
+    "utterance": "Häng bei der aktuellen Rohr-Bestellung unten noch die Zeile Muffe 3/4\": 6 Stk an. Vorher aber die intelligenten Anführungszeichen ausschalten, sonst wird das Zollzeichen krumm. Speichern nicht vergessen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In TextEdit Bearbeiten > Ersetzungen > Intelligente Anführungszeichen ausschalten",
+     "In Finder die aktuelle Datei Bestellung-Rohre.txt erkennen (nicht die 2025er)",
+     "Datei öffnen",
+     "Am Ende neue Zeile 'Muffe 3/4\": 6 Stk' tippen",
+     "Sichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Heizungsbau Materialliste",
+      "files": [
+       {
+        "name": "Bestellung-Rohre.txt",
+        "modified": "2026-09-18 14:20",
+        "text": "Bestellung Rohre\nKupferrohr 15 mm: 12 m\nPressfitting 22 mm: 8 Stk"
+       },
+       {
+        "name": "Bestellung-Rohre-2025.txt",
+        "modified": "2025-03-11 09:45",
+        "text": "Bestellung Rohre\nKupferrohr 15 mm: 20 m\nBogen 90 Grad: 10 Stk"
+       },
+       {
+        "name": "Lagerliste.txt",
+        "modified": "2026-07-02 08:10",
+        "text": "Lager Keller\nDichtband: 4 Rollen\nHanf: 2 Pakete"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit: Einstellung 'Intelligente Anführungszeichen' ist ausgeschaltet",
+     "TextEdit: 'Intelligente Bindestriche', 'Intelligentes Kopieren/Einsetzen' bleiben eingeschaltet, 'Intelligente Links' bleibt aus",
+     "Finder: Bestellung-Rohre.txt hat den Text 'Bestellung Rohre\\nKupferrohr 15 mm: 12 m\\nPressfitting 22 mm: 8 Stk\\nMuffe 3/4\": 6 Stk' mit geradem Anführungszeichen",
+     "Finder: Bestellung-Rohre-2025.txt und Lagerliste.txt unverändert",
+     "TextEdit: Bestellung-Rohre.txt ist geöffnet"
+    ],
+    "must_not_happen": [
+     "Die Zeile wird mit typografischem Zeichen (” oder “) gespeichert",
+     "Die 2025er-Bestellung wird geändert",
+     "Andere Einstellungen werden umgeschaltet"
+    ],
+    "why_it_is_hard": "Die Einstellung muss vor dem Tippen geändert werden, sonst ersetzt TextEdit das Zeichen; außerdem muss aus zwei ähnlich benannten Bestellungen die aktuelle gewählt werden."
+   },
+   "caller_values": {
+    "file": "Bestellung-Rohre.txt"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NU05/Heizungsbau Materialliste/Bestellung-Rohre.txt": "Bestellung Rohre\nKupferrohr 15 mm: 12 m\nPressfitting 22 mm: 8 Stk\nMuffe 3/4\": 6 Stk"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NU05/Heizungsbau Materialliste/Bestellung-Rohre.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen",
+       "on": false
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NU05/Heizungsbau Materialliste/Bestellung-Rohre.txt": "Finder: Bestellung-Rohre.txt hat den Text 'Bestellung Rohre\\nKupferrohr 15 mm: 12 m\\nPressfitting 22 mm: 8 Stk\\nMuffe 3/4\": 6 Stk' mit geradem Anführungszeichen"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": false,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU06",
+    "language": "en",
+    "utterance": "In my aquarium notes there's a plant I should trim every two weeks. Look that word up in the Oxford German dictionary.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen switch from the folder 'Gartenteich' to 'Aquarium 240 l'",
+     "Open the note 'Pflanzenpflege' there and read: trim every 2 weeks = Wasserpest",
+     "Switch to Lexikon",
+     "Choose 'Oxford German Dictionary' in menu Suchen",
+     "Type 'Wasserpest' into the search field"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Aquarium 240 l",
+       "notes": [
+        {
+         "title": "Pflanzenpflege",
+         "text": "Alle 2 Wochen kürzen: Wasserpest. Alle 6 Wochen teilen: Schwimmfarn."
+        },
+        {
+         "title": "Wasserwerte",
+         "text": "Nitrat unter 20 mg/l, Wasserwechsel 30 % pro Woche."
+        },
+        {
+         "title": "Besatz",
+         "text": "12 Neon, 6 Panzerwelse, 1 Schmerle."
+        }
+       ]
+      },
+      {
+       "name": "Gartenteich",
+       "notes": [
+        {
+         "title": "Pflanzenpflege",
+         "text": "Alle 2 Wochen kürzen: Rohrkolben. Algen abfischen: wöchentlich."
+        },
+        {
+         "title": "Winterschutz",
+         "text": "Pumpe ab Mitte November ausbauen, Eisfreihalter einsetzen."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Gartenteich",
+      "note": "Pflanzenpflege"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Lexikon: gewähltes Lexikon ist 'Oxford German Dictionary'",
+     "Lexikon: Suchfeld enthält 'Wasserpest'",
+     "Notizen: Ordner 'Aquarium 240 l' wird angezeigt, Notiz 'Pflanzenpflege' ist im Editor geöffnet",
+     "Notizen: Anzahl der Notizen in 'Aquarium 240 l' ist 3 und in 'Gartenteich' 2"
+    ],
+    "must_not_happen": [
+     "'Rohrkolben' oder 'Schwimmfarn' wird nachgeschlagen",
+     "Wikipedia oder 'Alle Lexika' wird gewählt",
+     "Eine Notiz wird verändert"
+    ],
+    "why_it_is_hard": "Beide Ordner enthalten eine Notiz 'Pflanzenpflege' mit '2 Wochen'-Angabe, und gestartet wird im falschen (Gartenteich); die Aquarium-Notiz nennt zwei Pflanzen mit verschiedenen Intervallen."
+   },
+   "caller_values": {
+    "folder": "Aquarium 240 l",
+    "note": "Pflanzenpflege",
+    "lookup": "Wasserpest"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Wasserpest",
+     "notes_shown": {
+      "folder": "Aquarium 240 l",
+      "note": "Pflanzenpflege",
+      "text": "Alle 2 Wochen kürzen: Wasserpest. Alle 6 Wochen teilen: Schwimmfarn."
+     }
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU07",
+    "language": "de",
+    "utterance": "Kannst du bei den diesjährigen Verkaufspreisen die kleine Nordmanntanne von 39 auf 42 Euro hochsetzen? Nur die Zeile, sonst nix ändern.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Finder Verkaufspreise-2026.txt erkennen (nicht 2025, nicht Einkauf-Lieferant)",
+     "Datei öffnen",
+     "Die Zeile der kleinen Nordmanntanne (150–175 cm) finden",
+     "39 durch 42 ersetzen",
+     "Sichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Christbaumverkauf Hofladen",
+      "files": [
+       {
+        "name": "Verkaufspreise-2026.txt",
+        "modified": "2026-09-15 19:00",
+        "text": "Verkaufspreise 2026\nNordmanntanne 150–175 cm: 39 €\nNordmanntanne 200–225 cm: 59 €\nBlaufichte 150–175 cm: 24 €"
+       },
+       {
+        "name": "Verkaufspreise-2025.txt",
+        "modified": "2025-11-20 10:30",
+        "text": "Verkaufspreise 2025\nNordmanntanne 150–175 cm: 36 €\nNordmanntanne 200–225 cm: 55 €\nBlaufichte 150–175 cm: 22 €"
+       },
+       {
+        "name": "Einkauf-Lieferant.txt",
+        "modified": "2026-08-28 13:05",
+        "text": "Hof Brandt, Lieferung ab 28. November\nNordmanntanne 150–175 cm: 28 € Einkauf\nBlaufichte 150–175 cm: 15 € Einkauf"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: Verkaufspreise-2026.txt hat den Text 'Verkaufspreise 2026\\nNordmanntanne 150–175 cm: 42 €\\nNordmanntanne 200–225 cm: 59 €\\nBlaufichte 150–175 cm: 24 €'",
+     "Finder: Verkaufspreise-2025.txt und Einkauf-Lieferant.txt unverändert",
+     "TextEdit: Verkaufspreise-2026.txt ist geöffnet"
+    ],
+    "must_not_happen": [
+     "Die große Nordmanntanne (59 €) wird geändert",
+     "Die 2025er-Datei oder die Einkaufsliste wird geändert",
+     "Die Änderung bleibt ungespeichert"
+    ],
+    "why_it_is_hard": "'Kleine' muss auf die 150–175-cm-Zeile abgebildet werden; drei Dateien enthalten ähnliche Nordmanntanne-Zeilen, nur die 2026er-Verkaufsliste ist richtig."
+   },
+   "caller_values": {
+    "file": "Verkaufspreise-2026.txt",
+    "anchor": "Nordmanntanne 150–175 cm: 39 €"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NU07/Christbaumverkauf Hofladen/Verkaufspreise-2026.txt": "Verkaufspreise 2026\nNordmanntanne 150–175 cm: 42 €\nNordmanntanne 200–225 cm: 59 €\nBlaufichte 150–175 cm: 24 €"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NU07/Christbaumverkauf Hofladen/Verkaufspreise-2026.txt"
+     }
+    },
+    "statements": {
+     "{GEN2}/NU07/Christbaumverkauf Hofladen/Verkaufspreise-2026.txt": "Finder: Verkaufspreise-2026.txt hat den Text 'Verkaufspreise 2026\\nNordmanntanne 150–175 cm: 42 €\\nNordmanntanne 200–225 cm: 59 €\\nBlaufichte 150–175 cm: 24 €'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU08",
+    "language": "en",
+    "utterance": "Show me my Nähprojekte notes as a gallery, search them for 'Burda', and open the note for the green jacket I'm actually sewing, not the discarded one.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Select the folder 'Nähprojekte' in the sidebar",
+     "Darstellung > Als Galerie",
+     "Bearbeiten > Suchen > Notizenliste durchsuchen … and type 'Burda'",
+     "Among the results pick 'Jacke grün' (not the '(verworfen)' one)",
+     "Open it in the editor"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Nähprojekte",
+       "notes": [
+        {
+         "title": "Jacke grün",
+         "text": "Schnittmuster Burda 6/2024, Größe 40, Stoff Walkloden 2,2 m"
+        },
+        {
+         "title": "Jacke grün (verworfen)",
+         "text": "Schnittmuster Burda 3/2023 – zu eng, nicht mehr nähen"
+        },
+        {
+         "title": "Jacke blau",
+         "text": "Schnittmuster Burda 9/2025, Futter fehlt noch"
+        },
+        {
+         "title": "Rock Cord",
+         "text": "Schnittmuster aus Heft Lillestoff, Cord 1,5 m"
+        }
+       ]
+      },
+      {
+       "name": "Stoffvorrat",
+       "notes": [
+        {
+         "title": "Baumwolle",
+         "text": "2 m Popeline weiß, kein Schnittmuster nötig"
+        },
+        {
+         "title": "Walkloden",
+         "text": "1,1 m grün, Rest von der Jacke"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Stoffvorrat",
+      "note": "Walkloden"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen: Ordner 'Nähprojekte' wird angezeigt",
+     "Notizen: Ansicht ist 'Als Galerie'",
+     "Notizen: Suchfeld enthält 'Burda'",
+     "Notizen: Notiz 'Jacke grün' ist im Editor geöffnet",
+     "Notizen: Anzahl der Notizen in 'Nähprojekte' ist 4 und in 'Stoffvorrat' 2"
+    ],
+    "must_not_happen": [
+     "'Jacke grün (verworfen)' oder 'Jacke blau' ist geöffnet",
+     "Eine Notiz wird verändert oder gelöscht"
+    ],
+    "why_it_is_hard": "Drei Teilaufgaben (Ordner, Ansicht, Suche) in der richtigen Kombination, und zwei Notizen mit fast identischem Titel; Start in einem anderen Ordner."
+   },
+   "caller_values": {
+    "note": "Jacke grün"
+   },
+   "translation": {
+    "expect": {
+     "notes_search": "Burda",
+     "notes_shown": {
+      "folder": "Nähprojekte",
+      "note": "Jacke grün",
+      "text": "Schnittmuster Burda 6/2024, Größe 40, Stoff Walkloden 2,2 m"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Galerie",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU09",
+    "language": "de",
+    "utterance": "Leg mal im Unterordner mit den Zählungen von diesem Jahr einen neuen Ordner 'Herbstzug' an und stell die Liste auf Sortierung nach Änderungsdatum.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Unterordner 'Zählungen-2026' erkennen (nicht 2025) und hineingehen",
+     "Ablage > Neuer Ordner",
+     "Namen 'Herbstzug' eingeben",
+     "Darstellung > Sortieren nach > Änderungsdatum wählen"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Vogelwarte Feldbeobachtung",
+      "files": [
+       {
+        "name": "Beobachtungsregeln.txt",
+        "modified": "2025-01-14 09:00",
+        "text": "Zählung nur bei Windstärke unter 5.\nStartzeit: eine Stunde nach Sonnenaufgang."
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Zählungen-2025",
+        "files": [
+         {
+          "name": "Zaehlung-2025-10-05.txt",
+          "modified": "2025-10-05 12:00",
+          "text": "Zählung 05.10.2025, Rhein-Auen\nRotmilan 2, Kranich 0, Mäusebussard 5"
+         },
+         {
+          "name": "Zaehlung-2025-11-02.txt",
+          "modified": "2025-11-02 11:30",
+          "text": "Zählung 02.11.2025, Rhein-Auen\nRotmilan 1, Kranich 12, Mäusebussard 3"
+         }
+        ]
+       },
+       {
+        "name": "Zählungen-2026",
+        "files": [
+         {
+          "name": "Zaehlung-2026-03-15.txt",
+          "modified": "2026-03-15 10:45",
+          "text": "Zählung 15.03.2026, Rhein-Auen\nRotmilan 3, Kranich 40, Mäusebussard 4"
+         },
+         {
+          "name": "Zaehlung-2026-09-13.txt",
+          "modified": "2026-09-13 11:15",
+          "text": "Zählung 13.09.2026, Rhein-Auen\nRotmilan 4, Kranich 0, Mäusebussard 7"
+         }
+        ]
+       },
+       {
+        "name": "Ausrüstung",
+        "files": [
+         {
+          "name": "Fernglas.txt",
+          "modified": "2026-01-20 16:00",
+          "text": "Fernglas 10x42, Reinigungstuch im Rucksack"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: Im Unterordner 'Zählungen-2026' existiert ein neuer, leerer Ordner 'Herbstzug'",
+     "Finder: 'Sortieren nach' hat 'Änderungsdatum' angehakt",
+     "Finder: Alle bestehenden Dateien und Ordner sind unverändert, keine weiteren neuen Ordner",
+     "TextEdit: keine Dokumente geöffnet"
+    ],
+    "must_not_happen": [
+     "'Herbstzug' wird im Hauptordner oder in 'Zählungen-2025' bzw. 'Ausrüstung' angelegt",
+     "Eine Datei wird in den Papierkorb gelegt",
+     "Der Ordner wird anders benannt (z. B. 'Neuer Ordner')"
+    ],
+    "why_it_is_hard": "Der Zielordner wird nur über 'von diesem Jahr' beschrieben und steht neben ähnlichen Ordnern; Ordneranlegen und Sortieren sind zwei getrennte Menüaktionen."
+   },
+   "caller_values": {
+    "folder": "Zählungen-2026"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ],
+     "folder_added": {
+      "{GEN2}/NU09/Vogelwarte Feldbeobachtung/Zählungen-2026": [
+       [
+        "Herbstzug",
+        "dir"
+       ]
+      ]
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NU10",
+    "language": "en",
+    "utterance": "The autumn tournament's postponed round now takes place on 14 October. Update the date in the plan, keep the rest of that line as it is, and save.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Notice that the open document is the spring plan, not the autumn one",
+     "TextEdit: Ablage > Öffnen … and choose Turnierplan-Herbst.txt",
+     "Find the line marked '(verschoben)'",
+     "Change '11. Oktober' to '14. Oktober', leaving '(verschoben)'",
+     "Save"
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Schachklub Eintracht",
+      "files": [
+       {
+        "name": "Turnierplan-Herbst.txt",
+        "modified": "2026-09-02 20:15",
+        "text": "Herbstturnier 2026\nRunde 1: 4. Oktober\nRunde 2: 11. Oktober (verschoben)\nRunde 3: 18. Oktober\nRunde 4: 25. Oktober"
+       },
+       {
+        "name": "Turnierplan-Frühjahr.txt",
+        "modified": "2026-02-10 18:00",
+        "text": "Frühjahrsturnier 2026\nRunde 1: 8. März\nRunde 2: 15. März (verschoben)\nRunde 3: 22. März"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Turnierplan-Frühjahr.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder: Turnierplan-Herbst.txt hat den Text 'Herbstturnier 2026\\nRunde 1: 4. Oktober\\nRunde 2: 14. Oktober (verschoben)\\nRunde 3: 18. Oktober\\nRunde 4: 25. Oktober'",
+     "Finder: Turnierplan-Frühjahr.txt unverändert",
+     "TextEdit: Turnierplan-Herbst.txt ist geöffnet (Turnierplan-Frühjahr.txt bleibt ebenfalls geöffnet)"
+    ],
+    "must_not_happen": [
+     "Das Frühjahrsdokument wird geändert (dort steht ebenfalls eine 'verschoben'-Runde 2)",
+     "Der Zusatz '(verschoben)' wird entfernt",
+     "Die Änderung bleibt ungespeichert"
+    ],
+    "why_it_is_hard": "Das offene Dokument ist das falsche (Frühjahrsplan mit gleicher Struktur); der richtige Plan muss über den Öffnen-Dialog gefunden und gezielt nur das Datum der markierten Zeile geändert werden."
+   },
+   "caller_values": {
+    "file": "Turnierplan-Herbst.txt",
+    "anchor": "Runde 2: 11. Oktober (verschoben)"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NU10/Schachklub Eintracht/Turnierplan-Herbst.txt": "Herbstturnier 2026\nRunde 1: 4. Oktober\nRunde 2: 14. Oktober (verschoben)\nRunde 3: 18. Oktober\nRunde 4: 25. Oktober"
+     },
+     "opened_set": [
+      "{GEN2}/NU10/Schachklub Eintracht/Turnierplan-Frühjahr.txt",
+      "{GEN2}/NU10/Schachklub Eintracht/Turnierplan-Herbst.txt"
+     ]
+    },
+    "statements": {
+     "{GEN2}/NU10/Schachklub Eintracht/Turnierplan-Herbst.txt": "Finder: Turnierplan-Herbst.txt hat den Text 'Herbstturnier 2026\\nRunde 1: 4. Oktober\\nRunde 2: 14. Oktober (verschoben)\\nRunde 3: 18. Oktober\\nRunde 4: 25. Oktober'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND01",
+    "language": "de",
+    "utterance": "Mach mal den neuesten Stand von letztem Monat auf, nicht den Septemberkram. Änder da die Abholzeit auf „Abholung: 16:30“ und speicher. Lass den Ordner nach Änderungsdatum sortiert.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Finder nach Änderungsdatum sortieren.",
+     "Anhand der Änderungsdaten die neueste Augustdatei bestimmen.",
+     "Diese Datei in TextEdit öffnen.",
+     "Die Abholzeile ersetzen und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Keramikbrand Havelufer",
+      "files": [
+       {
+        "name": "Brennplan-Ost.txt",
+        "modified": "2026-08-28 17:10",
+        "text": "Schalen, Ofen Ost\nAbholung: 14:00\nKisten: 3"
+       },
+       {
+        "name": "Brennplan-West.txt",
+        "modified": "2026-08-31 09:20",
+        "text": "Tassen, Ofen West\nAbholung: 15:00\nKisten: 4"
+       },
+       {
+        "name": "Brennplan-Neu.txt",
+        "modified": "2026-09-01 08:00",
+        "text": "Vasen, Ofen West\nAbholung: 15:00\nKisten: 2"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Finder: Bei „Sortieren nach“ ist „Änderungsdatum“ angehakt.",
+     "TextEdit: Brennplan-West.txt ist als einziges Dokument geöffnet.",
+     "TextEdit: Der gespeicherte Text von Brennplan-West.txt lautet exakt „Tassen, Ofen West\nAbholung: 16:30\nKisten: 4“."
+    ],
+    "must_not_happen": [
+     "Keine Septemberdatei bearbeiten.",
+     "Keine andere Zeile ändern."
+    ],
+    "why_it_is_hard": "Der neueste Stand insgesamt ist falsch; entscheidend ist das jüngste Änderungsdatum innerhalb des Augusts."
+   },
+   "caller_values": {
+    "file": "Brennplan-West.txt",
+    "anchor": "Abholung: 15:00"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/ND01/Keramikbrand Havelufer/Brennplan-West.txt": "Tassen, Ofen West\nAbholung: 16:30\nKisten: 4"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND01/Keramikbrand Havelufer/Brennplan-West.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/ND01/Keramikbrand Havelufer/Brennplan-West.txt": "TextEdit: Der gespeicherte Text von Brennplan-West.txt lautet exakt „Tassen, Ofen West\nAbholung: 16:30\nKisten: 4“."
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND02",
+    "language": "de",
+    "utterance": "Kannst du bei den Webkurs-Sachen die Notiz mit dem Faden quer zur Kette raussuchen und offen lassen? Das Fachwort hinter „Begriff:“ bitte im deutsch-englischen Lexikon nachschlagen.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den passenden Webkurs-Ordner in Notizen anzeigen.",
+     "Die Notiz zum Querfaden anhand ihres Inhalts öffnen.",
+     "In Lexikon das Oxford German Dictionary wählen.",
+     "Den Begriff aus der Notiz nachschlagen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Webkurs Flachswerk",
+       "notes": [
+        {
+         "title": "Längs im Rahmen",
+         "text": "Begriff: Kettfaden. Er läuft längs durch den Webrahmen."
+        },
+        {
+         "title": "Quer durch den Rahmen",
+         "text": "Begriff: Schussfaden. Dieser Faden läuft quer zur Kette."
+        },
+        {
+         "title": "Am Rand",
+         "text": "Begriff: Webkante. Hier wenden die Querfäden."
+        }
+       ]
+      },
+      {
+       "name": "Nähkurs Leinenstube",
+       "notes": [
+        {
+         "title": "Quer zur Naht",
+         "text": "Begriff: Heftfaden. Vor dem Nähen wieder entfernen."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Nähkurs Leinenstube",
+      "note": "Quer zur Naht"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notizen: Der Ordner „Webkurs Flachswerk“ wird angezeigt.",
+     "Notizen: Die Notiz „Quer durch den Rahmen“ wird im Editor angezeigt.",
+     "Lexikon: „Oxford German Dictionary“ ist gewählt.",
+     "Lexikon: Im Suchfeld steht exakt „Schussfaden“."
+    ],
+    "must_not_happen": [
+     "Keine Notiz bearbeiten.",
+     "Weder Alle Lexika noch Wikipedia wählen."
+    ],
+    "why_it_is_hard": "Ähnliche Richtungsbeschreibungen stehen in mehreren Notizen; das gesuchte Wort und die passende Wörterbuchquelle sind nur indirekt genannt."
+   },
+   "caller_values": {
+    "folder": "Webkurs Flachswerk",
+    "note": "Quer durch den Rahmen",
+    "lookup": "Schussfaden"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Webkurs Flachswerk",
+      "note": "Quer durch den Rahmen",
+      "text": "Begriff: Schussfaden. Dieser Faden läuft quer zur Kette."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Schussfaden"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND03",
+    "language": "en",
+    "utterance": "Use the cider note about the dry pear batch, not the sweet one. In the open label file, replace just the ingredients line with that note's ingredients line, exactly as written, and save it. Leave the source note open.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Show the cider notes folder.",
+     "Open the note identifying the dry pear batch.",
+     "Copy its complete ingredients line into the corresponding line of the open TextEdit file.",
+     "Save the file."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Alder Mill Bottling",
+      "files": [
+       {
+        "name": "Pear-label.txt",
+        "modified": "2026-09-12 10:15",
+        "text": "Alder Mill P7\nIngredients: pending\nVolume: 330 ml"
+       },
+       {
+        "name": "Apple-label.txt",
+        "modified": "2026-09-13 10:15",
+        "text": "Alder Mill A4\nIngredients: apple juice, yeast\nVolume: 330 ml"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Cider at Alder Mill",
+       "notes": [
+        {
+         "title": "Batch P6",
+         "text": "Ingredients: pear juice, sugar, yeast. Batch: sweet pear."
+        },
+        {
+         "title": "Batch P7",
+         "text": "Ingredients: pear juice, yeast. Batch: dry pear."
+        },
+        {
+         "title": "Batch A4",
+         "text": "Ingredients: apple juice, yeast. Batch: dry apple."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Cider at Alder Mill",
+      "note": "Batch P6"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Pear-label.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Notizen: The editor shows “Batch P7” in “Cider at Alder Mill”.",
+     "TextEdit: The saved text of Pear-label.txt is exactly “Alder Mill P7\nIngredients: pear juice, yeast. Batch: dry pear.\nVolume: 330 ml”."
+    ],
+    "must_not_happen": [
+     "Do not omit the batch description from the copied line.",
+     "Do not change the volume or the apple label."
+    ],
+    "why_it_is_hard": "The correct note must satisfy both fruit and dryness, and its entire single line must replace only one document line."
+   },
+   "caller_values": {
+    "folder": "Cider at Alder Mill",
+    "note": "Batch P7",
+    "file": "Pear-label.txt",
+    "anchor": "Ingredients: pending",
+    "text": "Ingredients: pear juice, yeast. Batch: dry pear."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/ND03/Alder Mill Bottling/Pear-label.txt": "Alder Mill P7\nIngredients: pear juice, yeast. Batch: dry pear.\nVolume: 330 ml"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND03/Alder Mill Bottling/Pear-label.txt"
+     },
+     "notes_shown": {
+      "folder": "Cider at Alder Mill",
+      "note": "Batch P7",
+      "text": "Ingredients: pear juice, yeast. Batch: dry pear."
+     }
+    },
+    "statements": {
+     "{GEN2}/ND03/Alder Mill Bottling/Pear-label.txt": "TextEdit: The saved text of Pear-label.txt is exactly “Alder Mill P7\nIngredients: pear juice, yeast. Batch: dry pear.\nVolume: 330 ml”."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND04",
+    "language": "de",
+    "utterance": "Mach im geöffneten Ordner fürs Reparaturcafé bitte einen leeren Ordner „Freigegeben“. Sortier danach nach Änderungsdatum und öffne mir die neueste Prüfliste, die alten und die Vorschau lass liegen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im angezeigten Aufgabenordner den leeren Ordner Freigegeben erstellen.",
+     "Finder nach Änderungsdatum sortieren.",
+     "Die jüngste Prüfliste unter Ausschluss der Vorschau bestimmen.",
+     "Diese Prüfliste in TextEdit öffnen."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Reparaturcafé Eichenplatz",
+      "files": [
+       {
+        "name": "Prüfliste-A.txt",
+        "modified": "2026-08-20 11:00",
+        "text": "Prüfliste A\nKabel prüfen\nSchalter prüfen"
+       },
+       {
+        "name": "Prüfliste-B.txt",
+        "modified": "2026-09-19 14:00",
+        "text": "Prüfliste B\nKabel prüfen\nSchalter prüfen\nGehäuse prüfen"
+       },
+       {
+        "name": "Prüfliste-Vorschau.txt",
+        "modified": "2026-09-26 09:00",
+        "text": "Vorschau\nNeue Messstation noch nicht verfügbar"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Art",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Finder: Reparaturcafé Eichenplatz contains a new empty subfolder named “Freigegeben”.",
+     "Finder: “Änderungsdatum” is the checked sorting entry.",
+     "TextEdit: Prüfliste-B.txt is the only open document."
+    ],
+    "must_not_happen": [
+     "Keine Datei in den neuen Ordner verschieben.",
+     "Die Vorschau nicht als neueste gültige Prüfliste öffnen."
+    ],
+    "why_it_is_hard": "The newest file is explicitly excluded, and creating a destination folder does not authorize moving anything into it."
+   },
+   "caller_values": {
+    "folder": "Reparaturcafé Eichenplatz",
+    "file": "Prüfliste-B.txt"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ],
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND04/Reparaturcafé Eichenplatz/Prüfliste-B.txt"
+     },
+     "folder_added": {
+      "{GEN2}/ND04/Reparaturcafé Eichenplatz": [
+       [
+        "Freigegeben",
+        "dir"
+       ]
+      ]
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND05",
+    "language": "en",
+    "utterance": "In this puppet cue sheet, turn off smart quotes, smart dashes and automatic spelling correction. Replace only the fox's cue with exactly: Fox: \"Wait--here!\" Save it.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Disable smart quotes and smart dashes in the substitutions menu.",
+     "Disable automatic spelling correction.",
+     "Identify and replace only the fox cue.",
+     "Save the open document."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Willow Puppet Stage",
+      "files": [
+       {
+        "name": "Woodland-cues.txt",
+        "modified": "2026-09-21 16:45",
+        "text": "Fox: Wait here.\nBadger: Wait here.\nOwl: Lights out."
+       },
+       {
+        "name": "Woodland-rehearsal.txt",
+        "modified": "2026-09-22 16:45",
+        "text": "Fox: Enter left.\nBadger: Enter right."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Woodland-cues.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "TextEdit: “Intelligente Anführungszeichen” is unchecked.",
+     "TextEdit: “Intelligente Bindestriche” is unchecked.",
+     "TextEdit: “Rechtschreibung autom. korrigieren” is unchecked.",
+     "TextEdit: Woodland-cues.txt has the exact saved text “Fox: \"Wait--here!\"\nBadger: Wait here.\nOwl: Lights out.”."
+    ],
+    "must_not_happen": [
+     "Do not disable spelling checks while typing.",
+     "Do not change the badger cue or substitute curly quotes or an en/em dash."
+    ],
+    "why_it_is_hard": "Several adjacent settings look related, but only three may change; the replacement must retain literal ASCII punctuation."
+   },
+   "caller_values": {
+    "file": "Woodland-cues.txt",
+    "anchor": "Fox: Wait here."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/ND05/Willow Puppet Stage/Woodland-cues.txt": "Fox: \"Wait--here!\"\nBadger: Wait here.\nOwl: Lights out."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND05/Willow Puppet Stage/Woodland-cues.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Bindestriche",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/ND05/Willow Puppet Stage/Woodland-cues.txt": "TextEdit: Woodland-cues.txt has the exact saved text “Fox: \"Wait--here!\"\nBadger: Wait here.\nOwl: Lights out.”."
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND06",
+    "language": "de",
+    "utterance": "Bei den Pilznotizen vom Moosgrund such ich die mit dem violetten Stiel und dem Rettichgeruch, nicht die vom Sandhang. Mach mal Listenansicht, öffne die passende Notiz und lass die Suche am Ende leer.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Ordner für Moosgrund öffnen.",
+     "Zur Listenansicht wechseln.",
+     "Die Notiz anhand beider Merkmale auswählen und das leere Suchfeld beibehalten."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Pilzrunde Moosgrund",
+       "notes": [
+        {
+         "title": "Fund am Buchenstumpf",
+         "text": "Violetter Stiel, deutlicher Rettichgeruch. Nur Beobachtung, keine Bestimmung."
+        },
+        {
+         "title": "Fund im Laub",
+         "text": "Violetter Stiel, süßlicher Geruch. Nur Beobachtung, keine Bestimmung."
+        },
+        {
+         "title": "Fund am Bach",
+         "text": "Weißer Stiel, Rettichgeruch. Nur Beobachtung, keine Bestimmung."
+        }
+       ]
+      },
+      {
+       "name": "Pilzrunde Sandhang",
+       "notes": [
+        {
+         "title": "Fund unter Kiefern",
+         "text": "Violetter Stiel, deutlicher Rettichgeruch. Nur Beobachtung, keine Bestimmung."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Pilzrunde Sandhang",
+      "note": "Fund unter Kiefern"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Notizen: Der angezeigte Ordner ist „Pilzrunde Moosgrund“.",
+     "Notizen: Im Editor steht die Notiz „Fund am Buchenstumpf“.",
+     "Notizen: Die Ansicht ist „Als Liste“.",
+     "Notizen: Das Suchfeld ist leer."
+    ],
+    "must_not_happen": [
+     "Keine Artbestimmung in eine Notiz schreiben.",
+     "Nicht die inhaltlich ähnliche Sandhang-Notiz auswählen."
+    ],
+    "why_it_is_hard": "Only one note satisfies both content clues within the requested folder; the initially visible note satisfies the clues in the wrong location."
+   },
+   "caller_values": {
+    "folder": "Pilzrunde Moosgrund",
+    "note": "Fund am Buchenstumpf"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Pilzrunde Moosgrund",
+      "note": "Fund am Buchenstumpf",
+      "text": "Violetter Stiel, deutlicher Rettichgeruch. Nur Beobachtung, keine Bestimmung."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Liste",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ],
+     "notes_search": ""
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND07",
+    "language": "en",
+    "utterance": "Find last year's price sheet for sharpening kitchen knives, not garden tools. Open it, change only the standard rate to \"Standard: 8 EUR\", and save. Leave Finder sorted by modification date.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Sort Finder by modification date and locate the 2025 candidates.",
+     "Open the candidate sheets to distinguish kitchen knives from garden tools.",
+     "In the kitchen knife sheet replace the standard rate and save.",
+     "Close the garden tool sheet if opened, leaving only the kitchen knife sheet open."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Brook Lane Sharpening",
+      "files": [
+       {
+        "name": "Rates-K.txt",
+        "modified": "2025-11-18 13:00",
+        "text": "Kitchen knife sharpening\nStandard: 7 EUR\nSerrated: 11 EUR"
+       },
+       {
+        "name": "Rates-G.txt",
+        "modified": "2025-11-19 13:00",
+        "text": "Garden tool sharpening\nStandard: 7 EUR\nShears: 12 EUR"
+       },
+       {
+        "name": "Rates-K-current.txt",
+        "modified": "2026-09-03 13:00",
+        "text": "Kitchen knife sharpening\nStandard: 9 EUR\nSerrated: 13 EUR"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Finder: “Änderungsdatum” is the checked sorting entry.",
+     "TextEdit: Rates-K.txt is the only open document.",
+     "TextEdit: Rates-K.txt has the exact saved text “Kitchen knife sharpening\nStandard: 8 EUR\nSerrated: 11 EUR”."
+    ],
+    "must_not_happen": [
+     "Do not edit the 2026 sheet.",
+     "Do not change the serrated rate or the garden tool sheet."
+    ],
+    "why_it_is_hard": "Year and document contents jointly identify the target; the same old standard price occurs in an unrelated sheet."
+   },
+   "caller_values": {
+    "file": "Rates-K.txt",
+    "anchor": "Standard: 7 EUR"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/ND07/Brook Lane Sharpening/Rates-K.txt": "Kitchen knife sharpening\nStandard: 8 EUR\nSerrated: 11 EUR"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND07/Brook Lane Sharpening/Rates-K.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/ND07/Brook Lane Sharpening/Rates-K.txt": "TextEdit: Rates-K.txt has the exact saved text “Kitchen knife sharpening\nStandard: 8 EUR\nSerrated: 11 EUR”."
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND08",
+    "language": "de",
+    "utterance": "Schau mal in meinen Buchbinderkurs: die Notiz übers Werkzeug zum Vorstechen, nicht die zum Falzen. Lass sie offen und such den Begriff hinter „Werkzeug:“ im deutschen Duden nach.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Buchbinderkurs-Ordner in Notizen anzeigen.",
+     "Die Notiz über das Vorstechen öffnen.",
+     "In Lexikon Duden-Wissensnetz deutsche Sprache auswählen.",
+     "Das genannte Werkzeug nachschlagen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Buchbinderkurs Kupferhof",
+       "notes": [
+        {
+         "title": "Scharfe Papierkanten",
+         "text": "Werkzeug: Falzbein. Zum Falzen und Glätten der Papierbögen."
+        },
+        {
+         "title": "Löcher vor der Heftung",
+         "text": "Werkzeug: Ahle. Zum Vorstechen der Löcher für den Heftfaden."
+        },
+        {
+         "title": "Faden durch die Lagen",
+         "text": "Werkzeug: Nadel. Zum Durchziehen des Heftfadens durch vorhandene Löcher."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Buchbinderkurs Kupferhof",
+      "note": "Scharfe Papierkanten"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notizen: Im Ordner „Buchbinderkurs Kupferhof“ wird „Löcher vor der Heftung“ im Editor angezeigt.",
+     "Lexikon: „Duden-Wissensnetz deutsche Sprache“ ist gewählt.",
+     "Lexikon: Im Suchfeld steht exakt „Ahle“."
+    ],
+    "must_not_happen": [
+     "Nicht Nadel oder Falzbein nachschlagen.",
+     "Die Galerieansicht nicht verändern.",
+     "Keine Onlinequelle wählen."
+    ],
+    "why_it_is_hard": "Two tools relate to holes and thread, but only one performs the operation the user describes."
+   },
+   "caller_values": {
+    "folder": "Buchbinderkurs Kupferhof",
+    "note": "Löcher vor der Heftung",
+    "lookup": "Ahle"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Buchbinderkurs Kupferhof",
+      "note": "Löcher vor der Heftung",
+      "text": "Werkzeug: Ahle. Zum Vorstechen der Löcher für den Heftfaden."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Ahle"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND09",
+    "language": "en",
+    "utterance": "Only in the Finished subfolder, open the newest kite test report. Replace its wind line with \"Wind: 14 km/h\" and save it. Keep Finder sorted by modification date.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Enter the Finished subfolder.",
+     "Sort by modification date and identify its newest report.",
+     "Open that report in TextEdit.",
+     "Replace its wind line and save."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Kite Trials at Reed Point",
+      "files": [
+       {
+        "name": "Delta-overview.txt",
+        "modified": "2026-09-26 16:00",
+        "text": "Kite trial overview\nWind: 18 km/h\nAwaiting final checks"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Finished",
+        "files": [
+         {
+          "name": "Delta-test-A.txt",
+          "modified": "2026-09-20 10:00",
+          "text": "Delta kite, short tail\nWind: 11 km/h\nResult: stable"
+         },
+         {
+          "name": "Delta-test-B.txt",
+          "modified": "2026-09-23 10:00",
+          "text": "Delta kite, long tail\nWind: 12 km/h\nResult: stable"
+         }
+        ]
+       },
+       {
+        "name": "Drafts",
+        "files": [
+         {
+          "name": "Delta-test-C.txt",
+          "modified": "2026-09-25 10:00",
+          "text": "Delta kite, split tail\nWind: 12 km/h\nResult: pending"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Finder: “Änderungsdatum” is the checked sorting entry.",
+     "TextEdit: Delta-test-B.txt is the only open document.",
+     "TextEdit: Finished/Delta-test-B.txt has the exact saved text “Delta kite, long tail\nWind: 14 km/h\nResult: stable”."
+    ],
+    "must_not_happen": [
+     "Do not edit the overview or anything in Drafts.",
+     "Do not alter the result line."
+    ],
+    "why_it_is_hard": "More recent files exist outside the explicit scope, including a report with the same initial wind value."
+   },
+   "caller_values": {
+    "file": "Delta-test-B.txt",
+    "anchor": "Wind: 12 km/h"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/ND09/Kite Trials at Reed Point/Finished/Delta-test-B.txt": "Delta kite, long tail\nWind: 14 km/h\nResult: stable"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND09/Kite Trials at Reed Point/Finished/Delta-test-B.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/ND09/Kite Trials at Reed Point/Finished/Delta-test-B.txt": "TextEdit: Finished/Delta-test-B.txt has the exact saved text “Delta kite, long tail\nWind: 14 km/h\nResult: stable”."
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "ND10",
+    "language": "de",
+    "utterance": "Für die Hörführung brauch ich den Treffpunkt aus der Notiz zur kurzen Runde ohne Treppen. Lass die Notiz offen und ersetz im offenen Ablauf nur die Treffpunkt-Zeile durch die Angabe hinter „Treffpunkt:“; das „Treffpunkt:“ im Ablauf soll davor stehen bleiben. Dann speichern.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im angezeigten Notizenordner die kurze Runde ohne Treppen identifizieren.",
+     "Diese Notiz öffnen und die Treffpunktangabe lesen.",
+     "Im offenen Ablauf ausschließlich die Treffpunkt-Zeile ersetzen.",
+     "Den Ablauf sichern."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Hörführung Mühlenviertel",
+      "files": [
+       {
+        "name": "Hoerfuehrung-Ablauf.txt",
+        "modified": "2026-09-24 12:30",
+        "text": "Hörführung, kurze Runde\nTreffpunkt: Haupteingang\nDauer: 35 Minuten"
+       },
+       {
+        "name": "Hoerfuehrung-Lang.txt",
+        "modified": "2026-09-25 12:30",
+        "text": "Hörführung, lange Runde\nTreffpunkt: Haupteingang\nDauer: 70 Minuten"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Hörrouten am Mühlbach",
+       "notes": [
+        {
+         "title": "Route Ziegel",
+         "text": "Kurze Runde, mit Treppen. Treffpunkt: Platz vor dem Speicher"
+        },
+        {
+         "title": "Route Kiesel",
+         "text": "Kurze Runde, ohne Treppen. Treffpunkt: Seitentor am Mühlbach"
+        },
+        {
+         "title": "Route Brücke",
+         "text": "Lange Runde, ohne Treppen. Treffpunkt: Brückenkopf"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Hörrouten am Mühlbach",
+      "note": "Route Ziegel"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Hoerfuehrung-Ablauf.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Notizen: Im Ordner „Hörrouten am Mühlbach“ ist „Route Kiesel“ im Editor angezeigt.",
+     "TextEdit: Der gespeicherte Text von Hoerfuehrung-Ablauf.txt lautet exakt „Hörführung, kurze Runde\nTreffpunkt: Seitentor am Mühlbach\nDauer: 35 Minuten“."
+    ],
+    "must_not_happen": [
+     "Nicht die lange treppenfreie Runde verwenden.",
+     "Keine Routenbeschreibung in die Treffpunkt-Zeile übernehmen.",
+     "Die Dauer nicht ändern."
+    ],
+    "why_it_is_hard": "Zwei unabhängige Inhaltsmerkmale bestimmen die Quelle; aus deren Zeile muss nur die Treffpunktangabe übernommen werden."
+   },
+   "caller_values": {
+    "note": "Route Kiesel",
+    "file": "Hoerfuehrung-Ablauf.txt",
+    "anchor": "Treffpunkt: Haupteingang",
+    "text": "Treffpunkt: Seitentor am Mühlbach"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/ND10/Hörführung Mühlenviertel/Hoerfuehrung-Ablauf.txt": "Hörführung, kurze Runde\nTreffpunkt: Seitentor am Mühlbach\nDauer: 35 Minuten"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/ND10/Hörführung Mühlenviertel/Hoerfuehrung-Ablauf.txt"
+     },
+     "notes_shown": {
+      "folder": "Hörrouten am Mühlbach",
+      "note": "Route Kiesel",
+      "text": "Kurze Runde, ohne Treppen. Treffpunkt: Seitentor am Mühlbach"
+     }
+    },
+    "statements": {
+     "{GEN2}/ND10/Hörführung Mühlenviertel/Hoerfuehrung-Ablauf.txt": "TextEdit: Der gespeicherte Text von Hoerfuehrung-Ablauf.txt lautet exakt „Hörführung, kurze Runde\nTreffpunkt: Seitentor am Mühlbach\nDauer: 35 Minuten“."
+    }
+   }
+  }
+ ]
+}

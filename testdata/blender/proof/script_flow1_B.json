@@ -1,0 +1,77 @@
+{
+  "active_object": "Cube",
+  "filepath": "/Users/guest/anyuse-guest/blender/base_empty.blend",
+  "materials": [
+    "Material"
+  ],
+  "objects": [
+    {
+      "active_material": null,
+      "location": [
+        7.358891,
+        -6.925791,
+        4.958309
+      ],
+      "material_slots": [],
+      "modifiers": [],
+      "name": "Camera",
+      "rotation_euler": [
+        1.109319,
+        0.0,
+        0.814928
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "type": "CAMERA"
+    },
+    {
+      "active_material": null,
+      "location": [
+        1.0,
+        2.0,
+        -3.0
+      ],
+      "material_slots": [],
+      "modifiers": [],
+      "name": "Cube",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "type": "MESH"
+    },
+    {
+      "active_material": null,
+      "location": [
+        4.076245,
+        1.005454,
+        5.903862
+      ],
+      "material_slots": [],
+      "modifiers": [],
+      "name": "Light",
+      "rotation_euler": [
+        0.650328,
+        0.055217,
+        1.866391
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "type": "LIGHT"
+    }
+  ],
+  "unit_scale_length": 1.0,
+  "unit_system": "METRIC"
+}

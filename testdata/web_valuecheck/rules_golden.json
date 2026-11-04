@@ -1,0 +1,239 @@
+{
+  "generated_at": "74ba0ca",
+  "note": "screen_values on testdata/web_valuecheck/fixtures.py renders, bench/web_arch4_live.py as of integration ef168a1 (unchanged at this commit); value_check='rules' must reproduce it",
+  "seed": "anyuse-web-arch4b-2026-11-03",
+  "sites": {
+    "www.mag.test": {
+      "record": {
+        "categories": [
+          "Garten",
+          "Balkon"
+        ],
+        "empty_tries": [
+          {
+            "how": "url",
+            "ok": true,
+            "term": "Ompluyth Quomunol",
+            "url": "https://www.mag.test/?s=Ompluyth+Quomunol",
+            "why": "the page says 'leider nichts gefunden'; no link names the term"
+          }
+        ],
+        "item_terms": [
+          "Tomaten",
+          "Rasen"
+        ],
+        "search_urls": [
+          "https://www.mag.test/?s={q}"
+        ],
+        "stratum": "other",
+        "tile_seeds": [],
+        "value_checks": [
+          {
+            "naming": 3,
+            "no_results": "",
+            "region": "cluster https://www.mag.test/artikel/{v} (4 links, 3 name the seed; 4 kept)",
+            "rows": 4,
+            "url": "https://www.mag.test/?s=düngen",
+            "value": "düngen"
+          },
+          {
+            "naming": 3,
+            "no_results": "",
+            "region": "cluster https://www.mag.test/artikel/{v} (4 links, 3 name the seed; 4 kept)",
+            "rows": 4,
+            "url": "https://www.mag.test/?s=Tomaten",
+            "value": "Tomaten"
+          },
+          {
+            "naming": 3,
+            "no_results": "",
+            "region": "cluster https://www.mag.test/artikel/{v} (4 links, 3 name the seed; 4 kept)",
+            "rows": 4,
+            "url": "https://www.mag.test/?s=winterharte",
+            "value": "winterharte"
+          }
+        ],
+        "value_tries": [
+          {
+            "fresh": {
+              "context": true
+            },
+            "how": "url",
+            "region": "cluster https://www.mag.test/artikel/{v} (10 links, 10 name the seed; 10 kept)",
+            "seed": "Garten",
+            "titles": [
+              "Garten im Herbst: winterharte Rosen pflanzen",
+              "Winterharte Stauden für den schattigen Garten",
+              "Tomaten im Garten richtig düngen",
+              "Tomaten im Kübel: die besten Sorten für den Garten",
+              "Rasen im Garten vertikutieren: wann und wie",
+              "Rasen düngen im Garten im Frühjahr",
+              "Hochbeet im Garten anlegen: Schritt für Schritt",
+              "Hochbeet bepflanzen: Gemüse für den Garten",
+              "Garten winterfest machen: die Checkliste",
+              "Oktober im Garten: was jetzt zu tun ist"
+            ],
+            "url": "https://www.mag.test/?s=Garten",
+            "values": [
+              "düngen",
+              "Tomaten",
+              "winterharte",
+              "Rasen",
+              "Hochbeet"
+            ]
+          }
+        ],
+        "values": {
+          "demo": "düngen",
+          "empty_index": 2,
+          "held_out": [
+            "Tomaten",
+            "winterharte",
+            "Ompluyth Quomunol"
+          ],
+          "seed_term": "Garten"
+        }
+      },
+      "renders": [
+        [
+          "www.mag.test",
+          "Garten"
+        ],
+        [
+          "www.mag.test",
+          "düngen"
+        ],
+        [
+          "www.mag.test",
+          "Tomaten"
+        ],
+        [
+          "www.mag.test",
+          "winterharte"
+        ],
+        [
+          "www.mag.test",
+          "Ompluyth Quomunol"
+        ]
+      ]
+    },
+    "www.shop.test": {
+      "record": {
+        "categories": [
+          "Sofa's",
+          "Verlichting"
+        ],
+        "empty_tries": [
+          {
+            "how": "url",
+            "ok": true,
+            "term": "Graevquo Nixtraxrin",
+            "url": "https://www.shop.test/zoeken?q=Graevquo+Nixtraxrin",
+            "why": "the page says 'geen resultaten'; no link names the term"
+          }
+        ],
+        "item_terms": [
+          "Vloerkleed",
+          "Fauteuil"
+        ],
+        "search_urls": [
+          "https://www.shop.test/zoeken?q={q}"
+        ],
+        "stratum": "shop",
+        "tile_seeds": [
+          "Hoekbank"
+        ],
+        "value_checks": [
+          {
+            "naming": 1,
+            "no_results": "",
+            "region": "product tiles with a price",
+            "rows": 3,
+            "url": "https://www.shop.test/zoeken?q=Hoekbank+Carino+Rechts",
+            "value": "Hoekbank Carino Rechts"
+          },
+          {
+            "naming": 1,
+            "no_results": "",
+            "region": "product tiles with a price",
+            "rows": 3,
+            "url": "https://www.shop.test/zoeken?q=Spot+Atlanta+Zwart",
+            "value": "Spot Atlanta Zwart"
+          },
+          {
+            "naming": 1,
+            "no_results": "",
+            "region": "product tiles with a price",
+            "rows": 3,
+            "url": "https://www.shop.test/zoeken?q=Poef+Winnipeg+Multicolor",
+            "value": "Poef Winnipeg Multicolor"
+          }
+        ],
+        "value_tries": [
+          {
+            "fresh": {
+              "context": true
+            },
+            "how": "url",
+            "region": "product tiles with a price (one URL pattern)",
+            "seed": "Hoekbank",
+            "titles": [
+              "Hoekbank Regalo",
+              "Se alle størrelser på produktet JANET",
+              "SCITEC NUTRITION",
+              "Vloerkleed Winnipeg Rood",
+              "3 zits bank Carino Bruin",
+              "Poef Winnipeg Multicolor",
+              "FAST CROP RUNWAY PINK NIKE Ursprungligt pris: Reapris (- )",
+              "Lage vitrinekast Marsciano Terra",
+              "Fauteuil Demenza",
+              "Vin & Champagne",
+              "Hoekbank Carino Rechts",
+              "Spot Atlanta Zwart"
+            ],
+            "url": "https://www.shop.test/zoeken?q=Hoekbank",
+            "values": [
+              "Hoekbank Carino Rechts",
+              "Spot Atlanta Zwart",
+              "Poef Winnipeg Multicolor",
+              "SCITEC NUTRITION",
+              "Se alle størrelser på produktet JANET"
+            ]
+          }
+        ],
+        "values": {
+          "demo": "Hoekbank Carino Rechts",
+          "empty_index": 2,
+          "held_out": [
+            "Spot Atlanta Zwart",
+            "Poef Winnipeg Multicolor",
+            "Graevquo Nixtraxrin"
+          ],
+          "seed_term": "Hoekbank"
+        }
+      },
+      "renders": [
+        [
+          "www.shop.test",
+          "Hoekbank"
+        ],
+        [
+          "www.shop.test",
+          "Hoekbank Carino Rechts"
+        ],
+        [
+          "www.shop.test",
+          "Spot Atlanta Zwart"
+        ],
+        [
+          "www.shop.test",
+          "Poef Winnipeg Multicolor"
+        ],
+        [
+          "www.shop.test",
+          "Graevquo Nixtraxrin"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,109 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "launch/**"
+  pull_request:
+
+jobs:
+  test-and-package:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          umask 022
+          chmod -R go-w "$GITHUB_WORKSPACE"
+          python -m pip install --upgrade pip build wheel
+          if [ "$RUNNER_OS" != "macOS" ] && ! command -v zsh >/dev/null 2>&1; then
+            sudo apt-get update && sudo apt-get install -y zsh
+          fi
+          python -m pip install -e ".[test,mcp,cdp,registry]"
+
+      - name: Run guarded test suite
+        run: |
+          umask 022
+          # Ephemeral macOS runners have background daemons (securityd/secd) that
+          # periodically touch /Users/runner/Library/Keychains/login.keychain-db.
+          # Seed a dedicated caller HOME so tripwire.py still watches ~/.anyuse and
+          # ~/Library/Keychains/*.keychain-db without false positives from runner OS daemons.
+          CI_HOME="$(mktemp -d "$RUNNER_TEMP/ci-home.XXXXXX")"
+          mkdir -p "$CI_HOME/.anyuse" "$CI_HOME/Library/Keychains"
+          : > "$CI_HOME/Library/Keychains/login.keychain-db"
+          HOME="$CI_HOME" ANYUSE_TEST_PYTHON="$(command -v python)" zsh tools/guarded_tests/run_allowed.sh
+
+      - name: Run offline quickstart
+        run: |
+          sh examples/quickstart/run.sh
+
+      - name: Build wheel and sdist and smoke-test outside the checkout
+        run: |
+          python -m build --outdir "$RUNNER_TEMP/dist"
+          ls -la "$RUNNER_TEMP/dist"
+
+          smoke_check() {
+            local pkg_artifact="$1"
+            local venv_dir="$2"
+            python -m venv "$venv_dir"
+            (
+              cd "$RUNNER_TEMP"
+              unset PYTHONPATH
+              "$venv_dir/bin/pip" install --upgrade pip
+              "$venv_dir/bin/pip" install "${pkg_artifact}[mcp,registry]"
+              "$venv_dir/bin/anyuse" version | grep -F "0.4.0"
+              "$venv_dir/bin/anyuse" doctor
+              "$venv_dir/bin/anyuse" doctor --install
+              "$venv_dir/bin/anyuse" watcher start --help
+              "$venv_dir/bin/anyuse" watch --help
+              "$venv_dir/bin/python" -c "
+          import asyncio, os, sys
+          from mcp import ClientSession, StdioServerParameters
+          from mcp.client.stdio import stdio_client
+          import anyuse, anyuse.watcher, anyuse.watcher.service
+          import anyuse.execution.confirmer, anyuse.execution.map_compile
+          import anyuse.execution.guest.interlock_drive_e2e
+          assert anyuse.__version__ == '0.4.0', anyuse.__version__
+          assert not os.path.realpath(anyuse.__file__).startswith(os.path.realpath('$GITHUB_WORKSPACE')), anyuse.__file__
+          assert os.path.isdir(anyuse.execution.map_compile.DISCOVERY_DIR), anyuse.execution.map_compile.DISCOVERY_DIR
+          assert os.path.isfile(anyuse.execution.confirmer.WORKER), anyuse.execution.confirmer.WORKER
+
+          async def check_mcp(profile):
+              env = dict(os.environ, ANYUSE_MCP_PROFILE=profile)
+              params = StdioServerParameters(command=sys.executable, args=['-P', '-m', 'anyuse.mcpserver'], env=env)
+              async with stdio_client(params) as (read, write):
+                  async with ClientSession(read, write) as session:
+                      await session.initialize()
+                      tools = (await session.list_tools()).tools
+                      names = {t.name for t in tools}
+                      if profile == 'meta':
+                          assert {'list_sites', 'list_operations', 'call_operation', 'login'} <= names, names
+                      else:
+                          assert len(names) > 0, names
+
+          for profile in ('default', 'meta'):
+              asyncio.run(check_mcp(profile))
+          print('MCP smoke ok for', '$pkg_artifact')
+          "
+            )
+          }
+
+          WHEEL_PATH="$(ls "$RUNNER_TEMP"/dist/anyuse-*.whl)"
+          SDIST_PATH="$(ls "$RUNNER_TEMP"/dist/anyuse-*.tar.gz)"
+          smoke_check "$WHEEL_PATH" "$RUNNER_TEMP/venv-wheel"
+          smoke_check "$SDIST_PATH" "$RUNNER_TEMP/venv-sdist"

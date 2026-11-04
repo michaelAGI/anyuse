@@ -1,0 +1,53 @@
+{
+  "apple_event": {
+    "class": "aevt",
+    "dictionary_keyword": "path",
+    "id": "rapp",
+    "query_keyword": "stxt"
+  },
+  "backend": "guest_apple_event_dictionary_ax_v1",
+  "effect": "scoped_find",
+  "evidence": [
+    {
+      "file": "artifacts/dictionary-decompile/evidence.json",
+      "pointer": "/raw_result",
+      "sha256": "d8253bdccaa33fe2b70022ea2cd1ab1de3dd8c4aa35087ba8f722f243f63d2d7"
+    },
+    {
+      "file": "artifacts/dictionary-registration/procedure_pseudo_code.json",
+      "pointer": "/structuredContent/raw_result",
+      "sha256": "ee25bc922c0c9321bd857eacfc4ead692f573153af95a7e9024c5248e47bc053"
+    },
+    {
+      "file": "artifacts/dictionary-path-handler/procedure_pseudo_code.json",
+      "pointer": "/structuredContent/raw_result",
+      "sha256": "d8e1f19c3f130e57085f849efa3f017508ace4235d818b5e04a6d74d03155c3f"
+    }
+  ],
+  "format": "anyuse.rea-candidate/1",
+  "id": "dictionary_apple_search",
+  "item_kind": "",
+  "label": "Look up in the Apple dictionary",
+  "observer": {
+    "dictionary_label": "Apple",
+    "dictionary_path": "/System/Library/AssetsV2/com_apple_MobileAsset_DictionaryServices_dictionary3macOS/9ef40b7cccb3ede15ebbd7090af2f9056251956f.asset/AssetData/Apple Dictionary.dictionary",
+    "dictionary_sha256": "9748eb13dbf95c379eea1d2a1aa68f2479b70cd282d7f6a8262044bcfba28f2b",
+    "kind": "dictionary_ax",
+    "reference_xml": "Contents/Resources/de.lproj/AppleDictionary.xml"
+  },
+  "params": [
+    {
+      "name": "query",
+      "source": "lookup",
+      "type": "string"
+    }
+  ],
+  "target": {
+    "build": "294",
+    "bundle_id": "com.apple.Dictionary",
+    "bytes": 2669513,
+    "files": 81,
+    "sha256": "2a77c1c0c10f8dd5b6915e865b0b3c24b70fa0c9fb122485318d7e802fc419f1",
+    "version": "2.3.0"
+  }
+}

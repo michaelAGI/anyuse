@@ -1,0 +1,33 @@
+# caches / build
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# environments
+.venv/
+venv/
+env/
+
+# secrets / local config
+# NOTE: anyuse/credentials/ is CODE (vault/accounts/sso/2fa) — tracked. Only ignore secret *stores*:
+credentials/*.json
+credentials/*.enc
+credentials/*.token
+credentials/store*
+.env
+*.key
+*.pem
+
+# runtime data / logs / db
+data/
+*.log
+*.db
+*.sqlite
+
+# os
+.DS_Store
+
+# build artefacts (the release checklist builds on an exported copy; this is for anyone who builds in place)
+dist/
+build/

@@ -1,0 +1,3253 @@
+{
+ "meta": {
+  "captured_at": "2026-11-03T16:57:46-0700",
+  "macos": "26.6.2",
+  "build": "25G83",
+  "language": "de_DE",
+  "app": "textedit",
+  "bundle_id": "com.apple.TextEdit",
+  "n": 405
+ },
+ "elements": [
+  {
+   "AXRole": "AXApplication",
+   "AXTitle": "TextEdit",
+   "AXDescription": null,
+   "AXRoleDescription": "Programm",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXWindow",
+   "AXTitle": "ladder_doc.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Standardfenster",
+   "AXIdentifier": "_NS:34",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXScrollArea",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbereich",
+   "AXIdentifier": "_NS:8",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXTextArea",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Bereich für Texteinträge",
+   "AXIdentifier": "First Text View",
+   "AXValue": "seed\n"
+  },
+  {
+   "AXRole": "AXScrollBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbalken",
+   "AXIdentifier": "_NS:24",
+   "AXValue": "0.18518517911434174"
+  },
+  {
+   "AXRole": "AXScrollBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbalken",
+   "AXIdentifier": "_NS:27",
+   "AXValue": "0.0"
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Schließen-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Taste „Vollbildmodus“",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Taste zum Minimieren",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuButton",
+   "AXTitle": "",
+   "AXDescription": "Dokumentaktionen",
+   "AXRoleDescription": "Menü-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXImage",
+   "AXTitle": "ladder_doc.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Bild",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXStaticText",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Text",
+   "AXIdentifier": null,
+   "AXValue": "ladder_doc.txt"
+  },
+  {
+   "AXRole": "AXWindow",
+   "AXTitle": "corpus_content.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Standardfenster",
+   "AXIdentifier": "_NS:34",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXScrollArea",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbereich",
+   "AXIdentifier": "_NS:8",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXTextArea",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Bereich für Texteinträge",
+   "AXIdentifier": "First Text View",
+   "AXValue": "Alpha beta gamma delta\nAlpha beta gamma delta\nAlpha beta gamma delta\nAlpha beta gamma delta\nAlpha beta gamma delta\nAlpha"
+  },
+  {
+   "AXRole": "AXScrollBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbalken",
+   "AXIdentifier": "_NS:24",
+   "AXValue": "0.18518517911434174"
+  },
+  {
+   "AXRole": "AXScrollBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbalken",
+   "AXIdentifier": "_NS:27",
+   "AXValue": "0.0"
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Schließen-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Taste „Vollbildmodus“",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Taste zum Minimieren",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuButton",
+   "AXTitle": "",
+   "AXDescription": "Dokumentaktionen",
+   "AXRoleDescription": "Menü-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXImage",
+   "AXTitle": "corpus_content.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Bild",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXStaticText",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Text",
+   "AXIdentifier": null,
+   "AXValue": "corpus_content.txt"
+  },
+  {
+   "AXRole": "AXWindow",
+   "AXTitle": "Ohne Titel",
+   "AXDescription": null,
+   "AXRoleDescription": "Standardfenster",
+   "AXIdentifier": "_NS:34",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXScrollArea",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbereich",
+   "AXIdentifier": "_NS:8",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXTextArea",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Bereich für Texteinträge",
+   "AXIdentifier": "First Text View",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXScrollBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbalken",
+   "AXIdentifier": "_NS:24",
+   "AXValue": "0.18518517911434174"
+  },
+  {
+   "AXRole": "AXScrollBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Rollbalken",
+   "AXIdentifier": "_NS:27",
+   "AXValue": "0.615384578704834"
+  },
+  {
+   "AXRole": "AXRuler",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Lineal",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "0.0"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "20.317460317460316"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "0.0"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "1.2698412698412698"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "2.5396825396825395"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "3.8095238095238093"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "5.079365079365079"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "6.349206349206349"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "7.619047619047619"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "8.88888888888889"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "10.158730158730158"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "11.428571428571429"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "12.698412698412698"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "13.968253968253968"
+  },
+  {
+   "AXRole": "AXRulerMarker",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Linealmarkierung",
+   "AXIdentifier": null,
+   "AXValue": "15.238095238095237"
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Fett",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Kursiv",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Unterstrichen",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Durchgestrichen",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXColorWell",
+   "AXTitle": null,
+   "AXDescription": "Textfarbe",
+   "AXRoleDescription": "Farbtopf",
+   "AXIdentifier": null,
+   "AXValue": "rgb 0 0 0 1"
+  },
+  {
+   "AXRole": "AXColorWell",
+   "AXTitle": null,
+   "AXDescription": "Texthintergrundfarbe",
+   "AXRoleDescription": "Farbtopf",
+   "AXIdentifier": null,
+   "AXValue": "rgb 1 1 1 1"
+  },
+  {
+   "AXRole": "AXPopUpButton",
+   "AXTitle": null,
+   "AXDescription": "Schriftschnitt",
+   "AXRoleDescription": "Einblendmenü",
+   "AXIdentifier": null,
+   "AXValue": "Helvetica"
+  },
+  {
+   "AXRole": "AXPopUpButton",
+   "AXTitle": null,
+   "AXDescription": "Stil",
+   "AXRoleDescription": "Einblendmenü",
+   "AXIdentifier": null,
+   "AXValue": "Regular"
+  },
+  {
+   "AXRole": "AXComboBox",
+   "AXTitle": null,
+   "AXDescription": "Schriftgröße",
+   "AXRoleDescription": "Combo-Box",
+   "AXIdentifier": null,
+   "AXValue": "12"
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": "",
+   "AXDescription": "Schriftgröße",
+   "AXRoleDescription": "Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Linksbündig",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "1"
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Zentrieren",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Rechtsbündig",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXCheckBox",
+   "AXTitle": null,
+   "AXDescription": "Vollständiger Blocksatz",
+   "AXRoleDescription": "Markierungsfeld",
+   "AXIdentifier": null,
+   "AXValue": "0"
+  },
+  {
+   "AXRole": "AXMenuButton",
+   "AXTitle": null,
+   "AXDescription": "Listenstil",
+   "AXRoleDescription": "Menü-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXPopUpButton",
+   "AXTitle": null,
+   "AXDescription": "Zeilenabstand",
+   "AXRoleDescription": "Einblendmenü",
+   "AXIdentifier": null,
+   "AXValue": "1,0"
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Schließen-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Taste „Vollbildmodus“",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXGroup",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Gruppe",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXButton",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Taste zum Minimieren",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuButton",
+   "AXTitle": "",
+   "AXDescription": "Dokumentaktionen",
+   "AXRoleDescription": "Menü-Taste",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXStaticText",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Text",
+   "AXIdentifier": null,
+   "AXValue": "Ohne Titel"
+  },
+  {
+   "AXRole": "AXMenuBar",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleiste",
+   "AXIdentifier": "_NS:833",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Apple",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Über diesen Mac",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_aboutThisMacRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Systeminformationen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_systemInformationRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Systemeinstellungen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_systemSettingsRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "App Store",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_appStoreRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Benutzte Objekte",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentsRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Apps",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Finder",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„Finder“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Notizen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„Notizen“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechner",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„Rechner“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "System­einstellungen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„System­einstellungen“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Terminal",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„Terminal“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "TextEdit",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„TextEdit“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Dokumente",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "AnyUse Runner.command",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„AnyUse Runner.command“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "corpus_content.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„corpus_content.txt“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "ladder_doc.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "„ladder_doc.txt“ im Finder anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Server",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Macintosh HD",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_recentItemRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Einträge löschen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_clearRecentItemsRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Sofort beenden …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_forceQuitPanelRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "TextEdit sofort beenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_forceQuitRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ruhezustand",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_sleepRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Neustart …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_restartRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Neustart",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_restartNowRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ausschalten …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shutDownRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ausschalten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shutDownNowRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Bildschirm sperren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_lockScreenRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Guest abmelden …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_logOutRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Guest abmelden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_logOutNowRequested:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "TextEdit",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:838",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:842",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Über TextEdit",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:211",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:846",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Einstellungen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:508",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:847",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Dienste",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:848",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:852",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Keine Dienste verfügbar",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_noServicesApplyAction:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Dienste-Einstellungen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_configureServicesMenu:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:857",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "TextEdit ausblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:515",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Andere ausblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:529",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:535",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:858",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "TextEdit beenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:522",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Beenden und Fenster beibehalten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "NSAlternateQuitMenuItem",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Ablage",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:860",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:864",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Neu",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:344",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Öffnen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:331",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Benutzte Dokumente",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:868",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:872",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "ladder_doc.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_openRecentDocument:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "corpus_content.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_openRecentDocument:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Einträge löschen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "clearRecentDocuments:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:877",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Schließen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:430",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle schließen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "closeAll:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Sichern",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:358",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Sichern unter …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:351",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Duplizieren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "duplicateDocument:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Umbenennen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "renameDocument:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Bewegen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "moveDocument:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zurücksetzen auf",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle Versionen durchsuchen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "browseDocumentVersions:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:878",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Von iPhone oder iPad einfügen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "NSMenuItemImportFromDeviceIdentifier",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Foto aufnehmen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_importFromDeviceText:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Dokumente scannen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_importFromDeviceText:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zeichnung hinzufügen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_importFromDeviceText:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Als PDF exportieren …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:704",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Teilen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "AirDrop",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Mail",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Nachrichten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Notizen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Freeform",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Journal",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Erinnerungen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Mehr …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_shareFromInterposedItem:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:884",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Eigenschaften einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:588",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:885",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Papierformat …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:423",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Drucken …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:416",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Bearbeiten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:886",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:889",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Widerrufen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:449",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Wiederholen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:456",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:893",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ausschneiden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:243",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Kopieren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:237",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Einsetzen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:231",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Einsetzen und Stil anpassen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:581",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Löschen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:571",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Vervollständigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:224",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alles auswählen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:217",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:894",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Einfügen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:895",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:898",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zeilenumbruch",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:605",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Absatz",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:611",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Seitenumbruch",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:617",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Dateien anfügen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:785",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Link hinzufügen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:623",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:902",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Suchen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:903",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:907",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Suchen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:371",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Suchen und Ersetzen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:761",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Weitersuchen (vorwärts)",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:378",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Weitersuchen (rückwärts)",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:384",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Auswahl für Suche übernehmen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:397",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Auswahl anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:390",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zeile auswählen …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:654",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechtschreibung und Grammatik",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:911",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:915",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechtschreibung und Grammatik einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:488",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Dokument jetzt prüfen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:495",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:919",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Während der Texteingabe prüfen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:502",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechtschreib- und Grammatikprüfung",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:630",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechtschreibung autom. korrigieren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:680",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ersetzungen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:920",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:924",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ersetzungen einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:698",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:928",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Intelligentes Kopieren/Einsetzen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:648",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Intelligente Anführungszeichen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:642",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Intelligente Bindestriche",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:668",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Intelligente Links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:636",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Datenerkennung",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:722",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Text ersetzen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:674",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Transformationen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:929",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:933",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Großbuchstaben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:662",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Kleinbuchstaben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:686",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Großschreiben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:692",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Sprachausgabe",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:937",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:941",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Sprachausgabe starten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:556",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Sprachausgabe stoppen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:562",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Automatisch ausfüllen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NSMenuItemAutoFillIdentifier",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Kontakt …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_handleInsertFromContactsCommand:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Passwörter …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_handleInsertFromPasswordsCommand:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Kreditkarte …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_handleInsertFromCreditCardsCommand:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Diktat starten …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "startDictation:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Emoji & Symbole",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "orderFrontCharacterPalette:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Format",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:945",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:949",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Schrift",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:953",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:31",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Schriften einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:36",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Fett",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:41",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Kursiv",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:46",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Unterstrichen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:51",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Konturschrift",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:56",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Hervorheben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Akzentfarbe",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Lila",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Pink",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Orange",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Minze",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Blau",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "highlight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Stile …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:64",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:68",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Größer",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:69",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Kleiner",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:74",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:79",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zeichenabstand",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:80",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:85",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Normal",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:89",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Nicht verwenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:93",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Enger",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:97",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Weiter",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:102",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ligaturen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:107",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:111",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Normal",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:115",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Nicht verwenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:118",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle verwenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:121",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Schriftlinie",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:125",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:129",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Normal",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:133",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Hochgestellt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:136",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Tiefgestellt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:140",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Höher",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:144",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Niedriger",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:148",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Buchstabenform",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:152",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:156",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Traditionelle Form",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:160",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:164",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Farben einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:165",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:170",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Stil kopieren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:171",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Stil einsetzen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:176",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Text",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:956",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:960",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Linksbündig",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:261",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zentriert",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:254",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Blocksatz",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:443",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechtsbündig",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:281",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:964",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Richtung beim Schreiben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:965",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:969",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Absatz",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:199",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Standard",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:728",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Von links nach rechts",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:734",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Von rechts nach links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:740",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:973",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Auswahl",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:205",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Standard",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:746",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Von links nach rechts",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:751",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Von rechts nach links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:756",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:974",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Lineal einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:296",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Lineal kopieren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:288",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Lineal einsetzen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:303",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:975",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zeilenabstand …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:599",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:976",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "In formatierten Text umwandeln",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:273",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Vor Bearbeitung schützen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:550",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Seitenränder einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:409",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Mit Silbentrennung",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:437",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Layout vertikal ausrichten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:766",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:977",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Liste …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:710",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Tabelle …",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:716",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Darstellung",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:978",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:982",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Tableiste einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "toggleTabBar:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle Tabs einblenden",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "toggleTabOverview:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:986",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Originalgröße",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:803",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Vergrößern",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:772",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Verkleinern",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:779",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:987",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Vollbildmodus",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:797",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Fenster",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:988",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": "_NS:992",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Im Dock ablegen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:475",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle im Dock ablegen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "miniaturizeAll:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zoomen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:482",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle zoomen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "zoomAll:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Füllen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomFill:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zentriert",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomCenter:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Bewegen & Skalieren",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Hälften",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomLeft:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechts",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomRight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Oben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomTop:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Unten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomBottom:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Viertel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Oben links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomTopLeft:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Oben rechts",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomTopRight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Unten links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomBottomLeft:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Unten rechts",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomBottomRight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Anordnen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Links & Rechts",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomLeftAndRight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Links & Viertel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomLeftThreeUp:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechts & Links",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomRightAndLeft:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechts & Viertel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomRightThreeUp:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Oben & Unten",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomTopAndBottom:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Oben & Viertel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomTopThreeUp:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Unten & Oben",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomBottomAndTop:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Unten & Viertel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomBottomThreeUp:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Viertel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomQuarters:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Zur vorherigen Größe wechseln",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_zoomUntile:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Vollbildkachel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Linke Bildschirmseite",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_tileLeft:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Rechte Bildschirmseite",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_tileRight:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Fenster aus Satz entfernen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_removeWindowFromStageManagerSet:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:996",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle nach vorne bringen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:469",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Aufräumen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "alternateArrangeInFront:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Vorherigen Tab anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "selectPreviousTab:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Nächsten Tab anzeigen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "selectNextTab:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Tab in ein neues Fenster bewegen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "moveTabToNewWindow:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Alle Fenster zusammenführen",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "mergeAllWindows:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "corpus_content.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "makeKeyAndOrderFront:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "ladder_doc.txt",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "makeKeyAndOrderFront:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "Ohne Titel",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "makeKeyAndOrderFront:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuBarItem",
+   "AXTitle": "Hilfe",
+   "AXDescription": null,
+   "AXRoleDescription": "Menüleisten-Objekt",
+   "AXIdentifier": "_NS:998",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenu",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü",
+   "AXIdentifier": null,
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "searchFieldAction:",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXTextField",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Feld für Suchtext",
+   "AXIdentifier": "_SC_SEARCH_FIELD",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXTable",
+   "AXTitle": null,
+   "AXDescription": "Suchergebnis",
+   "AXRoleDescription": "Tabelle",
+   "AXIdentifier": "_SC_RESULTS_TABLE",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXColumn",
+   "AXTitle": null,
+   "AXDescription": null,
+   "AXRoleDescription": "Spalte",
+   "AXIdentifier": "Title",
+   "AXValue": null
+  },
+  {
+   "AXRole": "AXMenuItem",
+   "AXTitle": "TextEdit-Hilfe",
+   "AXDescription": null,
+   "AXRoleDescription": "Menü-Objekt",
+   "AXIdentifier": "_NS:541",
+   "AXValue": null
+  }
+ ]
+}

@@ -1,0 +1,2126 @@
+{
+ "about": "Map-compile task pool: author_task = verbatim from the CLIs (claude -p sonnet: NS..; codex codex: NG..) from an empty directory, with the author's caller_values; translation = the author's expected end state in the reader's terms ({GEN2} = the data root). te_prefs from survey (the same guest baseline).",
+ "pool_sha256": "b2a709ce2416ab6d16b3a2c6da2645cba20093fc0bfca829c01dae29d14eea00",
+ "drawn": [
+  "NS01",
+  "NS02",
+  "NS03",
+  "NS04",
+  "NS05",
+  "NS06",
+  "NS07",
+  "NS08",
+  "NS09",
+  "NG01",
+  "NG02",
+  "NG03",
+  "NG04",
+  "NG05",
+  "NG06",
+  "NG07",
+  "NG08",
+  "NG09",
+  "NG10"
+ ],
+ "rejected": [
+  "NS10"
+ ],
+ "te_prefs_titles": {
+  "Intelligentes Kopieren/Einsetzen": "Intelligentes Kopieren/Einsetzen",
+  "Intelligente Anführungszeichen": "Intelligente Anführungszeichen",
+  "Intelligente Bindestriche": "Intelligente Bindestriche",
+  "Intelligente Links": "Intelligente Links",
+  "Während der Texteingabe prüfen": "Rechtschreibung während der Texteingabe prüfen ",
+  "Rechtschreibung autom. korrigieren": "Rechtschreibung automatisch korrigieren"
+ },
+ "te_prefs_baseline": {
+  "Intelligentes Kopieren/Einsetzen": true,
+  "Intelligente Anführungszeichen": true,
+  "Intelligente Bindestriche": true,
+  "Intelligente Links": true,
+  "Rechtschreibung während der Texteingabe prüfen ": true,
+  "Rechtschreibung automatisch korrigieren": false,
+  "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung": false
+ },
+ "te_prefs_plain_text": "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung",
+ "te_prefs_from": "desktop_e2e14_tasks.json",
+ "tasks": [
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS01",
+    "language": "de",
+    "utterance": "Mach mal das neuste Zürich-Angebot auf und stell die Abholzeit auf 9:00 Uhr um.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder die Dateiliste ansehen, nach Änderungsdatum sortieren oder die Daten lesen",
+     "Unter den zwei Zürich-Angeboten das mit dem jüngeren Änderungsdatum (Europcar, 03.09.) wählen",
+     "Die Datei öffnen (TextEdit)",
+     "Die Zeile 'Abholzeit: 16:30 Uhr' durch 'Abholzeit: 9:00 Uhr' ersetzen",
+     "Mit Ablage > Sichern speichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Mietwagen-Angebote",
+      "files": [
+       {
+        "name": "Angebot-Zuerich-Sixt.txt",
+        "modified": "2026-07-14 09:30",
+        "text": "Mietwagen Zürich Flughafen\nAbholzeit: 14:00 Uhr\nKategorie: Kompakt\nPreis: 289 EUR für 5 Tage"
+       },
+       {
+        "name": "Angebot-Zuerich-Europcar.txt",
+        "modified": "2026-09-03 11:10",
+        "text": "Mietwagen Zürich Hauptbahnhof\nAbholzeit: 16:30 Uhr\nKategorie: Kombi\nPreis: 342 EUR für 5 Tage"
+       },
+       {
+        "name": "Angebot-Genf-Avis.txt",
+        "modified": "2026-09-20 15:45",
+        "text": "Mietwagen Genf Flughafen\nAbholzeit: 12:00 Uhr\nKategorie: SUV\nPreis: 410 EUR für 5 Tage"
+       },
+       {
+        "name": "Angebot-Basel-Hertz.txt",
+        "modified": "2026-06-02 08:20",
+        "text": "Mietwagen Basel Bahnhof\nAbholzeit: 10:00 Uhr\nKategorie: Kleinwagen\nPreis: 215 EUR für 5 Tage"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Angebot-Zuerich-Europcar.txt has the saved text: \"Mietwagen Zürich Hauptbahnhof\\nAbholzeit: 9:00 Uhr\\nKategorie: Kombi\\nPreis: 342 EUR für 5 Tage\"",
+     "Angebot-Zuerich-Sixt.txt, Angebot-Genf-Avis.txt and Angebot-Basel-Hertz.txt have their original text",
+     "Angebot-Zuerich-Europcar.txt is open in TextEdit",
+     "No files or folders were added or removed"
+    ],
+    "must_not_happen": [
+     "Editing the older Zürich offer (Sixt)",
+     "Editing the Genf offer, which is the newest file overall",
+     "Leaving the change unsaved",
+     "Changing other lines of the file"
+    ],
+    "why_it_is_hard": "Two Zürich offers exist and the user means 'the newest' one, which has to be identified by modification date. The newest file overall is a Genf offer, and the file names carry no date. The right line has to be found and the edit saved."
+   },
+   "caller_values": {
+    "file": "Angebot-Zuerich-Europcar.txt",
+    "anchor": "Abholzeit: 16:30 Uhr"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NS01/Mietwagen-Angebote/Angebot-Zuerich-Europcar.txt": "Mietwagen Zürich Hauptbahnhof\nAbholzeit: 9:00 Uhr\nKategorie: Kombi\nPreis: 342 EUR für 5 Tage"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NS01/Mietwagen-Angebote/Angebot-Zuerich-Europcar.txt"
+     }
+    },
+    "statements": {
+     "{GEN2}/NS01/Mietwagen-Angebote/Angebot-Zuerich-Europcar.txt": "Angebot-Zuerich-Europcar.txt has the saved text: \"Mietwagen Zürich Hauptbahnhof\\nAbholzeit: 9:00 Uhr\\nKategorie: Kombi\\nPreis: 342 EUR für 5 Tage\""
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS02",
+    "language": "en",
+    "utterance": "Take the booking code for the Lisbon hotel from my notes and add it as a new last line in my Lisbon plan file, like 'Hotel-Code: <code>'.",
+    "apps": [
+     "Notizen",
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen the folder 'Reise-Buchungen' open and read the notes",
+     "Pick the note 'Hotel Lissabon' (not Porto, not the flight) and read its code LIS-48213",
+     "In the Finder open 'Reiseplan-Lissabon.txt' in TextEdit",
+     "Add a new last line 'Hotel-Code: LIS-48213'",
+     "Save with Ablage > Sichern"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Lissabon-Reise",
+      "files": [
+       {
+        "name": "Reiseplan-Lissabon.txt",
+        "modified": "2026-09-08 19:40",
+        "text": "Reiseplan Lissabon 2026\nFlug: 08:15 ab Hamburg\nHotel: Pensão Alfama\nRückflug: Sonntag 18:50"
+       },
+       {
+        "name": "Reiseplan-Porto.txt",
+        "modified": "2026-09-09 21:05",
+        "text": "Reiseplan Porto 2026\nZug von Lissabon: 10:20\nHotel: Casa da Ribeira\nRückflug: Mittwoch 12:30"
+       },
+       {
+        "name": "Packliste.txt",
+        "modified": "2026-08-30 10:00",
+        "text": "Packliste\nSonnencreme\nLadekabel\nRegenjacke"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Reise-Buchungen",
+       "notes": [
+        {
+         "title": "Hotel Lissabon",
+         "text": "Buchungscode LIS-48213, Check-in ab 14 Uhr"
+        },
+        {
+         "title": "Hotel Porto",
+         "text": "Buchungscode OPO-77120, Check-in ab 15 Uhr"
+        },
+        {
+         "title": "Flug Lissabon",
+         "text": "Buchungscode Flug: TP-5GH2K, Abflug 08:15"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Reise-Buchungen",
+      "note": "Flug Lissabon"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Reiseplan-Lissabon.txt has the saved text: \"Reiseplan Lissabon 2026\\nFlug: 08:15 ab Hamburg\\nHotel: Pensão Alfama\\nRückflug: Sonntag 18:50\\nHotel-Code: LIS-48213\"",
+     "Reiseplan-Porto.txt and Packliste.txt have their original text",
+     "Reiseplan-Lissabon.txt is open in TextEdit",
+     "The folder Reise-Buchungen still holds 3 notes"
+    ],
+    "must_not_happen": [
+     "Using the Porto code or the flight code",
+     "Writing the line into Reiseplan-Porto.txt",
+     "Leaving the file unsaved",
+     "Changing or deleting notes"
+    ],
+    "why_it_is_hard": "Three notes contain similar booking codes, and only the hotel code for Lisbon is right. The code has to be carried over exactly from Notes into the correct one of two similar plan files, as a new line at the end."
+   },
+   "caller_values": {
+    "note": "Hotel Lissabon",
+    "file": "Reiseplan-Lissabon.txt",
+    "text": "Hotel-Code: LIS-48213"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NS02/Lissabon-Reise/Reiseplan-Lissabon.txt": "Reiseplan Lissabon 2026\nFlug: 08:15 ab Hamburg\nHotel: Pensão Alfama\nRückflug: Sonntag 18:50\nHotel-Code: LIS-48213"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NS02/Lissabon-Reise/Reiseplan-Lissabon.txt"
+     },
+     "notes_shown_ok": [
+      {
+       "folder": "Reise-Buchungen",
+       "note": "Hotel Lissabon"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NS02/Lissabon-Reise/Reiseplan-Lissabon.txt": "Reiseplan-Lissabon.txt has the saved text: \"Reiseplan Lissabon 2026\\nFlug: 08:15 ab Hamburg\\nHotel: Pensão Alfama\\nRückflug: Sonntag 18:50\\nHotel-Code: LIS-48213\""
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS03",
+    "language": "de",
+    "utterance": "Schlag mal das Wort nach, das ich mir in meinen Notizen als schwer markiert hab – im Oxford, nicht im Duden.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen den Ordner 'Wortschatz-Training' ansehen",
+     "Die Notiz 'Wörter – schwer' öffnen und das Wort 'Fernweh' lesen",
+     "Zu Lexikon wechseln",
+     "Im Menü Suchen das 'Oxford German Dictionary' wählen",
+     "'Fernweh' ins Suchfeld tippen"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Wortschatz-Training",
+       "notes": [
+        {
+         "title": "Wörter – leicht",
+         "text": "Leicht: Hund, Haus, Baum, Tisch"
+        },
+        {
+         "title": "Wörter – schwer",
+         "text": "Fernweh – kann ich mir nie merken, immer nachschlagen"
+        },
+        {
+         "title": "Wörter – lustig",
+         "text": "Backpfeifengesicht – ist lustig, aber unwichtig"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Wortschatz-Training",
+      "note": "Wörter – leicht"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Lexikon: the chosen dictionary is Oxford German Dictionary",
+     "Lexikon: the search field contains 'Fernweh'",
+     "Notizen: folder Wortschatz-Training is shown with the note 'Wörter – schwer' in the editor",
+     "The folder Wortschatz-Training still holds 3 notes"
+    ],
+    "must_not_happen": [
+     "Looking up 'Backpfeifengesicht' or a word from 'Wörter – leicht'",
+     "Leaving Duden or another dictionary chosen",
+     "Using 'Alle Lexika' or 'Wikipedia'",
+     "Changing the notes"
+    ],
+    "why_it_is_hard": "The word is not named, so it must be found by reading the right note among three similar ones. Another note holds a tempting word. The dictionary has to be switched from the pre-selected Duden to Oxford."
+   },
+   "caller_values": {
+    "note": "Wörter – schwer",
+    "lookup": "Fernweh"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Fernweh",
+     "notes_shown": {
+      "folder": "Wortschatz-Training",
+      "note": "Wörter – schwer",
+      "text": "Fernweh – kann ich mir nie merken, immer nachschlagen"
+     }
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS04",
+    "language": "en",
+    "utterance": "In the invoices folder for this year, make a new folder called Bezahlt, and then sort the list by date modified.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In the Finder open the subfolder 'Rechnungen 2026' (not 2025)",
+     "Choose Ablage > Neuer Ordner",
+     "Name the new folder 'Bezahlt'",
+     "Choose Darstellung > Sortieren nach > Änderungsdatum"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Buchhaltung-Privat",
+      "files": [
+       {
+        "name": "Uebersicht.txt",
+        "modified": "2026-09-01 18:00",
+        "text": "Übersicht Rechnungen\nOrdner je Jahr\nBezahlte Rechnungen kommen in einen Unterordner"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Rechnungen 2025",
+        "files": [
+         {
+          "name": "Rechnung-Strom-2025-11.txt",
+          "modified": "2025-11-28 09:10",
+          "text": "Stromrechnung November 2025\nBetrag: 74,20 EUR"
+         },
+         {
+          "name": "Rechnung-Internet-2025-10.txt",
+          "modified": "2025-10-15 14:30",
+          "text": "Internet Oktober 2025\nBetrag: 39,99 EUR"
+         }
+        ]
+       },
+       {
+        "name": "Rechnungen 2026",
+        "files": [
+         {
+          "name": "Rechnung-Strom-2026-08.txt",
+          "modified": "2026-08-27 08:45",
+          "text": "Stromrechnung August 2026\nBetrag: 81,60 EUR"
+         },
+         {
+          "name": "Rechnung-Versicherung-2026-09.txt",
+          "modified": "2026-09-12 16:20",
+          "text": "Hausratversicherung 2026\nBetrag: 112,00 EUR"
+         }
+        ]
+       },
+       {
+        "name": "Belege Steuer",
+        "files": [
+         {
+          "name": "Beleg-Spende-2026.txt",
+          "modified": "2026-03-14 12:00",
+          "text": "Spende Tierheim\nBetrag: 50,00 EUR"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Inside the subfolder 'Rechnungen 2026' there is a new empty folder named 'Bezahlt'",
+     "No folder named 'Bezahlt' exists in 'Rechnungen 2025', 'Belege Steuer' or the top folder",
+     "Finder: 'Änderungsdatum' is the checked entry under Darstellung > Sortieren nach",
+     "All existing files keep their text"
+    ],
+    "must_not_happen": [
+     "Creating the folder in Rechnungen 2025 or in the top folder",
+     "Creating a folder with a wrong name",
+     "Moving files into the new folder",
+     "Trashing anything"
+    ],
+    "why_it_is_hard": "The user says 'this year' instead of naming the folder, so the 2026 folder has to be chosen over 2025 and the similar Belege folder. The new folder must be created inside the subfolder, not in the shown top folder, and then the sort order is changed."
+   },
+   "caller_values": {
+    "folder": "Rechnungen 2026"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ],
+     "folder_added": {
+      "{GEN2}/NS04/Buchhaltung-Privat/Rechnungen 2026": [
+       [
+        "Bezahlt",
+        "dir"
+       ]
+      ]
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS05",
+    "language": "de",
+    "utterance": "Schalt mal die automatische Rechtschreibkorrektur in TextEdit aus und mach in der Liste fürn Wochenmarkt aus 'Zwiebeln 2 kg' 'Zwiebeln 1 kg'. Speichern nicht vergessen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder die Datei 'Wochenmarkt-Samstag.txt' öffnen (nicht die Supermarkt-Liste)",
+     "In TextEdit Bearbeiten > Rechtschreibung und Grammatik > 'Rechtschreibung autom. korrigieren' ausschalten",
+     "Die Zeile 'Zwiebeln 2 kg' durch 'Zwiebeln 1 kg' ersetzen",
+     "Mit Ablage > Sichern speichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Einkaufslisten-September",
+      "files": [
+       {
+        "name": "Wochenmarkt-Samstag.txt",
+        "modified": "2026-09-12 07:50",
+        "text": "Einkauf Wochenmarkt\nÄpfel 2 kg\nZwiebeln 2 kg\nKäse 300 g\nBrot 1 Laib"
+       },
+       {
+        "name": "Supermarkt-Liste.txt",
+        "modified": "2026-09-25 17:15",
+        "text": "Einkauf Supermarkt\nMilch 6 l\nZwiebeln 2 kg\nNudeln 1 kg"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Rechtschreibung autom. korrigieren": true,
+      "Während der Texteingabe prüfen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Intelligentes Kopieren/Einsetzen": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Wochenmarkt-Samstag.txt has the saved text: \"Einkauf Wochenmarkt\\nÄpfel 2 kg\\nZwiebeln 1 kg\\nKäse 300 g\\nBrot 1 Laib\"",
+     "Supermarkt-Liste.txt has its original text",
+     "TextEdit: 'Rechtschreibung autom. korrigieren' is off",
+     "TextEdit: all other settings are still checked as at the start",
+     "Wochenmarkt-Samstag.txt is open in TextEdit"
+    ],
+    "must_not_happen": [
+     "Editing Supermarkt-Liste.txt, which has the same onion line",
+     "Turning off 'Während der Texteingabe prüfen' or other settings",
+     "Leaving the change unsaved"
+    ],
+    "why_it_is_hard": "Two files contain the identical line 'Zwiebeln 2 kg', so only the market list may be changed. The setting is a menu checkmark that has to be turned off precisely without touching its neighbour, and the file must be saved."
+   },
+   "caller_values": {
+    "file": "Wochenmarkt-Samstag.txt",
+    "anchor": "Zwiebeln 2 kg"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NS05/Einkaufslisten-September/Wochenmarkt-Samstag.txt": "Einkauf Wochenmarkt\nÄpfel 2 kg\nZwiebeln 1 kg\nKäse 300 g\nBrot 1 Laib"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NS05/Einkaufslisten-September/Wochenmarkt-Samstag.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NS05/Einkaufslisten-September/Wochenmarkt-Samstag.txt": "Wochenmarkt-Samstag.txt has the saved text: \"Einkauf Wochenmarkt\\nÄpfel 2 kg\\nZwiebeln 1 kg\\nKäse 300 g\\nBrot 1 Laib\""
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS06",
+    "language": "en",
+    "utterance": "Search my notes for 'Wartung', open the one that's about the heating, and switch everything to gallery view.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Choose Darstellung > Als Galerie",
+     "Choose Bearbeiten > Suchen > Notizenliste durchsuchen …",
+     "Type 'Wartung' into the search field",
+     "From the matches pick the note 'Heizung Wartung' (not Auto or Rauchmelder)"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Wohnung und Haus",
+       "notes": [
+        {
+         "title": "Heizung Wartung",
+         "text": "Brenner-Service am 12. Oktober, Firma Kaltenbach"
+        },
+        {
+         "title": "Auto Wartung",
+         "text": "Inspektion bei Autohaus Mertens, fällig im Dezember"
+        },
+        {
+         "title": "Rauchmelder Wartung",
+         "text": "Batterien im Flur und Schlafzimmer prüfen, jährlich"
+        },
+        {
+         "title": "Heizkostenabrechnung",
+         "text": "Nachzahlung 148 EUR, Frist bis 30. November"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Wohnung und Haus",
+      "note": "Heizkostenabrechnung"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen: the view is 'Als Galerie'",
+     "Notizen: the notes search field contains 'Wartung'",
+     "Notizen: the note 'Heizung Wartung' is shown in the editor",
+     "The folder 'Wohnung und Haus' still holds 4 notes"
+    ],
+    "must_not_happen": [
+     "Opening 'Auto Wartung' or 'Rauchmelder Wartung'",
+     "Opening 'Heizkostenabrechnung', which is about heating costs but does not match the search",
+     "Leaving list view active",
+     "Changing or deleting notes"
+    ],
+    "why_it_is_hard": "Three notes match the search term, and 'the one about the heating' must be chosen among them. A fourth note about heating costs is a decoy that does not match. Search, view change and selection must all end up in the right state."
+   },
+   "caller_values": {
+    "note": "Heizung Wartung"
+   },
+   "translation": {
+    "expect": {
+     "notes_search": "Wartung",
+     "notes_shown": {
+      "folder": "Wohnung und Haus",
+      "note": "Heizung Wartung",
+      "text": "Brenner-Service am 12. Oktober, Firma Kaltenbach"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Galerie",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS07",
+    "language": "de",
+    "utterance": "Häng mal unten an die Datei mit den Kaffeemaschinen-Preisen die Zeile 'Stand: September 2026' dran, aber nicht an die alte aus dem Alt-Ordner.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder die Dateien ansehen und 'Kaffeemaschinen-Preise.txt' im obersten Ordner finden (nicht die Mühlen-Datei, nicht den Alt-Ordner)",
+     "Die Datei öffnen (TextEdit)",
+     "Ans Textende gehen und eine neue letzte Zeile 'Stand: September 2026' anfügen",
+     "Mit Ablage > Sichern speichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Haushaltsgeraete-Preise",
+      "files": [
+       {
+        "name": "Kaffeemaschinen-Preise.txt",
+        "modified": "2026-08-21 13:25",
+        "text": "Kaffeemaschinen Preisvergleich\nDelonghi Magnifica: 429 EUR\nSiemens EQ6: 589 EUR\nPhilips 3200: 349 EUR"
+       },
+       {
+        "name": "Muehlen-Preise.txt",
+        "modified": "2026-08-30 20:10",
+        "text": "Kaffeemühlen Preisvergleich\nBaratza Encore: 169 EUR\nWilfa Svart: 149 EUR"
+       },
+       {
+        "name": "Toaster-Preise.txt",
+        "modified": "2026-04-11 09:00",
+        "text": "Toaster Preisvergleich\nSeverin AT 2515: 39 EUR\nBosch TAT3: 44 EUR"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Alt",
+        "files": [
+         {
+          "name": "Kaffeemaschinen-Preise-2025.txt",
+          "modified": "2025-03-08 11:35",
+          "text": "Kaffeemaschinen Preisvergleich\nDelonghi Magnifica: 399 EUR\nSiemens EQ6: 549 EUR"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Kaffeemaschinen-Preise.txt has the saved text: \"Kaffeemaschinen Preisvergleich\\nDelonghi Magnifica: 429 EUR\\nSiemens EQ6: 589 EUR\\nPhilips 3200: 349 EUR\\nStand: September 2026\"",
+     "Kaffeemaschinen-Preise-2025.txt in 'Alt' has its original text",
+     "Muehlen-Preise.txt and Toaster-Preise.txt have their original text",
+     "Kaffeemaschinen-Preise.txt is open in TextEdit"
+    ],
+    "must_not_happen": [
+     "Changing the old file in 'Alt'",
+     "Changing Muehlen-Preise.txt",
+     "Putting the line anywhere but at the end",
+     "Leaving the file unsaved"
+    ],
+    "why_it_is_hard": "Two coffee machine files exist, one in a subfolder, and the user excludes the old one by scope. A grinder file with a similar topic is a decoy. The new line must go at the very end and be saved."
+   },
+   "caller_values": {
+    "file": "Kaffeemaschinen-Preise.txt"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NS07/Haushaltsgeraete-Preise/Kaffeemaschinen-Preise.txt": "Kaffeemaschinen Preisvergleich\nDelonghi Magnifica: 429 EUR\nSiemens EQ6: 589 EUR\nPhilips 3200: 349 EUR\nStand: September 2026"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NS07/Haushaltsgeraete-Preise/Kaffeemaschinen-Preise.txt"
+     }
+    },
+    "statements": {
+     "{GEN2}/NS07/Haushaltsgeraete-Preise/Kaffeemaschinen-Preise.txt": "Kaffeemaschinen-Preise.txt has the saved text: \"Kaffeemaschinen Preisvergleich\\nDelonghi Magnifica: 429 EUR\\nSiemens EQ6: 589 EUR\\nPhilips 3200: 349 EUR\\nStand: September 2026\""
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS08",
+    "language": "en",
+    "utterance": "Open the glossary file I changed most recently and look up the term it explains in the Apple Dictionary.",
+    "apps": [
+     "Finder",
+     "TextEdit",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In the Finder sort by Änderungsdatum or compare the dates to find the most recently modified glossary file (Glossar-B.txt, 19 Sep)",
+     "Open it in TextEdit and read the term 'Spotlight'",
+     "Switch to Lexikon",
+     "Choose 'Apple Dictionary' in the menu Suchen",
+     "Type 'Spotlight' into the search field"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Mac-Glossar",
+      "files": [
+       {
+        "name": "Glossar-A.txt",
+        "modified": "2026-03-05 10:15",
+        "text": "Fachbegriff zum Nachschlagen: Dock\nDie Leiste am Bildschirmrand mit den Programmen."
+       },
+       {
+        "name": "Glossar-B.txt",
+        "modified": "2026-09-19 18:40",
+        "text": "Fachbegriff zum Nachschlagen: Spotlight\nSuche nach Dateien und Programmen auf dem Mac."
+       },
+       {
+        "name": "Glossar-C.txt",
+        "modified": "2026-07-30 08:05",
+        "text": "Fachbegriff zum Nachschlagen: Mission Control\nÜbersicht über alle offenen Fenster und Schreibtische."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "TextEdit: Glossar-B.txt is open",
+     "Lexikon: the chosen dictionary is Apple Dictionary",
+     "Lexikon: the search field contains 'Spotlight'",
+     "All three glossary files have their original text"
+    ],
+    "must_not_happen": [
+     "Looking up 'Dock' or 'Mission Control'",
+     "Using 'Alle Lexika' or 'Wikipedia'",
+     "Leaving Duden chosen",
+     "Editing the glossary files"
+    ],
+    "why_it_is_hard": "The file is identified only by 'most recently changed' while the names are not in date order, so the modification dates must be compared. The term inside has to be read and looked up in the correct one of three dictionaries, after switching away from the preselected Duden."
+   },
+   "caller_values": {
+    "file": "Glossar-B.txt",
+    "lookup": "Spotlight"
+   },
+   "translation": {
+    "expect": {
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NS08/Mac-Glossar/Glossar-B.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Apple Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Spotlight"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NS09",
+    "language": "de",
+    "utterance": "Trag mal bei der Gartenfest-Gästeliste die Nummer von Tante Heidi nach, die steht in meinen Notizen.",
+    "apps": [
+     "Notizen",
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen den Ordner 'Kontakte privat' öffnen",
+     "Die Notiz 'Tante Heidi' (nicht die Kollegin) öffnen und die Nummer 0171 5550 2381 lesen",
+     "Im Finder 'Gaesteliste-Gartenfest.txt' öffnen (nicht die Weihnachtsliste)",
+     "Die Zeile 'Tante Heidi: (Nummer fehlt)' durch 'Tante Heidi: 0171 5550 2381' ersetzen",
+     "Mit Ablage > Sichern speichern"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Gartenfest-Planung",
+      "files": [
+       {
+        "name": "Gaesteliste-Gartenfest.txt",
+        "modified": "2026-09-10 20:30",
+        "text": "Gästeliste Gartenfest\nOnkel Heinz: 0176 5550 9902\nTante Heidi: (Nummer fehlt)\nPeter: 0152 5550 1170"
+       },
+       {
+        "name": "Gaesteliste-Weihnachten-2025.txt",
+        "modified": "2025-12-01 19:00",
+        "text": "Gästeliste Weihnachten\nOnkel Heinz: 0176 5550 9902\nTante Heidi: (Nummer fehlt)\nMarkus: 0151 5550 4408"
+       },
+       {
+        "name": "Einkauf-Gartenfest.txt",
+        "modified": "2026-09-14 11:45",
+        "text": "Einkauf Gartenfest\nGrillkohle\nBratwurst 20 Stück\nLimonade 12 Flaschen"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Kontakte privat",
+       "notes": [
+        {
+         "title": "Tante Heidi",
+         "text": "Tel. 0171 5550 2381, Geburtstag 3. März"
+        },
+        {
+         "title": "Heidi Brandt (Arbeit)",
+         "text": "Tel. 030 5550 7714, Durchwahl 22"
+        },
+        {
+         "title": "Onkel Heinz",
+         "text": "Tel. 0176 5550 9902"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Kontakte privat",
+      "note": "Onkel Heinz"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Gaesteliste-Gartenfest.txt has the saved text: \"Gästeliste Gartenfest\\nOnkel Heinz: 0176 5550 9902\\nTante Heidi: 0171 5550 2381\\nPeter: 0152 5550 1170\"",
+     "Gaesteliste-Weihnachten-2025.txt and Einkauf-Gartenfest.txt have their original text",
+     "Gaesteliste-Gartenfest.txt is open in TextEdit",
+     "The folder 'Kontakte privat' still holds 3 notes"
+    ],
+    "must_not_happen": [
+     "Using the number of Heidi Brandt",
+     "Editing the Weihnachten list",
+     "Leaving the file unsaved",
+     "Changing or deleting notes"
+    ],
+    "why_it_is_hard": "Two different Heidis exist in the notes and two guest lists contain the same placeholder line, so both the note and the file must be chosen by reading carefully. The number has to be copied exactly from Notes into TextEdit and the right line replaced."
+   },
+   "caller_values": {
+    "note": "Tante Heidi",
+    "file": "Gaesteliste-Gartenfest.txt",
+    "anchor": "Tante Heidi: (Nummer fehlt)",
+    "text": "Tante Heidi: 0171 5550 2381"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NS09/Gartenfest-Planung/Gaesteliste-Gartenfest.txt": "Gästeliste Gartenfest\nOnkel Heinz: 0176 5550 9902\nTante Heidi: 0171 5550 2381\nPeter: 0152 5550 1170"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NS09/Gartenfest-Planung/Gaesteliste-Gartenfest.txt"
+     },
+     "notes_shown_ok": [
+      {
+       "folder": "Kontakte privat",
+       "note": "Tante Heidi"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NS09/Gartenfest-Planung/Gaesteliste-Gartenfest.txt": "Gaesteliste-Gartenfest.txt has the saved text: \"Gästeliste Gartenfest\\nOnkel Heinz: 0176 5550 9902\\nTante Heidi: 0171 5550 2381\\nPeter: 0152 5550 1170\""
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG01",
+    "language": "de",
+    "utterance": "Mach mal in „Angebote Lindenhof“ das letzte Angebot von letztem Monat auf, nicht den Septemberstand. Setz da die Lieferzeit auf 14 Tage und speicher's. Im Finder bitte nach Änderungsdatum sortieren.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder nach Änderungsdatum sortieren.",
+     "Das zuletzt im August 2026 geänderte Angebot bestimmen und öffnen.",
+     "Die Lieferzeit auf 14 Tage ändern.",
+     "Das Dokument sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Angebote Lindenhof",
+      "files": [
+       {
+        "name": "Angebot-A.txt",
+        "modified": "2026-08-12 09:00",
+        "text": "Lindenhof\nPreis: 480 Euro\nLieferzeit: 7 Tage"
+       },
+       {
+        "name": "Angebot-B.txt",
+        "modified": "2026-08-31 16:20",
+        "text": "Lindenhof\nPreis: 510 Euro\nLieferzeit: 10 Tage"
+       },
+       {
+        "name": "Angebot-C.txt",
+        "modified": "2026-09-01 08:10",
+        "text": "Lindenhof\nPreis: 530 Euro\nLieferzeit: 12 Tage"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Im Finder ist unter „Sortieren nach“ ausschließlich „Änderungsdatum“ angehakt.",
+     "In TextEdit ist ausschließlich Angebot-B.txt geöffnet.",
+     "Der gespeicherte Text von Angebot-B.txt lautet exakt: Lindenhof\nPreis: 510 Euro\nLieferzeit: 14 Tage"
+    ],
+    "must_not_happen": [
+     "Angebot-A.txt oder Angebot-C.txt verändern.",
+     "Dateien löschen oder zusätzliche Dateien anlegen."
+    ],
+    "why_it_is_hard": "Der neueste Stand insgesamt ist falsch; entscheidend ist das Änderungsdatum innerhalb von August 2026."
+   },
+   "caller_values": {
+    "file": "Angebot-B.txt",
+    "anchor": "Lieferzeit: 10 Tage"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NG01/Angebote Lindenhof/Angebot-B.txt": "Lindenhof\nPreis: 510 Euro\nLieferzeit: 14 Tage"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG01/Angebote Lindenhof/Angebot-B.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NG01/Angebote Lindenhof/Angebot-B.txt": "Der gespeicherte Text von Angebot-B.txt lautet exakt: Lindenhof\nPreis: 510 Euro\nLieferzeit: 14 Tage"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG02",
+    "language": "de",
+    "utterance": "Kannst du aus „Hofladen Freigaben“ den freigegebenen Samstagstext fürs Schild nehmen? Ersetz damit alles in der offenen Schilddatei und speicher. Nicht den Entwurf erwischen.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Notizenordner Hofladen Freigaben anzeigen.",
+     "Die Notiz mit dem freigegebenen Samstagstext auswählen.",
+     "Die vollständige Textzeile der Notiz kopieren und damit den Inhalt der offenen TextEdit-Datei ersetzen.",
+     "Die Datei sichern."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Hofladen Schilder",
+      "files": [
+       {
+        "name": "Schild-aktuell.txt",
+        "modified": "2026-09-19 11:00",
+        "text": "Samstag geschlossen."
+       },
+       {
+        "name": "Schild-alt.txt",
+        "modified": "2026-08-03 10:00",
+        "text": "Samstag bis 12 Uhr geöffnet."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Hofladen Freigaben",
+       "notes": [
+        {
+         "title": "Samstag – Entwurf",
+         "text": "Am Samstag sind wir von 9 bis 15 Uhr für Sie da."
+        },
+        {
+         "title": "Samstag – freigegeben",
+         "text": "Am Samstag sind wir von 9 bis 13 Uhr für Sie da."
+        },
+        {
+         "title": "Sonntag – freigegeben",
+         "text": "Am Sonntag bleibt der Hofladen geschlossen."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Hofladen Freigaben",
+      "note": "Samstag – Entwurf"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Schild-aktuell.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "In Notizen wird der Ordner Hofladen Freigaben angezeigt.",
+     "Im Notizeneditor wird Samstag – freigegeben angezeigt.",
+     "Der gespeicherte Text von Schild-aktuell.txt lautet exakt: Am Samstag sind wir von 9 bis 13 Uhr für Sie da."
+    ],
+    "must_not_happen": [
+     "Den Notiztitel in die Schilddatei übernehmen.",
+     "Schild-alt.txt oder eine Notiz verändern."
+    ],
+    "why_it_is_hard": "Der bereits ausgewählte Entwurf sieht fast wie die Freigabe aus, unterscheidet sich aber in der entscheidenden Uhrzeit."
+   },
+   "caller_values": {
+    "file": "Schild-aktuell.txt",
+    "note": "Samstag – freigegeben",
+    "text": "Am Samstag sind wir von 9 bis 13 Uhr für Sie da."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NG02/Hofladen Schilder/Schild-aktuell.txt": "Am Samstag sind wir von 9 bis 13 Uhr für Sie da."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG02/Hofladen Schilder/Schild-aktuell.txt"
+     },
+     "notes_shown": {
+      "folder": "Hofladen Freigaben",
+      "note": "Samstag – freigegeben",
+      "text": "Am Samstag sind wir von 9 bis 13 Uhr für Sie da."
+     }
+    },
+    "statements": {
+     "{GEN2}/NG02/Hofladen Schilder/Schild-aktuell.txt": "Der gespeicherte Text von Schild-aktuell.txt lautet exakt: Am Samstag sind wir von 9 bis 13 Uhr für Sie da."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG03",
+    "language": "de",
+    "utterance": "In „Wörter fürs Lektorat“ hab ich mir das Wort für die unnötige Wiederholung notiert. Schlag das mal im Duden nach und lass es da stehen.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Wörter fürs Lektorat die Notiz zur unnötigen Wiederholung auswählen.",
+     "Das dort genannte Stichwort kopieren.",
+     "In Lexikon Duden-Wissensnetz deutsche Sprache auswählen.",
+     "Das Stichwort im Suchfeld nachschlagen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Wörter fürs Lektorat",
+       "notes": [
+        {
+         "title": "Doppelt gesagt",
+         "text": "Pleonasmus — unnötige Wiederholung, etwa „weißer Schimmel“."
+        },
+        {
+         "title": "Gegensatz",
+         "text": "Oxymoron — Verbindung widersprüchlicher Begriffe."
+        },
+        {
+         "title": "Wieder am Anfang",
+         "text": "Anapher — Wiederholung am Anfang aufeinanderfolgender Sätze."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Wörter fürs Lektorat",
+      "note": "Wieder am Anfang"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Im Notizeneditor wird Doppelt gesagt im Ordner Wörter fürs Lektorat angezeigt.",
+     "In Lexikon ist Duden-Wissensnetz deutsche Sprache ausgewählt.",
+     "Im Suchfeld von Lexikon steht exakt Pleonasmus."
+    ],
+    "must_not_happen": [
+     "Alle Lexika oder Wikipedia auswählen.",
+     "Die ganze erklärende Notizzeile als Suchwort eingeben.",
+     "Notizen verändern."
+    ],
+    "why_it_is_hard": "Zwei Notizen handeln von Wiederholung; nur eine beschreibt die vom Nutzer gemeinte unnötige Wiederholung."
+   },
+   "caller_values": {
+    "note": "Doppelt gesagt",
+    "lookup": "Pleonasmus"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Wörter fürs Lektorat",
+      "note": "Doppelt gesagt",
+      "text": "Pleonasmus — unnötige Wiederholung, etwa „weißer Schimmel“."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Pleonasmus"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG04",
+    "language": "de",
+    "utterance": "Geh in „Marktstand Kalkulation“ nur in „Aktuell“. In der Datei mit den Preisen für die kleinen Gläser stimmt der Birnenpreis nicht: mach daraus 4,80 Euro, Rest lassen und speichern.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder den Unterordner Aktuell öffnen.",
+     "Die beiden dortigen Preisdateien in TextEdit öffnen und anhand ihres Inhalts die kleinen Gläser identifizieren.",
+     "In dieser Datei ausschließlich den Birnenpreis auf 4,80 Euro ändern.",
+     "Die geänderte Datei sichern und die andere Datei schließen."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Marktstand Kalkulation",
+      "files": [],
+      "subfolders": [
+       {
+        "name": "Aktuell",
+        "files": [
+         {
+          "name": "Preise-A.txt",
+          "modified": "2026-09-20 10:00",
+          "text": "Kleine Gläser, 150 g\nApfel: 3,90 Euro\nBirne: 4,50 Euro"
+         },
+         {
+          "name": "Preise-B.txt",
+          "modified": "2026-09-20 10:05",
+          "text": "Große Gläser, 300 g\nApfel: 6,90 Euro\nBirne: 7,50 Euro"
+         }
+        ]
+       },
+       {
+        "name": "Archiv",
+        "files": [
+         {
+          "name": "Preise-klein-alt.txt",
+          "modified": "2026-08-10 09:00",
+          "text": "Kleine Gläser, 150 g\nApfel: 3,50 Euro\nBirne: 4,20 Euro"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "In TextEdit ist ausschließlich Aktuell/Preise-A.txt geöffnet.",
+     "Der gespeicherte Text von Aktuell/Preise-A.txt lautet exakt: Kleine Gläser, 150 g\nApfel: 3,90 Euro\nBirne: 4,80 Euro"
+    ],
+    "must_not_happen": [
+     "Eine Datei im Archiv öffnen oder verändern.",
+     "Preise-B.txt verändern.",
+     "Den Apfelpreis verändern."
+    ],
+    "why_it_is_hard": "Die Dateinamen verraten die Glasgröße nicht; der Inhalt und die Beschränkung auf Aktuell entscheiden gemeinsam."
+   },
+   "caller_values": {
+    "file": "Preise-A.txt",
+    "anchor": "Birne: 4,50 Euro"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NG04/Marktstand Kalkulation/Aktuell/Preise-A.txt": "Kleine Gläser, 150 g\nApfel: 3,90 Euro\nBirne: 4,80 Euro"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG04/Marktstand Kalkulation/Aktuell/Preise-A.txt"
+     }
+    },
+    "statements": {
+     "{GEN2}/NG04/Marktstand Kalkulation/Aktuell/Preise-A.txt": "Der gespeicherte Text von Aktuell/Preise-A.txt lautet exakt: Kleine Gläser, 150 g\nApfel: 3,90 Euro\nBirne: 4,80 Euro"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG05",
+    "language": "de",
+    "utterance": "In der offenen Anleitung: schalt die intelligenten Anführungszeichen und Bindestriche aus. Dann ersetz nur die Zeile für den Startbefehl durch genau: Start: \"probe\" --kurz. Speichern, bitte.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Intelligente Anführungszeichen deaktivieren.",
+     "Intelligente Bindestriche deaktivieren.",
+     "Die Zeile für den Startbefehl durch den angegebenen Text ohne den abschließenden Satzpunkt ersetzen.",
+     "Die Datei sichern."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Werkstatt Kurzanleitung",
+      "files": [
+       {
+        "name": "Bedienung.txt",
+        "modified": "2026-09-22 15:00",
+        "text": "Testgerät\nStart: probe —lang\nBeispiel: probe —kurz\nEnde: aus"
+       },
+       {
+        "name": "Bedienung-alt.txt",
+        "modified": "2026-07-11 14:00",
+        "text": "Testgerät\nStart: probe\nEnde: aus"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Bedienung.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "In TextEdit ist Intelligente Anführungszeichen nicht angehakt.",
+     "In TextEdit ist Intelligente Bindestriche nicht angehakt.",
+     "Der gespeicherte Text von Bedienung.txt lautet exakt: Testgerät\nStart: \"probe\" --kurz\nBeispiel: probe —kurz\nEnde: aus"
+    ],
+    "must_not_happen": [
+     "Die Beispielzeile verändern.",
+     "Andere TextEdit-Einstellungen verändern.",
+     "Bedienung-alt.txt verändern."
+    ],
+    "why_it_is_hard": "Eine ähnliche Beispielzeile muss unverändert bleiben, während zwei automatische Ersetzungen vor der Eingabe ausgeschaltet werden müssen."
+   },
+   "caller_values": {
+    "file": "Bedienung.txt",
+    "anchor": "Start: probe —lang"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NG05/Werkstatt Kurzanleitung/Bedienung.txt": "Testgerät\nStart: \"probe\" --kurz\nBeispiel: probe —kurz\nEnde: aus"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG05/Werkstatt Kurzanleitung/Bedienung.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Bindestriche",
+       "on": false
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NG05/Werkstatt Kurzanleitung/Bedienung.txt": "Der gespeicherte Text von Bedienung.txt lautet exakt: Testgerät\nStart: \"probe\" --kurz\nBeispiel: probe —kurz\nEnde: aus"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": false,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": false,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG06",
+    "language": "de",
+    "utterance": "Zeig mir mal in „Lesekreis Auswahl“ die Notiz, wo wir den Roman mit dem Leuchtturm endgültig genommen haben, nicht bloß vorgeschlagen. Und mach die Ansicht bitte zur Galerie.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Ordner Lesekreis Auswahl anzeigen.",
+     "Die Notiz zur endgültigen Auswahl des Leuchtturmromans öffnen.",
+     "Über Darstellung zur Galerieansicht wechseln."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Lesekreis Auswahl",
+       "notes": [
+        {
+         "title": "Runde am Meer",
+         "text": "Vorschlag: den Roman mit dem Leuchtturm lesen; noch keine Entscheidung."
+        },
+        {
+         "title": "Abstimmung abgeschlossen",
+         "text": "Endgültig gewählt: der Roman mit dem Leuchtturm. Acht Stimmen dafür."
+        },
+        {
+         "title": "Zweite Wahl",
+         "text": "Endgültig gewählt für die spätere Runde: der Roman über die Bergbahn."
+        }
+       ]
+      },
+      {
+       "name": "Lesekreis Rückblicke",
+       "notes": [
+        {
+         "title": "Frühere Abstimmung",
+         "text": "Damals endgültig gewählt: der Roman mit dem Leuchtturm."
+        },
+        {
+         "title": "Sommerlektüre",
+         "text": "Die Erzählungen über den Hafen kamen gut an."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Lesekreis Rückblicke",
+      "note": "Frühere Abstimmung"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "In Notizen wird der Ordner Lesekreis Auswahl angezeigt.",
+     "Im Notizeneditor wird Abstimmung abgeschlossen angezeigt.",
+     "Notizen verwendet die Ansicht Als Galerie."
+    ],
+    "must_not_happen": [
+     "Die frühere Abstimmung als Ergebnis stehen lassen.",
+     "Eine Notiz verändern oder löschen."
+    ],
+    "why_it_is_hard": "Die anfangs sichtbare Notiz passt inhaltlich, gehört aber zum falschen Ordner; innerhalb des richtigen Ordners muss Vorschlag von Entscheidung unterschieden werden."
+   },
+   "caller_values": {
+    "note": "Abstimmung abgeschlossen"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Lesekreis Auswahl",
+      "note": "Abstimmung abgeschlossen",
+      "text": "Endgültig gewählt: der Roman mit dem Leuchtturm. Acht Stimmen dafür."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Galerie",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG07",
+    "language": "en",
+    "utterance": "In “Bridge Inspection”, open the most recently revised report from last year and leave it open. Sort Finder by modification date, and make an empty folder called “Review 2025” here for later.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Sort the Finder list by Änderungsdatum.",
+     "Identify the report with the latest modification date within 2025 and open it.",
+     "Return to the task folder in Finder and create the empty folder Review 2025."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Bridge Inspection",
+      "files": [
+       {
+        "name": "Report-North.txt",
+        "modified": "2025-12-30 16:00",
+        "text": "North span\nInspection complete.\nTwo bolts require monitoring."
+       },
+       {
+        "name": "Report-South.txt",
+        "modified": "2025-12-30 09:00",
+        "text": "South span\nInspection complete.\nNo follow-up required."
+       },
+       {
+        "name": "Report-East.txt",
+        "modified": "2026-01-02 08:00",
+        "text": "East span\nInspection complete.\nPaint repair recommended."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Finder has only Änderungsdatum checked under Sortieren nach.",
+     "Only Report-North.txt is open in TextEdit.",
+     "Bridge Inspection contains a new empty subfolder named Review 2025."
+    ],
+    "must_not_happen": [
+     "Change any report text.",
+     "Move a report into Review 2025.",
+     "Choose a report based on its creation or last-opened date."
+    ],
+    "why_it_is_hard": "The newest report overall is from the wrong year, and the two eligible reports require comparing times on the same date."
+   },
+   "caller_values": {
+    "file": "Report-North.txt"
+   },
+   "translation": {
+    "expect": {
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG07/Bridge Inspection/Report-North.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ],
+     "folder_added": {
+      "{GEN2}/NG07/Bridge Inspection": [
+       [
+        "Review 2025",
+        "dir"
+       ]
+      ]
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG08",
+    "language": "en",
+    "utterance": "Use the note in “Studio Access” about the side door after six. Add its instruction as one new line at the end of the open visitor sheet and save it. Keep what's already there.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Switch to Notes and select the Studio Access note about the side door after six.",
+     "Copy its instruction line.",
+     "Append it as a new final line in the open visitor sheet.",
+     "Save the visitor sheet."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Studio Visitor Sheets",
+      "files": [
+       {
+        "name": "Visitors-evening.txt",
+        "modified": "2026-09-24 13:00",
+        "text": "Welcome to the studio.\nPlease sign the visitor book."
+       },
+       {
+        "name": "Visitors-daytime.txt",
+        "modified": "2026-09-24 12:00",
+        "text": "Welcome to the studio.\nUse the main entrance."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Studio Access",
+       "notes": [
+        {
+         "title": "Evening arrival",
+         "text": "After 18:00, use the side door and ring the upper bell."
+        },
+        {
+         "title": "Early arrival",
+         "text": "Before 18:00, use the side door and ring the lower bell."
+        },
+        {
+         "title": "Weekend arrival",
+         "text": "On Sundays, use the main door and ring the upper bell."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Studio Access",
+      "note": "Early arrival"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Visitors-evening.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notes shows Evening arrival in the Studio Access folder.",
+     "The saved text of Visitors-evening.txt is exactly: Welcome to the studio.\nPlease sign the visitor book.\nAfter 18:00, use the side door and ring the upper bell."
+    ],
+    "must_not_happen": [
+     "Replace the existing visitor sheet text.",
+     "Change Visitors-daytime.txt.",
+     "Copy the note title into the document.",
+     "Modify any note."
+    ],
+    "why_it_is_hard": "The selected note uses the same door but the wrong time and bell; the instruction must be appended without replacing existing content."
+   },
+   "caller_values": {
+    "file": "Visitors-evening.txt",
+    "note": "Evening arrival",
+    "text": "After 18:00, use the side door and ring the upper bell."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NG08/Studio Visitor Sheets/Visitors-evening.txt": "Welcome to the studio.\nPlease sign the visitor book.\nAfter 18:00, use the side door and ring the upper bell."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG08/Studio Visitor Sheets/Visitors-evening.txt"
+     },
+     "notes_shown": {
+      "folder": "Studio Access",
+      "note": "Evening arrival",
+      "text": "After 18:00, use the side door and ring the upper bell."
+     }
+    },
+    "statements": {
+     "{GEN2}/NG08/Studio Visitor Sheets/Visitors-evening.txt": "The saved text of Visitors-evening.txt is exactly: Welcome to the studio.\nPlease sign the visitor book.\nAfter 18:00, use the side door and ring the upper bell."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG09",
+    "language": "en",
+    "utterance": "Find the note in “Mac Training Terms” about the app strip at the edge of the screen. Look up its term in the Apple dictionary and leave that search there.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Select the note about the app strip in Mac Training Terms.",
+     "Copy the term from that note.",
+     "Select Apple Dictionary in Lexikon.",
+     "Enter the term in the dictionary search field."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Mac Training Terms",
+       "notes": [
+        {
+         "title": "Launching apps",
+         "text": "Dock — the app strip at the edge of the screen."
+        },
+        {
+         "title": "Across the top",
+         "text": "Menu bar — the strip of menus across the top of the screen."
+        },
+        {
+         "title": "Inside a window",
+         "text": "Toolbar — the strip of controls inside a window."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Mac Training Terms",
+      "note": "Across the top"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notes shows Launching apps in the Mac Training Terms folder.",
+     "Lexikon has Apple Dictionary selected.",
+     "The Lexikon search field contains exactly Dock."
+    ],
+    "must_not_happen": [
+     "Select Alle Lexika or Wikipedia.",
+     "Search for the note title or the entire explanatory sentence.",
+     "Change the Notes view or any note text."
+    ],
+    "why_it_is_hard": "All three notes describe screen strips; the assistant must extract the correct term and switch away from the initially selected bilingual dictionary."
+   },
+   "caller_values": {
+    "note": "Launching apps",
+    "lookup": "Dock"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Mac Training Terms",
+      "note": "Launching apps",
+      "text": "Dock — the app strip at the edge of the screen."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Apple Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Dock"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NG10",
+    "language": "en",
+    "utterance": "In “Workshop Attendance”, use the latest August list for the afternoon session, not the morning one. Change the confirmed headcount to 18, leave the reserve alone, and save it.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Compare the afternoon list filenames and modification dates in Finder to identify the latest August version.",
+     "Open that file in TextEdit.",
+     "Change only the confirmed headcount to 18.",
+     "Save the document."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Workshop Attendance",
+      "files": [
+       {
+        "name": "Afternoon-A.txt",
+        "modified": "2026-08-15 11:00",
+        "text": "Afternoon session\nConfirmed: 14\nReserve: 3"
+       },
+       {
+        "name": "Afternoon-B.txt",
+        "modified": "2026-08-29 15:00",
+        "text": "Afternoon session\nConfirmed: 16\nReserve: 4"
+       },
+       {
+        "name": "Afternoon-C.txt",
+        "modified": "2026-09-02 10:00",
+        "text": "Afternoon session\nConfirmed: 20\nReserve: 2"
+       },
+       {
+        "name": "Morning-B.txt",
+        "modified": "2026-08-31 17:00",
+        "text": "Morning session\nConfirmed: 16\nReserve: 4"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Only Afternoon-B.txt is open in TextEdit.",
+     "The saved text of Afternoon-B.txt is exactly: Afternoon session\nConfirmed: 18\nReserve: 4"
+    ],
+    "must_not_happen": [
+     "Change the reserve count.",
+     "Modify another attendance list.",
+     "Leave a different Finder sort order selected."
+    ],
+    "why_it_is_hard": "The newest August file is for the wrong session, while the newest afternoon file is from September; both filters must be applied before editing."
+   },
+   "caller_values": {
+    "file": "Afternoon-B.txt",
+    "anchor": "Confirmed: 16"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NG10/Workshop Attendance/Afternoon-B.txt": "Afternoon session\nConfirmed: 18\nReserve: 4"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NG10/Workshop Attendance/Afternoon-B.txt"
+     }
+    },
+    "statements": {
+     "{GEN2}/NG10/Workshop Attendance/Afternoon-B.txt": "The saved text of Afternoon-B.txt is exactly: Afternoon session\nConfirmed: 18\nReserve: 4"
+    }
+   }
+  }
+ ]
+}

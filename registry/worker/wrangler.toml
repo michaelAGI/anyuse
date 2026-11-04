@@ -1,0 +1,13 @@
+# AnyUse map registry v0 — Worker config TEMPLATE.
+# Deploying needs node, wrangler, your own D1 database and a rate-limit rule
+# for reads at the edge. The ids below are placeholders on purpose;
+# `wrangler deploy` with them fails.
+name = "anyuse-map-registry"
+main = "src/index.js"
+compatibility_date = "2026-05-01"   # supported by the vetted wrangler 4.86 runtime; the Worker uses standard APIs only
+workers_dev = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "anyuse-map-registry"
+database_id = "OWNER-MUST-CREATE-AND-FILL-IN"

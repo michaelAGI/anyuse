@@ -1,0 +1,108 @@
+{
+ "apps": {
+  "com.apple.Notes": {
+   "counts": {
+    "app_property_commands": 5,
+    "commands": 13,
+    "effects": {
+     "create": 2,
+     "destructive": 1,
+     "never": 1,
+     "read": 2,
+     "ui": 5,
+     "write": 2
+    },
+    "osa_commands_mapped": 1,
+    "properties": 45,
+    "qualifying": 63,
+    "qualifying_commands": 6,
+    "typed_operations": 70
+   },
+   "mapped": [
+    "com.apple.Notes:osa_command/make_element/note"
+   ],
+   "mapped_scripts": {
+    "com.apple.Notes:osa_command/make_element/note": "on run argv\n\ttell application id \"com.apple.Notes\"\n\t\tset theResult to «event corecrel» given «class kocl»:«class note», «class prdt»:{«class pnam»:(item 1 of argv), «class body»:(item 2 of argv)}\n\t\treturn «class ID  » of theResult\n\tend tell\nend run\n"
+   }
+  },
+  "com.apple.TextEdit": {
+   "counts": {
+    "app_property_commands": 3,
+    "commands": 11,
+    "effects": {
+     "create": 2,
+     "destructive": 1,
+     "never": 1,
+     "read": 2,
+     "ui": 3,
+     "write": 2
+    },
+    "osa_commands_mapped": 1,
+    "properties": 19,
+    "qualifying": 31,
+    "qualifying_commands": 6,
+    "typed_operations": 36
+   },
+   "mapped": [
+    "com.apple.TextEdit:osa_command/document_write"
+   ],
+   "mapped_scripts": {
+    "com.apple.TextEdit:osa_command/document_write": "on run argv\n\tset theFile to POSIX file (item 1 of argv)\n\ttell application id \"com.apple.TextEdit\"\n\t\t«event aevtodoc» theFile\n\t\tset theDoc to «class docu» 1\n\t\tset «class ctxt» of theDoc to (item 2 of argv)\n\t\t«event coresave» theDoc\n\t\t«event coreclos» theDoc given «class savo»:«constant ****no  »\n\tend tell\n\treturn POSIX path of theFile\nend run\n"
+   }
+  },
+  "com.apple.calculator": {
+   "counts": {
+    "app_property_commands": 0,
+    "commands": 0,
+    "effects": {},
+    "osa_commands_mapped": 0,
+    "properties": 0,
+    "qualifying": 0,
+    "qualifying_commands": 0,
+    "typed_operations": 0
+   },
+   "mapped": [],
+   "mapped_scripts": {}
+  },
+  "com.apple.finder": {
+   "counts": {
+    "app_property_commands": 18,
+    "commands": 24,
+    "effects": {
+     "create": 2,
+     "destructive": 1,
+     "never": 7,
+     "read": 4,
+     "ui": 9,
+     "write": 1
+    },
+    "osa_commands_mapped": 1,
+    "properties": 167,
+    "qualifying": 259,
+    "qualifying_commands": 7,
+    "typed_operations": 276
+   },
+   "mapped": [
+    "com.apple.finder:osa_command/make_element/cfol"
+   ],
+   "mapped_scripts": {
+    "com.apple.finder:osa_command/make_element/cfol": "on run argv\n\tset theContainer to (POSIX file (item 1 of argv)) as alias\n\ttell application id \"com.apple.finder\"\n\t\tset theResult to «event corecrel» given «class kocl»:«class cfol», «class insh»:theContainer, «class prdt»:{«class pnam»:(item 2 of argv)}\n\t\tset theAlias to theResult as alias\n\tend tell\n\treturn POSIX path of theAlias\nend run\n"
+   }
+  },
+  "org.blenderfoundation.blender": {
+   "counts": {
+    "app_property_commands": 0,
+    "commands": 0,
+    "effects": {},
+    "osa_commands_mapped": 0,
+    "properties": 0,
+    "qualifying": 0,
+    "qualifying_commands": 0,
+    "typed_operations": 0
+   },
+   "mapped": [],
+   "mapped_scripts": {}
+  }
+ },
+ "source": "osa_analysis.json (counts only; osacompile fields are guest-only)"
+}

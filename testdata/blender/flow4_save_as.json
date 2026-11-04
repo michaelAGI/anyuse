@@ -1,0 +1,38 @@
+{
+  "flow": "save_as",
+  "app": "Blender",
+  "bundle_id": "org.blenderfoundation.blender",
+  "note": "Real guest recording. File > Save As (a real click sequence; Cmd+Shift+S was tried first and instead triggered the 3D viewport's Scale-tool shortcut -- a bare 'S' keypress, modifier apparently not delivered -- so the menu path was used instead). The Save-As file browser (Blender's own, not a native panel) accepted a typed filename and a click on 'Save As' genuinely wrote the file to disk under the new name (confirmed: filepath on disk changed, bpy.data.filepath updated) -- but produced ZERO new window_manager.operators entries. wm.save_as_mainfile is filepath-parameterized and the write demonstrably happened; it is simply never added to Blender's own operator-history/redo-panel list, so the log does not show this action occurred at all, regardless of the fact that the operator IS parameterized.",
+  "before_state": {
+    "filepath": "/Users/guest/anyuse-guest/blender/base_empty.blend"
+  },
+  "ops": [
+    {
+      "idname": "MESH_OT_primitive_cube_add",
+      "label": "Add Cube",
+      "kwargs": {
+        "size": 2.0,
+        "enter_editmode": false,
+        "align": "WORLD",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "idname": "MATERIAL_OT_new",
+      "label": "New Material",
+      "kwargs": {}
+    }
+  ],
+  "after_state": {
+    "filepath": "/Users/guest/anyuse-guest/blender/kumquat_flow4.blend"
+  }
+}

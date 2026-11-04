@@ -1,0 +1,838 @@
+{
+ "meta": {
+  "captured": "2026-11-03",
+  "guest": "macOS 26.6.2 (25G83) VirtualMac2,1 de_DE, German keyboard layout, python 3.13.15, pyobjc 12.2.2",
+  "source": "guest probes and flows_base; values verbatim as observed"
+ },
+ "probe101_axvalue_vs_accessors": {
+  "A_before": {
+   "value": "seed\n",
+   "nchars": 5,
+   "string_for_range": "seed\n"
+  },
+  "A_after_write": {
+   "value": "evidence probe alpha",
+   "nchars": 20,
+   "string_for_range": "evidence probe alpha"
+  },
+  "A_fresh_ref": {
+   "value": "evidence probe alpha",
+   "nchars": 20,
+   "string_for_range": "evidence probe alpha"
+  },
+  "A_disk": "evidence probe alpha",
+  "A_rc": 0,
+  "B_after": {
+   "value": "evidence probe bravo",
+   "nchars": 20,
+   "string_for_range": "evidence probe bravo"
+  },
+  "B_disk": "evidence probe bravo",
+  "C_after": {
+   "value": "seed\n",
+   "nchars": 5,
+   "string_for_range": "seed\n"
+  },
+  "C_disk": "seed\n",
+  "D_after": {
+   "value": "seed\n",
+   "nchars": 5,
+   "string_for_range": "seed\n"
+  },
+  "D_disk": "seed\n"
+ },
+ "probe100_d6": {
+  "before": "seed\n",
+  "settable_axvalue": "(0, True)",
+  "rung1_rc": 0,
+  "rung1_readback": "d6 probe rung one",
+  "rung1_stuck": true,
+  "rung2_readback": "D6 probe rung two",
+  "rung2_typed_ok": false,
+  "modified_after_rung1": "None",
+  "modified_after_rung2": "None",
+  "disk_after_save": "D6 probe rung two"
+ },
+ "diag102": {
+  "recorded": {
+   "area": {
+    "canonical_role": "textarea",
+    "name": "seed",
+    "identifier": "First Text View",
+    "path": "application/window[0]/scrollarea[0]/textarea[0]",
+    "raw_role": "AXTextArea"
+   },
+   "file": {
+    "canonical_role": "menuitem",
+    "name": "Ablage",
+    "identifier": "_NS:860",
+    "path": "application/menubar[0]/menuitem[2]",
+    "raw_role": "AXMenuBarItem"
+   },
+   "save": {
+    "canonical_role": "menuitem",
+    "name": "Sichern",
+    "identifier": "_NS:358",
+    "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]",
+    "raw_role": "AXMenuItem"
+   },
+   "save_item": {
+    "role": "AXMenuItem",
+    "title": "Sichern",
+    "identifier": "_NS:358",
+    "cmd": "S",
+    "mods": "0",
+    "parent_title": "Ablage",
+    "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+   }
+  },
+  "closed_menu_same_identifier": [
+   {
+    "role": "AXMenuItem",
+    "title": "Sichern",
+    "identifier": "_NS:358",
+    "cmd": "S",
+    "mods": "0",
+    "parent_title": "Ablage",
+    "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+   }
+  ],
+  "closed_menu_same_name": [
+   {
+    "role": "AXMenuItem",
+    "title": "Sichern",
+    "identifier": "_NS:358",
+    "cmd": "S",
+    "mods": "0",
+    "parent_title": "Ablage",
+    "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+   }
+  ],
+  "variants": [
+   {
+    "variant": "r1_product_path",
+    "word": "echo",
+    "i": 0,
+    "set_ok": true,
+    "readback": "anyuse diag echo 0",
+    "save_resolved": {
+     "role": "AXMenuItem",
+     "title": "Sichern",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "0",
+     "parent_title": "Ablage",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+    },
+    "pressed": true,
+    "disk": "anyuse diag echo 0",
+    "success": true
+   },
+   {
+    "variant": "r1_product_path",
+    "word": "echo",
+    "i": 1,
+    "set_ok": true,
+    "readback": "anyuse diag echo 1",
+    "save_resolved": {
+     "role": "AXMenuItem",
+     "title": "Sichern",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "0",
+     "parent_title": "Ablage",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+    },
+    "pressed": true,
+    "disk": "anyuse diag echo 1",
+    "success": true
+   },
+   {
+    "variant": "r1_product_path",
+    "word": "echo",
+    "i": 2,
+    "set_ok": true,
+    "readback": "anyuse diag echo 2",
+    "save_resolved": {
+     "role": "AXMenuItem",
+     "title": "Sichern",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "0",
+     "parent_title": "Ablage",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+    },
+    "pressed": true,
+    "disk": "anyuse diag echo 2",
+    "success": true
+   },
+   {
+    "variant": "raw_ax",
+    "word": "foxtrot",
+    "i": 0,
+    "rc": 0,
+    "readback": "anyuse diag foxtrot 0",
+    "save_resolved": {
+     "role": "AXMenuItem",
+     "title": "Sichern",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "0",
+     "parent_title": "Ablage",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+    },
+    "disk": "anyuse diag foxtrot 0",
+    "success": true
+   },
+   {
+    "variant": "raw_ax",
+    "word": "foxtrot",
+    "i": 1,
+    "rc": 0,
+    "readback": "anyuse diag foxtrot 1",
+    "save_resolved": {
+     "role": "AXMenuItem",
+     "title": "Sichern",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "0",
+     "parent_title": "Ablage",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+    },
+    "disk": "anyuse diag foxtrot 1",
+    "success": true
+   },
+   {
+    "variant": "raw_ax",
+    "word": "foxtrot",
+    "i": 2,
+    "rc": 0,
+    "readback": "anyuse diag foxtrot 2",
+    "save_resolved": {
+     "role": "AXMenuItem",
+     "title": "Sichern",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "0",
+     "parent_title": "Ablage",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]"
+    },
+    "disk": "anyuse diag foxtrot 2",
+    "success": true
+   },
+   {
+    "variant": "keys_plain",
+    "word": "golf",
+    "i": 0,
+    "readback": "seed\n",
+    "disk": "seed\n",
+    "success": false
+   },
+   {
+    "variant": "keys_plain",
+    "word": "golf",
+    "i": 1,
+    "readback": "seed\n",
+    "disk": "seed\n",
+    "success": false
+   },
+   {
+    "variant": "keys_plain",
+    "word": "golf",
+    "i": 2,
+    "readback": "seed\n",
+    "disk": "seed\n",
+    "success": false
+   },
+   {
+    "variant": "keys_raise",
+    "word": "hotel",
+    "i": 0,
+    "readback": "seed\n",
+    "disk": "seed\n",
+    "success": false
+   },
+   {
+    "variant": "keys_raise",
+    "word": "hotel",
+    "i": 1,
+    "readback": "seed\n",
+    "disk": "seed\n",
+    "success": false
+   },
+   {
+    "variant": "keys_raise",
+    "word": "hotel",
+    "i": 2,
+    "readback": "seed\n",
+    "disk": "seed\n",
+    "success": false
+   }
+  ]
+ },
+ "diag103": {
+  "flags_before": {
+   "hid": "0x20100000",
+   "combined": "0x20100000",
+   "hid_set": [
+    "cmd"
+   ],
+   "combined_set": [
+    "cmd"
+   ]
+  },
+  "flags_after_release": {
+   "hid": "0x20000000",
+   "combined": "0x20000000",
+   "hid_set": [],
+   "combined_set": []
+  },
+  "keys": [
+   {
+    "tag": "hid_unicode",
+    "readback": "anyuse keys hid_unicode",
+    "disk": "anyuse keys hid_unicode",
+    "success": true,
+    "windows_after": [
+     "k103_hid_unicode.txt",
+     "ev_c.txt",
+     "probe_d6.txt",
+     "corpus_content.txt",
+     "ladder_doc.txt",
+     "Ohne Titel"
+    ]
+   },
+   {
+    "tag": "hid_unicode_zeroflags",
+    "readback": "anyuse keys hid_unicode_zeroflags",
+    "disk": "anyuse keys hid_unicode_zeroflags",
+    "success": true,
+    "windows_after": [
+     "k103_hid_unicode_zeroflags.txt",
+     "ev_c.txt",
+     "probe_d6.txt",
+     "corpus_content.txt",
+     "ladder_doc.txt",
+     "Ohne Titel"
+    ]
+   },
+   {
+    "tag": "private_unicode_zeroflags",
+    "readback": "anyuse keys private_unicode_zeroflags",
+    "disk": "anyuse keys private_unicode_zeroflags",
+    "success": true,
+    "windows_after": [
+     "k103_private_unicode_zeroflags.txt",
+     "ev_c.txt",
+     "probe_d6.txt",
+     "corpus_content.txt",
+     "ladder_doc.txt",
+     "Ohne Titel"
+    ]
+   },
+   {
+    "tag": "keycodes_us",
+    "readback": "anzuse kezs kezcodesus",
+    "disk": "anzuse kezs kezcodesus",
+    "success": false,
+    "windows_after": [
+     "k103_keycodes_us.txt",
+     "ev_c.txt",
+     "probe_d6.txt",
+     "corpus_content.txt",
+     "ladder_doc.txt",
+     "Ohne Titel"
+    ]
+   }
+  ],
+  "prior_repro": {
+   "windows": [
+    "k103_target.txt",
+    "k103_other.txt",
+    "ev_c.txt",
+    "probe_d6.txt",
+    "corpus_content.txt",
+    "ladder_doc.txt",
+    "Ohne Titel"
+   ],
+   "resolved_window": "k103_target.txt",
+   "target_disk": "anyuse repro",
+   "other_disk": "other document\n"
+  }
+ },
+ "flow1_verified": {
+  "recorded_steps": {
+   "area": {
+    "selector": {
+     "canonical_role": "textarea",
+     "name": "seed",
+     "identifier": "First Text View",
+     "path": "application/window[0]/scrollarea[0]/textarea[0]",
+     "raw_role": "AXTextArea"
+    },
+    "identity": {
+     "role": "AXTextArea",
+     "identifier": "First Text View",
+     "cmd": "",
+     "mods": "",
+     "title": ""
+    }
+   },
+   "file_menu": {
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Ablage",
+     "identifier": "_NS:860",
+     "path": "application/menubar[0]/menuitem[2]",
+     "raw_role": "AXMenuBarItem"
+    },
+    "identity": {
+     "role": "AXMenuBarItem",
+     "identifier": "_NS:860",
+     "cmd": "",
+     "mods": "",
+     "title": "Ablage"
+    }
+   },
+   "save": {
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Sichern",
+     "identifier": "_NS:358",
+     "path": "application/menubar[0]/menuitem[2]/menu[0]/menuitem[6]",
+     "raw_role": "AXMenuItem"
+    },
+    "identity": {
+     "role": "AXMenuItem",
+     "identifier": "_NS:358",
+     "cmd": "S",
+     "mods": "",
+     "title": "Sichern"
+    }
+   }
+  },
+  "recorded_ok": true,
+  "runs": [
+   {
+    "input": "gamma",
+    "run": 0,
+    "success": true,
+    "latency_ms": 4289.2,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_gamma_0.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_gamma_0.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "gamma",
+    "run": 1,
+    "success": true,
+    "latency_ms": 3807.9,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_gamma_1.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_gamma_1.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "gamma",
+    "run": 2,
+    "success": true,
+    "latency_ms": 3802.8,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_gamma_2.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_gamma_2.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "gamma",
+    "run": 3,
+    "success": true,
+    "latency_ms": 3674.6,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_gamma_3.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_gamma_3.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "gamma",
+    "run": 4,
+    "success": true,
+    "latency_ms": 3765.5,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_gamma_4.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_gamma_4.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "delta",
+    "run": 0,
+    "success": true,
+    "latency_ms": 3899.0,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_delta_0.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_delta_0.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "delta",
+    "run": 1,
+    "success": true,
+    "latency_ms": 4347.0,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_delta_1.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_delta_1.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "delta",
+    "run": 2,
+    "success": true,
+    "latency_ms": 3927.5,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_delta_2.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_delta_2.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "delta",
+    "run": 3,
+    "success": true,
+    "latency_ms": 3905.1,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_delta_3.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_delta_3.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "delta",
+    "run": 4,
+    "success": true,
+    "latency_ms": 3764.8,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 33,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_delta_4.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_delta_4.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "epsilon",
+    "run": 0,
+    "success": true,
+    "latency_ms": 3667.2,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 35,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_epsilon_0.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_epsilon_0.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "epsilon",
+    "run": 1,
+    "success": true,
+    "latency_ms": 3649.3,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 35,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_epsilon_1.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_epsilon_1.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "epsilon",
+    "run": 2,
+    "success": true,
+    "latency_ms": 3658.4,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 35,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_epsilon_2.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_epsilon_2.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "epsilon",
+    "run": 3,
+    "success": true,
+    "latency_ms": 3665.9,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 35,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_epsilon_3.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_epsilon_3.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   },
+   {
+    "input": "epsilon",
+    "run": 4,
+    "success": true,
+    "latency_ms": 3652.8,
+    "wrong_target": 0,
+    "drift_gate_fired": 1,
+    "gate_reasons": [
+     "required_missing"
+    ],
+    "rung": "ax_value",
+    "verified_independently": true,
+    "evidence": [
+     {
+      "method": "ax_value",
+      "accepted": true,
+      "readback_matches": true,
+      "nchars": 35,
+      "nchars_matches": true,
+      "verified": true,
+      "independent": true,
+      "window_title": "flow1_epsilon_4.txt",
+      "document": "file:///Users/guest/anyuse-guest/scratch/flows/flow1_epsilon_4.txt",
+      "stuck_modifiers": [],
+      "error": ""
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,208 @@
+{
+  "rule": "act only when both option orders name the same item and min(confidence) >= t2",
+  "cw_max": 0.03,
+  "grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    0.99,
+    1.0
+  ],
+  "pickers": {
+    "jev": {
+      "t2": 0.75,
+      "at_t2": {
+        "t2": 0.75,
+        "n": 150,
+        "accepted": 115,
+        "accepted_wrong": 3,
+        "cw": 0.02,
+        "coverage": 0.7666666666666667,
+        "precision": 0.9739130434782609,
+        "right_accepted": 112,
+        "agree": 130
+      },
+      "n": 150,
+      "sources": [
+        "dev",
+        "step2"
+      ],
+      "n_by_source": {
+        "step2": 90,
+        "dev": 60
+      }
+    },
+    "openjev": {
+      "t2": 0.6,
+      "at_t2": {
+        "t2": 0.6,
+        "n": 90,
+        "accepted": 69,
+        "accepted_wrong": 1,
+        "cw": 0.011111111111111112,
+        "coverage": 0.7666666666666667,
+        "precision": 0.9855072463768116,
+        "right_accepted": 68,
+        "agree": 71
+      },
+      "n": 90,
+      "sources": [
+        "step2"
+      ],
+      "n_by_source": {
+        "step2": 90,
+        "dev": 0
+      }
+    }
+  },
+  "data": {
+    "step2_questions_sha256": "44e65809b640af1463f1f3dbb05c2a1f605b419b9aafe044b028be07cc5968a8",
+    "step2_jev_sha256": "4fd5665380045cc9a6b702f8ccb7d72f40f70de5b065cc81e76ff08814df81a4",
+    "step2_openjev_text_sha256": "1d265a2668cd59fbfe470f2167897b3103434491d99e27ce576b74149c5533a3",
+    "dev_logs": [
+      "desktop-e2e2/runs/measured.jsonl",
+      "desktop-e2e3/runs/measured.jsonl",
+      "desktop-e2e4/runs/measured.jsonl"
+    ],
+    "gold_rules": [
+      [
+        "S18",
+        "flag_toggle",
+        "Während der Texteingabe prüfen"
+      ],
+      [
+        "S18",
+        "open_item",
+        "Vertrag_B.txt"
+      ],
+      [
+        "S01",
+        "navigate",
+        "Umzug (the folder shown now)"
+      ],
+      [
+        "S01",
+        "open_item",
+        "Checkliste_alt.txt"
+      ],
+      [
+        "S02",
+        "open_item:Drucker Setup",
+        null
+      ],
+      [
+        "S02",
+        "open_item",
+        "Gast-Passwort"
+      ],
+      [
+        "N2",
+        "open_item",
+        "Gamma Notiz"
+      ],
+      [
+        "S03",
+        "open_item",
+        "Rechnung_Toner.txt"
+      ],
+      [
+        "S10",
+        "open_item:Alpha.txt",
+        null
+      ],
+      [
+        "S10",
+        "open_item",
+        "Flugzeiten.txt"
+      ],
+      [
+        "S10",
+        "flag_toggle",
+        "Rechtschreibung autom. korrigieren"
+      ],
+      [
+        "G10",
+        "flag_toggle",
+        "Rechtschreibung autom. korrigieren"
+      ],
+      [
+        "G02",
+        "open_item",
+        "Wasserhahn Küche"
+      ],
+      [
+        "G06",
+        "open_item",
+        "Blauer Koffer"
+      ],
+      [
+        "G07",
+        "open_item",
+        "Protokoll August 2026.txt"
+      ],
+      [
+        "G04",
+        "scoped_find",
+        "skip"
+      ],
+      [
+        "G04",
+        "select_item",
+        "Verworfen"
+      ],
+      [
+        "S06",
+        "select_item",
+        "Kostenaufstellung_alt.txt"
+      ],
+      [
+        "G11",
+        "navigate",
+        "Medientechnik Inventar (the folder shown now)"
+      ],
+      [
+        "G11",
+        "open_item",
+        "Projektor A"
+      ],
+      [
+        "G01",
+        "open_item",
+        "Preisliste Herbst.txt"
+      ],
+      [
+        "G05",
+        "navigate",
+        "Entwürfe (subfolder"
+      ],
+      [
+        "G05",
+        "open_item",
+        "Elternabend Entwurf.txt"
+      ],
+      [
+        "P1",
+        "navigate",
+        "skip"
+      ]
+    ],
+    "script_sha256": "24409b1858a077245cf37cbe2a9744c1bee392e1b8ed2e721ed7ded0fecd06fe"
+  }
+}

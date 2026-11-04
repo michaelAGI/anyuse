@@ -1,0 +1,49 @@
+{
+ "workflow": "pkgsearch_captcha_word",
+ "site": "packages.example.test",
+ "tag": "rec",
+ "param": {
+  "name": "q",
+  "value": "vibe"
+ },
+ "ui": {
+  "items": [
+   "vibe-core",
+   "vibe-d",
+   "vibe_recaptcha",
+   "vibe-http",
+   "vibe-captcha",
+   "vibe-mqtt",
+   "vibe-inet",
+   "vibe-auth",
+   "vibe-stream",
+   "vibe-s3"
+  ],
+  "text": "Menu\nPackages\nDocumentation\nLog in\nSearch\n\nSearch results for: vibe\n\nPackage\tLatest version\tDescription\nvibe-core\t1.0.0\tThe I/O core library\nvibe-d\t1.0.0\tEvent driven web framework\nvibe_recaptcha\t1.0.0\timplementation of google's recaptcha service\nvibe-http\t1.0.0\tHTTP server and client\nvibe-captcha\t1.0.0\tA CAPTCHA generator for web forms\nvibe-mqtt\t1.0.0\tA MQTT broker client\nvibe-inet\t1.0.0\tInternet standard functionality\nvibe-auth\t1.0.0\tOAuth2 server\nvibe-stream\t1.0.0\tAdvanced stream implementations\nvibe-s3\t1.0.0\tS3 client\nFooter text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. Footer text about the registry. "
+ },
+ "final_url": "https://packages.example.test/search?q=vibe",
+ "network": [
+  {
+   "url": "https://packages.example.test/search?q=vibe",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/html",
+   "bytes": 38000
+  },
+  {
+   "url": "https://www.google.com/recaptcha/api.js",
+   "method": "GET",
+   "status": 200,
+   "mime": "application/javascript",
+   "bytes": 900
+  },
+  {
+   "url": "https://packages.example.test/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+   "method": "GET",
+   "status": 200,
+   "mime": "application/javascript",
+   "bytes": 900
+  }
+ ],
+ "_note": "Synthetic regression fixture for the 2026-11-03 ladder re-proof false positive: a real, served package-search result page whose results mention 'recaptcha'/'CAPTCHA', plus a login-widget reCAPTCHA script and a CDN-injected challenge-platform script. The old substring rule in api_compile.diagnose_failure called it an anti-bot interstitial."
+}

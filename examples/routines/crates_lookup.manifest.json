@@ -1,0 +1,217 @@
+{
+  "apps": {
+    "crates": {
+      "origin": "https://crates.io",
+      "tenant": "public"
+    }
+  },
+  "data_transfers": [],
+  "inputs": {
+    "q": {
+      "maxLength": 100,
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "kind": "routine",
+  "name": "crates_lookup",
+  "outputs": {
+    "description": {
+      "from": {
+        "output": "description",
+        "step": "detail"
+      },
+      "type": "scalar"
+    },
+    "name": {
+      "from": {
+        "output": "name",
+        "step": "detail"
+      },
+      "type": "scalar"
+    }
+  },
+  "schema": "anyuse.manifest/1",
+  "steps": [
+    {
+      "action": {
+        "kind": "compiled_tool",
+        "proof_id": "a722965e9721",
+        "ref": "crates_search",
+        "template_digest": "2d82ea791372256d3fcff892e1e9dd650efa263dd3909d3a8127f011e2efba1a"
+      },
+      "app": "crates",
+      "approval": {
+        "required": false
+      },
+      "autonomy": {
+        "level": "rule"
+      },
+      "bindings": {
+        "q": {
+          "kind": "input",
+          "name": "q"
+        }
+      },
+      "effects": {
+        "class": "read_only",
+        "reversible": true
+      },
+      "evidence": {
+        "origin": "compiled_proof",
+        "proof_id": "a722965e9721",
+        "scope": "passed on 2 fresh value(s) not present in the recording",
+        "status": "proved"
+      },
+      "id": "search",
+      "inputs": {
+        "q": {
+          "maxLength": 2048,
+          "type": "string"
+        }
+      },
+      "mode": "proved",
+      "outputs": {
+        "items": {
+          "items": {
+            "type": "scalar"
+          },
+          "type": "array"
+        }
+      },
+      "policy": {
+        "idempotent": true,
+        "retries": 0,
+        "timeout_s": 30
+      },
+      "postconditions": [
+        {
+          "op": "len_min",
+          "ref": "$out.items",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "instruction": "Pick exactly one crate id from the search results.",
+        "kind": "human"
+      },
+      "approval": {
+        "required": false
+      },
+      "autonomy": {
+        "level": "rule"
+      },
+      "bindings": {
+        "candidates": {
+          "kind": "derived",
+          "output": "items",
+          "step": "search"
+        }
+      },
+      "effects": {
+        "class": "read_only",
+        "reversible": true
+      },
+      "evidence": {
+        "status": "none"
+      },
+      "id": "pick",
+      "inputs": {
+        "candidates": {
+          "items": {
+            "type": "scalar"
+          },
+          "type": "array"
+        }
+      },
+      "mode": "human",
+      "outputs": {
+        "crate": {
+          "maxLength": 100,
+          "type": "string"
+        }
+      },
+      "postconditions": [
+        {
+          "in": {
+            "ref": "$in.candidates"
+          },
+          "op": "in",
+          "ref": "$out.crate"
+        }
+      ]
+    },
+    {
+      "action": {
+        "kind": "compiled_tool",
+        "proof_id": "07dd09bf104f",
+        "ref": "crates_detail",
+        "template_digest": "76ca2b968ed418d0d44f46b3ed475a57ad68703a9ef56ecddcce42441ae9166e"
+      },
+      "app": "crates",
+      "approval": {
+        "required": false
+      },
+      "autonomy": {
+        "level": "rule"
+      },
+      "bindings": {
+        "crate": {
+          "kind": "derived",
+          "output": "crate",
+          "step": "pick"
+        }
+      },
+      "effects": {
+        "class": "read_only",
+        "reversible": true
+      },
+      "evidence": {
+        "origin": "compiled_proof",
+        "proof_id": "07dd09bf104f",
+        "scope": "passed on 2 fresh value(s) not present in the recording",
+        "status": "proved"
+      },
+      "id": "detail",
+      "inputs": {
+        "crate": {
+          "maxLength": 2048,
+          "type": "string"
+        }
+      },
+      "mode": "proved",
+      "outputs": {
+        "description": {
+          "type": "scalar"
+        },
+        "name": {
+          "type": "scalar"
+        }
+      },
+      "policy": {
+        "idempotent": true,
+        "retries": 0,
+        "timeout_s": 30
+      },
+      "postconditions": [
+        {
+          "op": "eq",
+          "ref": "$out.name",
+          "value": {
+            "ref": "$in.crate"
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "op": "non_empty",
+          "ref": "$in.crate"
+        }
+      ]
+    }
+  ],
+  "summary": "Search crates.io, let a person pick one result, then read its details.",
+  "version": "0.1.0"
+}

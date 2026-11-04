@@ -1,0 +1,9 @@
+{
+ "version": 4,
+ "none_position": "last",
+ "tie_break": "off",
+ "asym_item": null,
+ "asym_none": null,
+ "source": "the reversed order put 'none' first and the model chose it; 'none' is fixed in the last position in both orders (only the candidates are reversed); the pairwise tie-break stays off (consistent in 2 of 35 live questions); the asymmetric-none acceptance was calibrated on the none-first order and is off",
+ "acceptance": "both orders name the same candidate, neither names none, minimum confidence >= t2 (desktop_e2e6_picker.json)"
+}

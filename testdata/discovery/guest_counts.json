@@ -1,0 +1,132 @@
+{
+ "generated_at": "2026-11-03T11:21:19-0700",
+ "job": "discovery-dump",
+ "apps": [
+  {
+   "bundle_id": "com.apple.calculator",
+   "counts": {
+    "discovered": 97,
+    "by_source": {
+     "menu": 76,
+     "control": 21
+    },
+    "source_candidates_mapped": 16,
+    "mapped_by_source": {
+     "control": 16
+    },
+    "class_candidates": 1,
+    "class_candidates_proved": 0,
+    "classes": [
+     "arithmetic"
+    ],
+    "key_kinds": {
+     "identifier+position": 26,
+     "identifier": 67,
+     "position": 4
+    },
+    "menu_language_independent": "72/76"
+   }
+  },
+  {
+   "bundle_id": "com.apple.TextEdit",
+   "counts": {
+    "discovered": 199,
+    "by_source": {
+     "menu": 198,
+     "control": 1
+    },
+    "source_candidates_mapped": 2,
+    "mapped_by_source": {
+     "menu": 1,
+     "control": 1
+    },
+    "class_candidates": 1,
+    "class_candidates_proved": 0,
+    "classes": [
+     "file_write"
+    ],
+    "key_kinds": {
+     "identifier": 177,
+     "identifier+position": 16,
+     "position": 6
+    },
+    "menu_language_independent": "192/198"
+   }
+  },
+  {
+   "bundle_id": "com.apple.finder",
+   "counts": {
+    "discovered": 217,
+    "by_source": {
+     "menu": 192,
+     "control": 1,
+     "sdef": 24
+    },
+    "source_candidates_mapped": 1,
+    "mapped_by_source": {
+     "menu": 1
+    },
+    "class_candidates": 1,
+    "class_candidates_proved": 0,
+    "classes": [
+     "directory_op/create"
+    ],
+    "key_kinds": {
+     "identifier": 181,
+     "identifier+position": 9,
+     "position": 3,
+     "event_code": 24
+    },
+    "menu_language_independent": "189/192"
+   }
+  },
+  {
+   "bundle_id": "com.apple.Notes",
+   "counts": {
+    "discovered": 252,
+    "by_source": {
+     "menu": 237,
+     "control": 2,
+     "sdef": 13
+    },
+    "source_candidates_mapped": 0,
+    "mapped_by_source": {},
+    "class_candidates": 0,
+    "class_candidates_proved": 0,
+    "classes": [],
+    "key_kinds": {
+     "identifier": 235,
+     "position": 3,
+     "role": 1,
+     "event_code": 13
+    },
+    "menu_language_independent": "234/237"
+   }
+  },
+  {
+   "bundle_id": "org.blenderfoundation.blender",
+   "counts": {
+    "discovered": 2538,
+    "by_source": {
+     "menu": 40,
+     "bpy": 2498
+    },
+    "source_candidates_mapped": 2,
+    "mapped_by_source": {
+     "bpy": 2
+    },
+    "class_candidates": 1,
+    "class_candidates_proved": 0,
+    "classes": [
+     "app_script/mesh_add_move"
+    ],
+    "key_kinds": {
+     "identifier": 37,
+     "position": 3,
+     "idname": 2498
+    },
+    "menu_language_independent": "37/40"
+   }
+  }
+ ]
+}

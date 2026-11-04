@@ -1,0 +1,69 @@
+{
+  "flow": "material_add",
+  "app": "Blender",
+  "bundle_id": "org.blenderfoundation.blender",
+  "note": "Real guest recording. Properties panel > Material tab > 'New' button (a real click, located empirically by scanning the screenshot for the tab strip's distinctive icon colors) runs MATERIAL_OT_new() with EMPTY kwargs -- Blender always names the result 'Material'/'Material.NNN' itself; there is no name argument to bind a 'given name' to. The follow-up step (double-clicking the material's name field and typing the desired name) produced NO new operator-log entry either, same bare-ID-property-edit pattern as flow2's object rename -- confirmed by the op log staying at exactly 2 entries (cube add + material new) through the rename.",
+  "before_state": {
+    "objects": [
+      {
+        "name": "Cube",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_material": null,
+        "material_slots": []
+      }
+    ],
+    "materials": []
+  },
+  "ops": [
+    {
+      "idname": "MESH_OT_primitive_cube_add",
+      "label": "Add Cube",
+      "kwargs": {
+        "size": 2.0,
+        "enter_editmode": false,
+        "align": "WORLD",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "idname": "MATERIAL_OT_new",
+      "label": "New Material",
+      "kwargs": {}
+    }
+  ],
+  "after_state": {
+    "objects": [
+      {
+        "name": "Cube",
+        "type": "MESH",
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_material": "GivenMaterialName",
+        "material_slots": [
+          "GivenMaterialName"
+        ]
+      }
+    ],
+    "materials": [
+      "GivenMaterialName",
+      "Material"
+    ]
+  }
+}

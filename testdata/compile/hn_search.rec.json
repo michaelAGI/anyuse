@@ -1,0 +1,55 @@
+{
+ "workflow": "hn_search",
+ "site": "hn.algolia.com",
+ "tag": "rec",
+ "param": {
+  "name": "query",
+  "value": "rust async"
+ },
+ "ui": {
+  "items": [
+   "Async-await on stable Rust(https://blog.rust-lang.org/2019/11/07/Async-await-stable.html)\n1102 points|pietroalbini|7 years ago|380 comments",
+   "Async-await on stable Rust(https://blog.rust-lang.org/2019/11/07/Async-await-stable.html)",
+   "Tokio 1.0 \u2013 async runtime for Rust(https://tokio.rs/blog/2020-12-tokio-1-0)\n769 points|carllerche|6 years ago|402 comments",
+   "Tokio 1.0 \u2013 async runtime for Rust(https://tokio.rs/blog/2020-12-tokio-1-0)",
+   "Futurelock: A subtle risk in async Rust(https://rfd.shared.oxide.computer/rfd/0609)\n449 points|bcantrill|11 months ago|245 comments\nThis RFD describes our distillation of a really gnarly issue that we hit in the Oxide control plane.[0] Not unlike our discovery of the async cancellation issue[1][2][3], this is larger than the issue itself -- and worse, the program that hits futurelock is correct from the programmer's point of view. Fortunately, the surface area here is smaller than that of async cancellation and the conditions required to hit it can be relatively easily mitigated. Still, this is a pretty deep issue -- and something that took some very seasoned Rust hands quite a while to find.\n\n[0] https://github.com/oxidecomputer/omicron/issues/9259\n\n[1] https://rfd.shared.oxide.computer/rfd/397\n\n[2] https://rfd.shared.oxide.computer/rfd/400\n\n[3] https://www.youtube.com/watch?v=zrv5Cy1R7r4"
+  ],
+  "text": "Search\nHacker News\nSearch by\nSearch\nStories\nby\nPopularity\nfor\nAll time\n\n794 results (0.031 seconds)\n\nAsync-await on stable Rust(https://blog.rust-lang.org/2019/11/07/Async-await-stable.html)\n1102 points|pietroalbini|7 years ago|380 comments\nTokio 1.0 \u2013 async runtime for Rust(https://tokio.rs/blog/2020-12-tokio-1-0)\n769 points|carllerche|6 years ago|402 comments\nFuturelock: A subtle risk in async R"
+ },
+ "final_url": "https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=rust%20async&sort=byPopularity&type=story",
+ "network": [
+  {
+   "url": "https://uj5wyc0l7x-dsn.algolia.net/1/indexes/Item_dev/query?x-algolia-agent=Algolia%20for%20JavaScript%20(4.13.1)%3B%20Browser%20(lite)&x-algolia-api-key=28f0e1ec37a5e792e6845e67da5f20dd&x-algolia-application-id=UJ5WYC0L7X",
+   "method": "POST",
+   "status": 200,
+   "mime": "application/json",
+   "bytes": 29637,
+   "body": "{\"hits\": [{\"title\": \"Stephen Hawking has died\", \"url\": \"http://www.bbc.com/news/uk-43396008\", \"author\": \"Cogito\", \"points\": 6015, \"num_comments\": 436, \"story_id\": 16582136, \"created_at_i\": 1520999430, \"created_at\": \"2018-03-14T03:50:30Z\", \"updated_at\": \"2026-08-13T14:08:03Z\", \"_tags\": [\"story\", \"author_Cogito\", \"story_16582136\"], \"children\": [16582146, 16582152, 16582155, 16582157, 16582160], \"objectID\": \"16582136\", \"_highlightResult\": {\"title\": {\"value\": \"Stephen Hawking has died\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"url\": {\"value\": \"http://www.bbc.com/news/uk-43396008\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"author\": {\"value\": \"Cogito\", \"matchLevel\": \"none\", \"matchedWords\": []}}, \"_rankingInfo\": {\"nbTypos\": 0, \"firstMatchedWord\": 0, \"proximityDistance\": 0, \"userScore\": 180, \"geoDistance\": 0, \"geoPrecision\": 1, \"nbExactWords\": 0, \"words\": 0, \"filters\": 1}}, {\"title\": \"A Message to Our Customers\", \"url\": \"http://www.apple.com/customer-letter/\", \"author\": \"epaga\", \"points\": 5771, \"num_comments\": 967, \"story_id\": 11116274, \"created_at_i\": 1455698317, \"created_at\": \"2016-02-17T08:38:37Z\", \"updated_at\": \"2026-11-03T08:00:13Z\", \"_tags\": [\"story\", \"author_epaga\", \"story_11116274\"], \"children\": [11116340, 11116349, 11116382, 11116387, 11116394], \"objectID\": \"11116274\", \"_highlightResult\": {\"title\": {\"value\": \"A Message to Our Customers\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"url\": {\"value\": \"http://www.apple.com/customer-letter/\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"author\": {\"value\": \"epaga\", \"matchLevel\": \"none\", \"matchedWords\": []}}, \"_rankingInfo\": {\"nbTypos\": 0, \"firstMatchedWord\": 0, \"proximityDistance\": 0, \"userScore\": 179, \"geoDistance\": 0, \"geoPrecision\": 1, \"nbExactWords\": 0, \"words\": 0, \"filters\": 1}}, {\"title\": \"OpenAI's board has fired Sam Altman\", \"url\": \"https://openai.com/blog/openai-announces-leadership-transition\", \"author\": \"davidbarker\", \"points\": 5710, \"num_comments\": 2530, \"story_id\": 38309611, \"created_at_i\": 1700252930, \"created_at\": \"2023-11-17T20:28:50Z\", \"updated_at\": \"2026-11-03T03:21:06Z\", \"_tags\": [\"story\", \"author_davidbarker\", \"story_38309611\"], \"children\": [38309635, 38309640, 38309648, 38309657, 38309689], \"objectID\": \"38309611\", \"_highlightResult\": {\"title\": {\"value\": \"OpenAI's board has fired Sam Altman\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"url\": {\"value\": \"https://openai.com/blog/openai-announces-leadership-transition\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"author\": {\"value\": \"davidbarker\", \"matchLevel\": \"none\", \"matchedWords\": []}}, \"_rankingInfo\": {\"nbTypos\": 0, \"firstMatchedWord\": 0, \"proximityDistance\": 0, \"userScore\": 178, \"geoDistance\": 0, \"geoPrecision\": 1, \"nbExactWords\": 0, \"words\": 0, \"filters\": 1}}, {\"title\": \"Backdoor in upstream xz/liblzma leading to SSH server compromise\", \"url\": \"https://www.openwall.com/lists/oss-security/2024/03/29/4\", \"author\": \"rkta\", \"points\": 4549, \"num_comments\": 1849, \"story_id\": 39865810, \"created_at_i\": 1711729010, \"created_at\": \"2024-03-29T16:16:50Z\", \"updated_at\": \"2026-08-31T18:38:48Z\", \"_tags\": [\"story\", \"author_rkta\", \"story_39865810\"], \"children\": [39866016, 39866037, 39866039, 39866044, 39866068], \"objectID\": \"39865810\", \"_highlightResult\": {\"title\": {\"value\": \"Backdoor in upstream xz/liblzma leading to SSH server compromise\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"url\": {\"value\": \"https://www.openwall.com/lists/oss-security/2024/03/29/4\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"author\": {\"value\": \"rkta\", \"matchLevel\": \"none\", \"matchedWords\": []}}, \"_rankingInfo\": {\"nbTypos\": 0, \"firstMatchedWord\": 0, \"proximityDistance\": 0, \"userScore\": 177, \"geoDistance\": 0, \"geoPrecision\": 1, \"nbExactWords\": 0, \"words\": 0, \"filters\": 1}}, {\"title\": \"CrowdStrike Update: Windows Bluescreen and Boot Loops\", \"url\": \"https://old.reddit.com/r/crowdstrike/comments/1e6vmkf/bsod_error_in_latest_crowdstrike_update/\", \"author\": \"BLKNSLVR\", \"points\": 4489, \"story_text\": \"My workplace has a number of people reporting Windows blue-screening and going into a boot loop. The IT Department have a number of servers recently gone offline and have said there&#x27;s a chance that the two issues are related, and potentially due to a Crowd Strike application update.<p>My laptop\", \"num_comments\": 3859, \"story_id\": 41002195, \"created_at_i\": 1721366773, \"created_at\": \"2024-07-19T05:26:13Z\", \"updated_at\": \"2026-11-03T09:04:41Z\", \"_tags\": [\"story\", \"author_BLKNSLVR\", \"story_41002195\"], \"children\": [41002198, 41002199, 41002225, 41002268, 41002272], \"objectID\": \"41002195\", \"_highlightResult\": {\"title\": {\"value\": \"CrowdStrike Update: Windows Bluescreen and Boot Loops\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"url\": {\"value\": \"https://old.reddit.com/r/crowdstrike/comments/1e6vmkf/bsod_error_in_latest_crowdstrike_update/\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"author\": {\"value\": \"BLKNSLVR\", \"matchLevel\": \"none\", \"matchedWords\": []}, \"story_text\": {\"value\": \"My workplace has a number of people reporting Windows blue-screening and going into a boot loop. The IT Department have a number of servers recently gone offline and have said there's a chance that the two issues are related, and potentially due to a Crowd Strike application update.<p>My laptop blue\", \"matchLevel\": \"none\", \"matchedWords\": []}}, \"_rankingInfo\": {\"nbTypos\": 0, \"firstMatchedWord\": 0, \"proximityDistance\": 0, \"userScore\": 176, \"geoDistance\": 0, \"geoPrecision\": 1, \"nbExactWords\": 0, \"words\": 0, \"filters\": 1}}], \"nbHits\": 45070885, \"page\": 0, \"nbPages\": 34, \"hitsPerPage\": 30, \"exhaustiveNbHits\": false, \"exhaustiveTypo\": true, \"exhaustive\": {\"nbHits\": false, \"typo\": true}, \"query\": \"\", \"params\": \"analyticsTags=%5B%22web%22%5D&page=0&hitsPerPage=30&minWordSizefor1Typo=4&minWordSizefor2Typos=8&advancedSyntax=true&ignorePlurals=false&clickAnalytics=true&minProximity=7&numericFilters=%5B%5D&tagFilters=%5B%5B%22story%22%5D%2C%5B%5D%5D&typoTolerance=true&queryType=prefixNone&restrictSearchableAttr\", \"queryID\": \"2b5bf3aa7eba94223f6ad7a9dd705a88\", \"serverUsed\": \"t5-eu-1.algolia.net\", \"indexUsed\": \"Item_dev\", \"parsedQuery\": \"\", \"timeoutCounts\": false, \"timeoutHits\": false, \"processingTimeMS\": 1, \"processingTimingsMS\": {\"_request\": {\"roundTrip\": 18}, \"afterFetch\": {\"format\": {\"total\": 1}}, \"fetch\": {\"scanning\": 2}, \"total\": 1}, \"serverTimeMS\": 3}"
+  },
+  {
+   "url": "https://hn.algolia.com/",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/html",
+   "bytes": 2459,
+   "body": null
+  },
+  {
+   "url": "https://hn.algolia.com/public/main-73241a02a88ef9295e89.css",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/css",
+   "bytes": 13,
+   "body": null
+  },
+  {
+   "url": "https://hn.algolia.com/public/main-6e634771f729331a3c3c.js",
+   "method": "GET",
+   "status": 200,
+   "mime": "application/javascript",
+   "bytes": 13,
+   "body": null
+  }
+ ],
+ "_note": "Minimal redacted fixture of PUBLIC responses, captured 2026-11-03. Headers, cookies and timings removed; JSON bodies truncated to 5 entries."
+}

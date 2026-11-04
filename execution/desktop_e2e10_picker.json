@@ -1,0 +1,121 @@
+{
+ "rule": "FREEZE RULE (tiers A / B on SELECTION; the cheaper configuration first; then coverage); the CHECK half opened once after the freeze",
+ "frozen": {
+  "family": "c",
+  "mode": "agree",
+  "openjev": {
+   "format": "id_rich",
+   "t2": 0.8
+  },
+  "cerebras": {
+   "model": "gpt-oss-120b"
+  },
+  "positive": true
+ },
+ "tier_on_selection": "C",
+ "selection": {
+  "n_main": 49,
+  "n_absent": 48,
+  "right": 35,
+  "coverage": 0.7142857142857143,
+  "wrong_main": 0,
+  "absent_false": 11,
+  "wrong_ids_main": [],
+  "wrong_ids_absent": [
+   "r4:SA01:open_item:r1:2:absent",
+   "r4:SA13:open_item:r2:2:absent",
+   "r5:GB06:open_item:r1:2:absent",
+   "r5:GB06:open_item:r2:2:absent",
+   "r7:SD13:select_item:r1:1:absent",
+   "r8:GE09:open_item:r1:2:absent",
+   "r8:SE04:select_item:r1:2:absent",
+   "r8:SE15:select_item:r1:2:absent",
+   "r8:GE09:open_item:r2:2:absent",
+   "r8:SE04:select_item:r2:2:absent",
+   "r8:SE15:select_item:r2:2:absent"
+  ],
+  "calls_per_pick": 3.0309278350515463,
+  "cerebras_usd_per_pick": 0.000505041649484536
+ },
+ "family_best_on_selection": {
+  "a": {
+   "cfg": {
+    "family": "a",
+    "mode": "openjev",
+    "openjev": {
+     "format": "id_rich",
+     "t2": 0.8
+    },
+    "positive": true
+   },
+   "tier": "C"
+  },
+  "b": {
+   "cfg": {
+    "family": "b",
+    "mode": "cerebras",
+    "cerebras": {
+     "model": "gpt-oss-120b"
+    },
+    "positive": true
+   },
+   "tier": "C"
+  },
+  "c": {
+   "cfg": {
+    "family": "c",
+    "mode": "agree",
+    "openjev": {
+     "format": "id_rich",
+     "t2": 0.8
+    },
+    "cerebras": {
+     "model": "gpt-oss-120b"
+    },
+    "positive": true
+   },
+   "tier": "C"
+  },
+  "d": {
+   "cfg": {
+    "family": "d",
+    "mode": "cascade",
+    "openjev": {
+     "format": "id_rich",
+     "t2": 0.8
+    },
+    "cerebras": {
+     "model": "qwen-3.8-27b"
+    },
+    "positive": true
+   },
+   "tier": "C"
+  },
+  "e": {
+   "cfg": {
+    "family": "e",
+    "mode": "cascade",
+    "openjev": {
+     "format": "id_rich",
+     "t2": 0.8
+    },
+    "cerebras": {
+     "model": "gpt-oss-120b"
+    },
+    "positive": true
+   },
+   "tier": "C"
+  }
+ },
+ "data": {
+  "questions_sha256": "3727eb750ead5347ed4c94f45bba73e2575c9097776f9eded2ec044509a17802",
+  "split_sha256": "0baf6d2fa97d4d61de420d94124cf171019469f8712f9c46f95fa89373f69ba1",
+  "answers_sha256": {
+   "openjev": "27a44ad03bc4cdf25d7550fdd781126a42d4c695dc43c5ce7515ddc8db459ba4",
+   "gpt-oss-120b": "93bc716f00ea9b26b895761fe0fd01a6e581e054878244728d5168a799706d78",
+   "qwen-3.8-27b": "ba5f9f5fe2ef919d40f13a4845b8ea2a7e4fa4814aa43ce66720e66814e1fd28"
+  },
+  "script_sha256": "ad9993000c0e24e9a5561f3a710f067c7b16cec76fb9aa10c6e1fcde18f8097c"
+ },
+ "jev": "not used"
+}

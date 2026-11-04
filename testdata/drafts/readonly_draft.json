@@ -1,0 +1,59 @@
+{
+ "name": "kontostand_ansehen",
+ "goal": "Den Kontostand ansehen",
+ "session_id": "s-fixture-ro",
+ "apps_involved": [
+  "Banking"
+ ],
+ "urls_visited": [],
+ "app": "Banking",
+ "events": [
+  {
+   "id": "e0",
+   "tag_type": "WORKFLOW_START",
+   "timestamp": "2026-10-08T10:00:00",
+   "data": {},
+   "workflow_name": "kontostand_ansehen"
+  },
+  {
+   "id": "e1",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:01",
+   "data": {
+    "action": "click",
+    "selector": {
+     "canonical_role": "link",
+     "name": "Kontoübersicht",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXLink"
+    }
+   }
+  },
+  {
+   "id": "e2",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:02",
+   "data": {
+    "action": "scroll"
+   }
+  },
+  {
+   "id": "e3",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:03",
+   "data": {
+    "action": "read"
+   },
+   "reason": "den Saldo ablesen"
+  },
+  {
+   "id": "e4",
+   "tag_type": "WORKFLOW_END",
+   "timestamp": "2026-10-08T10:00:04",
+   "data": {},
+   "workflow_name": "kontostand_ansehen"
+  }
+ ],
+ "anchors": []
+}

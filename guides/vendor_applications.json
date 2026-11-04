@@ -1,0 +1,98 @@
+{
+  "list_version": 1,
+  "note": [
+    "THE APPLICATIONS ANYUSE RECOGNISES. A map travels only if its app identity",
+    "MATCHES an entry here. Nothing else travels — not anonymised, not hashed,",
+    "not partly. A hash of a tenant identity is still a tenant correlator.",
+    "",
+    "WHY A LIST AT ALL. Every earlier rule asked where a name came from and",
+    "trusted the answer. Twice the answer was honest and the name was still the",
+    "customer: the watcher built an 'OS app name' out of a window title",
+    "('Electron (Angebot Mueller GmbH)'), and the observing model reported a",
+    "screen as the application ('Angebot Mueller GmbH - Kalkulation'). Anything",
+    "derived from a running machine can be customer content, so identity is no",
+    "longer derived. It is matched against this file.",
+    "",
+    "'identity' holds the EXACT names the operating system reports for that",
+    "application on the platforms anyuse watches (macOS today; SAP is listed",
+    "under its Windows launcher name too, because the same screens sit behind",
+    "it). Matching is exact after one normalisation — strip, casefold — and",
+    "nothing else. No substring, no prefix, no fuzz. A near-match is a",
+    "non-match: 'Microsoft Excel - Kunde Mueller GmbH' matches nothing here.",
+    "",
+    "'application' is the name that TRAVELS, and it must also appear in",
+    "'identity'. The observed string is never copied onto a map; this one is",
+    "sent instead, so the single free-text identity on the wire comes out of",
+    "this file and never out of a screen. It is also what merges two tenants'",
+    "maps: 'SAP Logon' and 'SAP GUI' are one identity, so they share a handle.",
+    "",
+    "WHAT IS DELIBERATELY ABSENT. Runtimes and shells that many different",
+    "applications report themselves as — Electron, node, helper, python, java,",
+    "javaw, wine — identify no vendor application, and an entry for one would",
+    "let every in-house app built on it travel under a vendor's name. Adding",
+    "them would make this list a wish, not a claim.",
+    "",
+    "EXTENDING IT. Edit this file (or point ANYUSE_VENDOR_APPLICATIONS at",
+    "another one) and restart nothing — it is re-read when it changes. Add an",
+    "application only when you can name the vendor and the exact string the OS",
+    "reports for it. A list that cannot be read recognises nothing, and then",
+    "nothing travels."
+  ],
+  "applications": [
+    {
+      "application": "SAP GUI",
+      "vendor": "SAP SE",
+      "identity": ["SAP GUI", "SAP Logon"]
+    },
+    {
+      "application": "Microsoft Excel",
+      "vendor": "Microsoft",
+      "identity": ["Microsoft Excel"]
+    },
+    {
+      "application": "Microsoft Word",
+      "vendor": "Microsoft",
+      "identity": ["Microsoft Word"]
+    },
+    {
+      "application": "Microsoft Outlook",
+      "vendor": "Microsoft",
+      "identity": ["Microsoft Outlook"]
+    },
+    {
+      "application": "Google Chrome",
+      "vendor": "Google",
+      "identity": ["Google Chrome"]
+    },
+    {
+      "application": "Firefox",
+      "vendor": "Mozilla",
+      "identity": ["Firefox"]
+    },
+    {
+      "application": "Safari",
+      "vendor": "Apple",
+      "identity": ["Safari"]
+    },
+    {
+      "application": "Visual Studio Code",
+      "vendor": "Microsoft",
+      "identity": ["Visual Studio Code", "Code"]
+    },
+    {
+      "application": "Slack",
+      "vendor": "Slack Technologies",
+      "identity": ["Slack"]
+    },
+    {
+      "application": "Finder",
+      "vendor": "Apple",
+      "identity": ["Finder"]
+    },
+    {
+      "application": "Terminal",
+      "vendor": "Apple",
+      "identity": ["Terminal"]
+    }
+  ]
+}

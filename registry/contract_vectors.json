@@ -1,0 +1,2188 @@
+{
+ "contract": "anyuse.registry/0",
+ "note": "Shared vectors: registry/schema.py (test_registry.py) and registry/worker/vectors.mjs (not executed: no node here) must give the same verdict.",
+ "signature_vectors": {
+  "note": "TEST ONLY: fixed raw Ed25519 private key bytes make Python-generated signatures reproducible; never use this key outside these vectors.",
+  "test_only_private_key_base64url": "AQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyA",
+  "public_key_base64url": "ebVWLo_mVPlAeLES6KmLp5AfhTrmlb7X4OORC60ElmQ",
+  "vectors": [
+   {
+    "name": "empty_object_map_post",
+    "method": "POST",
+    "path_with_query": "/v0/maps",
+    "timestamp": "1790000000",
+    "nonce": "0123456789abcdef0123456789abcdef",
+    "body_utf8": "{}",
+    "signature_base64url": "z1DtyjWmhsHrqNifz1RrL_ZEFUT9fhULq_OhD8D7NgjtMJ00tC1GYmi603WWFFMGW_LvZUlRieETA5orhPyWCg"
+   },
+   {
+    "name": "proof_post_with_query",
+    "method": "POST",
+    "path_with_query": "/v0/maps/8c01f6451e29090eed96fbeb2fa9de02/proofs?source=local",
+    "timestamp": "1790000001",
+    "nonce": "fedcba9876543210fedcba9876543210",
+    "body_utf8": "{\"status\":\"proved\"}",
+    "signature_base64url": "sEHxAs0l_wopK6gWQeKz9d9Wpzt3BT5VJeNEx4goNt1DgmZX80IIqZuDQ5Hwmtbtg9vivIPIZWeMeb8-kYSgBQ"
+   }
+  ]
+ },
+ "vectors": [
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}&s=all"
+      }
+     },
+     {
+      "kind": "detail",
+      "name": "detail",
+      "params": [
+       {
+        "name": "item",
+        "type": "string",
+        "where": "path"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 0,
+       "proof_kind": "none",
+       "status": "discovered"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/package/{item}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "8c01f6451e29090eed96fbeb2fa9de02b854ae86f7e043576e9599284ce3b581"
+   },
+   "expect": "ok",
+   "name": "ok_web"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "app_operator",
+      "name": "add_cube",
+      "operator": {
+       "binds": [
+        {
+         "kwarg": "location",
+         "op": 0,
+         "param": "location"
+        }
+       ],
+       "idnames": [
+        "MESH_OT_primitive_cube_add"
+       ]
+      },
+      "params": [
+       {
+        "name": "location",
+        "type": "string",
+        "where": "input"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "desktop",
+       "status": "proved"
+      }
+     },
+     {
+      "kind": "desktop_class",
+      "name": "sum",
+      "operator": {
+       "class": "arithmetic"
+      },
+      "params": [],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 0,
+       "proof_kind": "none",
+       "status": "discovered"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "app": "Blender",
+     "app_id": "org.blenderfoundation.blender",
+     "kind": "desktop",
+     "versions": {
+      "max": "4.5",
+      "min": "4.2"
+     }
+    },
+    "content_hash": "41bfd9df84c73a4f5ca2c3d614bbe93d69a101047bb43c456b0051dfe6e73ecc"
+   },
+   "expect": "ok",
+   "name": "ok_desktop"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "page",
+      "name": "page",
+      "params": [
+       {
+        "key": "page",
+        "name": "page",
+        "type": "integer",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/list/?page={page}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "d9d183ce9dc56c4aecb7abfe839d97fc376119383e47a875263ffe73b8494349"
+   },
+   "expect": "ok",
+   "name": "ok_trailing_slash_and_integer_page"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 3,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}&s=all"
+      }
+     },
+     {
+      "kind": "detail",
+      "name": "detail",
+      "params": [
+       {
+        "name": "item",
+        "type": "string",
+        "where": "path"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 0,
+       "proof_kind": "none",
+       "status": "discovered"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/package/{item}"
+      }
+     }
+    ],
+    "content_hash": "8c01f6451e29090eed96fbeb2fa9de02b854ae86f7e043576e9599284ce3b581",
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    }
+   },
+   "expect": "hash_mismatch",
+   "name": "hash_mismatch"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://evil.example.com/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "0306ca2c4350adeda710aae3e19d34f7726bd50141acb7fda5fa1fa0e8f35120"
+   },
+   "expect": "schema",
+   "name": "other_host"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org@evil.example.com/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "cc167a4aa9986a2ece6a912d91e91ec172755226713262d513c37d4017180fea"
+   },
+   "expect": "schema",
+   "name": "userinfo_trick"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org.evil.example.com/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "4ac64525d11195b409de91e3a08603b49d3e5a28dbcef123e46ebc9e6328454e"
+   },
+   "expect": "schema",
+   "name": "origin_prefix_trick"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/go?q={q}&next=home"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "39ae5ec175bb4c039d5d3d7f1e768e39319786c0ffdce3c61d02b4f690be41bf"
+   },
+   "expect": "schema",
+   "name": "redirect_key"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}&api_key=abc"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "33808ed74a4b034cb825851a48d551c6205e7f87c1070117cda7e43a9b080110"
+   },
+   "expect": "schema",
+   "name": "credential_key"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}&s=https%3A%2F%2Fevil"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "00e6d86451f7e30f0fd140accbfa655242ec1ba5d6f3d4bb63ae2aa7e6417a2d"
+   },
+   "expect": "schema",
+   "name": "url_in_fixed_value"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}#x"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "c6f1ba33ba47ae8c434c860ed722e59adfb8df2ebe131b2d9bde7b65993781fe"
+   },
+   "expect": "schema",
+   "name": "fragment"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/../search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "66387985d0da38cce16ef5e01b3c69261ebca25400e58691e57de572da48e075"
+   },
+   "expect": "schema",
+   "name": "dot_segment"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "name": "q",
+        "type": "string",
+        "where": "path"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org//evil.example.com/{q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "0e279beee51ce26e416adc2dc54427dd44aa8da00f2af5a5179979513c8c06bc"
+   },
+   "expect": "schema",
+   "name": "double_slash_after_origin"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}&x={other}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "5d49fc96157dcc269050b9a1dd35cc9f576f2f28455b191f586db303efb45a98"
+   },
+   "expect": "schema",
+   "name": "undeclared_placeholder"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/{q}/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "4d85c9d0baf2c5f88a90bb5b6fb9cf57a05ccd8111240d1458e9fbe966daa733"
+   },
+   "expect": "schema",
+   "name": "param_twice"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?s=all"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "f164c046b76369eed0c1537c4f08b8dd43044cee19dd2dcb18a3419eb098c0bc"
+   },
+   "expect": "schema",
+   "name": "param_unused"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "detail",
+      "name": "detail",
+      "params": [
+       {
+        "name": "item",
+        "type": "string",
+        "where": "path"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/pkg-{item}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "ece309e17461196055d559202141c8f191dfc0350ac7f6f2c491b47b3bb0bbe4"
+   },
+   "expect": "schema",
+   "name": "partial_segment_placeholder"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "http://pkgs.example.org/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "http://pkgs.example.org"
+    },
+    "content_hash": "1c1cefc8d610f17d935a5ce0e6cc755a8a634186457a5346cfae7516602744b5"
+   },
+   "expect": "schema",
+   "name": "http_origin"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://10.0.0.7/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://10.0.0.7"
+    },
+    "content_hash": "f5db16b8fdc345b41992995036b9f396c1cef1f3442a8a8148aa38c826ed5430"
+   },
+   "expect": "schema",
+   "name": "ip_origin"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org:8443/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org:8443"
+    },
+    "content_hash": "52728f18b927f8935e19e3cc8d8e622209768f9fc565062fb4935d5a8c99da81"
+   },
+   "expect": "schema",
+   "name": "port_origin"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://localhost/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://localhost"
+    },
+    "content_hash": "75fb2836bf20f198027011a497b2a997470fc8354f55eff6588878d105946d3d"
+   },
+   "expect": "schema",
+   "name": "localhost_origin"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}"
+      },
+      "values": [
+       "jammy",
+       "noble",
+       "focal"
+      ]
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "3864424d325390b6b7e84ff1ad65bc278e8f061cfe913d02fe0a4aa58e0f0f4b"
+   },
+   "expect": "schema",
+   "name": "values_travel"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "headers": {
+        "Cookie": "sid=1"
+       },
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "b1575a4b65cfd51b22fdf34335e3b490a5936bcde22d3b52e0cbb29695e63c3c"
+   },
+   "expect": "schema",
+   "name": "headers_travel"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "description": "x",
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "2deec2456134ead6b368e4e32065e8c54f761ba5a70d6caaff4a27b81acee7fb"
+   },
+   "expect": "schema",
+   "name": "never_travels_key"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}"
+      }
+     }
+    ],
+    "recording": {
+     "steps": []
+    },
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "b34628244dde09db3483346b23202ef1f2e3fab9178ca6051d408325b43c9224"
+   },
+   "expect": "schema",
+   "name": "unknown_top_level_field"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/Users/anna/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "576856b0ff942321597a65e3ab1d303d8d84cdfa607a3db9fc7abba7eea080b8"
+   },
+   "expect": "schema",
+   "name": "user_path_in_string"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}&by=anna@example.org"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "83ccc61c7323c63dffef561429d1a8e6657e996b784557243a68c069b83fe88d"
+   },
+   "expect": "schema",
+   "name": "email_in_fixed_value"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/suche/m\u00fcller?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "41ba5f1470cd8c46a05a399eebf2cc95eb3d182f66fe92f8c5488893e1e9bfac"
+   },
+   "expect": "schema",
+   "name": "non_ascii"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 0,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "0e14430cc6f8ef494b77d939eb52c9f8b3954f3c08738ae969a831266820be69"
+   },
+   "expect": "schema",
+   "name": "proved_without_inputs"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "POST",
+       "template": "https://pkgs.example.org/search?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "9a82e87ddcbf88a3cce3fe5b923c5809120ca4e2218c1dce58f15bd164ddf124"
+   },
+   "expect": "schema",
+   "name": "post_method"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "search",
+      "name": "search_0",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s0?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_1",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s1?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_2",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s2?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_3",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s3?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_4",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s4?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_5",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s5?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_6",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s6?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_7",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s7?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_8",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s8?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_9",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s9?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_10",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s10?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_11",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s11?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_12",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s12?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_13",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s13?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_14",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s14?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_15",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s15?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_16",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s16?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_17",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s17?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_18",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s18?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_19",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s19?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_20",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s20?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_21",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s21?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_22",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s22?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_23",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s23?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_24",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s24?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_25",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s25?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_26",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s26?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_27",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s27?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_28",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s28?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_29",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s29?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_30",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s30?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_31",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s31?q={q}"
+      }
+     },
+     {
+      "kind": "search",
+      "name": "search_32",
+      "params": [
+       {
+        "key": "q",
+        "name": "q",
+        "type": "string",
+        "where": "query"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "learn",
+       "status": "proved"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/s32?q={q}"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "kind": "web",
+     "origin": "https://pkgs.example.org"
+    },
+    "content_hash": "355ea17b3e0360c85e3c82e018b2a5528107a68e6eb811c1d02135ec6a23439b"
+   },
+   "expect": "schema",
+   "name": "too_many_capabilities"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "desktop_class",
+      "name": "sum",
+      "operator": {
+       "class": "arithmetic"
+      },
+      "params": [],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 0,
+       "proof_kind": "none",
+       "status": "discovered"
+      },
+      "request": {
+       "method": "GET",
+       "template": "https://pkgs.example.org/"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "app": "Blender",
+     "app_id": "org.blenderfoundation.blender",
+     "kind": "desktop",
+     "versions": {
+      "max": "4.5",
+      "min": "4.2"
+     }
+    },
+    "content_hash": "2fed802071393c7b05d9fd3c176d200e41ac3a515fc3cade3bf3df3865d2644e"
+   },
+   "expect": "schema",
+   "name": "desktop_request"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "app_operator",
+      "name": "add_cube",
+      "operator": {
+       "binds": [
+        {
+         "kwarg": "location",
+         "op": 0,
+         "param": "location"
+        }
+       ],
+       "idnames": [
+        "import os"
+       ]
+      },
+      "params": [
+       {
+        "name": "location",
+        "type": "string",
+        "where": "input"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "desktop",
+       "status": "proved"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "app": "Blender",
+     "app_id": "org.blenderfoundation.blender",
+     "kind": "desktop",
+     "versions": {
+      "max": "4.5",
+      "min": "4.2"
+     }
+    },
+    "content_hash": "bd8128bb8395da8708f9a4cd3f8fe45be520f2a18def38293f6e93ec7eef35da"
+   },
+   "expect": "schema",
+   "name": "bad_idname"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "app_operator",
+      "name": "add_cube",
+      "operator": {
+       "binds": [],
+       "idnames": [
+        "MESH_OT_primitive_cube_add"
+       ]
+      },
+      "params": [
+       {
+        "name": "location",
+        "type": "string",
+        "where": "input"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "desktop",
+       "status": "proved"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "app": "Blender",
+     "app_id": "org.blenderfoundation.blender",
+     "kind": "desktop",
+     "versions": {
+      "max": "4.5",
+      "min": "4.2"
+     }
+    },
+    "content_hash": "5108b4cfeeef0ae7776a277638f7efea0a4c04514906277c380b93c975131476"
+   },
+   "expect": "schema",
+   "name": "unbound_param"
+  },
+  {
+   "entry": {
+    "capabilities": [
+     {
+      "kind": "app_operator",
+      "name": "add_cube",
+      "operator": {
+       "binds": [
+        {
+         "kwarg": "location",
+         "op": 0,
+         "param": "location"
+        }
+       ],
+       "idnames": [
+        "MESH_OT_primitive_cube_add"
+       ]
+      },
+      "params": [
+       {
+        "name": "location",
+        "type": "string",
+        "where": "input"
+       }
+      ],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 2,
+       "proof_kind": "desktop",
+       "status": "proved"
+      }
+     },
+     {
+      "kind": "desktop_class",
+      "name": "sum",
+      "operator": {
+       "class": "arithmetic"
+      },
+      "params": [],
+      "proof": {
+       "anyuse_version": "0.4.0",
+       "date": "2026-11-03",
+       "fresh_inputs": 0,
+       "proof_kind": "none",
+       "status": "discovered"
+      }
+     }
+    ],
+    "schema": "anyuse.map/0",
+    "target": {
+     "app": "Blender",
+     "app_id": "org.blenderfoundation.blender",
+     "kind": "desktop",
+     "versions": {
+      "min": "4.2-beta"
+     }
+    },
+    "content_hash": "6002a28857c5220fab6fabe540d43aafde9acc73bf67a505bf877406e698e677"
+   },
+   "expect": "schema",
+   "name": "bad_version"
+  }
+ ]
+}

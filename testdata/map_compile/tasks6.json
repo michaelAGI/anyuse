@@ -1,0 +1,2131 @@
+{
+ "about": "Map-compile task pool: author_task = verbatim from the CLIs (claude -p sonnet: NW..; codex codex: NF..; a fresh seed line) from an empty directory, with the author's caller_values; translation = the author's expected end state in the reader's terms ({GEN2} = the data root). te_prefs from survey (the same guest baseline).",
+ "pool_sha256": "5f58026c9e7d9c780f4028c05a01ac025216614051146a00110fc5fe7804a128",
+ "drawn": [
+  "NW01",
+  "NW02",
+  "NW03",
+  "NW04",
+  "NW05",
+  "NW06",
+  "NW07",
+  "NW08",
+  "NW09",
+  "NF01",
+  "NF02",
+  "NF03",
+  "NF04",
+  "NF05",
+  "NF06",
+  "NF07",
+  "NF08",
+  "NF09",
+  "NF10"
+ ],
+ "rejected": [
+  "NW10"
+ ],
+ "te_prefs_titles": {
+  "Intelligentes Kopieren/Einsetzen": "Intelligentes Kopieren/Einsetzen",
+  "Intelligente Anführungszeichen": "Intelligente Anführungszeichen",
+  "Intelligente Bindestriche": "Intelligente Bindestriche",
+  "Intelligente Links": "Intelligente Links",
+  "Während der Texteingabe prüfen": "Rechtschreibung während der Texteingabe prüfen ",
+  "Rechtschreibung autom. korrigieren": "Rechtschreibung automatisch korrigieren"
+ },
+ "te_prefs_baseline": {
+  "Intelligentes Kopieren/Einsetzen": true,
+  "Intelligente Anführungszeichen": true,
+  "Intelligente Bindestriche": true,
+  "Intelligente Links": true,
+  "Rechtschreibung während der Texteingabe prüfen ": true,
+  "Rechtschreibung automatisch korrigieren": false,
+  "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung": false
+ },
+ "te_prefs_plain_text": "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung",
+ "te_prefs_from": "desktop_e2e14_tasks.json",
+ "tasks": [
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW01",
+    "language": "de",
+    "utterance": "Mach mal bei der Honigernte von diesem Jahr den Lindenhonig auf 19 kg hoch, aber nicht im Entwurf.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder die drei Honigernte-Dateien ansehen und die von 2026 ohne 'Entwurf' erkennen",
+     "Honigernte-2026.txt öffnen (TextEdit)",
+     "Die Zeile 'Lindenhonig: 14 kg' auf 'Lindenhonig: 19 kg' ändern",
+     "Mit Ablage > Sichern speichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Imkerei-Hinterhof",
+      "files": [
+       {
+        "name": "Honigernte-2025.txt",
+        "modified": "2025-09-14 17:20",
+        "text": "Honigernte 2025\nLindenhonig: 14 kg\nRapshonig: 22 kg"
+       },
+       {
+        "name": "Honigernte-2026.txt",
+        "modified": "2026-08-18 19:05",
+        "text": "Honigernte 2026\nLindenhonig: 14 kg\nRapshonig: 18 kg"
+       },
+       {
+        "name": "Honigernte-2026-Entwurf.txt",
+        "modified": "2026-07-30 12:40",
+        "text": "Entwurf Honigernte 2026\nLindenhonig: 14 kg\nRapshonig: 17 kg"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Honigernte-2026.txt has the saved text 'Honigernte 2026\\nLindenhonig: 19 kg\\nRapshonig: 18 kg'",
+     "Honigernte-2025.txt is unchanged",
+     "Honigernte-2026-Entwurf.txt is unchanged",
+     "Finder sort order is still Name"
+    ],
+    "must_not_happen": [
+     "Editing Honigernte-2025.txt or the Entwurf file",
+     "Changing the Rapshonig line",
+     "Leaving the edited file unsaved"
+    ],
+    "why_it_is_hard": "Three near-identical files with the same anchor line; 'diesem Jahr' and 'nicht im Entwurf' must be resolved from names and content to exactly one file."
+   },
+   "caller_values": {
+    "file": "Honigernte-2026.txt",
+    "anchor": "Lindenhonig: 14 kg"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NW01/Imkerei-Hinterhof/Honigernte-2026.txt": "Honigernte 2026\nLindenhonig: 19 kg\nRapshonig: 18 kg"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NW01/Imkerei-Hinterhof/Honigernte-2026.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Name"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NW01/Imkerei-Hinterhof/Honigernte-2026.txt": "Honigernte-2026.txt has the saved text 'Honigernte 2026\\nLindenhonig: 19 kg\\nRapshonig: 18 kg'"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW02",
+    "language": "en",
+    "utterance": "In my cost sheet for this year's Baltic trip, add a line at the end that says 'Laboe: ' plus the berth price from the current note about the Laboe harbour, not the 2024 one.",
+    "apps": [
+     "Notizen",
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen open the folder Segeltörn Ostsee and read the note 'Hafen Laboe' (not the 2024 one)",
+     "Note the berth price 28 EUR",
+     "In Finder open Toern-Kosten-2026.txt",
+     "Add the line 'Laboe: 28 EUR' at the end",
+     "Save with Ablage > Sichern"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Ostsee-Toern",
+      "files": [
+       {
+        "name": "Toern-Kosten-2025.txt",
+        "modified": "2025-08-30 20:10",
+        "text": "Törn-Kosten Ostsee 2025\nDiesel: 38 EUR\nProviant: 105 EUR"
+       },
+       {
+        "name": "Toern-Kosten-2026.txt",
+        "modified": "2026-08-25 21:30",
+        "text": "Törn-Kosten Ostsee 2026\nDiesel: 45 EUR\nProviant: 120 EUR"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Segeltörn Ostsee",
+       "notes": [
+        {
+         "title": "Hafen Laboe",
+         "text": "Liegeplatz 28 EUR/Nacht, Strom 3 EUR extra, Duschmarke 1 EUR"
+        },
+        {
+         "title": "Hafen Laboe 2024 (alt)",
+         "text": "Liegeplatz 24 EUR/Nacht, Strom 2 EUR extra"
+        },
+        {
+         "title": "Hafen Heiligenhafen",
+         "text": "Liegeplatz 31 EUR/Nacht, Strom inklusive, Duschmarke 1,50 EUR"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Segeltörn Ostsee",
+      "note": "Hafen Heiligenhafen"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Toern-Kosten-2026.txt has the saved text 'Törn-Kosten Ostsee 2026\\nDiesel: 45 EUR\\nProviant: 120 EUR\\nLaboe: 28 EUR'",
+     "Toern-Kosten-2025.txt is unchanged",
+     "Number of notes in Segeltörn Ostsee is still 3"
+    ],
+    "must_not_happen": [
+     "Using the 24 EUR price from the 2024 note",
+     "Writing to Toern-Kosten-2025.txt",
+     "Modifying any note"
+    ],
+    "why_it_is_hard": "Two Laboe notes with different prices and two similar cost sheets; the right note and the right year must be chosen and the value carried across apps."
+   },
+   "caller_values": {
+    "note": "Hafen Laboe",
+    "file": "Toern-Kosten-2026.txt",
+    "text": "Laboe: 28 EUR"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NW02/Ostsee-Toern/Toern-Kosten-2026.txt": "Törn-Kosten Ostsee 2026\nDiesel: 45 EUR\nProviant: 120 EUR\nLaboe: 28 EUR"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NW02/Ostsee-Toern/Toern-Kosten-2026.txt"
+     },
+     "notes_shown_ok": [
+      {
+       "folder": "Segeltörn Ostsee",
+       "note": "Hafen Laboe"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NW02/Ostsee-Toern/Toern-Kosten-2026.txt": "Toern-Kosten-2026.txt has the saved text 'Törn-Kosten Ostsee 2026\\nDiesel: 45 EUR\\nProviant: 120 EUR\\nLaboe: 28 EUR'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW03",
+    "language": "de",
+    "utterance": "Welches Merkwort hab ich mir in der Notiz zum ersten Brand aufgeschrieben? Schlag das mal im Duden nach.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen den Ordner Töpferkurs Donnerstag öffnen",
+     "Die Notiz 'Erster Brand' lesen und das Merkwort 'Schrühbrand' finden",
+     "Zum Lexikon wechseln und über das Menü Suchen 'Duden-Wissensnetz deutsche Sprache' wählen",
+     "'Schrühbrand' ins Suchfeld eingeben"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Töpferkurs Donnerstag",
+       "notes": [
+        {
+         "title": "Erster Brand",
+         "text": "Merkwort: Schrühbrand, ca. 900 Grad, langsam hochheizen"
+        },
+        {
+         "title": "Zweiter Brand",
+         "text": "Merkwort: Glattbrand, ca. 1240 Grad, Glasur muss trocken sein"
+        },
+        {
+         "title": "Glasur ansetzen",
+         "text": "Merkwort: Engobe, dünn auftragen, Pinselstrich nicht überlappen"
+        },
+        {
+         "title": "Ton vorbereiten",
+         "text": "Merkwort: Wirken, Luftblasen rausdrücken, 10 Minuten kneten"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Töpferkurs Donnerstag",
+      "note": "Zweiter Brand"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Lexikon has the dictionary 'Duden-Wissensnetz deutsche Sprache' chosen",
+     "The Lexikon search field contains 'Schrühbrand'",
+     "Number of notes in Töpferkurs Donnerstag is still 4"
+    ],
+    "must_not_happen": [
+     "Using Alle Lexika or Wikipedia",
+     "Looking up Glattbrand or another note's word",
+     "Modifying any note"
+    ],
+    "why_it_is_hard": "The word has to be found by content (which note is 'the first firing'), with a similar note shown at the start, and the dictionary must be switched from Oxford to Duden."
+   },
+   "caller_values": {
+    "note": "Erster Brand",
+    "lookup": "Schrühbrand"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Schrühbrand",
+     "notes_shown_ok": [
+      {
+       "folder": "Töpferkurs Donnerstag",
+       "note": "Erster Brand"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW04",
+    "language": "en",
+    "utterance": "Order the route files by when I last changed them, then open the one I touched most recently and set its status to 'geschraubt'.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Finder choose Darstellung > Sortieren nach > Änderungsdatum",
+     "Identify the file with the newest modification date (Routen-Zone-C.txt)",
+     "Open it in TextEdit",
+     "Change 'Status: offen' to 'Status: geschraubt'",
+     "Save with Ablage > Sichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Kletterhalle-Routen",
+      "files": [
+       {
+        "name": "Routen-Zone-A.txt",
+        "modified": "2026-09-12 18:00",
+        "text": "Zone A - Routenschrauben\nRoute 3: 5c rot\nStatus: offen"
+       },
+       {
+        "name": "Routen-Zone-B.txt",
+        "modified": "2026-08-30 16:45",
+        "text": "Zone B - Routenschrauben\nRoute 8: 6a gelb\nStatus: offen"
+       },
+       {
+        "name": "Routen-Zone-C.txt",
+        "modified": "2026-09-24 20:15",
+        "text": "Zone C - Routenschrauben\nRoute 14: 6b+ blau\nStatus: offen"
+       },
+       {
+        "name": "Routen-Zone-D.txt",
+        "modified": "2026-09-05 09:30",
+        "text": "Zone D - Routenschrauben\nRoute 21: 7a schwarz\nStatus: offen"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder 'Sortieren nach' has Änderungsdatum checked",
+     "Routen-Zone-C.txt has the saved text 'Zone C - Routenschrauben\\nRoute 14: 6b+ blau\\nStatus: geschraubt'",
+     "Routen-Zone-A.txt, Routen-Zone-B.txt and Routen-Zone-D.txt are unchanged"
+    ],
+    "must_not_happen": [
+     "Editing the first file by name (Zone A)",
+     "Sorting by Erstellungsdatum, Hinzugefügt am or Zuletzt geöffnet",
+     "Changing 'Status' in a file other than Zone C"
+    ],
+    "why_it_is_hard": "The target file is only identified by the modification date, which needs the right sort criterion (other date columns carry no information), and every file has the same 'Status: offen' line."
+   },
+   "caller_values": {
+    "file": "Routen-Zone-C.txt",
+    "anchor": "Status: offen"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NW04/Kletterhalle-Routen/Routen-Zone-C.txt": "Zone C - Routenschrauben\nRoute 14: 6b+ blau\nStatus: geschraubt"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NW04/Kletterhalle-Routen/Routen-Zone-C.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NW04/Kletterhalle-Routen/Routen-Zone-C.txt": "Routen-Zone-C.txt has the saved text 'Zone C - Routenschrauben\\nRoute 14: 6b+ blau\\nStatus: geschraubt'"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW05",
+    "language": "de",
+    "utterance": "Such mal in den Notizen nach Nitrit und mach die Notiz auf, wo der Grenzwert drinsteht. Und stell das Ganze auf Liste um.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen Bearbeiten > Suchen > Notizenliste durchsuchen wählen",
+     "'Nitrit' ins Suchfeld tippen",
+     "Unter den Treffern die Notiz mit dem Grenzwert ('Wasserwerte Becken 1') auswählen",
+     "Darstellung > Als Liste wählen"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Aquarium-Pflege",
+       "notes": [
+        {
+         "title": "Futterplan",
+         "text": "Morgens Flocken, abends Frostfutter, Sonntag fasten"
+        },
+        {
+         "title": "Nitrit-Test Termine",
+         "text": "Nitrit alle 2 Wochen messen, immer montags nach dem Wasserwechsel"
+        },
+        {
+         "title": "Wasserwerte Becken 1",
+         "text": "Nitrit max 0,1 mg/l, Nitrat max 25 mg/l, pH 6,8, KH 5"
+        },
+        {
+         "title": "Wasserwechsel",
+         "text": "30 Prozent pro Woche, Wasser vorher temperieren"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Aquarium-Pflege",
+      "note": "Futterplan"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "The notes search field contains 'Nitrit'",
+     "The note 'Wasserwerte Becken 1' is shown in the editor",
+     "The notes view is Als Liste",
+     "Number of notes in Aquarium-Pflege is still 4"
+    ],
+    "must_not_happen": [
+     "Opening 'Nitrit-Test Termine' as the final note",
+     "Modifying any note",
+     "Leaving the view on Als Galerie"
+    ],
+    "why_it_is_hard": "Two notes match the search term; only one holds the limit value, and a view change must be combined with the search."
+   },
+   "caller_values": {
+    "note": "Wasserwerte Becken 1"
+   },
+   "translation": {
+    "expect": {
+     "notes_search": "Nitrit",
+     "notes_shown": {
+      "folder": "Aquarium-Pflege",
+      "note": "Wasserwerte Becken 1",
+      "text": "Nitrit max 0,1 mg/l, Nitrat max 25 mg/l, pH 6,8, KH 5"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Liste",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW06",
+    "language": "en",
+    "utterance": "The autocorrect keeps mangling the grape names, so switch that off, but I still want the red squiggles. And in the plan that's open, the Riesling harvest moves to 10 October.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open the Bearbeiten menu > Rechtschreibung und Grammatik",
+     "Uncheck 'Rechtschreibung autom. korrigieren' and leave 'Während der Texteingabe prüfen' checked",
+     "Change 'Riesling: Lese am 3. Oktober' to 'Riesling: Lese am 10. Oktober' in the open document",
+     "Save with Ablage > Sichern"
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Weingut-Lese",
+      "files": [
+       {
+        "name": "Lese-Plan-2025.txt",
+        "modified": "2025-09-20 08:10",
+        "text": "Lese-Plan 2025\nMüller-Thurgau: Lese am 22. September\nRiesling: Lese am 1. Oktober\nSpätburgunder: Lese am 10. Oktober"
+       },
+       {
+        "name": "Lese-Plan-2026.txt",
+        "modified": "2026-09-18 07:55",
+        "text": "Lese-Plan 2026\nMüller-Thurgau: Lese am 24. September\nRiesling: Lese am 3. Oktober\nSpätburgunder: Lese am 12. Oktober"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Lese-Plan-2026.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "'Rechtschreibung autom. korrigieren' is unchecked",
+     "'Während der Texteingabe prüfen' is still checked",
+     "The Ersetzungen settings (smart copy/paste, quotes, dashes, links) are still checked",
+     "Lese-Plan-2026.txt has the saved text 'Lese-Plan 2026\\nMüller-Thurgau: Lese am 24. September\\nRiesling: Lese am 10. Oktober\\nSpätburgunder: Lese am 12. Oktober'",
+     "Lese-Plan-2025.txt is unchanged"
+    ],
+    "must_not_happen": [
+     "Turning off 'Während der Texteingabe prüfen'",
+     "Editing Lese-Plan-2025.txt",
+     "Changing the other grape lines",
+     "Leaving the document unsaved"
+    ],
+    "why_it_is_hard": "Two similarly named spelling settings where only one is to change, and the file to edit is only 'the plan that's open' with another year's plan as distractor."
+   },
+   "caller_values": {
+    "file": "Lese-Plan-2026.txt",
+    "anchor": "Riesling: Lese am 3. Oktober"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NW06/Weingut-Lese/Lese-Plan-2026.txt": "Lese-Plan 2026\nMüller-Thurgau: Lese am 24. September\nRiesling: Lese am 10. Oktober\nSpätburgunder: Lese am 12. Oktober"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NW06/Weingut-Lese/Lese-Plan-2026.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen",
+       "on": true
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NW06/Weingut-Lese/Lese-Plan-2026.txt": "Lese-Plan-2026.txt has the saved text 'Lese-Plan 2026\\nMüller-Thurgau: Lese am 24. September\\nRiesling: Lese am 10. Oktober\\nSpätburgunder: Lese am 12. Oktober'"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW07",
+    "language": "de",
+    "utterance": "Leg mal im Ordner einen neuen Ordner an, der so heißt wie der Nachname vom Kunden, dessen Mountainbike zur Inspektion kommt.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder die drei Auftragsdateien nacheinander öffnen und lesen",
+     "Den Auftrag 'Mountainbike Inspektion' finden, Kunde: Brandt",
+     "Zurück zum Finder, Ablage > Neuer Ordner",
+     "Den Ordner 'Brandt' nennen"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Radwerkstatt-Auftraege",
+      "files": [
+       {
+        "name": "Auftrag-Rennrad.txt",
+        "modified": "2026-09-10 10:15",
+        "text": "Kunde: Seidel\nRennrad, Kette wechseln, Schaltung einstellen"
+       },
+       {
+        "name": "Auftrag-MTB-Inspektion.txt",
+        "modified": "2026-09-15 14:30",
+        "text": "Kunde: Brandt\nMountainbike, Inspektion, Bremsbeläge prüfen"
+       },
+       {
+        "name": "Auftrag-MTB-Reifen.txt",
+        "modified": "2026-09-16 09:00",
+        "text": "Kunde: Yilmaz\nMountainbike, Reifen wechseln, Schläuche neu"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "A new empty folder named 'Brandt' exists in Radwerkstatt-Auftraege",
+     "Auftrag-Rennrad.txt, Auftrag-MTB-Inspektion.txt and Auftrag-MTB-Reifen.txt are unchanged and still in the folder"
+    ],
+    "must_not_happen": [
+     "Naming the folder Yilmaz or Seidel",
+     "Creating more than one new folder",
+     "Changing the text of any file"
+    ],
+    "why_it_is_hard": "The folder name is not given and must be read from file content; two mountainbike jobs exist and only one is the inspection."
+   },
+   "caller_values": {
+    "file": "Auftrag-MTB-Inspektion.txt",
+    "folder": "Brandt"
+   },
+   "translation": {
+    "expect": {
+     "folder_added": {
+      "{GEN2}/NW07/Radwerkstatt-Auftraege": [
+       [
+        "Brandt",
+        "dir"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW08",
+    "language": "en",
+    "utterance": "Which bird on my autumn list still has a question mark? Look that one up in the Oxford dictionary.",
+    "apps": [
+     "TextEdit",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Notice that the open document is the spring list",
+     "Open Artenliste-Herbst.txt (Finder or Ablage > Öffnen)",
+     "Read it and find 'Wiedehopf: ?'",
+     "Switch to Lexikon and choose 'Oxford German Dictionary' in the Suchen menu",
+     "Type 'Wiedehopf' in the search field"
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Vogelbeobachtung-Hiddensee",
+      "files": [
+       {
+        "name": "Artenliste-Fruehling.txt",
+        "modified": "2026-04-19 11:00",
+        "text": "Kiebitz: 12\nNeuntöter: ?\nBraunkehlchen: 4"
+       },
+       {
+        "name": "Artenliste-Herbst.txt",
+        "modified": "2026-09-20 16:20",
+        "text": "Kranich: 40\nGraugans: 120\nWiedehopf: ?\nRotmilan: 2"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Artenliste-Fruehling.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": {
+      "source": "Duden-Wissensnetz deutsche Sprache"
+     }
+    },
+    "expected_end_state": [
+     "Artenliste-Herbst.txt is open in TextEdit",
+     "Lexikon has the dictionary 'Oxford German Dictionary' chosen",
+     "The Lexikon search field contains 'Wiedehopf'",
+     "Both Artenliste files are unchanged"
+    ],
+    "must_not_happen": [
+     "Looking up 'Neuntöter'",
+     "Using Alle Lexika or Wikipedia",
+     "Editing either list"
+    ],
+    "why_it_is_hard": "The open document is the wrong season, so the right file must be opened; the dictionary must also be switched from Duden to Oxford."
+   },
+   "caller_values": {
+    "file": "Artenliste-Herbst.txt",
+    "lookup": "Wiedehopf"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Wiedehopf",
+     "opened_set": [
+      "{GEN2}/NW08/Vogelbeobachtung-Hiddensee/Artenliste-Fruehling.txt",
+      "{GEN2}/NW08/Vogelbeobachtung-Hiddensee/Artenliste-Herbst.txt"
+     ]
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NW09",
+    "language": "de",
+    "utterance": "Trag unten in den Sauerteig-Plan noch die Anstellgut-Menge aus der Notiz zum Roggenmischbrot ein, im Format 'Anstellgut: ...'. Nur dort, nicht im Brötchen-Plan.",
+    "apps": [
+     "Notizen",
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In Notizen den Ordner Backstube-Rezepte öffnen",
+     "Die Notiz 'Roggenmischbrot' lesen: Anstellgut 60 g",
+     "Im Finder Sauerteig-Plan.txt öffnen (TextEdit)",
+     "Am Ende die Zeile 'Anstellgut: 60 g' hinzufügen",
+     "Mit Ablage > Sichern speichern"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Backstube-Plaene",
+      "files": [
+       {
+        "name": "Broetchen-Plan.txt",
+        "modified": "2026-09-03 05:30",
+        "text": "Brötchen-Plan\nTeig 22 Uhr kneten\nBacken 5 Uhr bei 240 Grad"
+       },
+       {
+        "name": "Sauerteig-Plan.txt",
+        "modified": "2026-09-08 06:10",
+        "text": "Sauerteig-Plan\nTag 1: 20 Uhr ansetzen\nTag 2: 8 Uhr füttern"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Backstube-Rezepte",
+       "notes": [
+        {
+         "title": "Roggenbrot rein",
+         "text": "Anstellgut 90 g, Roggenmehl 500 g, Wasser 420 g, Salz 10 g"
+        },
+        {
+         "title": "Roggenmischbrot",
+         "text": "Anstellgut 60 g, Roggenmehl 350 g, Weizenmehl 150 g, Wasser 380 g"
+        },
+        {
+         "title": "Dinkelbrot",
+         "text": "Anstellgut 40 g, Dinkelmehl 500 g, Wasser 360 g, Salz 10 g"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Backstube-Rezepte",
+      "note": "Roggenbrot rein"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Sauerteig-Plan.txt has the saved text 'Sauerteig-Plan\\nTag 1: 20 Uhr ansetzen\\nTag 2: 8 Uhr füttern\\nAnstellgut: 60 g'",
+     "Broetchen-Plan.txt is unchanged",
+     "Number of notes in Backstube-Rezepte is still 3"
+    ],
+    "must_not_happen": [
+     "Using 90 g or 40 g",
+     "Writing into Broetchen-Plan.txt",
+     "Modifying any note"
+    ],
+    "why_it_is_hard": "The note shown at the start is the wrong one (pure rye); similar notes with different amounts, and the value must be carried into the correct one of two plans."
+   },
+   "caller_values": {
+    "note": "Roggenmischbrot",
+    "file": "Sauerteig-Plan.txt",
+    "text": "Anstellgut: 60 g"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NW09/Backstube-Plaene/Sauerteig-Plan.txt": "Sauerteig-Plan\nTag 1: 20 Uhr ansetzen\nTag 2: 8 Uhr füttern\nAnstellgut: 60 g"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NW09/Backstube-Plaene/Sauerteig-Plan.txt"
+     },
+     "notes_shown_ok": [
+      {
+       "folder": "Backstube-Rezepte",
+       "note": "Roggenmischbrot"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NW09/Backstube-Plaene/Sauerteig-Plan.txt": "Sauerteig-Plan.txt has the saved text 'Sauerteig-Plan\\nTag 1: 20 Uhr ansetzen\\nTag 2: 8 Uhr füttern\\nAnstellgut: 60 g'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF01",
+    "language": "de",
+    "utterance": "Mach mal im Brennplan die Zeile für den Schrühbrand auf den Wert aus meiner Zusage-Notiz. Nur den kleinen Ofen ändern, den Glasurbrand so lassen.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "In der gezeigten Notizenliste die Zusage für den kleinen Ofen auswählen.",
+     "Die bestätigte Schrühbrandtemperatur lesen.",
+     "In den offenen Brennplan wechseln und nur die betreffende Zeile ersetzen.",
+     "Das Dokument sichern."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Keramikrunde Falkenried",
+      "files": [
+       {
+        "name": "Brennplan.txt",
+        "modified": "2026-09-21 14:30",
+        "text": "Kleiner Ofen\nSchrühbrand: 900 °C\nGlasurbrand: 1240 °C\n"
+       },
+       {
+        "name": "Brennplan-gross.txt",
+        "modified": "2026-09-22 14:30",
+        "text": "Großer Ofen\nSchrühbrand: 980 °C\nGlasurbrand: 1260 °C\n"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Ofenabsprachen Falkenried",
+       "notes": [
+        {
+         "title": "Kleiner Ofen – Vorschlag",
+         "text": "Noch offen: Schrühbrand bei 920 °C ausprobieren."
+        },
+        {
+         "title": "Kleiner Ofen – Zusage",
+         "text": "Bestätigt: Schrühbrand: 950 °C. Glasurbrand bleibt unverändert."
+        },
+        {
+         "title": "Großer Ofen – Zusage",
+         "text": "Bestätigt: Schrühbrand bei 980 °C."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Ofenabsprachen Falkenried",
+      "note": "Kleiner Ofen – Vorschlag"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Brennplan.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen shows folder Ofenabsprachen Falkenried with Kleiner Ofen – Zusage in the editor.",
+     "Brennplan.txt has saved text exactly: Kleiner Ofen\nSchrühbrand: 950 °C\nGlasurbrand: 1240 °C\n"
+    ],
+    "must_not_happen": [
+     "Change the Glasurbrand line.",
+     "Edit Brennplan-gross.txt or any note."
+    ],
+    "why_it_is_hard": "The proposal and confirmation concern the same kiln, while another confirmation gives a different kiln's temperature."
+   },
+   "caller_values": {
+    "note": "Kleiner Ofen – Zusage",
+    "anchor": "Schrühbrand: 900 °C",
+    "text": "Schrühbrand: 950 °C"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NF01/Keramikrunde Falkenried/Brennplan.txt": "Kleiner Ofen\nSchrühbrand: 950 °C\nGlasurbrand: 1240 °C"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NF01/Keramikrunde Falkenried/Brennplan.txt"
+     },
+     "notes_shown": {
+      "folder": "Ofenabsprachen Falkenried",
+      "note": "Kleiner Ofen – Zusage",
+      "text": "Bestätigt: Schrühbrand: 950 °C. Glasurbrand bleibt unverändert."
+     }
+    },
+    "statements": {
+     "{GEN2}/NF01/Keramikrunde Falkenried/Brennplan.txt": "Brennplan.txt has saved text exactly: Kleiner Ofen\nSchrühbrand: 950 °C\nGlasurbrand: 1240 °C\n"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF02",
+    "language": "en",
+    "utterance": "Open the latest August gear check in this folder and change its missing-paddles count to 0. Leave the September check alone, and leave Finder sorted by modification date.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Sort the shown Finder folder by Änderungsdatum.",
+     "Identify the gear check with the latest August modification date.",
+     "Open it in TextEdit and change the missing-paddles count to 0.",
+     "Save the document."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Kayak Shed Larch Cove",
+      "files": [
+       {
+        "name": "Gear-check-west.txt",
+        "modified": "2026-08-30 16:10",
+        "text": "West rack\nMissing paddles: 3\nMissing helmets: 1\n"
+       },
+       {
+        "name": "Gear-check-east.txt",
+        "modified": "2026-08-31 09:20",
+        "text": "East rack\nMissing paddles: 2\nMissing helmets: 1\n"
+       },
+       {
+        "name": "Gear-check-main.txt",
+        "modified": "2026-09-01 08:00",
+        "text": "Main rack\nMissing paddles: 4\nMissing helmets: 0\n"
+       },
+       {
+        "name": "Repair-list.txt",
+        "modified": "2026-08-31 18:40",
+        "text": "Repair list\nSand the east rack.\n"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Finder has Änderungsdatum checked under Sortieren nach.",
+     "TextEdit has only Gear-check-east.txt open.",
+     "Gear-check-east.txt has saved text exactly: East rack\nMissing paddles: 0\nMissing helmets: 1\n"
+    ],
+    "must_not_happen": [
+     "Choose the newest file overall or the latest August file regardless of its purpose.",
+     "Change another file or the missing-helmets count."
+    ],
+    "why_it_is_hard": "The latest August file is a repair list, and the newest gear check falls just outside the requested month."
+   },
+   "caller_values": {
+    "file": "Gear-check-east.txt",
+    "anchor": "Missing paddles: 2"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NF02/Kayak Shed Larch Cove/Gear-check-east.txt": "East rack\nMissing paddles: 0\nMissing helmets: 1"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NF02/Kayak Shed Larch Cove/Gear-check-east.txt"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Änderungsdatum"
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NF02/Kayak Shed Larch Cove/Gear-check-east.txt": "Gear-check-east.txt has saved text exactly: East rack\nMissing paddles: 0\nMissing helmets: 1\n"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF03",
+    "language": "de",
+    "utterance": "Ich brauch die deutsche Erklärung von dem Fachwort in meiner Notiz zur Reparatur am Geigensteg. Such das mal im Duden, nicht die englische Übersetzung.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Die Reparaturnotiz zum Geigensteg auswählen.",
+     "Das ausdrücklich als Fachwort markierte Wort lesen.",
+     "In Lexikon Duden-Wissensnetz deutsche Sprache auswählen.",
+     "Mensur ins Suchfeld eingeben."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Geigenwerkstatt Rosensteg",
+       "notes": [
+        {
+         "title": "Steg – Reparatur",
+         "text": "Fachwort nachschlagen: Mensur. Vor dem Anpassen des Geigenstegs die Maße prüfen."
+        },
+        {
+         "title": "Bogen – Reparatur",
+         "text": "Fachwort nachschlagen: Kolophonium. Danach die Bespannung prüfen."
+        },
+        {
+         "title": "Steg – Einkauf",
+         "text": "Zwei Rohlinge bestellen lassen; Fachwort für später: Ahorn."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Geigenwerkstatt Rosensteg",
+      "note": "Bogen – Reparatur"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notizen shows folder Geigenwerkstatt Rosensteg with Steg – Reparatur in the editor.",
+     "Lexikon has Duden-Wissensnetz deutsche Sprache chosen.",
+     "Lexikon has Mensur in its search field."
+    ],
+    "must_not_happen": [
+     "Select Alle Lexika or Wikipedia.",
+     "Look up a word from the bow repair or purchasing note.",
+     "Edit any note."
+    ],
+    "why_it_is_hard": "Similar note titles overlap on both the instrument part and the activity; the desired word is inside the matching note."
+   },
+   "caller_values": {
+    "note": "Steg – Reparatur",
+    "lookup": "Mensur"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Geigenwerkstatt Rosensteg",
+      "note": "Steg – Reparatur",
+      "text": "Fachwort nachschlagen: Mensur. Vor dem Anpassen des Geigenstegs die Maße prüfen."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Mensur"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF04",
+    "language": "en",
+    "utterance": "In the open terrarium checklist, replace the temporary label line with exactly Label: \"Moss -- north\". Switch off smart quotes and smart dashes first, leave the other typing settings as they are, and save it.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Turn off Intelligente Anführungszeichen.",
+     "Turn off Intelligente Bindestriche.",
+     "Replace the temporary label line with the exact requested line.",
+     "Save the checklist."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Terrarium Bench Alderwick",
+      "files": [
+       {
+        "name": "Moss-checklist.txt",
+        "modified": "2026-09-19 11:05",
+        "text": "North terrarium\nLabel: temporary\nSpare label: temporary\nMist: twice weekly\n"
+       },
+       {
+        "name": "Fern-checklist.txt",
+        "modified": "2026-09-20 11:05",
+        "text": "South terrarium\nLabel: Fern\nMist: daily\n"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Moss-checklist.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit has Intelligente Anführungszeichen unchecked.",
+     "TextEdit has Intelligente Bindestriche unchecked.",
+     "Moss-checklist.txt has saved text exactly: North terrarium\nLabel: \"Moss -- north\"\nSpare label: temporary\nMist: twice weekly\n"
+    ],
+    "must_not_happen": [
+     "Change the spare label line.",
+     "Use curly quotation marks or a typographic dash in the replacement.",
+     "Change any other TextEdit setting."
+    ],
+    "why_it_is_hard": "Two lines contain the temporary value, and automatic substitutions can silently alter the required literal text."
+   },
+   "caller_values": {
+    "anchor": "Label: temporary"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NF04/Terrarium Bench Alderwick/Moss-checklist.txt": "North terrarium\nLabel: \"Moss -- north\"\nSpare label: temporary\nMist: twice weekly"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NF04/Terrarium Bench Alderwick/Moss-checklist.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Ersetzungen > Intelligente Bindestriche",
+       "on": false
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NF04/Terrarium Bench Alderwick/Moss-checklist.txt": "Moss-checklist.txt has saved text exactly: North terrarium\nLabel: \"Moss -- north\"\nSpare label: temporary\nMist: twice weekly\n"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": true,
+       "Bearbeiten > Ersetzungen > Intelligente Links": false,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": false
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF05",
+    "language": "de",
+    "utterance": "Geh mal hier in den Ordner für die aktuellen Seifenkurse. Leg dort einen leeren Ordner „Etiketten“ an und öffne mir die zuletzt geänderte Rezeptdatei. Lass die Sortierung nach Name.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im gezeigten Aufgabenordner Kurse 2026 öffnen.",
+     "Dort den leeren Ordner Etiketten anlegen.",
+     "Anhand der Spalte Änderungsdatum die neueste Rezeptdatei bestimmen.",
+     "Die Rezeptdatei in TextEdit öffnen."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Seifenatelier Mühlenwinkel",
+      "files": [
+       {
+        "name": "Kursuebersicht.txt",
+        "modified": "2026-09-23 10:00",
+        "text": "Aktuelle Seifenkurse: Kurse 2026\nVorjahresunterlagen: Kurse 2025\n"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "Kurse 2026",
+        "files": [
+         {
+          "name": "Rezept-Lavendel.txt",
+          "modified": "2026-09-15 09:00",
+          "text": "Lavendelseife\nDuftmischung: L2\n"
+         },
+         {
+          "name": "Rezept-Ringelblume.txt",
+          "modified": "2026-09-22 09:00",
+          "text": "Ringelblumenseife\nDuftmischung: R4\n"
+         },
+         {
+          "name": "Materialliste.txt",
+          "modified": "2026-09-24 09:00",
+          "text": "Formen: 12\nSchürzen: 8\n"
+         }
+        ]
+       },
+       {
+        "name": "Kurse 2025",
+        "files": [
+         {
+          "name": "Rezept-Rose.txt",
+          "modified": "2026-09-25 09:00",
+          "text": "Archivkopie für den Kurs von 2025\nDuftmischung: R1\n"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Seifenatelier Mühlenwinkel/Kurse 2026 contains a new empty folder named Etiketten.",
+     "TextEdit has only Rezept-Ringelblume.txt open.",
+     "Finder has Name checked under Sortieren nach."
+    ],
+    "must_not_happen": [
+     "Create Etiketten in the task folder's root or in Kurse 2025.",
+     "Open Materialliste.txt as the recipe.",
+     "Modify any file."
+    ],
+    "why_it_is_hard": "The newest file is not a recipe, and an even newer recipe belongs to the previous year's courses."
+   },
+   "caller_values": {
+    "folder": "Kurse 2026",
+    "file": "Rezept-Ringelblume.txt"
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.finder",
+       "prefix": "Darstellung > Sortieren nach > ",
+       "selected": "Name"
+      }
+     ],
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NF05/Seifenatelier Mühlenwinkel/Kurse 2026/Rezept-Ringelblume.txt"
+     },
+     "folder_added": {
+      "{GEN2}/NF05/Seifenatelier Mühlenwinkel/Kurse 2026": [
+       [
+        "Etiketten",
+        "dir"
+       ]
+      ]
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.finder",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF06",
+    "language": "en",
+    "utterance": "Find my note about the telescope's finder, not the eyepiece. Look up the German term I flagged there in the German–English dictionary and leave that lookup showing.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Select the note about the telescope's finder.",
+     "Read the flagged German term.",
+     "Choose Oxford German Dictionary in Lexikon.",
+     "Enter Fadenkreuz in the search field."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Stargazing at Bracken Tor",
+       "notes": [
+        {
+         "title": "Eyepiece alignment",
+         "text": "German term to translate: Austrittspupille. This is about the eyepiece."
+        },
+        {
+         "title": "Finder alignment",
+         "text": "German term to translate: Fadenkreuz. This is about the telescope's finder."
+        },
+        {
+         "title": "Finder bracket",
+         "text": "Tighten the bracket before aligning. No translation needed."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Stargazing at Bracken Tor",
+      "note": "Eyepiece alignment"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "Notizen shows folder Stargazing at Bracken Tor with Finder alignment in the editor.",
+     "Lexikon has Oxford German Dictionary chosen.",
+     "Lexikon has Fadenkreuz in its search field."
+    ],
+    "must_not_happen": [
+     "Select Alle Lexika or Wikipedia.",
+     "Look up Austrittspupille or the English word finder.",
+     "Edit a note."
+    ],
+    "why_it_is_hard": "Two finder notes compete with the initially selected eyepiece note, and the dictionary is specified by function rather than menu label."
+   },
+   "caller_values": {
+    "note": "Finder alignment",
+    "lookup": "Fadenkreuz"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Stargazing at Bracken Tor",
+      "note": "Finder alignment",
+      "text": "German term to translate: Fadenkreuz. This is about the telescope's finder."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Fadenkreuz"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF07",
+    "language": "de",
+    "utterance": "Pack bitte den bestätigten Abholhinweis fürs Schattentheater als letzte Zeile in die offene Packliste, wortwörtlich aus der Notiz. Nicht den alten Vorschlag nehmen. Dann sichern.",
+    "apps": [
+     "Notizen",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Die bestätigte Abholnotiz auswählen.",
+     "Den vollständigen Hinweis aus der Notiz kopieren.",
+     "In der offenen Packliste den Hinweis als letzte Zeile anhängen.",
+     "Die Packliste sichern."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": {
+      "name": "Schattentheater Birkenbuehne",
+      "files": [
+       {
+        "name": "Packliste-Spieltag.txt",
+        "modified": "2026-09-20 12:15",
+        "text": "Leinwand: 1\nFigurenkiste: 1\nLampen: 2\n"
+       },
+       {
+        "name": "Packliste-Probe.txt",
+        "modified": "2026-09-21 12:15",
+        "text": "Leinwand: 1\nFigurenkiste: 1\n"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Birkenbühne Absprachen",
+       "notes": [
+        {
+         "title": "Abholung – Vorschlag",
+         "text": "Abholung: Haupteingang, Kiste S, bei Nils."
+        },
+        {
+         "title": "Abholung – bestätigt",
+         "text": "Abholung: Seiteneingang, Kiste S, bei Nora."
+        },
+        {
+         "title": "Rückgabe – bestätigt",
+         "text": "Rückgabe: Seiteneingang, Kiste S, bei Nils."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Birkenbühne Absprachen",
+      "note": "Abholung – Vorschlag"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": "Packliste-Spieltag.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen shows folder Birkenbühne Absprachen with Abholung – bestätigt in the editor.",
+     "Packliste-Spieltag.txt has saved text exactly: Leinwand: 1\nFigurenkiste: 1\nLampen: 2\nAbholung: Seiteneingang, Kiste S, bei Nora.\n"
+    ],
+    "must_not_happen": [
+     "Copy the proposal or the return instructions.",
+     "Replace existing packing-list lines.",
+     "Edit Packliste-Probe.txt or a note."
+    ],
+    "why_it_is_hard": "The three short notes share almost all their wording, so both the status and the direction of the handover matter."
+   },
+   "caller_values": {
+    "note": "Abholung – bestätigt",
+    "text": "Abholung: Seiteneingang, Kiste S, bei Nora."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NF07/Schattentheater Birkenbuehne/Packliste-Spieltag.txt": "Leinwand: 1\nFigurenkiste: 1\nLampen: 2\nAbholung: Seiteneingang, Kiste S, bei Nora."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NF07/Schattentheater Birkenbuehne/Packliste-Spieltag.txt"
+     },
+     "notes_shown": {
+      "folder": "Birkenbühne Absprachen",
+      "note": "Abholung – bestätigt",
+      "text": "Abholung: Seiteneingang, Kiste S, bei Nora."
+     }
+    },
+    "statements": {
+     "{GEN2}/NF07/Schattentheater Birkenbuehne/Packliste-Spieltag.txt": "Packliste-Spieltag.txt has saved text exactly: Leinwand: 1\nFigurenkiste: 1\nLampen: 2\nAbholung: Seiteneingang, Kiste S, bei Nora.\n"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF08",
+    "language": "en",
+    "utterance": "In this folder, open the tasting sheet whose text says it's for the decaf espresso, and change only its grind setting to 7. Save it; the filter batch should stay as it is.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open Tasting-A.txt and read its batch description.",
+     "Open Tasting-B.txt and verify that it is the decaf espresso sheet.",
+     "Change only its grind-setting value to 7.",
+     "Save Tasting-B.txt, leaving both inspected documents open."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Coffee Trials Copper Quay",
+      "files": [
+       {
+        "name": "Tasting-A.txt",
+        "modified": "2026-09-18 08:40",
+        "text": "Batch: decaf filter\nGrind setting: 9\nDose: 18 g\n"
+       },
+       {
+        "name": "Tasting-B.txt",
+        "modified": "2026-09-18 08:45",
+        "text": "Batch: decaf espresso\nGrind setting: 9\nDose: 18 g\n"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Tasting-A.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "TextEdit has Tasting-A.txt and Tasting-B.txt open, and no other documents open.",
+     "Tasting-B.txt has saved text exactly: Batch: decaf espresso\nGrind setting: 7\nDose: 18 g\n"
+    ],
+    "must_not_happen": [
+     "Change Tasting-A.txt.",
+     "Change the dose or batch description."
+    ],
+    "why_it_is_hard": "The filenames do not identify the brewing method, and the initially open sheet has the same original grind setting as the target."
+   },
+   "caller_values": {
+    "file": "Tasting-B.txt",
+    "anchor": "Grind setting: 9"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NF08/Coffee Trials Copper Quay/Tasting-B.txt": "Batch: decaf espresso\nGrind setting: 7\nDose: 18 g"
+     },
+     "opened_set": [
+      "{GEN2}/NF08/Coffee Trials Copper Quay/Tasting-A.txt",
+      "{GEN2}/NF08/Coffee Trials Copper Quay/Tasting-B.txt"
+     ]
+    },
+    "statements": {
+     "{GEN2}/NF08/Coffee Trials Copper Quay/Tasting-B.txt": "Tasting-B.txt has saved text exactly: Batch: decaf espresso\nGrind setting: 7\nDose: 18 g\n"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF09",
+    "language": "de",
+    "utterance": "Zeig mir mal bei den aktuellen Dachgarten-Notizen die mit der zugesagten Saatgutkiste für die Schule, nicht die Anfrage. Und stell die Notizen als Liste dar, die Kacheln nerven.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den aktuellen Dachgarten-Ordner in der Seitenleiste auswählen.",
+     "Über Darstellung zu Als Liste wechseln.",
+     "Die Notiz mit der zugesagten Saatgutkiste für die Schule auswählen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Dachgarten Sonnenhof 2025",
+       "notes": [
+        {
+         "title": "Saatgut – alte Schulzusage",
+         "text": "Zusage für 2025: Eine Kiste für die Schule am Bach."
+        },
+        {
+         "title": "Saatgut – Restbestand",
+         "text": "Zwei Kisten bleiben im Lager."
+        }
+       ]
+      },
+      {
+       "name": "Dachgarten Sonnenhof 2026",
+       "notes": [
+        {
+         "title": "Saatgut – Schulanfrage",
+         "text": "Die Schule am Bach fragt nach einer Kiste; noch nicht zugesagt."
+        },
+        {
+         "title": "Saatgut – Schulzusage",
+         "text": "Fest zugesagt: Eine Saatgutkiste für die Schule am Bach."
+        },
+        {
+         "title": "Saatgut – Vereinszusage",
+         "text": "Fest zugesagt: Eine Saatgutkiste für den Gartenverein."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Dachgarten Sonnenhof 2025",
+      "note": "Saatgut – alte Schulzusage"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": false,
+      "Rechtschreibung autom. korrigieren": false
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Notizen shows folder Dachgarten Sonnenhof 2026 with Saatgut – Schulzusage in the editor.",
+     "Notizen uses Als Liste view.",
+     "Dachgarten Sonnenhof 2025 still contains 2 notes.",
+     "Dachgarten Sonnenhof 2026 still contains 3 notes."
+    ],
+    "must_not_happen": [
+     "Leave the previous year's promise or the current inquiry selected.",
+     "Modify, move or delete notes.",
+     "Change unrelated note folders."
+    ],
+    "why_it_is_hard": "The starting note already matches the topic and recipient but belongs to the wrong year; the current folder also contains an inquiry and another recipient's promise."
+   },
+   "caller_values": {
+    "folder": "Dachgarten Sonnenhof 2026",
+    "note": "Saatgut – Schulzusage"
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Dachgarten Sonnenhof 2026",
+      "note": "Saatgut – Schulzusage",
+      "text": "Fest zugesagt: Eine Saatgutkiste für die Schule am Bach."
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Liste",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      }
+     ]
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "NF10",
+    "language": "de",
+    "utterance": "Korrigier mal im offenen Webzettel nur die Kettfäden auf 144, nicht den Schuss. Mach außerdem die automatische Rechtschreibkorrektur aus, aber die Prüfung beim Tippen soll anbleiben. Speichern bitte.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Unter Rechtschreibung und Grammatik nur Rechtschreibung autom. korrigieren ausschalten.",
+     "Die Zeile für die Kette identifizieren und die Fadenzahl auf 144 ändern.",
+     "Den Webzettel sichern."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Webkreis Lindenrain",
+      "files": [
+       {
+        "name": "Webzettel-Leinenschal.txt",
+        "modified": "2026-09-24 17:10",
+        "text": "Leinenschal\nKette: 140 Fäden\nSchuss: 140 Reihen\nBreite: 24 cm\n"
+       },
+       {
+        "name": "Webzettel-Wollschal.txt",
+        "modified": "2026-09-25 17:10",
+        "text": "Wollschal\nKette: 120 Fäden\nSchuss: 144 Reihen\nBreite: 24 cm\n"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Webzettel-Leinenschal.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Webzettel-Leinenschal.txt has saved text exactly: Leinenschal\nKette: 144 Fäden\nSchuss: 140 Reihen\nBreite: 24 cm\n",
+     "TextEdit has Rechtschreibung autom. korrigieren unchecked.",
+     "TextEdit has Während der Texteingabe prüfen checked."
+    ],
+    "must_not_happen": [
+     "Replace both occurrences of 140.",
+     "Turn off spelling checking while typing.",
+     "Edit Webzettel-Wollschal.txt or change another setting."
+    ],
+    "why_it_is_hard": "The same number occurs in two different weaving measurements, and the two adjacent spelling options must end in different states."
+   },
+   "caller_values": {
+    "anchor": "Kette: 140 Fäden"
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN2}/NF10/Webkreis Lindenrain/Webzettel-Leinenschal.txt": "Leinenschal\nKette: 144 Fäden\nSchuss: 140 Reihen\nBreite: 24 cm"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN2}/NF10/Webkreis Lindenrain/Webzettel-Leinenschal.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen",
+       "on": true
+      }
+     ]
+    },
+    "statements": {
+     "{GEN2}/NF10/Webkreis Lindenrain/Webzettel-Leinenschal.txt": "Webzettel-Leinenschal.txt has saved text exactly: Leinenschal\nKette: 144 Fäden\nSchuss: 140 Reihen\nBreite: 24 cm\n"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": true,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": false,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": false,
+       "Bearbeiten > Ersetzungen > Intelligente Links": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,1005 @@
+{
+ "name": "steps_schach_1",
+ "goal": "steps recorded in Schach",
+ "events": [
+  {
+   "id": "6ce21a5ba97e",
+   "tag_type": "WORKFLOW_START",
+   "timestamp": "2026-10-20T06:42:59.405359",
+   "data": {
+    "goal": "steps recorded in Schach",
+    "source": "ax_capture",
+    "app": "Schach",
+    "bundle_id": "com.apple.Chess"
+   },
+   "reason": "",
+   "context": "",
+   "expected_result": "",
+   "x": null,
+   "y": null,
+   "target": "",
+   "workflow_name": "steps_schach_1",
+   "anchor_id": null,
+   "confidence": 1.0,
+   "ax_state_id": null
+  },
+  {
+   "id": "7318725b9c71",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-20T06:42:59.405359",
+   "data": {
+    "action": "key",
+    "source": "ax_capture",
+    "app": "Schach",
+    "bundle_id": "com.apple.Chess",
+    "keys": "cmd+n",
+    "keycode": 45,
+    "flags": 537919488
+   },
+   "reason": "",
+   "context": "",
+   "expected_result": "",
+   "x": null,
+   "y": null,
+   "target": "unknown target",
+   "workflow_name": "steps_schach_1",
+   "anchor_id": null,
+   "confidence": 1.0,
+   "ax_state_id": "schach_empty-d2c027"
+  },
+  {
+   "id": "dabcef1e9437",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-20T06:43:01.776266",
+   "data": {
+    "action": "click",
+    "source": "ax_capture",
+    "app": "Schach",
+    "bundle_id": "com.apple.Chess",
+    "target": {
+     "role": "AXButton",
+     "identifier": "_NS:480",
+     "title": "[[ent:ui_label:8abe75f90948]]",
+     "path": "application/window[0]/dialog[0]/button[0]",
+     "frame": [
+      551.5,
+      553.0,
+      92.5,
+      26.0
+     ]
+    },
+    "selector": {
+     "canonical_role": "button",
+     "raw_role": "AXButton",
+     "name": "[[ent:ui_label:8abe75f90948]]",
+     "identifier": "_NS:480",
+     "path": "application/window[0]/dialog[0]/button[0]"
+    }
+   },
+   "reason": "",
+   "context": "",
+   "expected_result": "",
+   "x": null,
+   "y": null,
+   "target": "AXButton id=_NS:480",
+   "workflow_name": "steps_schach_1",
+   "anchor_id": null,
+   "confidence": 1.0,
+   "ax_state_id": "schach_c9ba477dd944-b0ba53"
+  },
+  {
+   "id": "ff891782b101",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-20T06:43:05.360467",
+   "data": {
+    "action": "click",
+    "source": "ax_capture",
+    "app": "Schach",
+    "bundle_id": "com.apple.Chess",
+    "window_title_ref": "[[ent:window_title:a06ba837aed9]]",
+    "target": {
+     "role": "AXButton",
+     "title": "[[ent:ui_label:35c647bce764]]",
+     "description": "[[ent:ui_label:35c647bce764]]",
+     "path": "application/window[0]/group[0]/button[12]",
+     "frame": [
+      493.9,
+      308.0,
+      59.3,
+      55.9
+     ]
+    },
+    "selector": {
+     "canonical_role": "button",
+     "raw_role": "AXButton",
+     "name": "[[ent:ui_label:35c647bce764]]",
+     "identifier": "",
+     "path": "application/window[0]/group[0]/button[12]"
+    }
+   },
+   "reason": "",
+   "context": "",
+   "expected_result": "",
+   "x": null,
+   "y": null,
+   "target": "AXButton",
+   "workflow_name": "steps_schach_1",
+   "anchor_id": null,
+   "confidence": 1.0,
+   "ax_state_id": "schach_015b9fc08055-88901f"
+  },
+  {
+   "id": "4cb0d6143e7d",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-20T06:43:07.319772",
+   "data": {
+    "action": "click",
+    "source": "ax_capture",
+    "app": "Schach",
+    "bundle_id": "com.apple.Chess",
+    "window_title_ref": "[[ent:window_title:a06ba837aed9]]",
+    "target": {
+     "role": "AXButton",
+     "title": "[[ent:ui_label:682d0277680a]]",
+     "description": "[[ent:ui_label:682d0277680a]]",
+     "path": "application/window[0]/group[0]/button[28]",
+     "frame": [
+      493.7,
+      428.4,
+      56.1,
+      49.9
+     ]
+    },
+    "selector": {
+     "canonical_role": "button",
+     "raw_role": "AXButton",
+     "name": "[[ent:ui_label:682d0277680a]]",
+     "identifier": "",
+     "path": "application/window[0]/group[0]/button[28]"
+    }
+   },
+   "reason": "",
+   "context": "",
+   "expected_result": "",
+   "x": null,
+   "y": null,
+   "target": "AXButton",
+   "workflow_name": "steps_schach_1",
+   "anchor_id": null,
+   "confidence": 1.0,
+   "ax_state_id": "schach_015b9fc08055-88901f"
+  },
+  {
+   "id": "afd583e1baa1",
+   "tag_type": "WORKFLOW_END",
+   "timestamp": "2026-10-20T06:43:15.075355",
+   "data": {
+    "source": "ax_capture",
+    "ended_by": "stop",
+    "steps": 4
+   },
+   "reason": "",
+   "context": "",
+   "expected_result": "",
+   "x": null,
+   "y": null,
+   "target": "",
+   "workflow_name": "steps_schach_1",
+   "anchor_id": null,
+   "confidence": 1.0,
+   "ax_state_id": null
+  }
+ ],
+ "anchors": [],
+ "apps_involved": [
+  "Schach"
+ ],
+ "urls_visited": [],
+ "session_id": "383361abacac",
+ "is_partial": false,
+ "composed": false,
+ "workflow_id": null,
+ "app": "Schach",
+ "bundle_id": "com.apple.Chess",
+ "ax_states": {
+  "schach_empty-d2c027": {
+   "state_id": "schach_empty-d2c027",
+   "app": "Schach",
+   "fingerprint": {
+    "required_elements": [],
+    "element_count_range": [
+     97,
+     238
+    ],
+    "structural_hash": "c07bf776ece5e158",
+    "role_frequency": {
+     "AXApplication": 1,
+     "AXMenuBar": 1,
+     "AXMenuBarItem": 8,
+     "AXMenu": 15,
+     "AXMenuItem": 138
+    }
+   },
+   "elements": [],
+   "url_patterns": [],
+   "title_patterns": [],
+   "times_seen": 0,
+   "last_seen": "",
+   "custom_render_notes": [],
+   "captured_at": 1792503768.56
+  },
+  "schach_c9ba477dd944-b0ba53": {
+   "state_id": "schach_c9ba477dd944-b0ba53",
+   "app": "Schach",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:bfc13e2e4565]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:64bdefe8bff9]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0a02aded404f]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:cf3057318b84]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:ea30408d28ec]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:78ec96461fbb]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:87714754137c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e1da9d58f36d]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:452a77dfe24f]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:d5c4bd8f2166]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:c67dd92cea87]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:05c4353a9474]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:35c647bce764]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0bb6b90a599e]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f660571c6d9c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e0687bbe2938]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:46b438582d70]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:b381353e8662]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1264c9b2d905]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0fc0600f59a5]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:df4338046d23]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f18e54be00f8]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:8dc51ebcc307]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:2397db964421]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4f58c4a5fe7f]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e5186b14e3d0]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:8a781226fc7c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:55069f6ccf72]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:682d0277680a]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4cf9f2103709]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:ba5068134c58]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f82c57e84e8c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:267cbd205d07]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:722c9a12e4e5]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e05f8930d757]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:5ca25ad742fe]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:12ae92b79302]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:9c8495e2571e]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:350484fcd0b9]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:52c6b69080b8]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:bc3867d7c51e]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e9c7bbff1186]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4066465251ef]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1f6a104ee0b2]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:171283da626d]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0625e642e611]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:d4d3f0cca8ac]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f1fb17696122]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e448132d7be4]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:62908624e10c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:77e4a214d8c0]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4ce89091e28c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:105527af67ea]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:c18d1a935475]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1a3b05f87d95]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:544100e9f752]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4097c7ac9829]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:69aef7c0820b]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0c977b525aa7]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:6eb3cc0072a1]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1ac6e7a7710a]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e8a18fa23971]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:244a8681438d]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:d1da10230c02]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXMenuButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXPopUpButton",
+      "title": "",
+      "identifier": "[[ent:ui_label:a7fa543bcb9a]]"
+     },
+     {
+      "role": "AXPopUpButton",
+      "title": "",
+      "identifier": "[[ent:ui_label:add21b9077c1]]"
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:8abe75f90948]]",
+      "identifier": "[[ent:ui_label:cf16245a7840]]"
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:dd07dc3333ce]]",
+      "identifier": "[[ent:ui_label:b62f63ed6c93]]"
+     },
+     {
+      "role": "AXSlider",
+      "title": "",
+      "identifier": "[[ent:ui_label:700cc36088e9]]"
+     }
+    ],
+    "element_count_range": [
+     152,
+     365
+    ],
+    "structural_hash": "4777f16bac5dca27",
+    "role_frequency": {
+     "AXApplication": 1,
+     "AXWindow": 1,
+     "AXGroup": 4,
+     "AXButton": 69,
+     "AXMenuButton": 1,
+     "AXStaticText": 7,
+     "AXSheet": 1,
+     "AXPopUpButton": 2,
+     "AXSlider": 1,
+     "AXValueIndicator": 1,
+     "AXMenuBar": 1,
+     "AXMenuBarItem": 8,
+     "AXMenu": 15,
+     "AXMenuItem": 142
+    }
+   },
+   "elements": [],
+   "url_patterns": [],
+   "title_patterns": [],
+   "times_seen": 0,
+   "last_seen": "",
+   "custom_render_notes": [],
+   "captured_at": 1792503779.919
+  },
+  "schach_015b9fc08055-88901f": {
+   "state_id": "schach_015b9fc08055-88901f",
+   "app": "Schach",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:bfc13e2e4565]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:64bdefe8bff9]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0a02aded404f]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:cf3057318b84]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:ea30408d28ec]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:78ec96461fbb]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:87714754137c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e1da9d58f36d]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:452a77dfe24f]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:d5c4bd8f2166]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:c67dd92cea87]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:05c4353a9474]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:35c647bce764]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0bb6b90a599e]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f660571c6d9c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e0687bbe2938]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:46b438582d70]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:b381353e8662]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1264c9b2d905]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0fc0600f59a5]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:df4338046d23]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f18e54be00f8]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:8dc51ebcc307]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:2397db964421]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4f58c4a5fe7f]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e5186b14e3d0]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:8a781226fc7c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:55069f6ccf72]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:682d0277680a]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4cf9f2103709]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:ba5068134c58]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f82c57e84e8c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:267cbd205d07]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:722c9a12e4e5]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e05f8930d757]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:5ca25ad742fe]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:12ae92b79302]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:9c8495e2571e]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:350484fcd0b9]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:52c6b69080b8]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:bc3867d7c51e]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e9c7bbff1186]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4066465251ef]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1f6a104ee0b2]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:171283da626d]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0625e642e611]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:d4d3f0cca8ac]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:f1fb17696122]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e448132d7be4]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:62908624e10c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:77e4a214d8c0]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4ce89091e28c]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:105527af67ea]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:c18d1a935475]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1a3b05f87d95]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:544100e9f752]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:4097c7ac9829]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:69aef7c0820b]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:0c977b525aa7]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:6eb3cc0072a1]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:1ac6e7a7710a]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:e8a18fa23971]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:244a8681438d]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "[[ent:ui_label:d1da10230c02]]",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "",
+      "identifier": ""
+     },
+     {
+      "role": "AXMenuButton",
+      "title": "",
+      "identifier": ""
+     }
+    ],
+    "element_count_range": [
+     130,
+     313
+    ],
+    "structural_hash": "82af457922ebb8b7",
+    "role_frequency": {
+     "AXApplication": 1,
+     "AXWindow": 1,
+     "AXGroup": 3,
+     "AXButton": 67,
+     "AXMenuButton": 1,
+     "AXStaticText": 1,
+     "AXMenuBar": 1,
+     "AXMenuBarItem": 8,
+     "AXMenu": 13,
+     "AXMenuItem": 121
+    }
+   },
+   "elements": [],
+   "url_patterns": [],
+   "title_patterns": [],
+   "times_seen": 0,
+   "last_seen": "",
+   "custom_render_notes": [],
+   "captured_at": 1792503782.208
+  }
+ }
+}

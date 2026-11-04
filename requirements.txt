@@ -1,0 +1,9 @@
+# Install from the AnyUse checkout root:
+#   python -m pip install -r requirements.txt
+# This editable core install uses pyproject.toml as the dependency source.
+# Add the extras you need with a separate checkout install:
+#   python -m pip install -e '.[mcp]'      # MCP server
+#   python -m pip install -e '.[cdp]'      # attach and learn
+#   python -m pip install -e '.[desktop]'  # macOS app recording and replay
+# Extras combine, for example: python -m pip install -e '.[mcp,cdp]'
+-e .

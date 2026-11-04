@@ -1,0 +1,141 @@
+{
+  "rule": "act only when both option orders name the same item, neither names \"keine davon / none of these\", and min(confidence) >= t2; else the protocol's follow-up (pair: A vs B + none; verify: A vs none) in both orders by the same rule",
+  "cw_max": 0.03,
+  "fa_margin": 0.03,
+  "grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    0.99,
+    1.0
+  ],
+  "none_option": "keine davon / none of these",
+  "pickers": {
+    "openjev": {
+      "t2": 0.45,
+      "protocol": "pair",
+      "at_t2": {
+        "t2": 0.45,
+        "n": 240,
+        "accepted": 195,
+        "accepted_wrong": 7,
+        "cw": 0.029166666666666667,
+        "coverage": 0.7833333333333333,
+        "accept_rate": 0.8125,
+        "precision": 0.9641025641025641
+      },
+      "ablation_at_t2": {
+        "t2": 0.45,
+        "n": 223,
+        "accepted": 34,
+        "accepted_wrong": 34,
+        "cw": 0.15246636771300448,
+        "coverage": 0.0,
+        "accept_rate": 0.15246636771300448,
+        "precision": 0.0
+      },
+      "n_main": 240,
+      "n_ablation": 223,
+      "protocols": {
+        "off": {
+          "t2": 0.0,
+          "main": {
+            "t2": 0.0,
+            "n": 240,
+            "accepted": 191,
+            "accepted_wrong": 6,
+            "cw": 0.025,
+            "coverage": 0.7708333333333334,
+            "accept_rate": 0.7958333333333333,
+            "precision": 0.9685863874345549
+          },
+          "ablation": {
+            "t2": 0.0,
+            "n": 223,
+            "accepted": 37,
+            "accepted_wrong": 37,
+            "cw": 0.16591928251121077,
+            "coverage": 0.0,
+            "accept_rate": 0.16591928251121077,
+            "precision": 0.0
+          },
+          "admissible": true,
+          "meets_cw": true
+        },
+        "pair": {
+          "t2": 0.45,
+          "main": {
+            "t2": 0.45,
+            "n": 240,
+            "accepted": 195,
+            "accepted_wrong": 7,
+            "cw": 0.029166666666666667,
+            "coverage": 0.7833333333333333,
+            "accept_rate": 0.8125,
+            "precision": 0.9641025641025641
+          },
+          "ablation": {
+            "t2": 0.45,
+            "n": 223,
+            "accepted": 34,
+            "accepted_wrong": 34,
+            "cw": 0.15246636771300448,
+            "coverage": 0.0,
+            "accept_rate": 0.15246636771300448,
+            "precision": 0.0
+          },
+          "admissible": true,
+          "meets_cw": true
+        },
+        "pair+verify": {
+          "t2": 0.65,
+          "main": {
+            "t2": 0.65,
+            "n": 240,
+            "accepted": 183,
+            "accepted_wrong": 6,
+            "cw": 0.025,
+            "coverage": 0.7375,
+            "accept_rate": 0.7625,
+            "precision": 0.9672131147540983
+          },
+          "ablation": {
+            "t2": 0.65,
+            "n": 223,
+            "accepted": 33,
+            "accepted_wrong": 33,
+            "cw": 0.14798206278026907,
+            "coverage": 0.0,
+            "accept_rate": 0.14798206278026907,
+            "precision": 0.0
+          },
+          "admissible": true,
+          "meets_cw": true
+        }
+      }
+    }
+  },
+  "data": {
+    "questions_sha256": "583721c228c2f62e8e0a6aef5efe60fb279d5ce62a1915231c1974029f8aa918",
+    "answers_sha256": "7532149e11fcdd8d5c07dd71893bd712c6b456b69b8efd50cb9afdc1e5fbb550",
+    "script_sha256": "9ee9f35cfb316a6daaaa09eefa78635f94324a2d44c1d9b27830ef1115f8719e"
+  },
+  "jev": "not calibrated"
+}

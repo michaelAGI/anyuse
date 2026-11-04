@@ -1,0 +1,2 @@
+# The wheel build hook must ship in the sdist so a wheel can be built from it.
+include _wheel_build.py

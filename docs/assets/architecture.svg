@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" role="img" aria-labelledby="title desc">
+  <title id="title">How AnyUse works: one pipeline, four targets</title>
+  <desc id="desc">Every tool goes through the same five steps: capture, compile, prove on unseen inputs, serve over MCP, heal or fail loudly. Only what the tool compiles to changes: an HTTP request for websites (stable), Apple Events for Mac apps with scripting (beta), a checked Accessibility routine for Mac apps without scripting (beta), and a reverse-engineered native call for apps with no API (experimental).</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e5e7eb; }
+    .h1 { font-size: 30px; font-weight: 700; fill: #ffffff; }
+    .sub { font-size: 17px; fill: #9ca3af; }
+    .step { font-size: 19px; font-weight: 700; fill: #ffffff; }
+    .num { font-size: 15px; font-weight: 700; fill: #2dd4bf; }
+    .body { font-size: 15px; fill: #cbd5e1; }
+    .section { font-size: 14px; font-weight: 700; fill: #9ca3af; letter-spacing: 1.5px; }
+    .target { font-size: 17px; font-weight: 700; fill: #ffffff; }
+    .badge { font-size: 13px; font-weight: 700; }
+    .foot { font-size: 15px; fill: #9ca3af; }
+  </style>
+  <rect width="1240" height="600" fill="#0d1117"/>
+
+  <text x="32" y="58" class="h1">Your agent does it once. AnyUse turns it into a tool.</text>
+  <text x="32" y="90" class="sub">One pipeline for every target. Repeat calls run without a model.</text>
+
+  <!-- five steps -->
+  <g>
+    <rect x="32" y="122" width="216" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="52" y="152" class="num">1</text><text x="72" y="152" class="step">Capture</text>
+    <text x="52" y="184" class="body">You or an agent do</text>
+    <text x="52" y="206" class="body">the task once, in a</text>
+    <text x="52" y="228" class="body">website or an app.</text>
+
+    <rect x="272" y="122" width="216" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="292" y="152" class="num">2</text><text x="312" y="152" class="step">Compile</text>
+    <text x="292" y="184" class="body">Find the cheapest</text>
+    <text x="292" y="206" class="body">deterministic way to</text>
+    <text x="292" y="228" class="body">repeat it.</text>
+
+    <rect x="512" y="122" width="216" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="532" y="152" class="num">3</text><text x="552" y="152" class="step">Prove</text>
+    <text x="532" y="184" class="body">Keep the tool only if</text>
+    <text x="532" y="206" class="body">it is right on inputs</text>
+    <text x="532" y="228" class="body">it has never seen.</text>
+
+    <rect x="752" y="122" width="216" height="150" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="772" y="152" class="num">4</text><text x="792" y="152" class="step">Serve</text>
+    <text x="772" y="184" class="body">Your agent calls it</text>
+    <text x="772" y="206" class="body">over MCP: milliseconds,</text>
+    <text x="772" y="228" class="body">no model.</text>
+
+    <rect x="992" y="122" width="216" height="150" rx="12" fill="#161b22" stroke="#2dd4bf"/>
+    <text x="1012" y="152" class="num">5</text><text x="1032" y="152" class="step">Heal or fail loudly</text>
+    <text x="1012" y="184" class="body">When the target</text>
+    <text x="1012" y="206" class="body">changes: rebuild and</text>
+    <text x="1012" y="228" class="body">prove again, or return</text>
+    <text x="1012" y="250" class="body">a reason, never stale data.</text>
+
+    <line x1="250" y1="197" x2="268" y2="197" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="490" y1="197" x2="508" y2="197" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="730" y1="197" x2="748" y2="197" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="970" y1="197" x2="988" y2="197" stroke="#2dd4bf" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="32" y="322" class="section">WHAT A TOOL COMPILES TO</text>
+
+  <!-- four targets -->
+  <g>
+    <rect x="32" y="340" width="282" height="170" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="52" y="372" class="target">Websites</text>
+    <text x="52" y="402" class="body">A plain HTTP request;</text>
+    <text x="52" y="424" class="body">a browser replay when no</text>
+    <text x="52" y="446" class="body">request reproduces the page.</text>
+    <rect x="52" y="468" width="132" height="26" rx="13" fill="#064e3b"/>
+    <text x="64" y="486" class="badge" fill="#6ee7b7">stable, measured</text>
+
+    <rect x="330" y="340" width="282" height="170" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="350" y="372" class="target">Mac apps with scripting</text>
+    <text x="350" y="402" class="body">Apple Events, planned from</text>
+    <text x="350" y="424" class="body">the app's own scripting</text>
+    <text x="350" y="446" class="body">dictionary (Mail, Calendar …).</text>
+    <rect x="350" y="468" width="58" height="26" rx="13" fill="#1e3a8a"/>
+    <text x="364" y="486" class="badge" fill="#93c5fd">beta</text>
+
+    <rect x="628" y="340" width="282" height="170" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="648" y="372" class="target">Mac apps without scripting</text>
+    <text x="648" y="402" class="body">A recorded routine through</text>
+    <text x="648" y="424" class="body">the Accessibility tree, with</text>
+    <text x="648" y="446" class="body">a check after every step.</text>
+    <rect x="648" y="468" width="58" height="26" rx="13" fill="#1e3a8a"/>
+    <text x="662" y="486" class="badge" fill="#93c5fd">beta</text>
+
+    <rect x="926" y="340" width="282" height="170" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="946" y="372" class="target">Apps with no API at all</text>
+    <text x="946" y="402" class="body">A reverse-engineered native</text>
+    <text x="946" y="424" class="body">call: found with REA and</text>
+    <text x="946" y="446" class="body">Ghidra, run through Frida.</text>
+    <rect x="946" y="468" width="108" height="26" rx="13" fill="#78350f"/>
+    <text x="958" y="486" class="badge" fill="#fcd34d">experimental</text>
+  </g>
+
+  <text x="32" y="556" class="foot">Optional: where a page leaves a yes/no check open, a small local decision model (Laya or OpenJev) answers it</text>
+  <text x="32" y="578" class="foot">instead of a large LLM. Off unless you set one up.</text>
+</svg>

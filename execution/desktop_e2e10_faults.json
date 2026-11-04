@@ -1,0 +1,402 @@
+{
+ "rule": "12 live fault cases (desktop_e2e9_faults.json, unchanged) run through Arch10, plus 4 concurrent-edit cases where the concurrent edit happens AFTER the pick and BEFORE the write (the write-time check must catch it).",
+ "pass": {
+  "wrong_focus": "the target is its preimage or the exact permitted edit; every other file of the task byte-identical; no success claimed unless the exact edit",
+  "concurrent_edit": "the target is its preimage PLUS the concurrent edit (it survives); every other file byte-identical; no success claimed",
+  "interrupted_save": "kill: the target is its preimage or the exact edit; torn save: the preimage restored AND recorded as an error; every other file byte-identical",
+  "all": "the fault fired at its location; no irreversible action; every restore succeeded"
+ },
+ "expect": {
+  "CE5-CE8": "a hand-off 'concurrency: the file changed on disk between the read and the write (nothing written)'; the target = preimage + the concurrent line; no write op"
+ },
+ "cases": [
+  {
+   "id": "WF1",
+   "kind": "wrong_focus",
+   "pool": "r7",
+   "task": "GD01",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "read_text",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 2
+   },
+   "fault": {
+    "kind": "open_doc",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/GD01/Preise Vereinsfest/Preisliste Frühjahr.txt"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/GD01/Preise Vereinsfest/Preisliste aktuell.txt",
+   "what": "another document of the folder opened in front right after the document was read"
+  },
+  {
+   "id": "WF2",
+   "kind": "wrong_focus",
+   "pool": "r8",
+   "task": "SE08",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "enter",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "document": true,
+    "nth": 1
+   },
+   "fault": {
+    "kind": "open_doc",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e8/SE08/Umzug_2026/Wohnung_Nord/konditionen_entwurf.txt"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE08/Umzug_2026/Wohnung_Nord/konditionen.txt",
+   "what": "the draft opened in front right before the write"
+  },
+  {
+   "id": "WF3",
+   "kind": "wrong_focus",
+   "pool": "r8",
+   "task": "SE07",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "open_doc",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e8/SE07/Backen_Wochenende/einkauf_brot.txt"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE07/Backen_Wochenende/einkauf_kuchen.txt",
+   "what": "another list opened in front right before the save"
+  },
+  {
+   "id": "WF4",
+   "kind": "wrong_focus",
+   "pool": "r7",
+   "task": "SD14",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "open_doc",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/SD14/Verträge/Vertrag2025/Kuendigung_Bedingungen.txt"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt",
+   "what": "the same-named file of the other year opened in front right before the save"
+  },
+  {
+   "id": "CE1",
+   "kind": "concurrent_edit",
+   "pool": "r6",
+   "task": "GC01",
+   "src": "desktop-e2e6/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "read_text",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 2
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e6/GC01/Café Einkauf Herbst/Preisliste.txt",
+    "append": "\nNotiz: Lieferant angerufen"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e6/GC01/Café Einkauf Herbst/Preisliste.txt",
+   "what": "another process appends a line right after the document was read"
+  },
+  {
+   "id": "CE2",
+   "kind": "concurrent_edit",
+   "pool": "r8",
+   "task": "SE06",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "enter",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "document": true,
+    "nth": 1
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e8/SE06/Briefe_Entwuerfe/brief_berger.txt",
+    "append": "\nPS: Unterlagen folgen."
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE06/Briefe_Entwuerfe/brief_berger.txt",
+   "what": "another process appends a line right before the write"
+  },
+  {
+   "id": "CE3",
+   "kind": "concurrent_edit",
+   "pool": "r7",
+   "task": "GD01",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "enter",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "document": true,
+    "nth": 1
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/GD01/Preise Vereinsfest/Preisliste aktuell.txt",
+    "append": "\nTee: 2 Euro"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/GD01/Preise Vereinsfest/Preisliste aktuell.txt",
+   "what": "another process appends a line right before the write"
+  },
+  {
+   "id": "CE4",
+   "kind": "concurrent_edit",
+   "pool": "r7",
+   "task": "SD14",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "read_text",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 2
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt",
+    "append": "\nStand: Juni 2026"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt",
+   "what": "another process appends a line right after the document was read"
+  },
+  {
+   "id": "IS1",
+   "kind": "interrupted_save",
+   "pool": "r8",
+   "task": "SE06",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "kill_app",
+    "bundle": "com.apple.TextEdit"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE06/Briefe_Entwuerfe/brief_berger.txt",
+   "what": "TextEdit terminated right before the save (the unsaved edit lost)"
+  },
+  {
+   "id": "IS2",
+   "kind": "interrupted_save",
+   "pool": "r8",
+   "task": "SE08",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "kill_app",
+    "bundle": "com.apple.TextEdit"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE08/Umzug_2026/Wohnung_Nord/konditionen.txt",
+   "what": "TextEdit terminated right before the save (the unsaved edit lost)"
+  },
+  {
+   "id": "IS3",
+   "kind": "interrupted_save",
+   "pool": "r8",
+   "task": "SE07",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "truncate_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e8/SE07/Backen_Wochenende/einkauf_kuchen.txt",
+    "keep": 10
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE07/Backen_Wochenende/einkauf_kuchen.txt",
+   "what": "a torn save: the file cut to its first 10 bytes right after the save"
+  },
+  {
+   "id": "IS4",
+   "kind": "interrupted_save",
+   "pool": "r6",
+   "task": "GC01",
+   "src": "desktop-e2e6/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "truncate_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e6/GC01/Café Einkauf Herbst/Preisliste.txt",
+    "keep": 20
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e6/GC01/Café Einkauf Herbst/Preisliste.txt",
+   "what": "a torn save: the file cut to its first 20 bytes right after the save"
+  },
+  {
+   "id": "CE5",
+   "kind": "concurrent_edit",
+   "pool": "r6",
+   "task": "GC01",
+   "src": "desktop-e2e6/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "field",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e6/GC01/Café Einkauf Herbst/Preisliste.txt",
+    "append": "\nNotiz: Lieferant angerufen"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e6/GC01/Café Einkauf Herbst/Preisliste.txt",
+   "what": "another process appends a line AFTER the pick and BEFORE the write: right after the write's own read of the text shown (the preimage), so the write-time check (the file's sha256 against the preimage, right before the write) is what must catch it",
+   "base_case": "CE1"
+  },
+  {
+   "id": "CE6",
+   "kind": "concurrent_edit",
+   "pool": "r8",
+   "task": "SE06",
+   "src": "desktop-e2e8/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "field",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e8/SE06/Briefe_Entwuerfe/brief_berger.txt",
+    "append": "\nPS: Unterlagen folgen."
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e8/SE06/Briefe_Entwuerfe/brief_berger.txt",
+   "what": "another process appends a line AFTER the pick and BEFORE the write: right after the write's own read of the text shown (the preimage), so the write-time check (the file's sha256 against the preimage, right before the write) is what must catch it",
+   "base_case": "CE2"
+  },
+  {
+   "id": "CE7",
+   "kind": "concurrent_edit",
+   "pool": "r7",
+   "task": "GD01",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "field",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/GD01/Preise Vereinsfest/Preisliste aktuell.txt",
+    "append": "\nTee: 2 Euro"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/GD01/Preise Vereinsfest/Preisliste aktuell.txt",
+   "what": "another process appends a line AFTER the pick and BEFORE the write: right after the write's own read of the text shown (the preimage), so the write-time check (the file's sha256 against the preimage, right before the write) is what must catch it",
+   "base_case": "CE3"
+  },
+  {
+   "id": "CE8",
+   "kind": "concurrent_edit",
+   "pool": "r7",
+   "task": "SD14",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "field",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "edit_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt",
+    "append": "\nStand: Juni 2026"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/SD14/Verträge/Vertrag2026/Kuendigung_Bedingungen.txt",
+   "what": "another process appends a line AFTER the pick and BEFORE the write: right after the write's own read of the text shown (the preimage), so the write-time check (the file's sha256 against the preimage, right before the write) is what must catch it",
+   "base_case": "CE4"
+  },
+  {
+   "id": "D1",
+   "kind": "wrong_focus",
+   "pool": "r6",
+   "task": "GC06",
+   "src": "desktop-e2e6/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "before",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "open_doc",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e6/GC06/Vereinsabend Reden/Ablauf.txt"
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e6/GC06/Vereinsabend Reden/Reden/Entwurf B.txt",
+   "what": "DEVELOPMENT (never counted)",
+   "dev": true
+  },
+  {
+   "id": "D2",
+   "kind": "interrupted_save",
+   "pool": "r7",
+   "task": "SD03",
+   "src": "desktop-e2e7/runs/measured.jsonl",
+   "src_run": 1,
+   "at": {
+    "op": "press",
+    "when": "after",
+    "bundle": "com.apple.TextEdit",
+    "label": "Sichern",
+    "nth": 1
+   },
+   "fault": {
+    "kind": "truncate_file",
+    "path": "~/anyuse-guest/scratch/e2e/gen/e7/SD03/Rezeptsammlung.txt",
+    "keep": 12
+   },
+   "target": "~/anyuse-guest/scratch/e2e/gen/e7/SD03/Rezeptsammlung.txt",
+   "what": "DEVELOPMENT (never counted)",
+   "dev": true
+  }
+ ]
+}

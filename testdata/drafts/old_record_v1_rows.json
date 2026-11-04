@@ -1,0 +1,906 @@
+{
+ "format": "anyuse.draft-workflow/1",
+ "compiler": {
+  "name": "draft_compile",
+  "version": 1
+ },
+ "workflow": "write_note_rows",
+ "workflow_id": "20891878",
+ "kind": "desktop",
+ "source_kind": "draft_file",
+ "app": "TextEdit",
+ "bundle_id": "com.apple.TextEdit",
+ "goal": "Eine kurze Notiz in TextEdit schreiben und als Datei sichern",
+ "parameters": [
+  {
+   "name": "text",
+   "candidate": "c2",
+   "type": "text",
+   "description": "",
+   "chosen_by": "override",
+   "example": "Einkaufsliste: Milch, Brot, Kaffee",
+   "occurrences": [
+    1
+   ]
+  },
+  {
+   "name": "dateiname",
+   "candidate": "c4",
+   "type": "file_name",
+   "description": "",
+   "chosen_by": "override",
+   "example": "notiz-2026-10-08.txt",
+   "occurrences": [
+    4
+   ]
+  }
+ ],
+ "candidates": [
+  {
+   "id": "c1",
+   "source": "chosen",
+   "value": "Neu",
+   "steps": [
+    0
+   ],
+   "field": {
+    "role": "menuitem",
+    "title": "Neu",
+    "identifier": "newDocument:"
+   }
+  },
+  {
+   "id": "c2",
+   "source": "typed",
+   "value": "Einkaufsliste: Milch, Brot, Kaffee",
+   "steps": [
+    1
+   ],
+   "field": {
+    "role": "textarea",
+    "title": "",
+    "identifier": "First Text View"
+   }
+  },
+  {
+   "id": "c3",
+   "source": "chosen",
+   "value": "Sichern",
+   "steps": [
+    2
+   ],
+   "field": {
+    "role": "menuitem",
+    "title": "Sichern",
+    "identifier": "_NS:358"
+   }
+  },
+  {
+   "id": "c4",
+   "source": "typed",
+   "value": "notiz-2026-10-08.txt",
+   "steps": [
+    4
+   ],
+   "field": {
+    "role": "textfield",
+    "title": "",
+    "identifier": "saveAsNameTextField"
+   }
+  }
+ ],
+ "steps": [
+  {
+   "intent": "neues Dokument anlegen",
+   "source": "workflow",
+   "target_element": "AXMenuItem Neu",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "Neu",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Neu",
+     "identifier": "newDocument:",
+     "path": "",
+     "raw_role": "AXMenuItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 0
+  },
+  {
+   "intent": "den Text schreiben",
+   "source": "workflow",
+   "target_element": "AXTextArea",
+   "modality": "ax",
+   "command": {
+    "role": "AXTextArea",
+    "title": "",
+    "action": "enter_text",
+    "selector": {
+     "canonical_role": "textarea",
+     "name": "",
+     "identifier": "First Text View",
+     "path": "",
+     "raw_role": "AXTextArea"
+    }
+   },
+   "input_data": "${text}",
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 1
+  },
+  {
+   "intent": "sichern",
+   "source": "workflow",
+   "target_element": "AXMenuItem Sichern",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "Sichern",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Sichern",
+     "identifier": "_NS:358",
+     "path": "",
+     "raw_role": ""
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 2
+  },
+  {
+   "intent": "den Ordner Dokumente waehlen",
+   "source": "workflow",
+   "target_element": "AXRow",
+   "modality": "ax",
+   "command": {
+    "role": "AXRow",
+    "title": "",
+    "action": "press",
+    "selector": {
+     "canonical_role": "row",
+     "name": "",
+     "identifier": "NSTableViewRowViewKey",
+     "path": "window[0]/sheet[0]/scrollarea[0]/outline[0]/row[2]",
+     "raw_role": "AXRow"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 3
+  },
+  {
+   "intent": "den Dateinamen eingeben",
+   "source": "workflow",
+   "target_element": "AXTextField",
+   "modality": "ax",
+   "command": {
+    "role": "AXTextField",
+    "title": "",
+    "action": "enter_text",
+    "selector": {
+     "canonical_role": "textfield",
+     "name": "",
+     "identifier": "saveAsNameTextField",
+     "path": "",
+     "raw_role": "AXTextField"
+    }
+   },
+   "input_data": "${dateiname}",
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 4
+  },
+  {
+   "intent": "speichern bestätigen",
+   "source": "workflow",
+   "target_element": "AXButton Sichern",
+   "modality": "ax",
+   "command": {
+    "role": "AXButton",
+    "title": "Sichern",
+    "action": "press",
+    "selector": {
+     "canonical_role": "button",
+     "name": "Sichern",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXButton"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 5
+  }
+ ],
+ "recorded": [
+  {
+   "intent": "neues Dokument anlegen",
+   "source": "workflow",
+   "target_element": "AXMenuItem Neu",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "Neu",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Neu",
+     "identifier": "newDocument:",
+     "path": "",
+     "raw_role": "AXMenuItem"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 0
+  },
+  {
+   "intent": "den Text schreiben",
+   "source": "workflow",
+   "target_element": "AXTextArea",
+   "modality": "ax",
+   "command": {
+    "role": "AXTextArea",
+    "title": "",
+    "action": "enter_text",
+    "selector": {
+     "canonical_role": "textarea",
+     "name": "",
+     "identifier": "First Text View",
+     "path": "",
+     "raw_role": "AXTextArea"
+    }
+   },
+   "input_data": "Einkaufsliste: Milch, Brot, Kaffee",
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 1
+  },
+  {
+   "intent": "sichern",
+   "source": "workflow",
+   "target_element": "AXMenuItem Sichern",
+   "modality": "ax",
+   "command": {
+    "role": "AXMenuItem",
+    "title": "Sichern",
+    "action": "press",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Sichern",
+     "identifier": "_NS:358",
+     "path": "",
+     "raw_role": ""
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 2
+  },
+  {
+   "intent": "den Ordner Dokumente waehlen",
+   "source": "workflow",
+   "target_element": "AXRow",
+   "modality": "ax",
+   "command": {
+    "role": "AXRow",
+    "title": "",
+    "action": "press",
+    "selector": {
+     "canonical_role": "row",
+     "name": "",
+     "identifier": "NSTableViewRowViewKey",
+     "path": "window[0]/sheet[0]/scrollarea[0]/outline[0]/row[2]",
+     "raw_role": "AXRow"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 3
+  },
+  {
+   "intent": "den Dateinamen eingeben",
+   "source": "workflow",
+   "target_element": "AXTextField",
+   "modality": "ax",
+   "command": {
+    "role": "AXTextField",
+    "title": "",
+    "action": "enter_text",
+    "selector": {
+     "canonical_role": "textfield",
+     "name": "",
+     "identifier": "saveAsNameTextField",
+     "path": "",
+     "raw_role": "AXTextField"
+    }
+   },
+   "input_data": "notiz-2026-10-08.txt",
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 4
+  },
+  {
+   "intent": "speichern bestätigen",
+   "source": "workflow",
+   "target_element": "AXButton Sichern",
+   "modality": "ax",
+   "command": {
+    "role": "AXButton",
+    "title": "Sichern",
+    "action": "press",
+    "selector": {
+     "canonical_role": "button",
+     "name": "Sichern",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXButton"
+    }
+   },
+   "input_data": null,
+   "needs_visual": false,
+   "expected_after": "",
+   "expected_after_state": null,
+   "reasoning": "",
+   "draft_index": 5
+  }
+ ],
+ "workflow_template": {
+  "id": "20891878",
+  "name": "write_note_rows",
+  "description": "Eine kurze Notiz in TextEdit schreiben und als Datei sichern",
+  "parameters": [
+   {
+    "name": "text",
+    "param_type": "string",
+    "required": true,
+    "default": null,
+    "description": ""
+   },
+   {
+    "name": "dateiname",
+    "param_type": "string",
+    "required": true,
+    "default": null,
+    "description": ""
+   }
+  ],
+  "steps": [
+   {
+    "intent": "neues Dokument anlegen",
+    "target_element": "AXMenuItem Neu",
+    "expected_before_state": "te0",
+    "expected_after_state": "",
+    "expected_after": "",
+    "input_data": null,
+    "input_type": "press",
+    "optional": false,
+    "ai_reasoning": "",
+    "step_attempts": 0,
+    "step_successes": 0,
+    "last_success_modality": ""
+   },
+   {
+    "intent": "den Text schreiben",
+    "target_element": "AXTextArea",
+    "expected_before_state": "te1",
+    "expected_after_state": "",
+    "expected_after": "",
+    "input_data": "${text}",
+    "input_type": "enter_text",
+    "optional": false,
+    "ai_reasoning": "",
+    "step_attempts": 0,
+    "step_successes": 0,
+    "last_success_modality": ""
+   },
+   {
+    "intent": "sichern",
+    "target_element": "AXMenuItem Sichern",
+    "expected_before_state": "te2",
+    "expected_after_state": "",
+    "expected_after": "",
+    "input_data": null,
+    "input_type": "press",
+    "optional": false,
+    "ai_reasoning": "",
+    "step_attempts": 0,
+    "step_successes": 0,
+    "last_success_modality": ""
+   },
+   {
+    "intent": "den Ordner Dokumente waehlen",
+    "target_element": "AXRow",
+    "expected_before_state": "",
+    "expected_after_state": "",
+    "expected_after": "",
+    "input_data": null,
+    "input_type": "press",
+    "optional": false,
+    "ai_reasoning": "",
+    "step_attempts": 0,
+    "step_successes": 0,
+    "last_success_modality": ""
+   },
+   {
+    "intent": "den Dateinamen eingeben",
+    "target_element": "AXTextField",
+    "expected_before_state": "te3",
+    "expected_after_state": "",
+    "expected_after": "",
+    "input_data": "${dateiname}",
+    "input_type": "enter_text",
+    "optional": false,
+    "ai_reasoning": "",
+    "step_attempts": 0,
+    "step_successes": 0,
+    "last_success_modality": ""
+   },
+   {
+    "intent": "speichern bestätigen",
+    "target_element": "AXButton Sichern",
+    "expected_before_state": "te4",
+    "expected_after_state": "",
+    "expected_after": "",
+    "input_data": null,
+    "input_type": "press",
+    "optional": false,
+    "ai_reasoning": "",
+    "step_attempts": 0,
+    "step_successes": 0,
+    "last_success_modality": ""
+   }
+  ],
+  "state_path": [
+   "te0",
+   "te1",
+   "te2",
+   "te3",
+   "te4"
+  ],
+  "entry_states": [],
+  "required_app": "TextEdit",
+  "run_count": 0,
+  "success_count": 0,
+  "version": 1,
+  "trigger_phrases": [
+   "write_note_rows",
+   "write note rows"
+  ],
+  "tags": [],
+  "created_at": "2026-10-10T06:00:23.179129",
+  "updated_at": "2026-10-10T06:00:23.179134",
+  "api_hint": null
+ },
+ "state_graph": {
+  "states": {
+   "te0": {
+    "state_id": "te0",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Neu"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXButton",
+       "title": "Neues Dokument"
+      }
+     ],
+     "element_count_range": [
+      9,
+      32
+     ],
+     "structural_hash": "fixture:AXButton=1,AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 2,
+      "AXButton": 1,
+      "AXStaticText": 6,
+      "AXGroup": 4,
+      "AXScrollArea": 1
+     }
+    },
+    "elements": [],
+    "url_patterns": [],
+    "title_patterns": [],
+    "times_seen": 0,
+    "last_seen": "",
+    "custom_render_notes": []
+   },
+   "te1": {
+    "state_id": "te1",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Neu"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXTextArea",
+       "title": ""
+      }
+     ],
+     "element_count_range": [
+      9,
+      32
+     ],
+     "structural_hash": "fixture:AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextArea=1",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 2,
+      "AXTextArea": 1,
+      "AXStaticText": 6,
+      "AXGroup": 4,
+      "AXScrollArea": 1
+     }
+    },
+    "elements": [],
+    "url_patterns": [],
+    "title_patterns": [],
+    "times_seen": 0,
+    "last_seen": "",
+    "custom_render_notes": []
+   },
+   "te2": {
+    "state_id": "te2",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Neu"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXTextArea",
+       "title": ""
+      }
+     ],
+     "element_count_range": [
+      9,
+      32
+     ],
+     "structural_hash": "fixture:AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextArea=1",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 2,
+      "AXTextArea": 1,
+      "AXStaticText": 6,
+      "AXGroup": 4,
+      "AXScrollArea": 1
+     }
+    },
+    "elements": [],
+    "url_patterns": [],
+    "title_patterns": [],
+    "times_seen": 0,
+    "last_seen": "",
+    "custom_render_notes": []
+   },
+   "te3": {
+    "state_id": "te3",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Neu"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXTextField",
+       "title": ""
+      },
+      {
+       "role": "AXButton",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXButton",
+       "title": "Abbrechen"
+      }
+     ],
+     "element_count_range": [
+      10,
+      35
+     ],
+     "structural_hash": "fixture:AXButton=2,AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextField=1",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 2,
+      "AXTextField": 1,
+      "AXButton": 2,
+      "AXStaticText": 6,
+      "AXGroup": 4,
+      "AXScrollArea": 1
+     }
+    },
+    "elements": [],
+    "url_patterns": [],
+    "title_patterns": [],
+    "times_seen": 0,
+    "last_seen": "",
+    "custom_render_notes": []
+   },
+   "te4": {
+    "state_id": "te4",
+    "app": "TextEdit",
+    "fingerprint": {
+     "required_elements": [
+      {
+       "role": "AXMenuBarItem",
+       "title": "Ablage"
+      },
+      {
+       "role": "AXMenuBarItem",
+       "title": "Format"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Neu"
+      },
+      {
+       "role": "AXMenuItem",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXTextField",
+       "title": ""
+      },
+      {
+       "role": "AXButton",
+       "title": "Sichern"
+      },
+      {
+       "role": "AXButton",
+       "title": "Abbrechen"
+      }
+     ],
+     "element_count_range": [
+      10,
+      35
+     ],
+     "structural_hash": "fixture:AXButton=2,AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextField=1",
+     "role_frequency": {
+      "AXMenuBarItem": 2,
+      "AXMenuItem": 2,
+      "AXTextField": 1,
+      "AXButton": 2,
+      "AXStaticText": 6,
+      "AXGroup": 4,
+      "AXScrollArea": 1
+     }
+    },
+    "elements": [],
+    "url_patterns": [],
+    "title_patterns": [],
+    "times_seen": 0,
+    "last_seen": "",
+    "custom_render_notes": []
+   }
+  },
+  "transitions": []
+ },
+ "approvals": {
+  "mode": "all",
+  "gated_steps": [
+   {
+    "index": 0,
+    "class": "side_effecting",
+    "executor_class": "destructive",
+    "intent": "neues Dokument anlegen",
+    "action": "press"
+   },
+   {
+    "index": 1,
+    "class": "side_effecting",
+    "executor_class": "destructive",
+    "intent": "den Text schreiben",
+    "action": "enter_text"
+   },
+   {
+    "index": 2,
+    "class": "side_effecting",
+    "executor_class": "destructive",
+    "intent": "sichern",
+    "action": "press"
+   },
+   {
+    "index": 3,
+    "class": "side_effecting",
+    "executor_class": "destructive",
+    "intent": "den Ordner Dokumente waehlen",
+    "action": "press"
+   },
+   {
+    "index": 4,
+    "class": "side_effecting",
+    "executor_class": "destructive",
+    "intent": "den Dateinamen eingeben",
+    "action": "enter_text"
+   },
+   {
+    "index": 5,
+    "class": "destructive",
+    "executor_class": "destructive",
+    "intent": "speichern bestätigen",
+    "action": "press"
+   }
+  ],
+  "rule": "every step the HIL classifier does not call read-only is held before dispatch"
+ },
+ "drift_profile": {
+  "gate": "on",
+  "settings": {
+   "ANYUSE_DRIFT_EXCLUDE_MENUBAR": true,
+   "ANYUSE_DRIFT_MISSING_TOLERANCE": 0.02
+  },
+  "baseline_steps": 5,
+  "steps": 6,
+  "note": "steps without a recorded fingerprint are checked by the recorded identity only; the drift gate has no baseline for them"
+ },
+ "unreplayable": [],
+ "rungs": [
+  {
+   "rung": "ax",
+   "status": "compiled",
+   "steps": 6
+  },
+  {
+   "rung": "api",
+   "status": "not_applicable",
+   "reason": "a step's label is destructive (submit / send / confirm / delete ...); the api rung sends GET/HEAD only, so this flow stays on the UI path"
+  }
+ ],
+ "attribution": {
+  "taught_by": "Alex (fixture)",
+  "taught_by_source": "draft",
+  "taught_at": "2026-10-08T10:00:00",
+  "taught_until": "2026-10-08T10:00:06",
+  "session_id": "s-fixture-te",
+  "workflow_name": "write_note_rows",
+  "draft_ref": "testdata/drafts/old_rows_draft.json",
+  "draft_kind": "draft_file",
+  "draft_digest": "e54a7e9d4be45206966210a5a1e11dd1ff3e9be25f061ac3507ace9c7d789806",
+  "partial": false
+ },
+ "verdict_keys": {
+  "draft_digest": "e54a7e9d4be45206966210a5a1e11dd1ff3e9be25f061ac3507ace9c7d789806",
+  "parameters_digest": "e59b54cfd0056ef9dded2344f2f0b7d66b0702d26f0d69ca8fc9c5f8fcec3e10",
+  "artifact_digest": "7df4f4b28fde1d286959216db84460d573daadebc987abf746ffb964a28c72e9"
+ },
+ "parameter_choice": {
+  "how": "override",
+  "problems": [],
+  "notes": [],
+  "proposal": null
+ },
+ "proof": {
+  "harness": "sim_ax",
+  "scope": "binding and the checked executor path (identity check, drift gate, approval holds) on the recorded AX world; the app's own effect is shown by the guest replay",
+  "min_cases": 2,
+  "cases": [
+   {
+    "values": {
+     "text": "AnyUse probe 1 e54a7e",
+     "dateiname": "anyuse-probe-1-e54a7e.txt"
+    },
+    "passed": true,
+    "problems": [],
+    "steps_run": 6,
+    "holds": 6,
+    "drift_fired": 0,
+    "llm_calls": 0
+   },
+   {
+    "values": {
+     "text": "AnyUse probe 2 e54a7e",
+     "dateiname": "anyuse-probe-2-e54a7e.txt"
+    },
+    "passed": true,
+    "problems": [],
+    "steps_run": 6,
+    "holds": 6,
+    "drift_fired": 0,
+    "llm_calls": 0
+   }
+  ],
+  "passed": true,
+  "reason": "2/2 fresh value sets replayed with the expected effects",
+  "fresh_inputs": 2,
+  "passed_cases": 2
+ },
+ "verdict": {
+  "verdict": "agrees",
+  "source": "fresh-input proof",
+  "why": "2/2 fresh value sets replayed with the expected effects"
+ },
+ "status": "ready",
+ "status_reasons": [],
+ "compiled_at": "2026-10-10T06:00:23+02:00"
+}

@@ -1,0 +1,35 @@
+{
+  "flow": "rename",
+  "app": "Blender",
+  "bundle_id": "org.blenderfoundation.blender",
+  "note": "Real guest recording. F2 in the 3D viewport (mouse hovering the viewport, real HID keypress) opens Blender's generic 'Object Name' popup (wm.call_panel(name='TOPBAR_PT_name')), pre-filled and pre-selected with the current name; typing a new name and pressing Enter DOES rename the object in bpy.data.objects, but produces ZERO new entries in window_manager.operators -- verified empirically (len(operators) was 0 both immediately before AND after, across the F2 press and the confirm). The popup edits object.name directly as a UI-bound ID property, never through an operator argument.",
+  "before_state": {
+    "objects": [
+      {
+        "name": "Cube",
+        "type": "MESH",
+        "location": [
+          2.5,
+          -1.0,
+          0.75
+        ]
+      }
+    ],
+    "active_object": "Cube"
+  },
+  "ops": [],
+  "after_state": {
+    "objects": [
+      {
+        "name": "MyRenamedThing",
+        "type": "MESH",
+        "location": [
+          2.5,
+          -1.0,
+          0.75
+        ]
+      }
+    ],
+    "active_object": "MyRenamedThing"
+  }
+}

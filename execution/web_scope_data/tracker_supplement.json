@@ -1,0 +1,70 @@
+{
+ "version": "2026-11-03.1",
+ "purpose": "Tracker, analytics and ad SCRIPT hosts the pinned EasyList/EasyPrivacy DOMAIN snapshot misses - by purpose, found on recorded pages. Refused like the snapshot under every rule (page code, third-party any, own hosts). Widgets, consent managers and payment providers are not trackers by purpose and are not listed.",
+ "entries": [
+  {
+   "domain": "facebook.net",
+   "reason": "Meta pixel / SDK (connect.facebook.net): ads and analytics"
+  },
+  {
+   "domain": "cloudflareinsights.com",
+   "reason": "Cloudflare Web Analytics beacon script"
+  },
+  {
+   "domain": "klaviyo.com",
+   "reason": "Klaviyo onsite tracking (marketing analytics)"
+  },
+  {
+   "domain": "kameleoon.io",
+   "reason": "Kameleoon A/B testing and analytics"
+  },
+  {
+   "domain": "listrakbi.com",
+   "reason": "Listrak behavioural marketing tracking"
+  },
+  {
+   "domain": "exponea.com",
+   "reason": "Bloomreach Engagement (Exponea) customer tracking"
+  },
+  {
+   "domain": "voyado.com",
+   "reason": "Voyado Engage marketing tracking"
+  },
+  {
+   "domain": "tracking.ringieraxelspringer.tech",
+   "reason": "Ringier Axel Springer tracking (the host names it)"
+  },
+  {
+   "domain": "piwik.ppm-vertrieb.de",
+   "reason": "Piwik analytics served from another domain"
+  },
+  {
+   "domain": "plausible.44bytes.net",
+   "reason": "Plausible analytics, self-hosted on another domain"
+  },
+  {
+   "domain": "redditstatic.com",
+   "reason": "Reddit pixel (ads)"
+  },
+  {
+   "domain": "drsupadserver.org",
+   "reason": "an ad server"
+  },
+  {
+   "domain": "nextinsure.com",
+   "reason": "insurance ad network widgets (MediaAlpha)"
+  },
+  {
+   "domain": "cardratings.com",
+   "reason": "affiliate credit-card ad widgets"
+  },
+  {
+   "domain": "stay22.com",
+   "reason": "affiliate travel ad widgets"
+  },
+  {
+   "domain": "stroeerdigitalgroup.de",
+   "reason": "Stroeer ad technology"
+  }
+ ]
+}

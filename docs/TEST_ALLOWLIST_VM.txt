@@ -1,0 +1,10 @@
+# Tests that refuse to start outside a macOS guest VM (each calls assert_guest() in __main__).
+# Run them inside the VM: tools/guarded_tests/run_allowed.sh reads docs/TEST_ALLOWLIST.txt only.
+tests/test_rea_native_path_runtime.py
+tests/test_rea_inspector_bridge.py
+tests/test_rea_inspector_lifecycle.py
+tests/test_rea_inspector_recovery.py
+tests/test_rea_svg_observer.py
+tests/test_rea_qt_moc_runtime.py
+tests/test_rea_memory_inspection_runtime.py
+tests/test_rea_runtime_permit_runtime.py

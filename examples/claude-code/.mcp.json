@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "anyuse": {
+      "command": "/path/to/anyuse/.venv/bin/python",
+      "args": [
+        "-P",
+        "-m",
+        "anyuse.mcpserver"
+      ],
+      "env": {
+        "ANYUSE_DATA_DIR": "~/.anyuse",
+        "ANYUSE_API_MODALITY": "on",
+        "ANYUSE_ROBOTS_POLICY": "respect"
+      }
+    }
+  }
+}

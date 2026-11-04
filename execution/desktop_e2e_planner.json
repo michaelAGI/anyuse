@@ -1,0 +1,230 @@
+{
+  "apps": [
+    "TextEdit",
+    "Notes",
+    "Finder",
+    "Calculator",
+    "Preview",
+    "Stickies",
+    "Dictionary",
+    "Digital Color Meter",
+    "Calendar",
+    "Console",
+    "System Information"
+  ],
+  "call": {
+    "host": "api.cerebras.ai",
+    "max_tokens": 2000,
+    "model": "gpt-oss-120b",
+    "path": "/v1/chat/completions",
+    "price_in": 0.25,
+    "price_out": 0.69,
+    "response_format": "json_schema strict (effect_plan)",
+    "temperature": 0.1
+  },
+  "frozen_sha256": {
+    "prompt_w1_system.txt": "5c2fed38ec490ead72f7226cc593c6b251cf2dd53f759d03dd398464545ad940",
+    "vocab.py": "102261a08cfa22f30aa8f505892e884e6c29b149c5831d1f9b7b5f22cabdb536"
+  },
+  "plan_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "steps": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "app": {
+              "enum": [
+                "TextEdit",
+                "Notes",
+                "Finder",
+                "Calculator",
+                "Preview",
+                "Stickies",
+                "Dictionary",
+                "Digital Color Meter",
+                "Calendar",
+                "Console",
+                "System Information",
+                "none"
+              ],
+              "type": "string"
+            },
+            "effect": {
+              "enum": [
+                "launch_app",
+                "navigate",
+                "select_item",
+                "open_item",
+                "object_create",
+                "field_rw",
+                "doc_save",
+                "scoped_find",
+                "toggle_select",
+                "flag_toggle",
+                "property_update",
+                "human_gate",
+                "refuse"
+              ],
+              "type": "string"
+            },
+            "target": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "effect",
+            "app",
+            "target",
+            "value"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "steps"
+    ],
+    "type": "object"
+  },
+  "schema": "anyuse.desktop_e2e_planner/1",
+  "source": "planner prompt w1_system and plan_schema",
+  "types": [
+    {
+      "doc": "Open the app or bring it to the front.",
+      "kind": "ui",
+      "map": "bundle id from the app enum; no model",
+      "name": "launch_app",
+      "origin": "added",
+      "probe_effect": "app_activated (not a probe effect; launch is a precondition)",
+      "target": "\"\"",
+      "value": "\"\""
+    },
+    {
+      "doc": "Show another container or location in the app's window (Finder folder, Notes folder, Calendar date, a sidebar section in System Information or Console).",
+      "kind": "ui",
+      "map": "sidebar/outline row or Go menu item; picker when several rows fit",
+      "name": "navigate",
+      "origin": "added",
+      "probe_effect": "navigated / view_changed",
+      "target": "the location to show: a folder, a notes folder, a date or period, a sidebar section",
+      "value": "\"\""
+    },
+    {
+      "doc": "Select one content item in a list without opening it (a file, a note, an event, a sticky, a report).",
+      "kind": "ui",
+      "map": "content row -> PICKER (screenshot + AX candidates)",
+      "name": "select_item",
+      "origin": "added",
+      "probe_effect": "selection_changed",
+      "target": "a short description of the item (from the goal)",
+      "value": "\"\""
+    },
+    {
+      "doc": "Open one content item from a list (double-click / Return).",
+      "kind": "ui",
+      "map": "content row -> PICKER, then the open action",
+      "name": "open_item",
+      "origin": "added",
+      "probe_effect": "window_opened / navigated",
+      "target": "a short description of the item (from the goal)",
+      "value": "\"\""
+    },
+    {
+      "doc": "Create exactly one new object in the container shown.",
+      "kind": "create",
+      "map": "New-family menu item whose probe showed object_created",
+      "name": "object_create",
+      "origin": "contract",
+      "probe_effect": "object_created / object_created_on_commit",
+      "target": "the object kind (folder, note, event, document, sticky)",
+      "value": "its name if the goal names it ('called', 'titled', 'named'), else \"\""
+    },
+    {
+      "doc": "Write text into an editable text field or area of the app WITHOUT saving a file (a note's text, a sticky's text). Not a search field.",
+      "kind": "write",
+      "map": "identified AXTextField/AXTextArea (not AXSearchField)",
+      "name": "field_rw",
+      "origin": "contract",
+      "probe_effect": "entry_focused + value read back",
+      "target": "the field (note text, sticky text)",
+      "value": "the exact text"
+    },
+    {
+      "doc": "Make the front document's file on disk hold exactly the given text and save it (TextEdit).",
+      "kind": "write",
+      "map": "Save item whose probe showed document_saved (not autosave)",
+      "name": "doc_save",
+      "origin": "contract",
+      "probe_effect": "document_saved",
+      "target": "the file name if the goal gives one, else \"\"",
+      "value": "the exact text the saved file must hold, or \"\" to save the current text unchanged"
+    },
+    {
+      "doc": "Search or look up a pattern in the container currently shown: files of the shown folder, notes, log messages, events, a dictionary, a system report.",
+      "kind": "read",
+      "map": "Find item whose probe focused a search field + a container",
+      "name": "scoped_find",
+      "origin": "contract",
+      "probe_effect": "search_focused",
+      "target": "\"\" (the scope is the container currently shown; navigate first if the goal names one)",
+      "value": "the search pattern / word to look up"
+    },
+    {
+      "doc": "Choose one option in a menu group in which exactly one option is marked.",
+      "kind": "write",
+      "map": "radio run in the menu whose probe showed mark_exclusive; option by label",
+      "name": "toggle_select",
+      "origin": "contract",
+      "probe_effect": "mark_exclusive",
+      "target": "the option group (view mode, sort order, calendar view, colour, magnification, value format, dictionary source, calculator mode, writing direction, sidebar)",
+      "value": "the option to choose"
+    },
+    {
+      "doc": "Switch one on/off menu setting.",
+      "kind": "write",
+      "map": "checkbox run whose probe showed mark_flag; press only if the state differs",
+      "name": "flag_toggle",
+      "origin": "contract",
+      "probe_effect": "mark_flag",
+      "target": "the setting (bold, smart quotes, automatic spelling correction, float on top, translucent, lock position, thousands separators, annotation tool)",
+      "value": "\"on\" or \"off\" (the desired state)"
+    },
+    {
+      "doc": "Set a slider, stepper or pop-up button to a value.",
+      "kind": "write",
+      "map": "identified AXSlider/AXIncrementor/AXPopUpButton",
+      "name": "property_update",
+      "origin": "contract",
+      "probe_effect": "(control value read from a fresh tree)",
+      "target": "the control (aperture size slider, colour space pop-up)",
+      "value": "the value"
+    },
+    {
+      "doc": "An irreversible action inside a supported app (delete, move to the Trash, empty the Trash, discard unsaved changes, cancel an event). The engine stops; a person does or confirms it. The steps that lead to it (launch, navigate, select_item) are planned before it.",
+      "kind": "stop",
+      "map": "none: execution halts at the gate",
+      "name": "human_gate",
+      "origin": "added",
+      "probe_effect": "object_removed (never pressed by the probe)",
+      "target": "what is affected",
+      "value": "delete | discard | other"
+    },
+    {
+      "doc": "The goal needs something outside the supported apps (mail, web, payments, purchases, system settings, installing, passwords or credentials) or something no other type can do. The whole plan is then exactly this one step.",
+      "kind": "stop",
+      "map": "none: nothing is executed",
+      "name": "refuse",
+      "origin": "added",
+      "probe_effect": "auth_required (refused) / outside the apps",
+      "target": "the part that cannot be done",
+      "value": "outside_apps | credentials | unsupported"
+    }
+  ],
+  "user_prefix": "Plan this goal: ",
+  "w1_system": "Turn a user's goal into a plan of steps for a Mac automation engine (German user interface). Output JSON only.\nAllowed step types (closed list; nothing else exists):\n- launch_app(target=\"\"; value=\"\"): Open the app or bring it to the front.\n- navigate(target=the location to show: a folder, a notes folder, a date or period, a sidebar section; value=\"\"): Show another container or location in the app's window (Finder folder, Notes folder, Calendar date, a sidebar section in System Information or Console).\n- select_item(target=a short description of the item (from the goal); value=\"\"): Select one content item in a list without opening it (a file, a note, an event, a sticky, a report).\n- open_item(target=a short description of the item (from the goal); value=\"\"): Open one content item from a list (double-click / Return).\n- object_create(target=the object kind (folder, note, event, document, sticky); value=its name if the goal names it ('called', 'titled', 'named'), else \"\"): Create exactly one new object in the container shown.\n- field_rw(target=the field (note text, sticky text); value=the exact text): Write text into an editable text field or area of the app WITHOUT saving a file (a note's text, a sticky's text). Not a search field.\n- doc_save(target=the file name if the goal gives one, else \"\"; value=the exact text the saved file must hold, or \"\" to save the current text unchanged): Make the front document's file on disk hold exactly the given text and save it (TextEdit).\n- scoped_find(target=\"\" (the scope is the container currently shown; navigate first if the goal names one); value=the search pattern / word to look up): Search or look up a pattern in the container currently shown: files of the shown folder, notes, log messages, events, a dictionary, a system report.\n- toggle_select(target=the option group (view mode, sort order, calendar view, colour, magnification, value format, dictionary source, calculator mode, writing direction, sidebar); value=the option to choose): Choose one option in a menu group in which exactly one option is marked.\n- flag_toggle(target=the setting (bold, smart quotes, automatic spelling correction, float on top, translucent, lock position, thousands separators, annotation tool); value=\"on\" or \"off\" (the desired state)): Switch one on/off menu setting.\n- property_update(target=the control (aperture size slider, colour space pop-up); value=the value): Set a slider, stepper or pop-up button to a value.\n- human_gate(target=what is affected; value=delete | discard | other): An irreversible action inside a supported app (delete, move to the Trash, empty the Trash, discard unsaved changes, cancel an event). The engine stops; a person does or confirms it. The steps that lead to it (launch, navigate, select_item) are planned before it.\n- refuse(target=the part that cannot be done; value=outside_apps | credentials | unsupported): The goal needs something outside the supported apps (mail, web, payments, purchases, system settings, installing, passwords or credentials) or something no other type can do. The whole plan is then exactly this one step.\n\nSupported apps (German UI names in brackets): TextEdit, Notes (Notizen), Finder, Calculator (Rechner), Preview (Vorschau), Stickies (Notizzettel), Dictionary (Wörterbuch), Digital Color Meter (Farbmessung), Calendar (Kalender), Console (Konsole), System Information (Systeminformationen).\n\nRules:\n- Start state: no app is open. Put launch_app before the first step in each app the goal uses.\n- One step = one effect type. Order the steps as a person would do them.\n- Never express an irreversible action (delete, discard, empty the Trash, cancel) as another type: plan the steps that lead to it, then human_gate.\n- If any part of the goal is outside the supported apps or cannot be done with these types, the whole plan is one refuse step (app \"none\").\n- Text that only mentions paying, sending or deleting (a note's text, an event name, a search word) is data, not an action.\n- Copy names and texts from the goal exactly, in the goal's language. Options and settings may be named in English or German. Use \"\" for unused arguments.\n\nExamples:\nGoal: Make the text italic and save the letter with the text 'Liebe Grüße'.\nPlan: {\"steps\": [{\"effect\": \"launch_app\", \"app\": \"TextEdit\", \"target\": \"\", \"value\": \"\"}, {\"effect\": \"flag_toggle\", \"app\": \"TextEdit\", \"target\": \"italic\", \"value\": \"on\"}, {\"effect\": \"doc_save\", \"app\": \"TextEdit\", \"target\": \"\", \"value\": \"Liebe Grüße\"}]}\nGoal: Neuer Zettel mit dem Text „Fenster putzen“, bitte in Blau.\nPlan: {\"steps\": [{\"effect\": \"launch_app\", \"app\": \"Stickies\", \"target\": \"\", \"value\": \"\"}, {\"effect\": \"object_create\", \"app\": \"Stickies\", \"target\": \"sticky\", \"value\": \"\"}, {\"effect\": \"field_rw\", \"app\": \"Stickies\", \"target\": \"sticky text\", \"value\": \"Fenster putzen\"}, {\"effect\": \"toggle_select\", \"app\": \"Stickies\", \"target\": \"colour\", \"value\": \"blue\"}]}\nGoal: Get rid of the sticky with the old phone number.\nPlan: {\"steps\": [{\"effect\": \"launch_app\", \"app\": \"Stickies\", \"target\": \"\", \"value\": \"\"}, {\"effect\": \"select_item\", \"app\": \"Stickies\", \"target\": \"sticky with the old phone number\", \"value\": \"\"}, {\"effect\": \"human_gate\", \"app\": \"Stickies\", \"target\": \"sticky with the old phone number\", \"value\": \"delete\"}]}\nGoal: Order a new keyboard for me.\nPlan: {\"steps\": [{\"effect\": \"refuse\", \"app\": \"none\", \"target\": \"order a keyboard\", \"value\": \"outside_apps\"}]}\nGoal: Stell den Rechner auf die einfache Ansicht.\nPlan: {\"steps\": [{\"effect\": \"launch_app\", \"app\": \"Calculator\", \"target\": \"\", \"value\": \"\"}, {\"effect\": \"toggle_select\", \"app\": \"Calculator\", \"target\": \"mode\", \"value\": \"basic\"}]}"
+}

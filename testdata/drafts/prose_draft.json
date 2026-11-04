@@ -1,0 +1,37 @@
+{
+ "name": "reply_to_client_email",
+ "goal": "Reply to a client email",
+ "session_id": "s-fixture-prose",
+ "apps_involved": [
+  "Mail"
+ ],
+ "urls_visited": [],
+ "events": [
+  {
+   "id": "e0",
+   "tag_type": "WORKFLOW_START",
+   "timestamp": "2026-10-08T10:00:00",
+   "data": {},
+   "workflow_name": "reply_to_client_email"
+  },
+  {
+   "id": "e1",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:01",
+   "data": {
+    "action": "clicked the Reply button in Mail"
+   },
+   "target": "Reply button"
+  },
+  {
+   "id": "e2",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:02",
+   "data": {
+    "action": "typed a short answer"
+   },
+   "target": "message body"
+  }
+ ],
+ "anchors": []
+}

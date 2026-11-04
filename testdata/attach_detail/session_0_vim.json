@@ -1,0 +1,95 @@
+{
+ "kind": "anyuse-attach-session",
+ "version": 1,
+ "id": "20260924T100000-d0000000",
+ "task": "pkgs_detail",
+ "input": {
+  "name": "package",
+  "value": "vim"
+ },
+ "started_at": "2026-11-03T10:00:00+0000",
+ "started": 1790000000.0,
+ "ended": 1790000030.0,
+ "stop_reason": "max-seconds",
+ "endpoint": "127.0.0.1:9334",
+ "browser": {
+  "product": "HeadlessChrome/151",
+  "id": "b-1",
+  "protocol": "1.3"
+ },
+ "target": {
+  "id": "ABCDEF0123456789",
+  "origin_at_attach": "https://pkgs.example.test"
+ },
+ "navigations": [
+  "https://pkgs.example.test/packages",
+  "https://pkgs.example.test/package/vim"
+ ],
+ "snapshots": [
+  {
+   "t": 1.2,
+   "url": "https://pkgs.example.test/packages",
+   "title": "Packages - pkgs",
+   "password_field": false,
+   "text": "Home Packages All packages vim git curl make",
+   "dom": "<html><body><header class=\"site\"><a>Home</a><a>Packages</a></header><h1>All packages</h1><ul class=\"pkgs\"><li class=\"pkg\"><a>vim</a></li><li class=\"pkg\"><a>git</a></li><li class=\"pkg\"><a>curl</a></li><li class=\"pkg\"><a>make</a></li></ul></body></html>"
+  },
+  {
+   "t": 4.8,
+   "url": "https://pkgs.example.test/package/vim",
+   "title": "vim 9.1.0 - pkgs",
+   "password_field": false,
+   "text": "Home Packages vim 9.1.0 Vi IMproved - enhanced vi editor Name vim Licence see upstream Files",
+   "dom": "<html><body><header class=\"site\"><a>Home</a><a>Packages</a></header><main id=\"pkg\"><h1>vim 9.1.0</h1><p class=\"desc\">Vi IMproved - enhanced vi editor</p><dl><dt>Name</dt><dd>vim</dd><dt>Licence</dt><dd>see upstream</dd></dl><h2>Files</h2></main></body></html>"
+  }
+ ],
+ "network": [
+  {
+   "url": "https://pkgs.example.test/packages",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/html",
+   "body": "<html><head><title>Packages - pkgs</title></head><body><header class=\"site\"><a>Home</a><a>Packages</a></header><h1>All packages</h1><ul class=\"pkgs\"><li class=\"pkg\"><a>vim</a></li><li class=\"pkg\"><a>git</a></li><li class=\"pkg\"><a>curl</a></li><li class=\"pkg\"><a>make</a></li></ul></body></html>",
+   "post_data": null,
+   "bytes": 294,
+   "resource_type": "Document",
+   "headers": {
+    "content-type": "text/html"
+   },
+   "credential_bound": "",
+   "body_dropped": ""
+  },
+  {
+   "url": "https://pkgs.example.test/static/app.js",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/javascript",
+   "body": null,
+   "post_data": null,
+   "bytes": 0,
+   "resource_type": "Script",
+   "headers": {
+    "content-type": "text/javascript"
+   },
+   "credential_bound": "",
+   "body_dropped": ""
+  },
+  {
+   "url": "https://pkgs.example.test/package/vim",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/html",
+   "body": "<html><head><title>vim 9.1.0 - pkgs</title><meta property=\"og:title\" content=\"pkgs\"></head><body><header class=\"site\"><a>Home</a><a>Packages</a></header><main id=\"pkg\"><h1>vim 9.1.0</h1><p class=\"desc\">Vi IMproved - enhanced vi editor</p><dl><dt>Name</dt><dd>vim</dd><dt>Licence</dt><dd>see upstream</dd></dl><h2>Files</h2></main></body></html>",
+   "post_data": null,
+   "bytes": 344,
+   "resource_type": "Document",
+   "headers": {
+    "content-type": "text/html"
+   },
+   "credential_bound": "",
+   "body_dropped": ""
+  }
+ ],
+ "dropped_entries": 0,
+ "password_field_seen": false
+}

@@ -1,0 +1,47 @@
+{
+ "workflow": "wikipedia_typeahead",
+ "site": "en.wikipedia.org",
+ "tag": "rec",
+ "param": {
+  "name": "q",
+  "value": "Ada Lovelace"
+ },
+ "ui": {
+  "items": [
+   "Ada Lovelace\nEnglish mathematician (1815\u20131852)",
+   "Ada Lovelace (microarchitecture)\nGPU microarchitecture by Nvidia",
+   "Ada Lovelace Day\nAnnual event celebrating the contributions of women to STEM fields",
+   "Ada Lovelace Award\nAward for women in computing, founded 1981",
+   "Alan M. Lovelace\nAmerican scientist and government official (1929\u20132018)"
+  ],
+  "text": "Jump to content\nMain menu\nAda Lovelace\nEnglish mathematician (1815\u20131852)\nAda Lovelace (microarchitecture)\nGPU microarchitecture by Nvidia\nAda Lovelace Day\nAnnual event celebrating the contributions of women to STEM fields\nAda Lovelace Award\nAward for women in computing, founded 1981\nAlan M. Lovelace\nAmerican scientist and government official (1929\u20132018)\nDelilah S. Dawson (Redirected from Ava Lovel"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Main_Page",
+ "network": [
+  {
+   "url": "https://en.wikipedia.org/w/rest.php/v1/search/title?q=Ada+Lovelace&limit=10",
+   "method": "GET",
+   "status": 200,
+   "mime": "application/json",
+   "bytes": 1647,
+   "body": "{\"pages\": [{\"id\": 974, \"key\": \"Ada_Lovelace\", \"title\": \"Ada Lovelace\", \"excerpt\": \"Ada Lovelace\", \"matched_title\": null, \"anchor\": null, \"description\": \"English mathematician (1815\\u20131852)\", \"thumbnail\": {\"mimetype\": \"image/png\", \"width\": 60, \"height\": 78, \"duration\": null, \"url\": \"//thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843_-_cropped.png/60px-Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843_-_cropped.png?utm_source=en.wikipedia.org&utm_campaign=rest&utm_content=thumbnail\"}}, {\"id\": 71803512, \"key\": \"Ada_Lovelace_(microarchitecture)\", \"title\": \"Ada Lovelace (microarchitecture)\", \"excerpt\": \"Ada Lovelace (microarchitecture)\", \"matched_title\": null, \"anchor\": null, \"description\": \"GPU microarchitecture by Nvidia\", \"thumbnail\": null}, {\"id\": 26688680, \"key\": \"Ada_Lovelace_Day\", \"title\": \"Ada Lovelace Day\", \"excerpt\": \"Ada Lovelace Day\", \"matched_title\": null, \"anchor\": null, \"description\": \"Annual event celebrating the contributions of women to STEM fields\", \"thumbnail\": {\"mimetype\": \"image/jpeg\", \"width\": 60, \"height\": 45, \"duration\": null, \"url\": \"//thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Cake_from_Ada_Lovelace_Day_2013_Editathon_Oxford.JPG/60px-Cake_from_Ada_Lovelace_Day_2013_Editathon_Oxford.JPG?utm_source=en.wikipedia.org&utm_campaign=rest&utm_content=thumbnail\"}}, {\"id\": 54202109, \"key\": \"Ada_Lovelace_Award\", \"title\": \"Ada Lovelace Award\", \"excerpt\": \"Ada Lovelace Award\", \"matched_title\": null, \"anchor\": null, \"description\": \"Award for women in computing, founded 1981\", \"thumbnail\": {\"mimetype\": \"image/jpeg\", \"width\": 60, \"height\": 76, \"duration\": null, \"url\": \"//thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Margaret_Hamilton_1995.jpg/60px-Margaret_Hamilton_1995.jpg?utm_source=en.wikipedia.org&utm_campaign=rest&utm_content=thumbnail\"}}, {\"id\": 18293025, \"key\": \"Alan_M._Lovelace\", \"title\": \"Alan M. Lovelace\", \"excerpt\": \"Alan M. Lovelace\", \"matched_title\": null, \"anchor\": null, \"description\": \"American scientist and government official (1929\\u20132018)\", \"thumbnail\": {\"mimetype\": \"image/jpeg\", \"width\": 60, \"height\": 74, \"duration\": null, \"url\": \"//thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Alan_Lovelace%2C_official_NASA_photo_portrait.jpg/60px-Alan_Lovelace%2C_official_NASA_photo_portrait.jpg?utm_source=en.wikipedia.org&utm_campaign=rest&utm_content=thumbnail\"}}]}"
+  },
+  {
+   "url": "https://en.wikipedia.org/w/load.php?lang=en&modules=mediawiki.codex.typeaheadSearch%7Cmediawiki.skinning.typeaheadSearch%7Cskins.vector.search%7Cvue&skin=vector-2022&version=t9jxc",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/javascript",
+   "bytes": 90334,
+   "body": null
+  },
+  {
+   "url": "https://en.wikipedia.org/w/load.php?lang=en&modules=ext.uls.common%2Ci18n%2Cime%2Clanguagenames%2Cmediawiki%2Cmessages%7Cjquery.i18n%2Cime%2Culs%7Cjquery.uls.data%2Cgrid&skin=vector-2022&version=x4jpg",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/javascript",
+   "bytes": 65326,
+   "body": null
+  }
+ ],
+ "_note": "Minimal redacted fixture of PUBLIC responses, captured 2026-11-03. Headers, cookies and timings removed; JSON bodies truncated to 5 entries."
+}

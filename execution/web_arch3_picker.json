@@ -1,0 +1,62 @@
+{
+ "rule": "act when both option orders name the same item, neither names none, and min(confidence) >= t2; OR one order names item X with confidence >= asym_item while the other names none with confidence <= asym_none (accept X); when the two orders name DIFFERENT items: the pairwise tie-break (the two items + none, both orders; act only when both orders name the same item and neither names none)",
+ "t2": 0.0,
+ "asym_item": 0.9,
+ "asym_none": 0.8,
+ "tie_break": "pairwise",
+ "cw_max": 0.03,
+ "selection": "the most accepted picks with confident-wrong <= 3 % pooled AND on the web-only seen rows (<= 1 of 41)",
+ "seen_data": {
+  "desktop": "desktop calibration picks (n=171)",
+  "web1": "web-arch results/picker_gold.json (n=15)",
+  "web2": "web-arch3 analysis/picker_gold_r2.json (n=26, gold set blind to the picks)"
+ },
+ "at_rule": {
+  "n": 212,
+  "accepted": 153,
+  "right": 151,
+  "wrong": 2,
+  "cw": 0.0094,
+  "coverage": 0.7217,
+  "by_src": {
+   "desktop": [
+    138,
+    1
+   ],
+   "web1": [
+    5,
+    1
+   ],
+   "web2": [
+    10,
+    0
+   ]
+  },
+  "tie_break_questions": 20
+ },
+ "tie_break_note": "the pairwise tie-break needs new model calls: it cannot be scored on logged answers; it is frozen by its rule (the same consistency test), its live accuracy is reported",
+ "options": "richer: title, price, a snippet of the item's card and the link path within OpenJev's 120 characters",
+ "frozen": "2026-11-03",
+ "prev_rule": {
+  "n": 212,
+  "accepted": 146,
+  "right": 144,
+  "wrong": 2,
+  "cw": 0.0094,
+  "coverage": 0.6887,
+  "by_src": {
+   "desktop": [
+    132,
+    1
+   ],
+   "web1": [
+    5,
+    1
+   ],
+   "web2": [
+    9,
+    0
+   ]
+  }
+ }
+}

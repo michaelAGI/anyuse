@@ -1,0 +1,18 @@
+[
+  {
+    "request": {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": {"name": "fixture", "version": "1"}}},
+    "response": {"jsonrpc": "2.0", "id": 1, "result": {"protocolVersion": "2025-06-18", "capabilities": {"tools": {"listChanged": false}}, "serverInfo": {"name": "anyuse", "version": "0.4.0"}}}
+  },
+  {
+    "request": {"jsonrpc": "2.0", "method": "notifications/initialized", "params": {}},
+    "response": null
+  },
+  {
+    "request": {"jsonrpc": "2.0", "id": 2, "method": "tools/list", "params": {}},
+    "response": {"jsonrpc": "2.0", "id": 2, "result": {"tools": [{"name": "api_example__detail", "description": "Run an approved AnyUse workflow for this host; tier 1_proved_request; proof 4ad5e810bf25; schema v2.", "inputSchema": {"type": "object", "properties": {"q": {"type": "string", "minLength": 0, "maxLength": 2048}}, "required": ["q"], "additionalProperties": false}, "outputSchema": {"type": "object", "properties": {"ok": {"type": "boolean"}, "result": {"type": "object", "properties": {"id": {}, "title": {}, "summary": {}}, "required": ["id", "title", "summary"], "additionalProperties": false}, "provenance": {"type": "object"}}, "required": ["ok"], "additionalProperties": true}, "_meta": {"anyuse": {"tool_set_version": 1, "compiled_schema_version": 2, "proof_id": "4ad5e810bf25"}}}]}}
+  },
+  {
+    "request": {"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "api_example__detail", "arguments": {"q": "alpha"}}},
+    "response": {"jsonrpc": "2.0", "id": 3, "result": {"content": [{"type": "text", "text": "{\"ok\": true, \"result\": {\"id\": \"one\", \"title\": \"One\", \"summary\": \"first\"}, \"llm_calls\": 0, \"provenance\": {\"proof_id\": \"4ad5e810bf25\", \"served_by\": \"api\"}}"}]}}
+  }
+]

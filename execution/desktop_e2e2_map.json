@@ -1,0 +1,1943 @@
+{
+ "apps": {
+  "Calculator": {
+   "bundle_id": "com.apple.calculator",
+   "entries": [
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung",
+     "id": "com.apple.calculator:toggle_select:id:menuAction:@3/1+id:menuAction:@3/2+id:menuAction:@3/3",
+     "note": "",
+     "options": [
+      {
+       "key": "id:menuAction:@3/1",
+       "label": "Standard",
+       "observed": [
+        "mark_already"
+       ],
+       "path": "Darstellung > Standard",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "0",
+        "identifier": "menuAction:",
+        "index_path": [
+         3,
+         1
+        ],
+        "key": "id:menuAction:@3/1"
+       }
+      },
+      {
+       "key": "id:menuAction:@3/2",
+       "label": "Wissenschaftlich",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Wissenschaftlich",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "0",
+        "identifier": "menuAction:",
+        "index_path": [
+         3,
+         2
+        ],
+        "key": "id:menuAction:@3/2"
+       }
+      },
+      {
+       "key": "id:menuAction:@3/3",
+       "label": "Programmieren",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Programmieren",
+       "trigger": {
+        "cmd_char": "3",
+        "cmd_mods": "0",
+        "identifier": "menuAction:",
+        "index_path": [
+         3,
+         3
+        ],
+        "key": "id:menuAction:@3/3"
+       }
+      }
+     ],
+     "parent_index_path": [
+      3
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung",
+     "id": "com.apple.calculator:toggle_select:id:menuAction:@3/6+id:menuAction:@3/7",
+     "note": "2 options",
+     "options": [
+      {
+       "key": "id:menuAction:@3/6",
+       "label": "Umrechnen",
+       "observed": [
+        "focus_changed",
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Umrechnen",
+       "trigger": {
+        "cmd_char": "c",
+        "cmd_mods": "2",
+        "identifier": "menuAction:",
+        "index_path": [
+         3,
+         6
+        ],
+        "key": "id:menuAction:@3/6"
+       }
+      },
+      {
+       "key": "id:menuAction:@3/7",
+       "label": "Umgekehrte polnische Notation",
+       "observed": [
+        "focus_changed",
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Umgekehrte polnische Notation",
+       "trigger": {
+        "cmd_char": "r",
+        "cmd_mods": "0",
+        "identifier": "menuAction:",
+        "index_path": [
+         3,
+         7
+        ],
+        "key": "id:menuAction:@3/7"
+       }
+      }
+     ],
+     "parent_index_path": [
+      3
+     ],
+     "provable": false,
+     "side_effect_paths": [],
+     "side_effects": []
+    }
+   ],
+   "open": null,
+   "quittable": true,
+   "refuted": [],
+   "unmapped_observed": {}
+  },
+  "Dictionary": {
+   "bundle_id": "com.apple.Dictionary",
+   "entries": [
+    {
+     "effect": "toggle_select",
+     "group": "Suchen",
+     "id": "com.apple.Dictionary:toggle_select:id:_NS:226+id:chooseDictionary:@5/2+id:chooseDictionary:@5/3+id:chooseDictionary:@5/4+id:chooseDictionary:@5/5",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:226",
+       "label": "Alle Lexika",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Suchen > Alle Lexika",
+       "trigger": {
+        "cmd_char": "0",
+        "cmd_mods": "0",
+        "identifier": "_NS:226",
+        "index_path": [
+         5,
+         0
+        ],
+        "key": "id:_NS:226"
+       }
+      },
+      {
+       "key": "id:chooseDictionary:@5/2",
+       "label": "Duden-Wissensnetz deutsche Sprache",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Suchen > Duden-Wissensnetz deutsche Sprache",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "0",
+        "identifier": "chooseDictionary:",
+        "index_path": [
+         5,
+         2
+        ],
+        "key": "id:chooseDictionary:@5/2"
+       }
+      },
+      {
+       "key": "id:chooseDictionary:@5/3",
+       "label": "Oxford German Dictionary",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Suchen > Oxford German Dictionary",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "0",
+        "identifier": "chooseDictionary:",
+        "index_path": [
+         5,
+         3
+        ],
+        "key": "id:chooseDictionary:@5/3"
+       }
+      },
+      {
+       "key": "id:chooseDictionary:@5/4",
+       "label": "Apple Dictionary",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Suchen > Apple Dictionary",
+       "trigger": {
+        "cmd_char": "3",
+        "cmd_mods": "0",
+        "identifier": "chooseDictionary:",
+        "index_path": [
+         5,
+         4
+        ],
+        "key": "id:chooseDictionary:@5/4"
+       }
+      },
+      {
+       "key": "id:chooseDictionary:@5/5",
+       "label": "Wikipedia",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Suchen > Wikipedia",
+       "trigger": {
+        "cmd_char": "4",
+        "cmd_mods": "0",
+        "identifier": "chooseDictionary:",
+        "index_path": [
+         5,
+         5
+        ],
+        "key": "id:chooseDictionary:@5/5"
+       }
+      }
+     ],
+     "parent_index_path": [
+      5
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    }
+   ],
+   "open": null,
+   "quittable": true,
+   "refuted": [],
+   "unmapped_observed": {}
+  },
+  "Digital Color Meter": {
+   "bundle_id": "com.apple.DigitalColorMeter",
+   "entries": [
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung > Vergrößerung",
+     "id": "com.apple.DigitalColorMeter:toggle_select:id:_NS:13+id:_NS:29+id:_NS:36+id:_NS:43",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:13",
+       "label": "1x",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Vergrößerung > 1x",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "0",
+        "identifier": "_NS:13",
+        "index_path": [
+         2,
+         3,
+         0
+        ],
+        "key": "id:_NS:13"
+       }
+      },
+      {
+       "key": "id:_NS:29",
+       "label": "2x",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Vergrößerung > 2x",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "0",
+        "identifier": "_NS:29",
+        "index_path": [
+         2,
+         3,
+         1
+        ],
+        "key": "id:_NS:29"
+       }
+      },
+      {
+       "key": "id:_NS:36",
+       "label": "4x",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Vergrößerung > 4x",
+       "trigger": {
+        "cmd_char": "4",
+        "cmd_mods": "0",
+        "identifier": "_NS:36",
+        "index_path": [
+         2,
+         3,
+         2
+        ],
+        "key": "id:_NS:36"
+       }
+      },
+      {
+       "key": "id:_NS:43",
+       "label": "8x",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Vergrößerung > 8x",
+       "trigger": {
+        "cmd_char": "8",
+        "cmd_mods": "0",
+        "identifier": "_NS:43",
+        "index_path": [
+         2,
+         3,
+         3
+        ],
+        "key": "id:_NS:43"
+       }
+      }
+     ],
+     "parent_index_path": [
+      2,
+      3
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung > Werte anzeigen",
+     "id": "com.apple.DigitalColorMeter:toggle_select:id:_NS:230+id:_NS:242+id:_NS:248+id:_NS:236",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:230",
+       "label": "als Dezimalwert",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Werte anzeigen > als Dezimalwert",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:230",
+        "index_path": [
+         2,
+         4,
+         0
+        ],
+        "key": "id:_NS:230"
+       }
+      },
+      {
+       "key": "id:_NS:242",
+       "label": "als Hex-Wert",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Werte anzeigen > als Hex-Wert",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:242",
+        "index_path": [
+         2,
+         4,
+         1
+        ],
+        "key": "id:_NS:242"
+       }
+      },
+      {
+       "key": "id:_NS:248",
+       "label": "als Prozentwert",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Werte anzeigen > als Prozentwert",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:248",
+        "index_path": [
+         2,
+         4,
+         2
+        ],
+        "key": "id:_NS:248"
+       }
+      },
+      {
+       "key": "id:_NS:236",
+       "label": "als Gleitzahl",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Werte anzeigen > als Gleitzahl",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:236",
+        "index_path": [
+         2,
+         4,
+         3
+        ],
+        "key": "id:_NS:236"
+       }
+      }
+     ],
+     "parent_index_path": [
+      2,
+      4
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "property_update",
+     "id": "com.apple.DigitalColorMeter:property_update:id:_NS:98",
+     "identifier": "_NS:98",
+     "note": "",
+     "provable": true,
+     "role": "AXPopUpButton"
+    },
+    {
+     "effect": "property_update",
+     "id": "com.apple.DigitalColorMeter:property_update:id:_NS:50",
+     "identifier": "_NS:50",
+     "note": "",
+     "provable": true,
+     "role": "AXSlider"
+    }
+   ],
+   "open": null,
+   "quittable": true,
+   "refuted": [],
+   "unmapped_observed": {
+    "flag_toggle": [
+     {
+      "label": "Position fixieren",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Darstellung > Position fixieren",
+      "precondition": null,
+      "side_effect_paths": [
+       "Darstellung > X-Koordinate fixieren",
+       "Darstellung > Y-Koordinate fixieren"
+      ],
+      "side_effects": [
+       "_NS:184|x|0",
+       "_NS:191|y|0"
+      ],
+      "trigger": {
+       "cmd_char": "l",
+       "cmd_mods": "0",
+       "identifier": "_NS:177",
+       "index_path": [
+        2,
+        0
+       ]
+      }
+     },
+     {
+      "label": "X-Koordinate fixieren",
+      "observed": [
+       "mark_flag"
+      ],
+      "path": "Darstellung > X-Koordinate fixieren",
+      "precondition": null,
+      "side_effect_paths": [
+       "Darstellung > Position fixieren"
+      ],
+      "side_effects": [
+       "_NS:177|l|0"
+      ],
+      "trigger": {
+       "cmd_char": "x",
+       "cmd_mods": "0",
+       "identifier": "_NS:184",
+       "index_path": [
+        2,
+        1
+       ]
+      }
+     },
+     {
+      "label": "Y-Koordinate fixieren",
+      "observed": [
+       "mark_flag"
+      ],
+      "path": "Darstellung > Y-Koordinate fixieren",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "y",
+       "cmd_mods": "0",
+       "identifier": "_NS:191",
+       "index_path": [
+        2,
+        2
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "Finder": {
+   "bundle_id": "com.apple.finder",
+   "entries": [
+    {
+     "commit": "return",
+     "effect": "object_create",
+     "entry": "focused text entry after the trigger",
+     "id": "com.apple.finder:object_create:id:_NS:685",
+     "kind": "folder",
+     "label": "Neuer Ordner",
+     "model": "folder",
+     "naming": "inline",
+     "note": "",
+     "observe": "model",
+     "observed": [
+      "object_created",
+      "entry_focused"
+     ],
+     "path": "Ablage > Neuer Ordner",
+     "provable": true,
+     "trigger": {
+      "cmd_char": "n",
+      "cmd_mods": "1",
+      "identifier": "_NS:685",
+      "index_path": [
+       2,
+       1
+      ],
+      "key": "id:_NS:685"
+     }
+    },
+    {
+     "commit": "return",
+     "effect": "scoped_find",
+     "entry": "focused search field in the window the trigger opened",
+     "id": "com.apple.finder:scoped_find:id:_NS:595",
+     "label": "Suchen",
+     "note": "calibration results match the spotlight rule on every pattern",
+     "observed": [
+      "window_opened",
+      "search_focused",
+      "selection_changed"
+     ],
+     "path": "Ablage > Suchen",
+     "provable": true,
+     "semantics": "spotlight",
+     "trigger": {
+      "cmd_char": "f",
+      "cmd_mods": "0",
+      "identifier": "_NS:595",
+      "index_path": [
+       2,
+       41
+      ],
+      "key": "id:_NS:595"
+     },
+     "window": "new"
+    },
+    {
+     "commit": "return",
+     "effect": "scoped_find",
+     "entry": "focused search field in the window the trigger opened",
+     "id": "com.apple.finder:scoped_find:id:_NS:484",
+     "label": "Nach Name suchen …",
+     "note": "calibration results match the token_prefix rule on every pattern",
+     "observed": [
+      "window_opened",
+      "search_focused",
+      "selection_changed"
+     ],
+     "path": "Ablage > Nach Name suchen …",
+     "provable": true,
+     "semantics": "token_prefix",
+     "trigger": {
+      "cmd_char": "f",
+      "cmd_mods": "5",
+      "identifier": "_NS:484",
+      "index_path": [
+       2,
+       42
+      ],
+      "key": "id:_NS:484"
+     },
+     "window": "new"
+    },
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung > Sortieren nach",
+     "id": "com.apple.finder:toggle_select:id:_NS:102+id:_NS:105+id:_NS:114+id:_NS:117+id:_NS:120+id:_NS:123",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:102",
+       "label": "Name",
+       "observed": [
+        "mark_from_none"
+       ],
+       "path": "Darstellung > Sortieren nach > Name",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "6",
+        "identifier": "_NS:102",
+        "index_path": [
+         4,
+         6,
+         0
+        ],
+        "key": "id:_NS:102"
+       }
+      },
+      {
+       "key": "id:_NS:105",
+       "label": "Art",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Sortieren nach > Art",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "6",
+        "identifier": "_NS:105",
+        "index_path": [
+         4,
+         6,
+         1
+        ],
+        "key": "id:_NS:105"
+       }
+      },
+      {
+       "key": "id:_NS:114",
+       "label": "Zuletzt geöffnet",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Sortieren nach > Zuletzt geöffnet",
+       "trigger": {
+        "cmd_char": "3",
+        "cmd_mods": "6",
+        "identifier": "_NS:114",
+        "index_path": [
+         4,
+         6,
+         2
+        ],
+        "key": "id:_NS:114"
+       }
+      },
+      {
+       "key": "id:_NS:117",
+       "label": "Hinzugefügt am",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Sortieren nach > Hinzugefügt am",
+       "trigger": {
+        "cmd_char": "4",
+        "cmd_mods": "6",
+        "identifier": "_NS:117",
+        "index_path": [
+         4,
+         6,
+         3
+        ],
+        "key": "id:_NS:117"
+       }
+      },
+      {
+       "key": "id:_NS:120",
+       "label": "Änderungsdatum",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Sortieren nach > Änderungsdatum",
+       "trigger": {
+        "cmd_char": "5",
+        "cmd_mods": "6",
+        "identifier": "_NS:120",
+        "index_path": [
+         4,
+         6,
+         4
+        ],
+        "key": "id:_NS:120"
+       }
+      },
+      {
+       "key": "id:_NS:123",
+       "label": "Erstellungsdatum",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Sortieren nach > Erstellungsdatum",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:123",
+        "index_path": [
+         4,
+         6,
+         5
+        ],
+        "key": "id:_NS:123"
+       }
+      }
+     ],
+     "parent_index_path": [
+      4,
+      6
+     ],
+     "provable": true,
+     "side_effect_paths": [
+      "Darstellung > Sortieren nach > "
+     ],
+     "side_effects": [
+      "_NS:344||8>*"
+     ]
+    },
+    {
+     "effect": "field_rw",
+     "id": "com.apple.finder:field_rw:id:_NS:359",
+     "identifier": "_NS:359",
+     "note": "",
+     "provable": true,
+     "role": "AXTextField"
+    }
+   ],
+   "open": {
+    "basis": "platform convention (⌘O opens the selection); not probed",
+    "label": "Öffnen",
+    "path": "Ablage > Öffnen",
+    "trigger": {
+     "cmd_char": "o",
+     "cmd_mods": "0",
+     "identifier": "_NS:728",
+     "index_path": [
+      2,
+      5
+     ]
+    }
+   },
+   "quittable": false,
+   "refuted": [],
+   "unmapped_observed": {
+    "flag_toggle": [
+     {
+      "label": "Gruppen verwenden",
+      "observed": [
+       "mark_flag"
+      ],
+      "path": "Darstellung > Gruppen verwenden",
+      "precondition": "pane_shown:id:_NS:100",
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "0",
+       "cmd_mods": "4",
+       "identifier": "_NS:1022",
+       "index_path": [
+        4,
+        5
+       ]
+      }
+     },
+     {
+      "label": "Größe",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Darstellung > Sortieren nach > Größe",
+      "precondition": null,
+      "side_effect_paths": [
+       "Darstellung > Sortieren nach > "
+      ],
+      "side_effects": [
+       "_NS:344||8>*"
+      ],
+      "trigger": {
+       "cmd_char": "6",
+       "cmd_mods": "6",
+       "identifier": "_NS:126",
+       "index_path": [
+        4,
+        6,
+        6
+       ]
+      }
+     },
+     {
+      "label": "Tags",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Darstellung > Sortieren nach > Tags",
+      "precondition": null,
+      "side_effect_paths": [
+       "Darstellung > Sortieren nach > "
+      ],
+      "side_effects": [
+       "_NS:344||8>*"
+      ],
+      "trigger": {
+       "cmd_char": "7",
+       "cmd_mods": "6",
+       "identifier": "_NS:129",
+       "index_path": [
+        4,
+        6,
+        7
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "Notes": {
+   "bundle_id": "com.apple.Notes",
+   "entries": [
+    {
+     "commit": "return",
+     "effect": "object_create",
+     "entry": "focused text entry after the trigger",
+     "id": "com.apple.Notes:object_create:id:_NS:411",
+     "kind": "item",
+     "label": "Neue Notiz",
+     "model": null,
+     "naming": "inline",
+     "note": "",
+     "observe": "model",
+     "observed": [
+      "layout_changed",
+      "object_created",
+      "entry_focused"
+     ],
+     "path": "Ablage > Neue Notiz",
+     "provable": true,
+     "trigger": {
+      "cmd_char": "n",
+      "cmd_mods": "0",
+      "identifier": "_NS:411",
+      "index_path": [
+       2,
+       0
+      ],
+      "key": "id:_NS:411"
+     }
+    },
+    {
+     "commit": "default_button",
+     "effect": "object_create",
+     "entry": "focused text field in the window/sheet the trigger opened",
+     "id": "com.apple.Notes:object_create:id:_NS:419",
+     "kind": "folder",
+     "label": "Neuer Ordner",
+     "model": null,
+     "naming": "dialog",
+     "note": "",
+     "observe": "scopes",
+     "observed": [
+      "dialog_opened",
+      "entry_focused"
+     ],
+     "path": "Ablage > Neuer Ordner",
+     "provable": true,
+     "trigger": {
+      "cmd_char": "n",
+      "cmd_mods": "1",
+      "identifier": "_NS:419",
+      "index_path": [
+       2,
+       1
+      ],
+      "key": "id:_NS:419"
+     }
+    },
+    {
+     "commit": "return",
+     "effect": "scoped_find",
+     "entry": "focused search field after the trigger",
+     "id": "com.apple.Notes:scoped_find:id:_NS:654",
+     "label": "Notizenliste durchsuchen …",
+     "note": "no backend reachable: the search scope is not a file-system folder",
+     "observed": [
+      "search_focused"
+     ],
+     "path": "Bearbeiten > Suchen > Notizenliste durchsuchen …",
+     "provable": false,
+     "semantics": null,
+     "trigger": {
+      "cmd_char": "f",
+      "cmd_mods": "2",
+      "identifier": "_NS:654",
+      "index_path": [
+       3,
+       17,
+       0
+      ],
+      "key": "id:_NS:654"
+     }
+    },
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung",
+     "id": "com.apple.Notes:toggle_select:id:_NS:81+id:_NS:89",
+     "note": "2 options",
+     "options": [
+      {
+       "key": "id:_NS:81",
+       "label": "Als Liste",
+       "observed": [
+        "layout_changed",
+        "focus_changed",
+        "mark_exclusive",
+        "selection_changed"
+       ],
+       "path": "Darstellung > Als Liste",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "0",
+        "identifier": "_NS:81",
+        "index_path": [
+         5,
+         0
+        ],
+        "key": "id:_NS:81"
+       }
+      },
+      {
+       "key": "id:_NS:89",
+       "label": "Als Galerie",
+       "observed": [
+        "layout_changed",
+        "focus_changed",
+        "mark_exclusive",
+        "selection_changed"
+       ],
+       "path": "Darstellung > Als Galerie",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "0",
+        "identifier": "_NS:89",
+        "index_path": [
+         5,
+         1
+        ],
+        "key": "id:_NS:89"
+       }
+      }
+     ],
+     "parent_index_path": [
+      5
+     ],
+     "provable": false,
+     "side_effect_paths": [
+      "Darstellung > Sortieren nach > ",
+      "Darstellung > Nach Datum gruppieren > "
+     ],
+     "side_effects": [
+      "_NS:111||8>*",
+      "_NS:147||8>*"
+     ]
+    },
+    {
+     "effect": "field_rw",
+     "id": "com.apple.Notes:field_rw:id:_NS:11",
+     "identifier": "_NS:11",
+     "note": "",
+     "provable": true,
+     "role": "AXTextField"
+    }
+   ],
+   "open": null,
+   "quittable": true,
+   "refuted": [],
+   "unmapped_observed": {}
+  },
+  "Preview": {
+   "bundle_id": "com.apple.Preview",
+   "entries": [
+    {
+     "effect": "toggle_select",
+     "group": "Darstellung",
+     "id": "com.apple.Preview:toggle_select:id:_NS:127+id:_NS:137+id:_NS:169",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:127",
+       "label": "Seitenleiste ausblenden",
+       "observed": [
+        "layout_changed",
+        "focus_changed",
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Seitenleiste ausblenden",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "2",
+        "identifier": "_NS:127",
+        "index_path": [
+         4,
+         3
+        ],
+        "key": "id:_NS:127"
+       }
+      },
+      {
+       "key": "id:_NS:137",
+       "label": "Miniaturen",
+       "observed": [
+        "layout_changed",
+        "focus_changed",
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Miniaturen",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "2",
+        "identifier": "_NS:137",
+        "index_path": [
+         4,
+         4
+        ],
+        "key": "id:_NS:137"
+       }
+      },
+      {
+       "key": "id:_NS:169",
+       "label": "Kontaktbogen",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Darstellung > Kontaktbogen",
+       "trigger": {
+        "cmd_char": "6",
+        "cmd_mods": "2",
+        "identifier": "_NS:169",
+        "index_path": [
+         4,
+         8
+        ],
+        "key": "id:_NS:169"
+       }
+      }
+     ],
+     "parent_index_path": [
+      4
+     ],
+     "provable": true,
+     "side_effect_paths": [
+      "Darstellung > Bildhintergrund anzeigen",
+      "Darstellung > ",
+      "Darstellung > Originalgröße",
+      "Darstellung > Originalgröße auf alles",
+      "Darstellung > Größe an Fenster anpassen",
+      "Darstellung > Größe von allem anpassen",
+      "Darstellung > Vergrößern",
+      "Darstellung > Alles vergrößern",
+      "Darstellung > Verkleinern",
+      "Darstellung > Alles verkleinern",
+      "Darstellung > Auswahl zoomen",
+      "Darstellung > ",
+      "Darstellung > Werkzeugleiste einblenden",
+      "Darstellung > Symbolleiste einblenden",
+      "Darstellung > Symbolleiste anpassen …",
+      "Darstellung > ",
+      "Darstellung > Diashow",
+      "Darstellung > Vollbildmodus"
+     ],
+     "side_effects": [
+      "_NS:200|b|2",
+      "_NS:209||8",
+      "_NS:210|0|0",
+      "_NS:218|0|2",
+      "_NS:222|9|0",
+      "_NS:230|9|2",
+      "_NS:234|+|0",
+      "_NS:242|+|2",
+      "_NS:246|-|0",
+      "_NS:254|-|2",
+      "_NS:258|8|1",
+      "_NS:266||0",
+      "_NS:267|a|1",
+      "_NS:275|t|2",
+      "_NS:279||8",
+      "_NS:286||0",
+      "_NS:287|f|1",
+      "_NS:295|f|24"
+     ]
+    }
+   ],
+   "open": {
+    "basis": "platform convention (⌘O opens the selection); not probed",
+    "label": "Öffnen …",
+    "path": "Ablage > Öffnen …",
+    "trigger": {
+     "cmd_char": "o",
+     "cmd_mods": "0",
+     "identifier": "_NS:394",
+     "index_path": [
+      2,
+      1
+     ]
+    }
+   },
+   "quittable": true,
+   "refuted": [],
+   "unmapped_observed": {
+    "flag_toggle": [
+     {
+      "label": "Text unterstreichen",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Werkzeuge > Anmerken > Text unterstreichen",
+      "precondition": null,
+      "side_effect_paths": [
+       "Werkzeuge > Autom. Auswahl"
+      ],
+      "side_effects": [
+       "_NS:768||8"
+      ],
+      "trigger": {
+       "cmd_char": "u",
+       "cmd_mods": "4",
+       "identifier": "_NS:809",
+       "index_path": [
+        6,
+        11,
+        1
+       ]
+      }
+     },
+     {
+      "label": "Text durchstreichen",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Werkzeuge > Anmerken > Text durchstreichen",
+      "precondition": null,
+      "side_effect_paths": [
+       "Werkzeuge > Anmerken > "
+      ],
+      "side_effects": [
+       "_NS:797||0>*"
+      ],
+      "trigger": {
+       "cmd_char": "s",
+       "cmd_mods": "4",
+       "identifier": "_NS:814",
+       "index_path": [
+        6,
+        11,
+        2
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "Stickies": {
+   "bundle_id": "com.apple.Stickies",
+   "entries": [
+    {
+     "effect": "flag_toggle",
+     "group": "Bearbeiten > Ersetzungen",
+     "id": "com.apple.Stickies:flag_toggle:id:_NS:736+id:_NS:700+id:_NS:706+id:_NS:688",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:736",
+       "label": "Intelligentes Kopieren/Einsetzen",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:736",
+        "index_path": [
+         3,
+         14,
+         2
+        ],
+        "key": "id:_NS:736"
+       }
+      },
+      {
+       "key": "id:_NS:700",
+       "label": "Intelligente Anführungszeichen",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:700",
+        "index_path": [
+         3,
+         14,
+         3
+        ],
+        "key": "id:_NS:700"
+       }
+      },
+      {
+       "key": "id:_NS:706",
+       "label": "Intelligente Bindestriche",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligente Bindestriche",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:706",
+        "index_path": [
+         3,
+         14,
+         4
+        ],
+        "key": "id:_NS:706"
+       }
+      },
+      {
+       "key": "id:_NS:688",
+       "label": "Intelligente Links",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligente Links",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:688",
+        "index_path": [
+         3,
+         14,
+         5
+        ],
+        "key": "id:_NS:688"
+       }
+      }
+     ],
+     "parent_index_path": [
+      3,
+      14
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "toggle_select",
+     "group": "Farbe",
+     "id": "com.apple.Stickies:toggle_select:id:_NS:232+id:_NS:237+id:_NS:242+id:_NS:247+id:_NS:252+id:_NS:257",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:232",
+       "label": "Gelb",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Farbe > Gelb",
+       "trigger": {
+        "cmd_char": "1",
+        "cmd_mods": "0",
+        "identifier": "_NS:232",
+        "index_path": [
+         5,
+         0
+        ],
+        "key": "id:_NS:232"
+       }
+      },
+      {
+       "key": "id:_NS:237",
+       "label": "Blau",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Farbe > Blau",
+       "trigger": {
+        "cmd_char": "2",
+        "cmd_mods": "0",
+        "identifier": "_NS:237",
+        "index_path": [
+         5,
+         1
+        ],
+        "key": "id:_NS:237"
+       }
+      },
+      {
+       "key": "id:_NS:242",
+       "label": "Grün",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Farbe > Grün",
+       "trigger": {
+        "cmd_char": "3",
+        "cmd_mods": "0",
+        "identifier": "_NS:242",
+        "index_path": [
+         5,
+         2
+        ],
+        "key": "id:_NS:242"
+       }
+      },
+      {
+       "key": "id:_NS:247",
+       "label": "Rosa",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Farbe > Rosa",
+       "trigger": {
+        "cmd_char": "4",
+        "cmd_mods": "0",
+        "identifier": "_NS:247",
+        "index_path": [
+         5,
+         3
+        ],
+        "key": "id:_NS:247"
+       }
+      },
+      {
+       "key": "id:_NS:252",
+       "label": "Lila",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Farbe > Lila",
+       "trigger": {
+        "cmd_char": "5",
+        "cmd_mods": "0",
+        "identifier": "_NS:252",
+        "index_path": [
+         5,
+         4
+        ],
+        "key": "id:_NS:252"
+       }
+      },
+      {
+       "key": "id:_NS:257",
+       "label": "Grau",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Farbe > Grau",
+       "trigger": {
+        "cmd_char": "6",
+        "cmd_mods": "0",
+        "identifier": "_NS:257",
+        "index_path": [
+         5,
+         5
+        ],
+        "key": "id:_NS:257"
+       }
+      }
+     ],
+     "parent_index_path": [
+      5
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "flag_toggle",
+     "group": "Fenster",
+     "id": "com.apple.Stickies:flag_toggle:id:_NS:755+id:_NS:803",
+     "note": "2 flags",
+     "options": [
+      {
+       "key": "id:_NS:755",
+       "label": "Oben schweben",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Fenster > Oben schweben",
+       "trigger": {
+        "cmd_char": "f",
+        "cmd_mods": "2",
+        "identifier": "_NS:755",
+        "index_path": [
+         6,
+         14
+        ],
+        "key": "id:_NS:755"
+       }
+      },
+      {
+       "key": "id:_NS:803",
+       "label": "Transparent",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Fenster > Transparent",
+       "trigger": {
+        "cmd_char": "t",
+        "cmd_mods": "2",
+        "identifier": "_NS:803",
+        "index_path": [
+         6,
+         15
+        ],
+        "key": "id:_NS:803"
+       }
+      }
+     ],
+     "parent_index_path": [
+      6
+     ],
+     "provable": false,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "field_rw",
+     "id": "com.apple.Stickies:field_rw:id:_NS:153",
+     "identifier": "_NS:153",
+     "note": "",
+     "provable": true,
+     "role": "AXTextArea"
+    }
+   ],
+   "open": null,
+   "quittable": true,
+   "refuted": [],
+   "unmapped_observed": {
+    "flag_toggle": [
+     {
+      "label": "Fett",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Schrift > Fett",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "b",
+       "cmd_mods": "0",
+       "identifier": "_NS:532",
+       "index_path": [
+        4,
+        1
+       ]
+      }
+     },
+     {
+      "label": "Kursiv",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Schrift > Kursiv",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "i",
+       "cmd_mods": "0",
+       "identifier": "_NS:522",
+       "index_path": [
+        4,
+        2
+       ]
+      }
+     },
+     {
+      "label": "Unterstrichen",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Schrift > Unterstrichen",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "u",
+       "cmd_mods": "0",
+       "identifier": "_NS:538",
+       "index_path": [
+        4,
+        3
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "TextEdit": {
+   "bundle_id": "com.apple.TextEdit",
+   "entries": [
+    {
+     "effect": "doc_save",
+     "entry": {
+      "identifier": "First Text View",
+      "role": "AXTextArea"
+     },
+     "id": "com.apple.TextEdit:doc_save:id:_NS:358",
+     "label": "Sichern",
+     "note": "",
+     "observed": [
+      "document_saved"
+     ],
+     "path": "Ablage > Sichern",
+     "provable": true,
+     "trigger": {
+      "cmd_char": "s",
+      "cmd_mods": "0",
+      "identifier": "_NS:358",
+      "index_path": [
+       2,
+       6
+      ],
+      "key": "id:_NS:358"
+     }
+    },
+    {
+     "effect": "flag_toggle",
+     "group": "Bearbeiten > Rechtschreibung und Grammatik",
+     "id": "com.apple.TextEdit:flag_toggle:id:_NS:502+id:_NS:680",
+     "note": "2 flags",
+     "options": [
+      {
+       "key": "id:_NS:502",
+       "label": "Während der Texteingabe prüfen",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "0",
+        "identifier": "_NS:502",
+        "index_path": [
+         3,
+         16,
+         3
+        ],
+        "key": "id:_NS:502"
+       }
+      },
+      {
+       "key": "id:_NS:680",
+       "label": "Rechtschreibung autom. korrigieren",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "0",
+        "identifier": "_NS:680",
+        "index_path": [
+         3,
+         16,
+         5
+        ],
+        "key": "id:_NS:680"
+       }
+      }
+     ],
+     "parent_index_path": [
+      3,
+      16
+     ],
+     "provable": false,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "flag_toggle",
+     "group": "Bearbeiten > Ersetzungen",
+     "id": "com.apple.TextEdit:flag_toggle:id:_NS:648+id:_NS:668+id:_NS:636",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:648",
+       "label": "Intelligentes Kopieren/Einsetzen",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:648",
+        "index_path": [
+         3,
+         17,
+         2
+        ],
+        "key": "id:_NS:648"
+       }
+      },
+      {
+       "key": "id:_NS:668",
+       "label": "Intelligente Bindestriche",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligente Bindestriche",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:668",
+        "index_path": [
+         3,
+         17,
+         4
+        ],
+        "key": "id:_NS:668"
+       }
+      },
+      {
+       "key": "id:_NS:636",
+       "label": "Intelligente Links",
+       "observed": [
+        "mark_flag"
+       ],
+       "path": "Bearbeiten > Ersetzungen > Intelligente Links",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "0",
+        "identifier": "_NS:636",
+        "index_path": [
+         3,
+         17,
+         5
+        ],
+        "key": "id:_NS:636"
+       }
+      }
+     ],
+     "parent_index_path": [
+      3,
+      17
+     ],
+     "provable": true,
+     "side_effect_paths": [],
+     "side_effects": []
+    },
+    {
+     "effect": "toggle_select",
+     "group": "Format > Text > Richtung beim Schreiben",
+     "id": "com.apple.TextEdit:toggle_select:id:_NS:728+id:_NS:734+id:_NS:740",
+     "note": "",
+     "options": [
+      {
+       "key": "id:_NS:728",
+       "label": "Standard",
+       "observed": [
+        "mark_already"
+       ],
+       "path": "Format > Text > Richtung beim Schreiben > Standard",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:728",
+        "index_path": [
+         4,
+         1,
+         5,
+         1
+        ],
+        "key": "id:_NS:728"
+       }
+      },
+      {
+       "key": "id:_NS:734",
+       "label": "Von links nach rechts",
+       "observed": [
+        "mark_exclusive"
+       ],
+       "path": "Format > Text > Richtung beim Schreiben > Von links nach rechts",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:734",
+        "index_path": [
+         4,
+         1,
+         5,
+         2
+        ],
+        "key": "id:_NS:734"
+       }
+      },
+      {
+       "key": "id:_NS:740",
+       "label": "Von rechts nach links",
+       "observed": [
+        "document_saved",
+        "mark_exclusive"
+       ],
+       "path": "Format > Text > Richtung beim Schreiben > Von rechts nach links",
+       "trigger": {
+        "cmd_char": "",
+        "cmd_mods": "8",
+        "identifier": "_NS:740",
+        "index_path": [
+         4,
+         1,
+         5,
+         3
+        ],
+        "key": "id:_NS:740"
+       }
+      }
+     ],
+     "parent_index_path": [
+      4,
+      1,
+      5
+     ],
+     "provable": true,
+     "side_effect_paths": [
+      "Format > Text > "
+     ],
+     "side_effects": [
+      "_NS:956||0>*"
+     ]
+    },
+    {
+     "effect": "field_rw",
+     "id": "com.apple.TextEdit:field_rw:id:First Text View",
+     "identifier": "First Text View",
+     "note": "",
+     "provable": true,
+     "role": "AXTextArea"
+    }
+   ],
+   "open": {
+    "basis": "platform convention (⌘O opens the selection); not probed",
+    "label": "Öffnen …",
+    "path": "Ablage > Öffnen …",
+    "trigger": {
+     "cmd_char": "o",
+     "cmd_mods": "0",
+     "identifier": "_NS:331",
+     "index_path": [
+      2,
+      1
+     ]
+    }
+   },
+   "quittable": true,
+   "refuted": [
+    {
+     "id": "com.apple.TextEdit:doc_save:id:_NS:97",
+     "why": "re-proof 776: the kerning item never saves the document"
+    },
+    {
+     "id": "com.apple.TextEdit:doc_save:id:_NS:273",
+     "why": "re-proof 776: converts to rich text and renames the document"
+    }
+   ],
+   "unmapped_observed": {
+    "flag_toggle": [
+     {
+      "label": "Rechtschreib- und Grammatikprüfung",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreib- und Grammatikprüfung",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "",
+       "cmd_mods": "0",
+       "identifier": "_NS:630",
+       "index_path": [
+        3,
+        16,
+        4
+       ]
+      }
+     },
+     {
+      "label": "Intelligente Anführungszeichen",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "",
+       "cmd_mods": "8",
+       "identifier": "_NS:642",
+       "index_path": [
+        3,
+        17,
+        3
+       ]
+      }
+     },
+     {
+      "label": "Fett",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Format > Schrift > Fett",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "b",
+       "cmd_mods": "0",
+       "identifier": "_NS:41",
+       "index_path": [
+        4,
+        0,
+        1
+       ]
+      }
+     },
+     {
+      "label": "Kursiv",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Format > Schrift > Kursiv",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "i",
+       "cmd_mods": "0",
+       "identifier": "_NS:46",
+       "index_path": [
+        4,
+        0,
+        2
+       ]
+      }
+     },
+     {
+      "label": "Unterstrichen",
+      "observed": [
+       "mark_from_none"
+      ],
+      "path": "Format > Schrift > Unterstrichen",
+      "precondition": null,
+      "side_effect_paths": [],
+      "side_effects": [],
+      "trigger": {
+       "cmd_char": "u",
+       "cmd_mods": "0",
+       "identifier": "_NS:51",
+       "index_path": [
+        4,
+        0,
+        3
+       ]
+      }
+     }
+    ],
+    "scoped_find": [
+     {
+      "label": "Suchen …",
+      "observed": [
+       "search_focused"
+      ],
+      "path": "Bearbeiten > Suchen > Suchen …",
+      "precondition": null,
+      "side_effect_paths": [
+       "Bearbeiten > Rechtschreibung und Grammatik > "
+      ],
+      "side_effects": [
+       "_NS:911||0>*"
+      ],
+      "trigger": {
+       "cmd_char": "f",
+       "cmd_mods": "0",
+       "identifier": "_NS:371",
+       "index_path": [
+        3,
+        15,
+        0
+       ]
+      }
+     }
+    ]
+   }
+  }
+ },
+ "built_from": {
+  "contracts3.json": "9f0bd165438cbcd344027e9b4fdd759733131f9248887acdcbfbf6069cd089ca",
+  "dump3_com.apple.Dictionary.json": "ad5385bb23973142d25c602094ca80d8e60731fa72bb4276f58d870f08938e49",
+  "dump3_com.apple.DigitalColorMeter.json": "b30a8bc8546a9ac0401a36ffacbdf9809a19d91fe8fb2545ac952a94e5facea0",
+  "dump3_com.apple.Notes.json": "74c5da371b1d5ddb211e6eaf62835bb87b6955a0af4ca69bb58331ee60b1deaa",
+  "dump3_com.apple.Preview.json": "c1f6b33d79b645d272d52b55d3d189dbccadbea11e91ae0e2965614087fbd1df",
+  "dump3_com.apple.Stickies.json": "983c484a25a6e475ea5b15dec4d730a93f423633559a02fdb88dc3625faf8788",
+  "dump3_com.apple.TextEdit.json": "65c358d4616f245ec91428c854c35e3296b2c8d8deefb9adece694e05fa9ac82",
+  "dump3_com.apple.calculator.json": "9658e86092b5d4bf321f9f5bb0ea93dbb518e13f7d4e3129b975ca1448d4fdae",
+  "dump3_com.apple.finder.json": "8e3cbc3ff36a3ad90e6f41c5a4fef42a7cd501e46ad601847a1903f323082300",
+  "probes3_com.apple.Dictionary.json": "6238133ccc85725e080af4d6b5c6b4075d6c99a2423704ca46f431636c3dd6f5",
+  "probes3_com.apple.DigitalColorMeter.json": "ea486bc8b8902d38048a8cb3b7936f927f54ac9938663333cf187c1ba6cfd6a8",
+  "probes3_com.apple.Notes.json": "ed4b8a56cde36c0b6f5dab1f341ac83ba121c6d838fe6eda27cf9ac401b770b0",
+  "probes3_com.apple.Preview.json": "f568b461062bf6111cbb5019adb652299b86eee5958f130fd37c20f7cf5e4e39",
+  "probes3_com.apple.Stickies.json": "fe070c12f365b70d58b467193247c8c27b1d0f7a42d59bab4686ac1f81c429bf",
+  "probes3_com.apple.TextEdit.json": "f9f7e2b6473702c31dfea961e9bcf3296ca413c496fc47c14c86d60521afc424",
+  "probes3_com.apple.calculator.json": "4750bf14d18dd6f501bba52d6525309c895de46e09bdd7f23fd5df3f7826bf16",
+  "probes3_com.apple.finder.json": "6975f5b8f64edbc5de3d6c30a32b2cf7ed6e26dbfea9e3340e81936c26388fe1",
+  "proved3.json": "9c3cab34a6363867b630c4cd436698f07ea69a695cfb405d6803b7835cc11d71"
+ },
+ "caveat": "Initial probe ran with the AXValue frame comparison defect (fixed in b9b3f76); menu-mark effects do not depend on frames, window follow-ups and field/property window checks did.",
+ "schema": "anyuse.desktop_e2e_map/1"
+}

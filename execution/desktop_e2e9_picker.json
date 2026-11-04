@@ -1,0 +1,30 @@
+{
+ "rule": "typed evidence; contradicted candidates dropped; NONE last; the IDs in two permutations; act only when both name the same ID, neither NONE, min confidence >= t2 and (positive on) the ID has positive evidence; one read-only inspection and one retry when unresolved",
+ "tuning": "SELECTION only; the CHECK split opened once after this freeze",
+ "pickers": {
+  "openjev": {
+   "t2": 1.0,
+   "format": "id",
+   "positive": true,
+   "selection": {
+    "n_main": 49,
+    "n_absent": 47,
+    "right": 0,
+    "coverage": 0.0,
+    "wrong_main": [],
+    "wrong_absent": [],
+    "fa_absent": 0.0
+   }
+  }
+ },
+ "data": {
+  "questions_sha256": "3727eb750ead5347ed4c94f45bba73e2575c9097776f9eded2ec044509a17802",
+  "split_sha256": "8b11b119e109c7ca625c1989cebd118334144c900b23a82c28a5380ebacdcfab",
+  "answers_sha256": {
+   "id": "8248707225fa94bea9bfc60414d806e19c4650b10b9cf3a48e56a6c1a1458ea9",
+   "id_name": "f2bd4ceda5d91e4bbf81783d4d16c61e2e3f3bb45ba2094ef199ca7b58aed6ec"
+  },
+  "script_sha256": "d70cbb5ab28b21687face6781e51bcbe0f5be85fb834551b60674e3291b6891a"
+ },
+ "jev": "not used"
+}

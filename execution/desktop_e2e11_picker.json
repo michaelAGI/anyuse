@@ -1,0 +1,446 @@
+{
+ "rule": "protocol pair: the smallest t2 on the grid with confident-wrong <= 3 % on MAIN (all 98 seen records)",
+ "frozen": {
+  "model": "gpt-oss-120b",
+  "protocol": "pair",
+  "t2": 0.99,
+  "chooser": "Cerebras JSON {choice, confidence}, both orders, NONE last, temperature 0, max_tokens 3000, the default reasoning effort"
+ },
+ "meets_cw": true,
+ "at_t2": {
+  "n": 98,
+  "accepted": 37,
+  "right": 35,
+  "accepted_wrong": 2,
+  "cw": 0.02040816326530612,
+  "coverage": 0.35714285714285715,
+  "absent_n": 94,
+  "absent_false": 12,
+  "wrong_ids": [
+   "r6:GC02:open_item:r1:2",
+   "r8:GE15:open_item:r1:2"
+  ],
+  "absent_false_ids": [
+   "r4:SA01:open_item:r1:2:absent",
+   "r5:GA07:open_item:r1:2:absent",
+   "r5:GB06:open_item:r1:2:absent",
+   "r5:SB08:open_item:r1:2:absent",
+   "r6:GC02:open_item:r1:2:absent",
+   "r6:GC08:open_item:r1:2:absent",
+   "r7:SD13:select_item:r1:1:absent",
+   "r8:GE09:open_item:r1:2:absent",
+   "r8:SE02:open_item:r1:2:absent",
+   "r8:SE03:open_item:r1:2:absent",
+   "r8:GE09:open_item:r2:2:absent",
+   "r8:SE13:open_item:r2:2:absent"
+  ]
+ },
+ "curve_pair": [
+  {
+   "t2": 0.0,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.05,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.1,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.15,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.2,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.25,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.3,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.35,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.4,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.45,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.5,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.55,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.6,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.65,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 32
+  },
+  {
+   "t2": 0.7,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 32
+  },
+  {
+   "t2": 0.75,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 29
+  },
+  {
+   "t2": 0.8,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 28
+  },
+  {
+   "t2": 0.85,
+   "accepted": 90,
+   "right": 85,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8673469387755102,
+   "absent_false": 25
+  },
+  {
+   "t2": 0.9,
+   "accepted": 88,
+   "right": 83,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8469387755102041,
+   "absent_false": 23
+  },
+  {
+   "t2": 0.95,
+   "accepted": 73,
+   "right": 69,
+   "accepted_wrong": 4,
+   "cw": 0.04081632653061224,
+   "coverage": 0.7040816326530612,
+   "absent_false": 19
+  },
+  {
+   "t2": 0.99,
+   "accepted": 37,
+   "right": 35,
+   "accepted_wrong": 2,
+   "cw": 0.02040816326530612,
+   "coverage": 0.35714285714285715,
+   "absent_false": 12
+  },
+  {
+   "t2": 1.0,
+   "accepted": 0,
+   "right": 0,
+   "accepted_wrong": 0,
+   "cw": 0.0,
+   "coverage": 0.0,
+   "absent_false": 0
+  }
+ ],
+ "curve_off": [
+  {
+   "t2": 0.0,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.05,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.1,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.15,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.2,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.25,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.3,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.35,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.4,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.45,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.5,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.55,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.6,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 35
+  },
+  {
+   "t2": 0.65,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 32
+  },
+  {
+   "t2": 0.7,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 32
+  },
+  {
+   "t2": 0.75,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 29
+  },
+  {
+   "t2": 0.8,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 28
+  },
+  {
+   "t2": 0.85,
+   "accepted": 89,
+   "right": 84,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8571428571428571,
+   "absent_false": 25
+  },
+  {
+   "t2": 0.9,
+   "accepted": 87,
+   "right": 82,
+   "accepted_wrong": 5,
+   "cw": 0.05102040816326531,
+   "coverage": 0.8367346938775511,
+   "absent_false": 23
+  },
+  {
+   "t2": 0.95,
+   "accepted": 72,
+   "right": 68,
+   "accepted_wrong": 4,
+   "cw": 0.04081632653061224,
+   "coverage": 0.6938775510204082,
+   "absent_false": 19
+  },
+  {
+   "t2": 0.99,
+   "accepted": 37,
+   "right": 35,
+   "accepted_wrong": 2,
+   "cw": 0.02040816326530612,
+   "coverage": 0.35714285714285715,
+   "absent_false": 12
+  },
+  {
+   "t2": 1.0,
+   "accepted": 0,
+   "right": 0,
+   "accepted_wrong": 0,
+   "cw": 0.0,
+   "coverage": 0.0,
+   "absent_false": 0
+  }
+ ],
+ "data": {
+  "questions_sha256": "3727eb750ead5347ed4c94f45bba73e2575c9097776f9eded2ec044509a17802",
+  "answers_sha256": "25cf9e756ce45607cfa9b35123ec5b550eca40956612b160442ed5be26ffad18",
+  "script_sha256": "a889bbd00fde306bebb5458f0daf16c6cfbf92088ab7365247419497ed48cea2",
+  "chooser_calls": 366,
+  "usd": 0.153227
+ },
+ "jev": "not used; OpenJev not used (no pod)"
+}

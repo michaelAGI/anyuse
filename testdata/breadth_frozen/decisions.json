@@ -1,0 +1,1967 @@
+{
+ "runs": [
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "paged": {
+      "collected": 7,
+      "duplicates": [],
+      "end": "last page (the stated total is read)",
+      "overlap": 0,
+      "pages": [
+       {
+        "items": 4,
+        "new": 4,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Akku"
+       },
+       {
+        "items": 3,
+        "new": 3,
+        "page": 2,
+        "url": "https://www.bshop.test/search?q=Akku&page=2"
+       }
+      ],
+      "stated_total": 7
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akku",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "pages": 2,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "page": 1,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      },
+      {
+       "page": 2,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      },
+      {
+       "page": 2,
+       "title": "Metabo Akkuschrauber BS 18",
+       "url": "https://www.bshop.test/p/metabo-akkuschrauber-bs-18"
+      },
+      {
+       "page": 2,
+       "title": "Ryobi Akkuschrauber R18",
+       "url": "https://www.bshop.test/p/ryobi-akkuschrauber-r18"
+      }
+     ],
+     "total": 7
+    },
+    "status": "ok",
+    "why": "paged: 7 results from 2 page(s) (last page (the stated total is read))"
+   },
+   "params": {
+    "n": 20
+   },
+   "shop": "plain",
+   "tool": "param",
+   "value": "Akku"
+  },
+  {
+   "decision": {
+    "accepted": false,
+    "checks": {
+     "paged": {
+      "collected": 2,
+      "duplicates": [],
+      "end": "last page (no next-page control)",
+      "pages": [
+       {
+        "items": 2,
+        "new": 2,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Akku"
+       }
+      ],
+      "stated_total": 7
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       }
+      ],
+      "n_items": 2,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akku",
+      "why": "query: 2 item(s) (sparse); each names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "incomplete": true,
+     "pages": 1,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      }
+     ],
+     "total": 7
+    },
+    "status": "incomplete",
+    "why": "paged: the site states 7 results, 2 were read before the last page (no next-page control)"
+   },
+   "params": {
+    "n": 20
+   },
+   "shop": "seite",
+   "tool": "param",
+   "value": "Akku"
+  },
+  {
+   "decision": {
+    "accepted": false,
+    "checks": {
+     "paged": {
+      "collected": 2,
+      "duplicates": [],
+      "end": "last page (no next-page control)",
+      "pages": [
+       {
+        "items": 2,
+        "new": 2,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Bosch"
+       }
+      ],
+      "stated_total": 5
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       }
+      ],
+      "n_items": 2,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch",
+      "why": "query: 2 item(s) (sparse); each names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "incomplete": true,
+     "pages": 1,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      }
+     ],
+     "total": 5
+    },
+    "status": "incomplete",
+    "why": "paged: the site states 5 results, 2 were read before the last page (no next-page control)"
+   },
+   "params": {},
+   "shop": "seite",
+   "tool": "param",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "paged": {
+      "collected": 7,
+      "duplicates": [],
+      "end": "last page (no next-page control)",
+      "overlap": 0,
+      "pages": [
+       {
+        "items": 4,
+        "new": 4,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Akku"
+       },
+       {
+        "items": 3,
+        "new": 3,
+        "page": 2,
+        "url": "https://www.bshop.test/search?q=Akku&page=2"
+       }
+      ],
+      "stated_total": null
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akku",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "pages": 2,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "page": 1,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      },
+      {
+       "page": 2,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      },
+      {
+       "page": 2,
+       "title": "Metabo Akkuschrauber BS 18",
+       "url": "https://www.bshop.test/p/metabo-akkuschrauber-bs-18"
+      },
+      {
+       "page": 2,
+       "title": "Ryobi Akkuschrauber R18",
+       "url": "https://www.bshop.test/p/ryobi-akkuschrauber-r18"
+      }
+     ],
+     "total": null
+    },
+    "status": "ok",
+    "why": "paged: 7 results from 2 page(s) (last page (no next-page control))"
+   },
+   "params": {
+    "n": 20
+   },
+   "shop": "echo",
+   "tool": "param",
+   "value": "Akku"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "paged": {
+      "collected": 5,
+      "duplicates": [],
+      "end": "last page (no next-page control)",
+      "overlap": 0,
+      "pages": [
+       {
+        "items": 4,
+        "new": 4,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Bosch"
+       },
+       {
+        "items": 1,
+        "new": 1,
+        "page": 2,
+        "url": "https://www.bshop.test/search?q=Bosch&page=2"
+       }
+      ],
+      "stated_total": null
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Bosch Akkuschrauber PSR 18",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+       },
+       {
+        "title": "Bosch Bohrhammer PBH 2100",
+        "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "pages": 2,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Bohrhammer PBH 2100",
+       "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+      },
+      {
+       "page": 2,
+       "title": "Bosch Stichsäge PST 650",
+       "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+      }
+     ],
+     "total": null
+    },
+    "status": "ok",
+    "why": "paged: 5 results from 2 page(s) (last page (no next-page control))"
+   },
+   "params": {},
+   "shop": "echo",
+   "tool": "param",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "paged": {
+      "collected": 7,
+      "duplicates": [],
+      "end": "n",
+      "overlap": 0,
+      "pages": [
+       {
+        "items": 4,
+        "new": 4,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Akkuschrauber"
+       },
+       {
+        "items": 3,
+        "new": 3,
+        "page": 2,
+        "url": "https://www.bshop.test/search?q=Akkuschrauber&cursor=c2"
+       }
+      ],
+      "stated_total": 7
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akkuschrauber",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "pages": 2,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "page": 1,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      },
+      {
+       "page": 2,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      },
+      {
+       "page": 2,
+       "title": "Metabo Akkuschrauber BS 18",
+       "url": "https://www.bshop.test/p/metabo-akkuschrauber-bs-18"
+      },
+      {
+       "page": 2,
+       "title": "Ryobi Akkuschrauber R18",
+       "url": "https://www.bshop.test/p/ryobi-akkuschrauber-r18"
+      }
+     ],
+     "total": 7
+    },
+    "status": "ok",
+    "why": "paged: 7 results from 2 page(s) (n)"
+   },
+   "params": {},
+   "shop": "plain",
+   "tool": "cursor",
+   "value": "Akkuschrauber"
+  },
+  {
+   "decision": {
+    "accepted": false,
+    "checks": {
+     "paged": {
+      "collected": 4,
+      "duplicates": [],
+      "end": "page 2 failed (membership: no item of the compiled region on the result page and no 'no results' statement)",
+      "pages": [
+       {
+        "items": 4,
+        "new": 4,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Akku"
+       },
+       {
+        "items": 0,
+        "new": 0,
+        "page": 2,
+        "status": "failed",
+        "url": "https://www.bshop.test/search?q=Akku&cursor=c3",
+        "why": "membership: no item of the compiled region on the result page and no 'no results' statement"
+       }
+      ],
+      "stated_total": 7
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akku",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "incomplete": true,
+     "pages": 2,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "page": 1,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      }
+     ],
+     "total": 7
+    },
+    "status": "incomplete",
+    "why": "paged: page 2 failed (membership: no item of the compiled region on the result page and no 'no results' statement) (4 results read)"
+   },
+   "params": {
+    "n": 20
+   },
+   "shop": "textnum",
+   "tool": "cursor",
+   "value": "Akku"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "paged": {
+      "collected": 7,
+      "duplicates": [],
+      "end": "last page (no next-page link)",
+      "overlap": 0,
+      "pages": [
+       {
+        "items": 4,
+        "new": 4,
+        "page": 1,
+        "url": "https://www.bshop.test/search?q=Akku"
+       },
+       {
+        "items": 3,
+        "new": 3,
+        "page": 2,
+        "url": "https://www.bshop.test/search?q=Akku&cursor=c2"
+       }
+      ],
+      "stated_total": null
+     },
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akku",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "pages": 2,
+     "results": [
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "page": 1,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "page": 1,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "page": 1,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      },
+      {
+       "page": 2,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      },
+      {
+       "page": 2,
+       "title": "Metabo Akkuschrauber BS 18",
+       "url": "https://www.bshop.test/p/metabo-akkuschrauber-bs-18"
+      },
+      {
+       "page": 2,
+       "title": "Ryobi Akkuschrauber R18",
+       "url": "https://www.bshop.test/p/ryobi-akkuschrauber-r18"
+      }
+     ],
+     "total": null
+    },
+    "status": "ok",
+    "why": "paged: 7 results from 2 page(s) (last page (no next-page link))"
+   },
+   "params": {
+    "n": 20
+   },
+   "shop": "echo",
+   "tool": "cursor",
+   "value": "Akku"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Bosch",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Bosch&sort=newest"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "date_desc",
+        "kind": "sort",
+        "label": "Neueste",
+        "param": "sort",
+        "value": "newest"
+       },
+       "evidence": {
+        "key": "date_desc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         "2025-4-4",
+         "2025-3-30",
+         "2025-3-12",
+         "2025-1-15"
+        ]
+       },
+       "status": "ok",
+       "why": "sort: date, desc verified on 4 of 4 results"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Bohrhammer PBH 2100",
+        "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+       },
+       {
+        "title": "Bosch Stichsäge PST 650",
+        "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+       },
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Akkuschrauber PSR 18",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch&sort=newest",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "applied": [
+      {
+       "key": "date_desc",
+       "kind": "sort",
+       "label": "Neueste",
+       "param": "sort",
+       "value": "newest"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-04-04",
+       "price": 119.0,
+       "title": "Bosch Bohrhammer PBH 2100",
+       "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+      },
+      {
+       "date": "2025-03-30",
+       "price": 59.0,
+       "title": "Bosch Stichsäge PST 650",
+       "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+      },
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "date": "2025-01-15",
+       "price": 129.0,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      }
+     ]
+    },
+    "status": "ok",
+    "why": "sort: date, desc verified on 4 of 4 results"
+   },
+   "params": {},
+   "shop": "plain",
+   "tool": "newest",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": false,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Bosch",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Bosch&sort=newest"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "date_desc",
+        "kind": "sort",
+        "label": "Neueste",
+        "param": "sort",
+        "value": "newest"
+       },
+       "evidence": {
+        "key": "date_desc",
+        "listed": 4,
+        "shown": 0,
+        "values": [
+         null,
+         null,
+         null,
+         null
+        ]
+       },
+       "status": "incomplete",
+       "why": "sort: the order cannot be verified (0 of 4 results show a date)"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Bohrhammer PBH 2100",
+        "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+       },
+       {
+        "title": "Bosch Stichsäge PST 650",
+        "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+       },
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Akkuschrauber PSR 18",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch&sort=newest",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "applied": [
+      {
+       "key": "date_desc",
+       "kind": "sort",
+       "label": "Neueste",
+       "param": "sort",
+       "value": "newest"
+      }
+     ],
+     "incomplete": true,
+     "results": [
+      {
+       "price": 119.0,
+       "title": "Bosch Bohrhammer PBH 2100",
+       "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+      },
+      {
+       "price": 59.0,
+       "title": "Bosch Stichsäge PST 650",
+       "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+      },
+      {
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "price": 129.0,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      }
+     ]
+    },
+    "status": "incomplete",
+    "why": "sort: the order cannot be verified (0 of 4 results show a date)"
+   },
+   "params": {},
+   "shop": "markup",
+   "tool": "newest",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Bosch",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Bosch&sort=newest"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "date_desc",
+        "kind": "sort",
+        "label": "Neueste",
+        "param": "sort",
+        "value": "newest"
+       },
+       "evidence": {
+        "key": "date_desc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         "2025-4-4",
+         "2025-3-30",
+         "2025-3-12",
+         "2025-1-15"
+        ]
+       },
+       "status": "ok",
+       "why": "sort: date, desc verified on 4 of 4 results"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Bohrhammer PBH 2100",
+        "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+       },
+       {
+        "title": "Bosch Stichsäge PST 650",
+        "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+       },
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Akkuschrauber PSR 18",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch&sort=newest",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "applied": [
+      {
+       "key": "date_desc",
+       "kind": "sort",
+       "label": "Neueste",
+       "param": "sort",
+       "value": "newest"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-04-04",
+       "price": 119.0,
+       "title": "Bosch Bohrhammer PBH 2100",
+       "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+      },
+      {
+       "date": "2025-03-30",
+       "price": 59.0,
+       "title": "Bosch Stichsäge PST 650",
+       "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+      },
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "date": "2025-01-15",
+       "price": 129.0,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      }
+     ]
+    },
+    "status": "ok",
+    "why": "sort: date, desc verified on 4 of 4 results"
+   },
+   "params": {},
+   "shop": "mixed",
+   "tool": "newest",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Akkuschrauber",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Akkuschrauber&sort=newest"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "date_desc",
+        "kind": "sort",
+        "label": "Neueste",
+        "param": "sort",
+        "value": "newest"
+       },
+       "evidence": {
+        "key": "date_desc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         "2025-6-1",
+         "2025-5-2",
+         "2025-3-12",
+         "2025-2-11"
+        ]
+       },
+       "status": "ok",
+       "why": "sort: date, desc verified on 4 of 4 results"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Ryobi Akkuschrauber R18",
+        "url": "https://www.bshop.test/p/ryobi-akkuschrauber-r18"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akkuschrauber&sort=newest",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "applied": [
+      {
+       "key": "date_desc",
+       "kind": "sort",
+       "label": "Neueste",
+       "param": "sort",
+       "value": "newest"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-06-01",
+       "price": 49.99,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      },
+      {
+       "date": "2025-05-02",
+       "price": 79.5,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "date": "2025-02-11",
+       "price": 99.0,
+       "title": "Ryobi Akkuschrauber R18",
+       "url": "https://www.bshop.test/p/ryobi-akkuschrauber-r18"
+      }
+     ]
+    },
+    "status": "ok",
+    "why": "sort: date, desc verified on 4 of 4 results"
+   },
+   "params": {},
+   "shop": "mixed",
+   "tool": "newest",
+   "value": "Akkuschrauber"
+  },
+  {
+   "decision": {
+    "accepted": false,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Bosch",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Bosch&sort=lowpricefirst"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "price_asc",
+        "kind": "sort",
+        "label": "Neueste",
+        "param": "sort",
+        "value": "lowpricefirst"
+       },
+       "evidence": {
+        "key": "price_asc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         89.0,
+         64.9,
+         129.0,
+         119.0
+        ]
+       },
+       "status": "failed",
+       "why": "sort: the list is not sorted by price, asc (#1 shows 89.0, #2 64.9)"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Bosch Akkuschrauber PSR 18",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+       },
+       {
+        "title": "Bosch Bohrhammer PBH 2100",
+        "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch&sort=lowpricefirst",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": {
+     "applied": [
+      {
+       "key": "price_asc",
+       "kind": "sort",
+       "label": "Neueste",
+       "param": "sort",
+       "value": "lowpricefirst"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "date": "2024-11-20",
+       "price": 64.9,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "date": "2025-01-15",
+       "price": 129.0,
+       "title": "Bosch Akkuschrauber PSR 18",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-psr-18"
+      },
+      {
+       "date": "2025-04-04",
+       "price": 119.0,
+       "title": "Bosch Bohrhammer PBH 2100",
+       "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+      }
+     ]
+    },
+    "missing": null,
+    "output": null,
+    "status": "failed",
+    "why": "sort: the list is not sorted by price, asc (#1 shows 89.0, #2 64.9)"
+   },
+   "params": {
+    "sort": "lowpricefirst"
+   },
+   "shop": "plain",
+   "tool": "newest",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Bosch",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Bosch&sort=price-asc"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "price_asc",
+        "kind": "sort",
+        "label": "Preis aufsteigend",
+        "param": "sort",
+        "value": "price-asc"
+       },
+       "evidence": {
+        "key": "price_asc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         59.0,
+         64.9,
+         89.0,
+         119.0
+        ]
+       },
+       "status": "ok",
+       "why": "sort: price, asc verified on 4 of 4 results"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Stichsäge PST 650",
+        "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Bosch Bohrhammer PBH 2100",
+        "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Bosch&sort=price-asc",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "applied": [
+      {
+       "key": "price_asc",
+       "kind": "sort",
+       "label": "Preis aufsteigend",
+       "param": "sort",
+       "value": "price-asc"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-03-30",
+       "price": 59.0,
+       "title": "Bosch Stichsäge PST 650",
+       "url": "https://www.bshop.test/p/bosch-stichsaege-pst"
+      },
+      {
+       "date": "2024-11-20",
+       "price": 64.9,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "date": "2025-04-04",
+       "price": 119.0,
+       "title": "Bosch Bohrhammer PBH 2100",
+       "url": "https://www.bshop.test/p/bosch-bohrhammer-pbh"
+      }
+     ]
+    },
+    "status": "ok",
+    "why": "sort: price, asc verified on 4 of 4 results"
+   },
+   "params": {},
+   "shop": "plain",
+   "tool": "price",
+   "value": "Bosch"
+  },
+  {
+   "decision": {
+    "accepted": true,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Akkuschrauber",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Akkuschrauber&sort=price-asc"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "price_asc",
+        "kind": "sort",
+        "label": "Preis aufsteigend",
+        "param": "sort",
+        "value": "price-asc"
+       },
+       "evidence": {
+        "key": "price_asc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         49.99,
+         64.9,
+         79.5,
+         89.0
+        ]
+       },
+       "status": "ok",
+       "why": "sort: price, asc verified on 4 of 4 results"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akkuschrauber&sort=price-asc",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": null,
+    "missing": null,
+    "output": {
+     "applied": [
+      {
+       "key": "price_asc",
+       "kind": "sort",
+       "label": "Preis aufsteigend",
+       "param": "sort",
+       "value": "price-asc"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-06-01",
+       "price": 49.99,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      },
+      {
+       "date": "2024-11-20",
+       "price": 64.9,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "date": "2025-05-02",
+       "price": 79.5,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      }
+     ]
+    },
+    "status": "ok",
+    "why": "sort: price, asc verified on 4 of 4 results"
+   },
+   "params": {},
+   "shop": "mixed",
+   "tool": "price",
+   "value": "Akkuschrauber"
+  },
+  {
+   "decision": {
+    "accepted": false,
+    "checks": {
+     "refine": {
+      "from": "https://www.bshop.test/search?q=Akkuschrauber",
+      "mode": "url",
+      "to": "https://www.bshop.test/search?q=Akkuschrauber&sort=lowpricefirst"
+     },
+     "refined": [
+      {
+       "applied": {
+        "key": "price_asc",
+        "kind": "sort",
+        "label": "Preis aufsteigend",
+        "param": "sort",
+        "value": "lowpricefirst"
+       },
+       "evidence": {
+        "key": "price_asc",
+        "listed": 4,
+        "shown": 4,
+        "values": [
+         89.0,
+         79.5,
+         64.9,
+         49.99
+        ]
+       },
+       "status": "failed",
+       "why": "sort: the list is not sorted by price, asc (#1 shows 89.0, #2 79.5)"
+      }
+     ],
+     "result_page": {
+      "items": [
+       {
+        "title": "Bosch Akkuschrauber GSR 12",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+       },
+       {
+        "title": "Makita Akkuschrauber DF333",
+        "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+       },
+       {
+        "title": "Bosch Akkuschrauber EasyDrill",
+        "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+       },
+       {
+        "title": "Einhell Akkuschrauber TE-CD",
+        "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+       }
+      ],
+      "n_items": 4,
+      "status": "list",
+      "url": "https://www.bshop.test/search?q=Akkuschrauber&sort=lowpricefirst",
+      "why": "query: 4 items; an item names the value"
+     }
+    },
+    "fields_seen": {
+     "applied": [
+      {
+       "key": "price_asc",
+       "kind": "sort",
+       "label": "Preis aufsteigend",
+       "param": "sort",
+       "value": "lowpricefirst"
+      }
+     ],
+     "results": [
+      {
+       "date": "2025-03-12",
+       "price": 89.0,
+       "title": "Bosch Akkuschrauber GSR 12",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-gsr-12"
+      },
+      {
+       "date": "2025-05-02",
+       "price": 79.5,
+       "title": "Makita Akkuschrauber DF333",
+       "url": "https://www.bshop.test/p/makita-akkuschrauber-df333"
+      },
+      {
+       "date": "2024-11-20",
+       "price": 64.9,
+       "title": "Bosch Akkuschrauber EasyDrill",
+       "url": "https://www.bshop.test/p/bosch-akkuschrauber-easydrill"
+      },
+      {
+       "date": "2025-06-01",
+       "price": 49.99,
+       "title": "Einhell Akkuschrauber TE-CD",
+       "url": "https://www.bshop.test/p/einhell-akkuschrauber-te-cd"
+      }
+     ]
+    },
+    "missing": null,
+    "output": null,
+    "status": "failed",
+    "why": "sort: the list is not sorted by price, asc (#1 shows 89.0, #2 79.5)"
+   },
+   "params": {
+    "sort": "lowpricefirst"
+   },
+   "shop": "plain",
+   "tool": "price",
+   "value": "Akkuschrauber"
+  }
+ ],
+ "tools": {
+  "cursor": {
+   "checks": [
+    "search_page",
+    "membership",
+    "query",
+    "empty_state",
+    "no_duplicates",
+    "page_order",
+    "stated_total"
+   ],
+   "compiled_from": {
+    "search_step": 0,
+    "steps": 3,
+    "trace_sha256": "51c0d032a8edc22cbfc4adac7a755d9d0959993f24a581e4549cb4d3f8b49133"
+   },
+   "hosts": [
+    "www.bshop.test"
+   ],
+   "input": {
+    "binding": "the search text is the input term",
+    "demonstrated_text_was_the_input": true,
+    "name": "term"
+   },
+   "max_pages": 5,
+   "model_calls": 0,
+   "n": 7,
+   "output": [
+    "results",
+    "total",
+    "pages"
+   ],
+   "pager": {
+    "link": {
+     "rel": "next",
+     "text": "Weiter"
+    },
+    "mode": "link"
+   },
+   "params": [
+    {
+     "default": 7,
+     "kind": "count",
+     "name": "n"
+    }
+   ],
+   "region": {
+    "cards": [
+     {
+      "chain": [
+       "body",
+       "main",
+       "ul.products",
+       "li.product-item"
+      ],
+      "kind": "card",
+      "rels": [
+       "a.title"
+      ],
+      "roles": [
+       {
+        "anchor": "a.title",
+        "heading": false
+       }
+      ]
+     }
+    ],
+    "cards_version": 10,
+    "chrome_frac": 0.0,
+    "kind": "cluster",
+    "members_at_compile": 3,
+    "regex": "^https?://(?:www\\.)?bshop\\.test/p/[^/?#]+(?:\\?[^#]*)?(?:#.*)?$",
+    "template": "https://www.bshop.test/p/{v}",
+    "want": 3,
+    "want_in_cluster": 3,
+    "where": "path",
+    "width": 1
+   },
+   "result_scope": {
+    "hosts": [
+     "www.bshop.test"
+    ],
+    "paths": [
+     "/p"
+    ],
+    "results": 3
+   },
+   "search": {
+    "fallback_templates": [],
+    "mode": "url",
+    "start_url": "https://www.bshop.test/",
+    "template": "https://www.bshop.test/search?q={q}"
+   },
+   "site": "www.bshop.test",
+   "start_url": "https://www.bshop.test/",
+   "version": 14,
+   "workflow": "paged_search"
+  },
+  "newest": {
+   "applied": [
+    {
+     "key": "date_desc",
+     "kind": "sort",
+     "label": "Neueste",
+     "mode": "url",
+     "param": "sort",
+     "value": "newest"
+    }
+   ],
+   "checks": [
+    "search_page",
+    "membership",
+    "query",
+    "empty_state",
+    "refined"
+   ],
+   "compiled_from": {
+    "search_step": 0,
+    "steps": 3,
+    "trace_sha256": "62bbf1e60fe357eab6adc8760872ad398644f9f6d89c9b21399fb02dacd38be7"
+   },
+   "hosts": [
+    "www.bshop.test"
+   ],
+   "input": {
+    "binding": "the search text is the input term",
+    "demonstrated_text_was_the_input": true,
+    "name": "term"
+   },
+   "model_calls": 0,
+   "output": [
+    "results",
+    "applied"
+   ],
+   "params": [
+    {
+     "default": "newest",
+     "key": "date_desc",
+     "kind": "sort",
+     "name": "sort"
+    }
+   ],
+   "refine": {
+    "mode": "url",
+    "params": {
+     "sort": "newest"
+    }
+   },
+   "region": {
+    "cards": [
+     {
+      "chain": [
+       "body",
+       "main",
+       "ul.products",
+       "li.product-item"
+      ],
+      "kind": "card",
+      "rels": [
+       "a.title"
+      ],
+      "roles": [
+       {
+        "anchor": "a.title",
+        "heading": false
+       }
+      ]
+     }
+    ],
+    "cards_version": 10,
+    "chrome_frac": 0.0,
+    "kind": "cluster",
+    "members_at_compile": 4,
+    "regex": "^https?://(?:www\\.)?bshop\\.test/p/[^/?#]+(?:\\?[^#]*)?(?:#.*)?$",
+    "template": "https://www.bshop.test/p/{v}",
+    "want": 4,
+    "want_in_cluster": 4,
+    "where": "path",
+    "width": 1
+   },
+   "result_scope": {
+    "hosts": [
+     "www.bshop.test"
+    ],
+    "paths": [
+     "/p"
+    ],
+    "results": 4
+   },
+   "search": {
+    "fallback_templates": [],
+    "mode": "url",
+    "start_url": "https://www.bshop.test/",
+    "template": "https://www.bshop.test/search?q={q}"
+   },
+   "site": "www.bshop.test",
+   "start_url": "https://www.bshop.test/",
+   "top_k": 5,
+   "version": 14,
+   "workflow": "filtered_search"
+  },
+  "param": {
+   "checks": [
+    "search_page",
+    "membership",
+    "query",
+    "empty_state",
+    "no_duplicates",
+    "page_order",
+    "stated_total"
+   ],
+   "compiled_from": {
+    "search_step": 0,
+    "steps": 3,
+    "trace_sha256": "cd0cd390e2484fa27f4e531011e7530d183b9551a0fa75123eace63845ab78c9"
+   },
+   "hosts": [
+    "www.bshop.test"
+   ],
+   "input": {
+    "binding": "the search text is the input term",
+    "demonstrated_text_was_the_input": true,
+    "name": "term"
+   },
+   "max_pages": 5,
+   "model_calls": 0,
+   "n": 7,
+   "output": [
+    "results",
+    "total",
+    "pages"
+   ],
+   "pager": {
+    "first": 1,
+    "key": "page",
+    "link": {
+     "rel": "next",
+     "text": "Weiter"
+    },
+    "mode": "param",
+    "stride": 1
+   },
+   "params": [
+    {
+     "default": 7,
+     "kind": "count",
+     "name": "n"
+    }
+   ],
+   "region": {
+    "cards": [
+     {
+      "chain": [
+       "body",
+       "main",
+       "ul.products",
+       "li.product-item"
+      ],
+      "kind": "card",
+      "rels": [
+       "a.title"
+      ],
+      "roles": [
+       {
+        "anchor": "a.title",
+        "heading": false
+       }
+      ]
+     }
+    ],
+    "cards_version": 10,
+    "chrome_frac": 0.0,
+    "kind": "cluster",
+    "members_at_compile": 3,
+    "regex": "^https?://(?:www\\.)?bshop\\.test/p/[^/?#]+(?:\\?[^#]*)?(?:#.*)?$",
+    "template": "https://www.bshop.test/p/{v}",
+    "want": 3,
+    "want_in_cluster": 3,
+    "where": "path",
+    "width": 1
+   },
+   "result_scope": {
+    "hosts": [
+     "www.bshop.test"
+    ],
+    "paths": [
+     "/p"
+    ],
+    "results": 3
+   },
+   "search": {
+    "fallback_templates": [],
+    "mode": "url",
+    "start_url": "https://www.bshop.test/",
+    "template": "https://www.bshop.test/search?q={q}"
+   },
+   "site": "www.bshop.test",
+   "start_url": "https://www.bshop.test/",
+   "version": 14,
+   "workflow": "paged_search"
+  },
+  "price": {
+   "applied": [
+    {
+     "key": "price_asc",
+     "kind": "sort",
+     "label": "Preis aufsteigend",
+     "mode": "url",
+     "param": "sort",
+     "value": "price-asc"
+    }
+   ],
+   "checks": [
+    "search_page",
+    "membership",
+    "query",
+    "empty_state",
+    "refined"
+   ],
+   "compiled_from": {
+    "search_step": 0,
+    "steps": 3,
+    "trace_sha256": "cddadc147443e9bb5d47a69ecb82fda04082c4876ad905877b47a19517a653ad"
+   },
+   "hosts": [
+    "www.bshop.test"
+   ],
+   "input": {
+    "binding": "the search text is the input term",
+    "demonstrated_text_was_the_input": true,
+    "name": "term"
+   },
+   "model_calls": 0,
+   "output": [
+    "results",
+    "applied"
+   ],
+   "params": [
+    {
+     "default": "price-asc",
+     "key": "price_asc",
+     "kind": "sort",
+     "name": "sort"
+    }
+   ],
+   "refine": {
+    "mode": "url",
+    "params": {
+     "sort": "price-asc"
+    }
+   },
+   "region": {
+    "cards": [
+     {
+      "chain": [
+       "body",
+       "main",
+       "ul.products",
+       "li.product-item"
+      ],
+      "kind": "card",
+      "rels": [
+       "a.title"
+      ],
+      "roles": [
+       {
+        "anchor": "a.title",
+        "heading": false
+       }
+      ]
+     }
+    ],
+    "cards_version": 10,
+    "chrome_frac": 0.0,
+    "kind": "cluster",
+    "members_at_compile": 4,
+    "regex": "^https?://(?:www\\.)?bshop\\.test/p/[^/?#]+(?:\\?[^#]*)?(?:#.*)?$",
+    "template": "https://www.bshop.test/p/{v}",
+    "want": 4,
+    "want_in_cluster": 4,
+    "where": "path",
+    "width": 1
+   },
+   "result_scope": {
+    "hosts": [
+     "www.bshop.test"
+    ],
+    "paths": [
+     "/p"
+    ],
+    "results": 4
+   },
+   "search": {
+    "fallback_templates": [],
+    "mode": "url",
+    "start_url": "https://www.bshop.test/",
+    "template": "https://www.bshop.test/search?q={q}"
+   },
+   "site": "www.bshop.test",
+   "start_url": "https://www.bshop.test/",
+   "top_k": 5,
+   "version": 14,
+   "workflow": "filtered_search"
+  }
+ }
+}

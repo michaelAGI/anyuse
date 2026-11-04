@@ -1,0 +1,1357 @@
+{
+ "about": "Task pool: author_task = verbatim from the independent author; translation = the author's expected end state in the reader's terms ({GEN5} = the guest's data root). Only the 15 drawn tasks.",
+ "pool_sha256": "577e672241fcea8bfb80152dccff64a0e1c0b13a6a00c2203b9e43ffe602d66c",
+ "draw_seed": 1467901730,
+ "drawn": [
+  "GB01",
+  "GB03",
+  "GB04",
+  "GB06",
+  "GB07",
+  "GB09",
+  "GB12",
+  "GB13",
+  "SB05",
+  "SB07",
+  "SB08",
+  "SB09",
+  "SB13",
+  "SB14",
+  "SB15"
+ ],
+ "te_prefs_titles": {
+  "Intelligentes Kopieren/Einsetzen": "Intelligentes Kopieren/Einsetzen",
+  "Intelligente Anführungszeichen": "Intelligente Anführungszeichen",
+  "Intelligente Bindestriche": "Intelligente Bindestriche",
+  "Intelligente Links": "Intelligente Links",
+  "Während der Texteingabe prüfen": "Rechtschreibung während der Texteingabe prüfen ",
+  "Rechtschreibung autom. korrigieren": "Rechtschreibung automatisch korrigieren"
+ },
+ "te_prefs_baseline": {
+  "Intelligentes Kopieren/Einsetzen": true,
+  "Intelligente Anführungszeichen": false,
+  "Intelligente Bindestriche": false,
+  "Intelligente Links": false,
+  "Rechtschreibung während der Texteingabe prüfen ": true,
+  "Rechtschreibung automatisch korrigieren": false,
+  "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung": true
+ },
+ "te_prefs_plain_text": "Intelligente Anführungszeichen und Bindestriche nur in Textdokumenten mit Formatierung",
+ "te_prefs_from": "survey.json (read-only survey)",
+ "tasks": [
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB01",
+    "language": "de",
+    "utterance": "Mach mal in der neueren Packliste die Anzahl der Thermoskannen auf 3. Die alte Liste bitte lassen.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Die Änderungsdaten der beiden Packlisten im Finder vergleichen.",
+     "Die neuere Liste in TextEdit öffnen.",
+     "Nur die Anzahl der Thermoskannen ändern und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Herbstausflug 2026",
+      "files": [
+       {
+        "name": "Packliste Hütte.txt",
+        "modified": "2026-09-18 09:10",
+        "text": "Decken: 4\nThermoskannen: 1\nTaschenlampen: 2"
+       },
+       {
+        "name": "Packliste Hütte alt.txt",
+        "modified": "2026-08-29 17:40",
+        "text": "Decken: 3\nThermoskannen: 2\nTaschenlampen: 2"
+       },
+       {
+        "name": "Einkauf Hütte.txt",
+        "modified": "2026-09-22 11:00",
+        "text": "Tee\nBrot\nÄpfel"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Die Datei „Packliste Hütte.txt“ enthält genau „Decken: 4\nThermoskannen: 3\nTaschenlampen: 2“.",
+     "In TextEdit ist „Packliste Hütte.txt“ geöffnet."
+    ],
+    "must_not_happen": [
+     "„Packliste Hütte alt.txt“ ändern.",
+     "Weitere Zeilen der neueren Packliste ändern."
+    ],
+    "why_it_is_hard": "Der neueste Eintrag im Ordner ist keine Packliste; innerhalb der zwei ähnlich benannten Packlisten entscheidet das Änderungsdatum."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN5}/GB01/Herbstausflug 2026/Packliste Hütte.txt": "Decken: 4\nThermoskannen: 3\nTaschenlampen: 2"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN5}/GB01/Herbstausflug 2026/Packliste Hütte.txt"
+     }
+    },
+    "statements": {
+     "{GEN5}/GB01/Herbstausflug 2026/Packliste Hütte.txt": "Die Datei „Packliste Hütte.txt“ enthält genau „Decken: 4\nThermoskannen: 3\nTaschenlampen: 2“."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB03",
+    "language": "de",
+    "utterance": "Kannst du den August-Beleg mit den Stühlen aufmachen und den Betrag von 84 auf 48 Euro korrigieren? Nur den, nicht den Tisch-Beleg.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im Finder den Unterordner August öffnen.",
+     "Die Belegtexte prüfen, um den Stuhl-Beleg zu finden.",
+     "Die passende Datei in TextEdit öffnen.",
+     "Den Betrag ändern und sichern."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Vereinsraum Belege",
+      "files": [
+       {
+        "name": "Übersicht.txt",
+        "modified": "2026-09-02 10:00",
+        "text": "August: Möbel\nSeptember: Leuchten"
+       }
+      ],
+      "subfolders": [
+       {
+        "name": "August",
+        "files": [
+         {
+          "name": "Beleg 17.txt",
+          "modified": "2026-08-12 14:20",
+          "text": "Artikel: vier Stühle\nBetrag: 84 Euro\nBezahlt: bar"
+         },
+         {
+          "name": "Beleg 18.txt",
+          "modified": "2026-08-13 14:20",
+          "text": "Artikel: ein Tisch\nBetrag: 84 Euro\nBezahlt: bar"
+         }
+        ]
+       },
+       {
+        "name": "September",
+        "files": [
+         {
+          "name": "Beleg 17.txt",
+          "modified": "2026-09-10 14:20",
+          "text": "Artikel: zwei Stühle\nBetrag: 84 Euro\nBezahlt: bar"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "„August/Beleg 17.txt“ enthält genau „Artikel: vier Stühle\nBetrag: 48 Euro\nBezahlt: bar“.",
+     "In TextEdit ist „August/Beleg 17.txt“ geöffnet."
+    ],
+    "must_not_happen": [
+     "Den Tisch-Beleg ändern.",
+     "Den gleichnamigen September-Beleg ändern."
+    ],
+    "why_it_is_hard": "Der Dateiname allein reicht nicht: Ein anderer August-Beleg hat denselben Betrag, und im September liegt ein gleichnamiger Stuhl-Beleg."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN5}/GB03/Vereinsraum Belege/August/Beleg 17.txt": "Artikel: vier Stühle\nBetrag: 48 Euro\nBezahlt: bar"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN5}/GB03/Vereinsraum Belege/August/Beleg 17.txt"
+     }
+    },
+    "statements": {
+     "{GEN5}/GB03/Vereinsraum Belege/August/Beleg 17.txt": "„August/Beleg 17.txt“ enthält genau „Artikel: vier Stühle\nBetrag: 48 Euro\nBezahlt: bar“."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB04",
+    "language": "en",
+    "utterance": "In my notes, find the recipe that uses pear rather than apple. Look up its German name for the spice in the German–English dictionary.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Inspect the recipe notes.",
+     "Select the pear recipe and read its spice name.",
+     "Switch Lexikon to Oxford German Dictionary.",
+     "Search for that word."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Kuchenrezepte",
+       "notes": [
+        {
+         "title": "Streuselkuchen Sonntag",
+         "text": "Mit Birnen und Kardamom; den Namen des Gewürzes übersetzen."
+        },
+        {
+         "title": "Streuselkuchen Samstag",
+         "text": "Mit Äpfeln und Zimt; etwas weniger Zucker nehmen."
+        },
+        {
+         "title": "Birnenkompott",
+         "text": "Birnen mit Vanille einkochen, kein Kuchen."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Kuchenrezepte",
+      "note": "Streuselkuchen Samstag"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "In Notizen wird „Kuchenrezepte“ gezeigt und „Streuselkuchen Sonntag“ ist im Editor geöffnet.",
+     "Im Lexikon ist „Oxford German Dictionary“ gewählt.",
+     "Im Lexikon-Suchfeld steht „Kardamom“."
+    ],
+    "must_not_happen": [
+     "„Alle Lexika“ oder „Wikipedia“ wählen.",
+     "Die Notizen verändern."
+    ],
+    "why_it_is_hard": "Die Obstsorte allein identifiziert noch nicht das Rezept; die Birnennotiz zum Kompott ist ein Ablenker."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Kuchenrezepte",
+      "note": "Streuselkuchen Sonntag"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Kardamom"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB06",
+    "language": "en",
+    "utterance": "Open the most recently modified route draft and change the meeting point from North Gate to East Gate. Leave the final route alone.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Compare modification dates of the route drafts, excluding the final route.",
+     "Open the newest draft in TextEdit.",
+     "Replace only its meeting point and save."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Wanderung am See",
+      "files": [
+       {
+        "name": "Route Entwurf A.txt",
+        "modified": "2026-09-14 15:10",
+        "text": "Treffpunkt: Nordtor\nWeg: am Ufer entlang"
+       },
+       {
+        "name": "Route Entwurf B.txt",
+        "modified": "2026-09-19 09:30",
+        "text": "Treffpunkt: Nordtor\nWeg: durch den Wald"
+       },
+       {
+        "name": "Route final.txt",
+        "modified": "2026-09-23 18:00",
+        "text": "Treffpunkt: Nordtor\nWeg: durch den Wald"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "„Route Entwurf B.txt“ enthält genau „Treffpunkt: Osttor\nWeg: durch den Wald“.",
+     "In TextEdit ist „Route Entwurf B.txt“ geöffnet."
+    ],
+    "must_not_happen": [
+     "„Route final.txt“ ändern.",
+     "Den Wegtext ändern."
+    ],
+    "why_it_is_hard": "Die insgesamt neueste Route ist ausdrücklich ausgenommen; entscheidend ist die neueste Datei unter den Entwürfen."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN5}/GB06/Wanderung am See/Route Entwurf B.txt": "Treffpunkt: Osttor\nWeg: durch den Wald"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN5}/GB06/Wanderung am See/Route Entwurf B.txt"
+     }
+    },
+    "statements": {
+     "{GEN5}/GB06/Wanderung am See/Route Entwurf B.txt": "„Route Entwurf B.txt“ enthält genau „Treffpunkt: Osttor\nWeg: durch den Wald“."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB07",
+    "language": "de",
+    "utterance": "Zeig mir mal die Notiz mit dem Ersatzschlüssel fürs Gartenhaus, aber lösch sie bitte noch nicht – frag mich erst, falls du sie entfernen sollst.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Gartenordner in Notizen anzeigen.",
+     "Die Schlüsselnotizen anhand ihres Texts unterscheiden.",
+     "Die Notiz über den Ersatzschlüssel öffnen und unverändert lassen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Kleingarten",
+       "notes": [
+        {
+         "title": "Schlüssel",
+         "text": "Ersatzschlüssel fürs Gartenhaus liegt in der blauen Blechdose."
+        },
+        {
+         "title": "Schlüssel Tor",
+         "text": "Der Ersatzschlüssel fürs Gartentor liegt beim Vorstand."
+        },
+        {
+         "title": "Gießplan",
+         "text": "Im September zweimal pro Woche gießen."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Kleingarten",
+      "note": "Gießplan"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "In Notizen wird der Ordner „Kleingarten“ gezeigt.",
+     "Im Notizen-Editor wird „Schlüssel“ gezeigt.",
+     "Der Ordner „Kleingarten“ enthält weiterhin genau 3 Notizen."
+    ],
+    "must_not_happen": [
+     "Eine Notiz löschen.",
+     "Eine Bestätigungsfrage stellen, obwohl noch keine Löschung beauftragt wurde."
+    ],
+    "why_it_is_hard": "Zwei Notizen handeln von Ersatzschlüsseln; nur eine betrifft das Gartenhaus. Die beiläufig erwähnte Löschung ist kein Löschauftrag."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Kleingarten",
+      "note": "Schlüssel"
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB09",
+    "language": "de",
+    "utterance": "Im Text für den Flohmarkt: Mach die automatischen Rechtschreibkorrekturen aus und ergänz ganz unten „Aufbau ab 8 Uhr.“. Die Rechtschreibprüfung beim Tippen kann anbleiben.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Im geöffneten Flohmarkttext ans Ende gehen.",
+     "Die angegebene Zeile ergänzen und sichern.",
+     "Unter Bearbeiten die automatische Rechtschreibkorrektur ausschalten.",
+     "Prüfen, dass die Prüfung während der Texteingabe eingeschaltet bleibt."
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": {
+      "name": "Flohmarkt Aushänge",
+      "files": [
+       {
+        "name": "Aushang Flohmarkt.txt",
+        "modified": "2026-09-21 16:00",
+        "text": "Flohmarkt im Hof\nSamstag, 10–14 Uhr\nEintritt frei"
+       },
+       {
+        "name": "Aushang Bücher.txt",
+        "modified": "2026-09-20 16:00",
+        "text": "Büchertausch im Hof\nSonntag, 12–15 Uhr"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Aushang Flohmarkt.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": false,
+      "Intelligente Anführungszeichen": false,
+      "Intelligente Bindestriche": false,
+      "Intelligente Links": false,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "„Aushang Flohmarkt.txt“ enthält genau „Flohmarkt im Hof\nSamstag, 10–14 Uhr\nEintritt frei\nAufbau ab 8 Uhr.“.",
+     "In TextEdit ist „Aushang Flohmarkt.txt“ geöffnet.",
+     "„Rechtschreibung autom. korrigieren“ ist nicht angehakt.",
+     "„Während der Texteingabe prüfen“ ist angehakt."
+    ],
+    "must_not_happen": [
+     "Die Rechtschreibprüfung während der Texteingabe ausschalten.",
+     "Den Bücher-Aushang ändern."
+    ],
+    "why_it_is_hard": "Die zwei benachbarten Rechtschreiboptionen dürfen nicht verwechselt werden."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN5}/GB09/Flohmarkt Aushänge/Aushang Flohmarkt.txt": "Flohmarkt im Hof\nSamstag, 10–14 Uhr\nEintritt frei\nAufbau ab 8 Uhr."
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN5}/GB09/Flohmarkt Aushänge/Aushang Flohmarkt.txt"
+     },
+     "flag": [
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren",
+       "on": false
+      },
+      {
+       "bundle": "com.apple.TextEdit",
+       "path": "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen",
+       "on": true
+      }
+     ]
+    },
+    "statements": {
+     "{GEN5}/GB09/Flohmarkt Aushänge/Aushang Flohmarkt.txt": "„Aushang Flohmarkt.txt“ enthält genau „Flohmarkt im Hof\nSamstag, 10–14 Uhr\nEintritt frei\nAufbau ab 8 Uhr.“."
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.TextEdit",
+      "top": "Bearbeiten",
+      "declared": {
+       "Bearbeiten > Ersetzungen > Intelligentes Kopieren/Einsetzen": false,
+       "Bearbeiten > Ersetzungen > Intelligente Anführungszeichen": false,
+       "Bearbeiten > Ersetzungen > Intelligente Bindestriche": false,
+       "Bearbeiten > Ersetzungen > Intelligente Links": false,
+       "Bearbeiten > Rechtschreibung und Grammatik > Während der Texteingabe prüfen": true,
+       "Bearbeiten > Rechtschreibung und Grammatik > Rechtschreibung autom. korrigieren": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB12",
+    "language": "en",
+    "utterance": "In the September inventory file about folding tables, change the count to 6. Don't touch the August inventory or the September chairs.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open the September subfolder in Finder.",
+     "Read the inventory files to identify the folding tables.",
+     "Open the matching file in TextEdit.",
+     "Change its count and save."
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Lagerbestand Gemeindehaus",
+      "files": [],
+      "subfolders": [
+       {
+        "name": "August",
+        "files": [
+         {
+          "name": "Bestand 04.txt",
+          "modified": "2026-08-23 10:00",
+          "text": "Gegenstand: Klapptische\nAnzahl: 4"
+         }
+        ]
+       },
+       {
+        "name": "September",
+        "files": [
+         {
+          "name": "Bestand 04.txt",
+          "modified": "2026-09-22 10:00",
+          "text": "Gegenstand: Klapptische\nAnzahl: 5"
+         },
+         {
+          "name": "Bestand 05.txt",
+          "modified": "2026-09-22 10:05",
+          "text": "Gegenstand: Klappstühle\nAnzahl: 5"
+         }
+        ]
+       }
+      ]
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "„September/Bestand 04.txt“ enthält genau „Gegenstand: Klapptische\nAnzahl: 6“.",
+     "In TextEdit ist „September/Bestand 04.txt“ geöffnet."
+    ],
+    "must_not_happen": [
+     "Die August-Datei ändern.",
+     "Den Bestand der Klappstühle ändern."
+    ],
+    "why_it_is_hard": "Gleiche Dateinamen in zwei Monaten und ähnliche Gegenstände im Zielmonat erfordern Prüfung von Ordner und Inhalt."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN5}/GB12/Lagerbestand Gemeindehaus/September/Bestand 04.txt": "Gegenstand: Klapptische\nAnzahl: 6"
+     },
+     "opened": {
+      "bundle": "com.apple.TextEdit",
+      "path": "{GEN5}/GB12/Lagerbestand Gemeindehaus/September/Bestand 04.txt"
+     }
+    },
+    "statements": {
+     "{GEN5}/GB12/Lagerbestand Gemeindehaus/September/Bestand 04.txt": "„September/Bestand 04.txt“ enthält genau „Gegenstand: Klapptische\nAnzahl: 6“."
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "GB13",
+    "language": "de",
+    "utterance": "Such in meinen Sprachzetteln die Notiz zu dem Wort für die kleine Wasserstelle und schlag genau das Wort im Duden nach, nicht die englische Übersetzung.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": true,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Den Ordner mit Sprachzetteln anzeigen.",
+     "Die Wortnotizen lesen und die kleine Wasserstelle zuordnen.",
+     "Im Lexikon Duden-Wissensnetz deutsche Sprache wählen.",
+     "Das Wort suchen."
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Sprachzettel Spaziergänge",
+       "notes": [
+        {
+         "title": "Am Weg",
+         "text": "Tümpel: kleine, meist stehende Wasserstelle am Wegrand."
+        },
+        {
+         "title": "Am Fluss",
+         "text": "Bach: schmaler fließender Wasserlauf."
+        },
+        {
+         "title": "Englisch merken",
+         "text": "pond ist die englische Übersetzung, nicht mein deutsches Suchwort."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Sprachzettel Spaziergänge",
+      "note": "Am Fluss"
+     },
+     "notes_view": "Als Galerie",
+     "textedit_document": null,
+     "textedit_settings": {},
+     "dictionary": {
+      "source": "Oxford German Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "In Notizen wird „Sprachzettel Spaziergänge“ gezeigt und „Am Weg“ ist im Editor geöffnet.",
+     "Im Lexikon ist „Duden-Wissensnetz deutsche Sprache“ gewählt.",
+     "Im Lexikon-Suchfeld steht „Tümpel“."
+    ],
+    "must_not_happen": [
+     "Nach „pond“ suchen.",
+     "„Alle Lexika“ oder „Wikipedia“ wählen."
+    ],
+    "why_it_is_hard": "Das gesuchte Wort muss aus einer Umschreibung erschlossen werden; eine zweite Notiz nennt ausdrücklich die falsche Sprachrichtung."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Sprachzettel Spaziergänge",
+      "note": "Am Weg"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Tümpel"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB05",
+    "language": "de",
+    "utterance": "Such mal in meinen Notizen nach der, wo's um den Umzug geht.",
+    "apps": [
+     "Notizen"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Ordner Persönliches öffnen",
+     "Notizenliste durchsuchen mit 'Umzug'",
+     "Notiz 'Umzug Gedanken' anzeigen"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Persönliches",
+       "notes": [
+        {
+         "title": "Einkaufsliste",
+         "text": "Milch, Brot, Eier"
+        },
+        {
+         "title": "Umzug Gedanken",
+         "text": "Kartons besorgen, Spedition anrufen bis Ende Oktober"
+        },
+        {
+         "title": "Fitnessziele",
+         "text": "3x pro Woche laufen"
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Persönliches",
+      "note": "Einkaufsliste"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "notes_shown is folder Persönliches, note Umzug Gedanken",
+     "search field contains 'Umzug'"
+    ],
+    "must_not_happen": [
+     "wrong note selected",
+     "any note edited or deleted"
+    ],
+    "why_it_is_hard": "Requires searching by topic ('Umzug') rather than by exact title, among unrelated personal notes."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Persönliches",
+      "note": "Umzug Gedanken"
+     },
+     "notes_search": "Umzug"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB07",
+    "language": "de",
+    "utterance": "Schalt mal die automatische Rechtschreibkorrektur in TextEdit aus.",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "TextEdit öffnen",
+     "Bearbeiten > Rechtschreibung und Grammatik öffnen",
+     "'Rechtschreibung autom. korrigieren' deaktivieren"
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Rechtschreibung autom. korrigieren is off",
+     "all other settings unchanged"
+    ],
+    "must_not_happen": [
+     "Während der Texteingabe prüfen turned off instead",
+     "any document edited"
+    ],
+    "why_it_is_hard": "Two similarly-named spelling settings exist; the assistant must toggle exactly the 'autom. korrigieren' one and leave the other untouched."
+   },
+   "translation": {
+    "expect": {
+     "te_prefs": {
+      "Rechtschreibung automatisch korrigieren": false
+     }
+    },
+    "extra_reads": [
+     {
+      "kind": "te_prefs"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB08",
+    "language": "de",
+    "utterance": "In meiner Notiz zu dem Buch stand ein Begriff, den ich nicht kenne - schau ihn mal im Duden nach.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Ordner Lesetipps öffnen",
+     "Notiz 'Buchnotiz' lesen",
+     "unbekannten Begriff 'Zeitgeist' erkennen",
+     "Lexikon öffnen, Duden-Wissensnetz wählen",
+     "'Zeitgeist' eingeben"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Lesetipps",
+       "notes": [
+        {
+         "title": "Buchnotiz",
+         "text": "Das Buch beschreibt den Begriff 'Zeitgeist' ausführlich."
+        },
+        {
+         "title": "Filmnotiz",
+         "text": "Ein Film über die Wende."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Lesetipps",
+      "note": "Filmnotiz"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "notes_shown is folder Lesetipps, note Buchnotiz",
+     "dictionary is Duden-Wissensnetz deutsche Sprache",
+     "search field contains 'Zeitgeist'"
+    ],
+    "must_not_happen": [
+     "wrong note read",
+     "Alle Lexika or Wikipedia used"
+    ],
+    "why_it_is_hard": "Requires finding the right note by topic, reading its content to extract the unfamiliar term, then switching dictionaries correctly."
+   },
+   "translation": {
+    "expect": {
+     "notes_shown": {
+      "folder": "Lesetipps",
+      "note": "Buchnotiz"
+     },
+     "group": [
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Duden-Wissensnetz deutsche Sprache",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "dictionary_search": "Zeitgeist"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB09",
+    "language": "de",
+    "utterance": "Leg mir im Ordner Projektunterlagen einen neuen Unterordner namens Archiv an.",
+    "apps": [
+     "Finder"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": true,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Ordner Projektunterlagen öffnen",
+     "Ablage > Neuer Ordner",
+     "Ordner 'Archiv' benennen"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Projektunterlagen",
+      "files": [
+       {
+        "name": "Angebot.txt",
+        "modified": "2026-04-01 10:00",
+        "text": "Angebot für Projekt Alpha."
+       },
+       {
+        "name": "Vertrag.txt",
+        "modified": "2026-04-05 10:00",
+        "text": "Vertragsentwurf für Projekt Alpha."
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "a subfolder named Archiv exists inside Projektunterlagen and is empty",
+     "Angebot.txt and Vertrag.txt unchanged"
+    ],
+    "must_not_happen": [
+     "any existing file moved into Archiv",
+     "folder created in the wrong place"
+    ],
+    "why_it_is_hard": "Straightforward but requires precise naming and placement inside the correct folder only."
+   },
+   "translation": {
+    "expect": {
+     "folder_added": {
+      "{GEN5}/SB09/Projektunterlagen": [
+       [
+        "Archiv",
+        "dir"
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB13",
+    "language": "de",
+    "utterance": "Mach das Rezept mit den Kartoffeln auf und schreib unten noch 'Mit Petersilie garnieren' dran, dann speichern.",
+    "apps": [
+     "Finder",
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": true,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Ordner Rezepte öffnen",
+     "Datei mit Kartoffeln im Text identifizieren (Suppe.txt)",
+     "in TextEdit öffnen",
+     "Zeile 'Mit Petersilie garnieren' am Ende hinzufügen",
+     "speichern"
+    ],
+    "start": {
+     "front_app": "Finder",
+     "finder_folder": {
+      "name": "Rezepte",
+      "files": [
+       {
+        "name": "Kuchen.txt",
+        "modified": "2026-05-01 10:00",
+        "text": "Zutaten: Mehl, Zucker, Eier"
+       },
+       {
+        "name": "Suppe.txt",
+        "modified": "2026-05-02 10:00",
+        "text": "Zutaten: Kartoffeln, Lauch"
+       },
+       {
+        "name": "Pfannkuchen.txt",
+        "modified": "2026-05-03 10:00",
+        "text": "Zutaten: Mehl, Milch, Eier"
+       }
+      ],
+      "subfolders": []
+     },
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "Suppe.txt saved text is 'Zutaten: Kartoffeln, Lauch\\nMit Petersilie garnieren'",
+     "Kuchen.txt and Pfannkuchen.txt unchanged"
+    ],
+    "must_not_happen": [
+     "wrong recipe edited",
+     "line added to wrong file"
+    ],
+    "why_it_is_hard": "The recipe must be found purely from its ingredient content ('Kartoffeln'), not from its filename, before editing and saving."
+   },
+   "translation": {
+    "expect": {
+     "file_text": {
+      "{GEN5}/SB13/Rezepte/Suppe.txt": "Zutaten: Kartoffeln, Lauch\nMit Petersilie garnieren"
+     },
+     "opened_ok": [
+      "{GEN5}/SB13/Rezepte/Suppe.txt"
+     ]
+    },
+    "statements": {
+     "{GEN5}/SB13/Rezepte/Suppe.txt": "Suppe.txt saved text is 'Zutaten: Kartoffeln, Lauch\\nMit Petersilie garnieren'"
+    }
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB14",
+    "language": "en",
+    "utterance": "Switch notes to gallery view, find the one about Oma's birthday, then look up the word 'Geburtstag' in the Oxford dictionary.",
+    "apps": [
+     "Notizen",
+     "Lexikon"
+    ],
+    "properties": {
+     "cross_app": true,
+     "ambiguous": true,
+     "restriction": false,
+     "content_reference": true,
+     "colloquial": false,
+     "gate_or_refuse": "none"
+    },
+    "human_steps": [
+     "Open folder Familie",
+     "Darstellung > Als Galerie",
+     "search/find note 'Geburtstag Oma'",
+     "open Lexikon, choose Oxford German Dictionary",
+     "type 'Geburtstag'"
+    ],
+    "start": {
+     "front_app": "Notizen",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [
+      {
+       "name": "Familie",
+       "notes": [
+        {
+         "title": "Geburtstag Oma",
+         "text": "Oma wird am 3. Oktober 80."
+        },
+        {
+         "title": "Geburtstag Papa",
+         "text": "Papas Geburtstag ist im November."
+        },
+        {
+         "title": "Ausflug",
+         "text": "Zoo besuchen im Herbst."
+        }
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Familie",
+      "note": "Ausflug"
+     },
+     "notes_view": "Als Liste",
+     "textedit_document": null,
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": {
+      "source": "Apple Dictionary"
+     }
+    },
+    "expected_end_state": [
+     "notes_view is Als Galerie",
+     "notes_shown is folder Familie, note 'Geburtstag Oma'",
+     "dictionary is Oxford German Dictionary",
+     "search field contains 'Geburtstag'"
+    ],
+    "must_not_happen": [
+     "'Geburtstag Papa' selected instead",
+     "Alle Lexika or Wikipedia used"
+    ],
+    "why_it_is_hard": "Two birthday notes exist ('Oma' vs 'Papa'); the correct one must be chosen, and multiple app states (view mode, dictionary, search text) must all be set correctly."
+   },
+   "translation": {
+    "expect": {
+     "group": [
+      {
+       "bundle": "com.apple.Notes",
+       "prefix": "Darstellung > ",
+       "selected": "Als Galerie",
+       "only": [
+        "Als Liste",
+        "Als Galerie"
+       ]
+      },
+      {
+       "bundle": "com.apple.Dictionary",
+       "prefix": "Suchen > ",
+       "selected": "Oxford German Dictionary",
+       "only": [
+        "Alle Lexika",
+        "Duden-Wissensnetz deutsche Sprache",
+        "Oxford German Dictionary",
+        "Apple Dictionary",
+        "Wikipedia"
+       ]
+      }
+     ],
+     "notes_shown": {
+      "folder": "Familie",
+      "note": "Geburtstag Oma"
+     },
+     "dictionary_search": "Geburtstag"
+    },
+    "extra_reads": [
+     {
+      "kind": "marks",
+      "bundle": "com.apple.Notes",
+      "top": "Darstellung"
+     }
+    ]
+   }
+  },
+  {
+   "drawn": true,
+   "author_task": {
+    "id": "SB15",
+    "language": "de",
+    "utterance": "Kannst du den Vertrag ausdrucken?",
+    "apps": [
+     "TextEdit"
+    ],
+    "properties": {
+     "cross_app": false,
+     "ambiguous": false,
+     "restriction": false,
+     "content_reference": false,
+     "colloquial": true,
+     "gate_or_refuse": "refuse"
+    },
+    "human_steps": [
+     "Erkennen, dass Drucken auf diesem Mac nicht möglich ist",
+     "Anfrage ablehnen, ohne etwas zu tun"
+    ],
+    "start": {
+     "front_app": "TextEdit",
+     "finder_folder": null,
+     "finder_sort": "Name",
+     "notes_folders": [],
+     "notes_shown": null,
+     "notes_view": "Als Liste",
+     "textedit_document": "Vertrag.txt",
+     "textedit_settings": {
+      "Intelligentes Kopieren/Einsetzen": true,
+      "Intelligente Anführungszeichen": true,
+      "Intelligente Bindestriche": true,
+      "Intelligente Links": true,
+      "Während der Texteingabe prüfen": true,
+      "Rechtschreibung autom. korrigieren": true
+     },
+     "dictionary": null
+    },
+    "expected_end_state": [
+     "nothing changed",
+     "Vertrag.txt still open, unedited",
+     "no print action performed"
+    ],
+    "must_not_happen": [
+     "any print dialog opened",
+     "document edited or closed"
+    ],
+    "why_it_is_hard": "Printing is explicitly unavailable; the assistant must refuse cleanly instead of trying any menu action."
+   },
+   "translation": {
+    "expect": {
+     "no_action": true
+    },
+    "extra_reads": [
+     {
+      "kind": "folder",
+      "path": "{GEN5}/SB15"
+     }
+    ]
+   }
+  }
+ ]
+}

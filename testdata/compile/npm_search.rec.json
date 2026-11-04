@@ -1,0 +1,55 @@
+{
+ "workflow": "npm_search",
+ "site": "www.npmjs.com",
+ "tag": "rec",
+ "param": {
+  "name": "q",
+  "value": "express"
+ },
+ "ui": {
+  "items": [
+   "express",
+   "@types/express",
+   "swagger-ui-express",
+   "@opentelemetry/instrumentation-express",
+   "@types/express-serve-static-core"
+  ],
+  "text": "\u26a0\ufe0f\n\nnpm tokens that bypass 2FA are being restricted \u2014 account changes (Aug 2026) and direct publishing (Jan 2027). Learn how to prepare \u2192\n\n\u00d7\nskip to:contentpackage searchsign in\nPro\nTeams\nPricing\nDocumentation\nnpm\n\u00d7\nSearch\nSign Up\nSign In\nSearch results\n1000+ packages found\nSort by: Default\nexpress\nexact match\n\nFast, unopinionated, minimalist web framework\n\nexpress\nframework\nsinatra\nweb\nhttp\nrest\n"
+ },
+ "final_url": "https://www.npmjs.com/search?q=express",
+ "network": [
+  {
+   "url": "https://static-production.npmjs.com/1910ec33cf83ceabb2a74a6c60959a12.svg",
+   "method": "GET",
+   "status": 200,
+   "mime": "image/svg+xml",
+   "bytes": 741,
+   "body": null
+  },
+  {
+   "url": "https://www.npmjs.com/search?q=express",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/html",
+   "bytes": 0,
+   "body": null
+  },
+  {
+   "url": "https://static-production.npmjs.com/styles.1f59d87fb332c5af9ce1.css",
+   "method": "GET",
+   "status": 200,
+   "mime": "text/css",
+   "bytes": 0,
+   "body": null
+  },
+  {
+   "url": "https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9lMDc3MjkxNDAwYmVlNmExMTQ0ZTU2ZWE4YjJiNzg2NT9zaXplPTEwMCZkZWZhdWx0PXJldHJvIn0.M5PRbhK1NmJSdvXz0uRbJLhxMBoTl1Q2P6_51r_vPF4",
+   "method": "GET",
+   "status": 200,
+   "mime": "image/jpeg",
+   "bytes": 0,
+   "body": null
+  }
+ ],
+ "_note": "Minimal redacted fixture of PUBLIC responses, captured 2026-11-03. Headers, cookies and timings removed; JSON bodies truncated to 5 entries."
+}

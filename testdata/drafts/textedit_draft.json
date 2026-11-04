@@ -1,0 +1,350 @@
+{
+ "name": "write_note",
+ "goal": "Eine kurze Notiz in TextEdit schreiben und als Datei sichern",
+ "session_id": "s-fixture-te",
+ "apps_involved": [
+  "TextEdit"
+ ],
+ "urls_visited": [],
+ "app": "TextEdit",
+ "bundle_id": "com.apple.TextEdit",
+ "taught_by": "Alex (fixture)",
+ "events": [
+  {
+   "id": "e0",
+   "tag_type": "WORKFLOW_START",
+   "timestamp": "2026-10-08T10:00:00",
+   "data": {
+    "goal": "note"
+   },
+   "workflow_name": "write_note"
+  },
+  {
+   "id": "e1",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:01",
+   "data": {
+    "action": "click",
+    "selector": {
+     "canonical_role": "menuitem",
+     "name": "Neu",
+     "identifier": "newDocument:",
+     "path": "",
+     "raw_role": "AXMenuItem"
+    }
+   },
+   "reason": "neues Dokument anlegen",
+   "ax_state_id": "te0"
+  },
+  {
+   "id": "e2",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:02",
+   "data": {
+    "action": "type",
+    "text": "Einkaufsliste: Milch, Brot, Kaffee",
+    "selector": {
+     "canonical_role": "textarea",
+     "name": "",
+     "identifier": "First Text View",
+     "path": "",
+     "raw_role": "AXTextArea"
+    }
+   },
+   "reason": "den Text schreiben",
+   "ax_state_id": "te1"
+  },
+  {
+   "id": "e3",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:03",
+   "data": {
+    "action": "click"
+   },
+   "reason": "sichern",
+   "ax_state_id": "te2",
+   "anchor_id": "a3"
+  },
+  {
+   "id": "e4",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:04",
+   "data": {
+    "action": "type",
+    "text": "notiz-2026-10-08.txt",
+    "selector": {
+     "canonical_role": "textfield",
+     "name": "",
+     "identifier": "saveAsNameTextField",
+     "path": "",
+     "raw_role": "AXTextField"
+    }
+   },
+   "reason": "den Dateinamen eingeben",
+   "ax_state_id": "te3"
+  },
+  {
+   "id": "e5",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:05",
+   "data": {
+    "action": "click",
+    "selector": {
+     "canonical_role": "button",
+     "name": "Sichern",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXButton"
+    }
+   },
+   "reason": "speichern bestätigen",
+   "ax_state_id": "te4"
+  },
+  {
+   "id": "e6",
+   "tag_type": "WORKFLOW_END",
+   "timestamp": "2026-10-08T10:00:06",
+   "data": {
+    "success": true
+   },
+   "workflow_name": "write_note"
+  }
+ ],
+ "anchors": [
+  {
+   "id": "a3",
+   "timestamp": "2026-10-08T10:00:03",
+   "x": 40,
+   "y": 10,
+   "filename": "step_003_a3.png",
+   "app": "TextEdit",
+   "target_description": "menuitem 'Sichern' id=_NS:358",
+   "tag_event_id": "e3"
+  }
+ ],
+ "ax_states": {
+  "te0": {
+   "state_id": "te0",
+   "app": "TextEdit",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXMenuBarItem",
+      "title": "Ablage"
+     },
+     {
+      "role": "AXMenuBarItem",
+      "title": "Format"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Neu"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXButton",
+      "title": "Neues Dokument"
+     }
+    ],
+    "element_count_range": [
+     9,
+     32
+    ],
+    "structural_hash": "fixture:AXButton=1,AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6",
+    "role_frequency": {
+     "AXMenuBarItem": 2,
+     "AXMenuItem": 2,
+     "AXButton": 1,
+     "AXStaticText": 6,
+     "AXGroup": 4,
+     "AXScrollArea": 1
+    }
+   }
+  },
+  "te1": {
+   "state_id": "te1",
+   "app": "TextEdit",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXMenuBarItem",
+      "title": "Ablage"
+     },
+     {
+      "role": "AXMenuBarItem",
+      "title": "Format"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Neu"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXTextArea",
+      "title": ""
+     }
+    ],
+    "element_count_range": [
+     9,
+     32
+    ],
+    "structural_hash": "fixture:AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextArea=1",
+    "role_frequency": {
+     "AXMenuBarItem": 2,
+     "AXMenuItem": 2,
+     "AXTextArea": 1,
+     "AXStaticText": 6,
+     "AXGroup": 4,
+     "AXScrollArea": 1
+    }
+   }
+  },
+  "te2": {
+   "state_id": "te2",
+   "app": "TextEdit",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXMenuBarItem",
+      "title": "Ablage"
+     },
+     {
+      "role": "AXMenuBarItem",
+      "title": "Format"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Neu"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXTextArea",
+      "title": ""
+     }
+    ],
+    "element_count_range": [
+     9,
+     32
+    ],
+    "structural_hash": "fixture:AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextArea=1",
+    "role_frequency": {
+     "AXMenuBarItem": 2,
+     "AXMenuItem": 2,
+     "AXTextArea": 1,
+     "AXStaticText": 6,
+     "AXGroup": 4,
+     "AXScrollArea": 1
+    }
+   }
+  },
+  "te3": {
+   "state_id": "te3",
+   "app": "TextEdit",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXMenuBarItem",
+      "title": "Ablage"
+     },
+     {
+      "role": "AXMenuBarItem",
+      "title": "Format"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Neu"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXTextField",
+      "title": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXButton",
+      "title": "Abbrechen"
+     }
+    ],
+    "element_count_range": [
+     10,
+     35
+    ],
+    "structural_hash": "fixture:AXButton=2,AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextField=1",
+    "role_frequency": {
+     "AXMenuBarItem": 2,
+     "AXMenuItem": 2,
+     "AXTextField": 1,
+     "AXButton": 2,
+     "AXStaticText": 6,
+     "AXGroup": 4,
+     "AXScrollArea": 1
+    }
+   }
+  },
+  "te4": {
+   "state_id": "te4",
+   "app": "TextEdit",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXMenuBarItem",
+      "title": "Ablage"
+     },
+     {
+      "role": "AXMenuBarItem",
+      "title": "Format"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Neu"
+     },
+     {
+      "role": "AXMenuItem",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXTextField",
+      "title": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Sichern"
+     },
+     {
+      "role": "AXButton",
+      "title": "Abbrechen"
+     }
+    ],
+    "element_count_range": [
+     10,
+     35
+    ],
+    "structural_hash": "fixture:AXButton=2,AXGroup=4,AXMenuBarItem=2,AXMenuItem=2,AXScrollArea=1,AXStaticText=6,AXTextField=1",
+    "role_frequency": {
+     "AXMenuBarItem": 2,
+     "AXMenuItem": 2,
+     "AXTextField": 1,
+     "AXButton": 2,
+     "AXStaticText": 6,
+     "AXGroup": 4,
+     "AXScrollArea": 1
+    }
+   }
+  }
+ }
+}

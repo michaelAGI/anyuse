@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "threshold": 0.99,
+ "status": "frozen",
+ "options": [
+  "a specific product or item name",
+  "a brand, category or collection name",
+  "a button, call-to-action or UI label",
+  "a price, size, date or other number",
+  "none of these / unclear"
+ ],
+ "orders": {
+  "o0": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "o1": [
+   3,
+   2,
+   1,
+   0,
+   4
+  ]
+ },
+ "acceptance": "kept only if both orders choose 'a specific product or item name' and the minimum confidence >= threshold; every other outcome rejects; OpenJev unreachable -> the rules' decision, recorded",
+ "frozen_at": "2026-11-03T23:34:09",
+ "tune_rule": "on SELECTION only: the SMALLEST t of the grid [0.0, 0.3, 0.4, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.97, 0.99] at which the kept values' precision (good kept / all kept) is >= 0.95 with >= 20 values kept; if no t reaches it, the t with the highest precision (ties: the smaller t), reported as a missed target",
+ "target_met_on_selection": false,
+ "selection": {
+  "n": 380,
+  "good": 124,
+  "bad": 256,
+  "kept": 116,
+  "bad_let_through": 9,
+  "good_rejected": 17,
+  "precision": 0.9224,
+  "bad_let_through_rate": 0.0352,
+  "good_kept_rate": 0.8629
+ },
+ "check": {
+  "n": 414,
+  "good": 152,
+  "bad": 262,
+  "kept": 160,
+  "bad_let_through": 31,
+  "good_rejected": 23,
+  "precision": 0.8063,
+  "bad_let_through_rate": 0.1183,
+  "good_kept_rate": 0.8487
+ },
+ "check_rules_draw": {
+  "n": 414,
+  "good": 152,
+  "bad": 262,
+  "kept": 414,
+  "bad_let_through": 262,
+  "good_rejected": 0,
+  "precision": 0.3671,
+  "bad_let_through_rate": 1.0,
+  "good_kept_rate": 1.0
+ },
+ "set_file": "bench/web_valuecheck_set.json"
+}

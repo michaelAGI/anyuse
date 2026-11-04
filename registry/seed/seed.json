@@ -1,0 +1,943 @@
+{
+  "date": "2026-11-03",
+  "entries": [
+    {
+      "capabilities": [
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://bioconductor.org/{item}/"
+          }
+        }
+      ],
+      "content_hash": "f07a6882761b263b98aea9aa6eb5849610b6edaff45a75cf19ce35a2901410f0",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://bioconductor.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "search",
+          "name": "search",
+          "params": [
+            {
+              "key": "q",
+              "name": "q",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://code.dlang.org/search?q={q}"
+          }
+        },
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://code.dlang.org/packages/{item}"
+          }
+        },
+        {
+          "kind": "sort",
+          "name": "sort",
+          "params": [
+            {
+              "key": "sort",
+              "name": "sort",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://code.dlang.org/?sort={sort}"
+          }
+        }
+      ],
+      "content_hash": "0e134da39adee05d8a86f666a06fd73623327fd8ea5212a4c1fadcbea6affd84",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://code.dlang.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "search",
+          "name": "search",
+          "params": [
+            {
+              "key": "q",
+              "name": "q",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://data.humdata.org/dataset/?ext_search_source=main-nav&q={q}"
+          }
+        },
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://data.humdata.org/organization/{item}"
+          }
+        },
+        {
+          "kind": "page",
+          "name": "page",
+          "params": [
+            {
+              "key": "page",
+              "name": "page",
+              "type": "integer",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://data.humdata.org/dataset/?page={page}"
+          }
+        }
+      ],
+      "content_hash": "e05dd9793e1ef8a60ba7a844cf8633e5b601a9f0db0c8865efae0334190c5071",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://data.humdata.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://formulae.brew.sh/formula/{item}"
+          }
+        }
+      ],
+      "content_hash": "280cefc56858ceb35205ba000202d9cd914d725a17704aedb012098c711c5b8b",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://formulae.brew.sh"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "search",
+          "name": "search",
+          "params": [
+            {
+              "key": "q",
+              "name": "q",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://ourairports.com/search?q={q}"
+          }
+        },
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://ourairports.com/{item}"
+          }
+        }
+      ],
+      "content_hash": "70abce3c6731ffadede0f596417edec9f2b820c3a0af8c8eb71fb6805f4e4f5b",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://ourairports.com"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "search",
+          "name": "search",
+          "params": [
+            {
+              "key": "q",
+              "name": "q",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://packages.gentoo.org/packages/search?q={q}"
+          }
+        },
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://packages.gentoo.org/{item}"
+          }
+        }
+      ],
+      "content_hash": "965827ffe49c87c5876220be2f310a7abec4a21bbd5945b131f3fb657c1845ce",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://packages.gentoo.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "search",
+          "name": "search",
+          "params": [
+            {
+              "key": "q",
+              "name": "q",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://packages.msys2.org/search?q={q}"
+          }
+        },
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://packages.msys2.org/packages/{item}"
+          }
+        }
+      ],
+      "content_hash": "f16229c842ae0c35265cbcc3353028867876bd8a305aac1f4a73631552d36286",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://packages.msys2.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://packages.ubuntu.com/{item}/"
+          }
+        }
+      ],
+      "content_hash": "390c91baae6180b45df8b06f0ccb150730fa833a4ad911ddda32d3ec006b2ea9",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://packages.ubuntu.com"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://pkgs.racket-lang.org/package/{item}"
+          }
+        }
+      ],
+      "content_hash": "8c429d78e8fbb743aaf58b495431bd1f19788059ab8fda8df99232527abad173",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://pkgs.racket-lang.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://slackbuilds.org/{item}/"
+          }
+        },
+        {
+          "kind": "filter",
+          "name": "filter",
+          "params": [
+            {
+              "key": "sv",
+              "name": "sv",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://slackbuilds.org/result/?search=&sv={sv}"
+          }
+        }
+      ],
+      "content_hash": "dd0b2acf32c5083131e842194957632bd42a477de90604d2c705b2e6b7700805",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://slackbuilds.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://www.freshports.org/{item}/"
+          }
+        },
+        {
+          "kind": "page",
+          "name": "page",
+          "params": [
+            {
+              "key": "page",
+              "name": "page",
+              "type": "integer",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://www.freshports.org/categories.php?page={page}"
+          }
+        },
+        {
+          "kind": "sort",
+          "name": "sort",
+          "params": [
+            {
+              "key": "sort",
+              "name": "sort",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://www.freshports.org/categories.php?sort={sort}"
+          }
+        }
+      ],
+      "content_hash": "1cf452c4480751fa48d4bf278d2cae2811a1c1a812c6b0a4c456f061cec3d55d",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://www.freshports.org"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "kind": "search",
+          "name": "search",
+          "params": [
+            {
+              "key": "q",
+              "name": "q",
+              "type": "string",
+              "where": "query"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://www.mankier.com/?q={q}"
+          }
+        },
+        {
+          "kind": "detail",
+          "name": "detail",
+          "params": [
+            {
+              "name": "item",
+              "type": "string",
+              "where": "path"
+            }
+          ],
+          "proof": {
+            "anyuse_version": "0.4.0",
+            "date": "2026-11-03",
+            "fresh_inputs": 0,
+            "proof_kind": "none",
+            "status": "discovered"
+          },
+          "request": {
+            "method": "GET",
+            "template": "https://www.mankier.com/package/{item}"
+          }
+        }
+      ],
+      "content_hash": "da31df86bda17ca1c29b93ed4c17fe2de22dccc6b84e2ece5144c6d3c84e498e",
+      "schema": "anyuse.map/0",
+      "target": {
+        "kind": "web",
+        "origin": "https://www.mankier.com"
+      }
+    }
+  ],
+  "export_report": {
+    "bioconductor.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "template embeds a proof input value"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "detail"
+      ],
+      "refused": ""
+    },
+    "code.dlang.org": {
+      "dropped": [
+        {
+          "kind": "page",
+          "reason": "template embeds a proof input value"
+        }
+      ],
+      "exported": [
+        "search",
+        "detail",
+        "sort"
+      ],
+      "refused": ""
+    },
+    "data.humdata.org": {
+      "dropped": [
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "search",
+        "detail",
+        "page"
+      ],
+      "refused": ""
+    },
+    "formulae.brew.sh": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "detail"
+      ],
+      "refused": ""
+    },
+    "gitlab.gnome.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "detail",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [],
+      "refused": "no capability survived sanitising"
+    },
+    "onlinebooks.library.upenn.edu": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "detail",
+          "reason": "template: empty path segment"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [],
+      "refused": "no capability survived sanitising"
+    },
+    "ourairports.com": {
+      "dropped": [
+        {
+          "kind": "page",
+          "reason": "template embeds a proof input value"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "search",
+        "detail"
+      ],
+      "refused": ""
+    },
+    "packages.gentoo.org": {
+      "dropped": [
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "search",
+        "detail"
+      ],
+      "refused": ""
+    },
+    "packages.msys2.org": {
+      "dropped": [
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "template embeds a proof input value"
+        }
+      ],
+      "exported": [
+        "search",
+        "detail"
+      ],
+      "refused": ""
+    },
+    "packages.ubuntu.com": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "template embeds a proof input value"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "template embeds a proof input value"
+        }
+      ],
+      "exported": [
+        "detail"
+      ],
+      "refused": ""
+    },
+    "pkgs.racket-lang.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "detail"
+      ],
+      "refused": ""
+    },
+    "savannah.gnu.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "detail",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [],
+      "refused": "no capability survived sanitising"
+    },
+    "slackbuilds.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "detail",
+        "filter"
+      ],
+      "refused": ""
+    },
+    "www.freebsd.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "detail",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [],
+      "refused": "no capability survived sanitising"
+    },
+    "www.freshports.org": {
+      "dropped": [
+        {
+          "kind": "search",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "detail",
+        "page",
+        "sort"
+      ],
+      "refused": ""
+    },
+    "www.mankier.com": {
+      "dropped": [
+        {
+          "kind": "page",
+          "reason": "status refused does not travel"
+        },
+        {
+          "kind": "filter",
+          "reason": "status refused does not travel"
+        }
+      ],
+      "exported": [
+        "search",
+        "detail"
+      ],
+      "refused": ""
+    }
+  },
+  "note": "local seed only; never pushed. Proof summaries as recorded by the discovery bench; every entry lands as unproved on a client.",
+  "schema": "anyuse.map/0",
+  "seed": "anyuse.registry.seed/0",
+  "source": "discover_off.json"
+}

@@ -1,0 +1,227 @@
+{
+  "actor": {
+    "abi": "default",
+    "arguments": [
+      {
+        "type": "pointer",
+        "value": {
+          "native_path": {
+            "consumer": {
+              "abi": "default",
+              "argument_types": [
+                "pointer",
+                "int32"
+              ],
+              "dispatch": "vtable_slot",
+              "entry": {
+                "module": {
+                  "path": "/Applications/OwnedStudio.app/Contents/MacOS/OwnedStudio",
+                  "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "offset": "0x1008"
+              },
+              "pac_mode": "none",
+              "return_type": "void",
+              "signature_evidence": {
+                "file": "/Users/guest/anyuse-rea/artifacts/studio/s0004/declaration.json",
+                "kind": "declared_native_receiver_v2",
+                "pointer": "/signatures/consumer",
+                "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+              },
+              "this_adjustment": -16,
+              "vtable_slot_offset": 16
+            },
+            "evidence_basis": {
+              "abi_basis": "model_declared",
+              "abi_recovered": false,
+              "lifetime_basis": "assumed_not_established",
+              "lifetime_proven": false,
+              "proof_created": false,
+              "receiver_basis": "binary_correlated_hypothesis_v2",
+              "type_proven": false
+            },
+            "format": "anyuse.rea-native-receiver-hypothesis/2",
+            "hops": [
+              {
+                "field_offset": 16,
+                "kind": "field_pointer",
+                "name": "active_document",
+                "non_null": true
+              },
+              {
+                "abi": "default",
+                "kind": "step_getter",
+                "name": "timeline_controller",
+                "signature_evidence": {
+                  "file": "/Users/guest/anyuse-rea/artifacts/studio/s0004/declaration.json",
+                  "kind": "declared_native_receiver_v2",
+                  "pointer": "/signatures/hop_1",
+                  "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                },
+                "target": {
+                  "module": {
+                    "path": "/Applications/OwnedStudio.app/Contents/MacOS/OwnedStudio",
+                    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "offset": "0x1004"
+                }
+              }
+            ],
+            "lifetime": {
+              "expected_native_calls": 3,
+              "mode": "main_queue_binary_runtime_hypothesis_v2",
+              "queue": "main",
+              "scope": "single_immediate_transaction"
+            },
+            "originals": [
+              {
+                "file": "/Users/guest/anyuse-rea/artifacts/studio/s0000/original.json",
+                "role": "getter_code",
+                "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+              },
+              {
+                "file": "/Users/guest/anyuse-rea/artifacts/studio/s0001/original.json",
+                "role": "consumer_code",
+                "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+              },
+              {
+                "file": "/Users/guest/anyuse-rea/artifacts/studio/s0002/original.json",
+                "role": "vptr_data",
+                "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+              },
+              {
+                "file": "/Users/guest/anyuse-rea/artifacts/studio/s0003/original.json",
+                "role": "vtable_slot_data",
+                "sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+              }
+            ],
+            "root": {
+              "getter": {
+                "abi": "default",
+                "arguments": [],
+                "kind": "native_function",
+                "return_type": "pointer",
+                "signature_evidence": {
+                  "file": "/Users/guest/anyuse-rea/artifacts/studio/s0004/declaration.json",
+                  "kind": "declared_native_receiver_v2",
+                  "pointer": "/signatures/getter",
+                  "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+                },
+                "target": {
+                  "module": {
+                    "path": "/Applications/OwnedStudio.app/Contents/MacOS/OwnedStudio",
+                    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                  },
+                  "offset": "0x1000"
+                }
+              }
+            },
+            "vptr": {
+              "data_offset": "0x2000",
+              "image": {
+                "path": "/Applications/OwnedStudio.app/Contents/MacOS/OwnedStudio",
+                "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "pac_mode": "none",
+              "subobject_offset": 0
+            }
+          }
+        }
+      },
+      {
+        "type": "int32",
+        "value": 9
+      }
+    ],
+    "dispatch": "vtable_slot",
+    "kind": "native_function",
+    "return_type": "void",
+    "signature_evidence": {
+      "file": "/Users/guest/anyuse-rea/artifacts/studio/s0004/declaration.json",
+      "kind": "declared_native_receiver_v2",
+      "pointer": "/signatures/consumer",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "target": {
+      "module": {
+        "path": "/Applications/OwnedStudio.app/Contents/MacOS/OwnedStudio",
+        "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "offset": "0x1008"
+    },
+    "vtable_slot_offset": 16
+  },
+  "backend": "guest_model_judged_state_v1",
+  "effect": "visible_state_transition",
+  "evidence": [
+    {
+      "file": "/Users/guest/anyuse-rea/artifacts/studio/s0004/declaration.json",
+      "pointer": "/actor",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    }
+  ],
+  "format": "anyuse.rea-candidate/1",
+  "id": "studio_select_september",
+  "label": "Select September in timeline picker",
+  "learning_case_pins": [
+    {
+      "case": {
+        "bytes": 512,
+        "file": "/Users/guest/anyuse-rea/artifacts/studio/learn-0/case.json",
+        "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      },
+      "restart": null
+    }
+  ],
+  "params": [],
+  "policy": {
+    "after": "The timeline month picker shows September",
+    "before": "The timeline month picker shows the initial month",
+    "format": "anyuse.rea-visual-effect-task/1",
+    "id": "studio_select_september",
+    "input_constraints": {},
+    "kind": "visible_state_transition",
+    "minimum_confidence": 0.9,
+    "model": {
+      "api_key_env": "",
+      "base_url": "http://127.0.0.1:11434/v1",
+      "max_tokens": 512,
+      "model": "llava",
+      "price_in": 0.0,
+      "price_out": 0.0,
+      "provider": "local",
+      "reasoning_effort": null,
+      "retries": 0,
+      "structured_output_mode": "json_schema",
+      "timeout": 30,
+      "user_agent": "anyuse-model-adapter/0.4.0 (OpenAI-compatible; python-httpx)"
+    },
+    "observer": {
+      "window_title": "OwnedStudio"
+    },
+    "params": [],
+    "target": {
+      "build": "100",
+      "bundle_id": "com.example.OwnedStudio",
+      "bytes": 4194304,
+      "files": 12,
+      "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "version": "1.0.0"
+    }
+  },
+  "scope": "model_judged_visible_effect_across_declared_trials_with_restart",
+  "target": {
+    "build": "100",
+    "bundle_id": "com.example.OwnedStudio",
+    "bytes": 4194304,
+    "files": 12,
+    "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "version": "1.0.0"
+  },
+  "trial_policy": {
+    "min_heldout": 1,
+    "min_learning": 1,
+    "min_verification": 1,
+    "require_restart": true
+  }
+}

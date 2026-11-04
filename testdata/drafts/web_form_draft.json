@@ -1,0 +1,353 @@
+{
+ "name": "spende_erfassen",
+ "goal": "Eine Spende im Webformular erfassen und absenden",
+ "session_id": "s-fixture-web",
+ "apps_involved": [
+  "Safari"
+ ],
+ "urls_visited": [
+  "https://forms.example.test/spende"
+ ],
+ "app": "Safari",
+ "bundle_id": "com.apple.Safari",
+ "taught_by": "Alex (fixture)",
+ "events": [
+  {
+   "id": "e0",
+   "tag_type": "WORKFLOW_START",
+   "timestamp": "2026-10-08T10:00:00",
+   "data": {
+    "goal": "spende"
+   },
+   "workflow_name": "spende_erfassen"
+  },
+  {
+   "id": "e1",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:01",
+   "data": {
+    "action": "type",
+    "text": "Erika Mustermann",
+    "selector": {
+     "canonical_role": "textfield",
+     "name": "Name",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXTextField"
+    }
+   },
+   "ax_state_id": "wf0"
+  },
+  {
+   "id": "e2",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:02",
+   "data": {
+    "action": "type",
+    "text": "120,50",
+    "selector": {
+     "canonical_role": "textfield",
+     "name": "Betrag",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXTextField"
+    }
+   },
+   "ax_state_id": "wf1"
+  },
+  {
+   "id": "e3",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:03",
+   "data": {
+    "action": "select",
+    "selector": {
+     "canonical_role": "radiobutton",
+     "name": "Überweisung",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXRadioButton"
+    }
+   },
+   "ax_state_id": "wf2"
+  },
+  {
+   "id": "e4",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:04",
+   "data": {
+    "action": "scroll"
+   },
+   "reason": "nach unten"
+  },
+  {
+   "id": "e5",
+   "tag_type": "STEP",
+   "timestamp": "2026-10-08T10:00:05",
+   "data": {
+    "action": "click",
+    "selector": {
+     "canonical_role": "button",
+     "name": "Absenden",
+     "identifier": "",
+     "path": "",
+     "raw_role": "AXButton"
+    }
+   },
+   "reason": "Formular absenden",
+   "ax_state_id": "wf4"
+  },
+  {
+   "id": "e6",
+   "tag_type": "WORKFLOW_END",
+   "timestamp": "2026-10-08T10:00:06",
+   "data": {
+    "success": true
+   },
+   "workflow_name": "spende_erfassen"
+  }
+ ],
+ "anchors": [],
+ "ax_states": {
+  "wf0": {
+   "state_id": "wf0",
+   "app": "Safari",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXTextField",
+      "title": "Name"
+     },
+     {
+      "role": "AXTextField",
+      "title": "Betrag"
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Überweisung",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Lastschrift",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Rechnung",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Absenden"
+     }
+    ],
+    "element_count_range": [
+     17,
+     50
+    ],
+    "structural_hash": "fixture:AXButton=1,AXGroup=8,AXLink=3,AXRadioButton=3,AXStaticText=12,AXTextField=2",
+    "role_frequency": {
+     "AXTextField": 2,
+     "AXRadioButton": 3,
+     "AXButton": 1,
+     "AXStaticText": 12,
+     "AXGroup": 8,
+     "AXLink": 3
+    }
+   }
+  },
+  "wf1": {
+   "state_id": "wf1",
+   "app": "Safari",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXTextField",
+      "title": "Name"
+     },
+     {
+      "role": "AXTextField",
+      "title": "Betrag"
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Überweisung",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Lastschrift",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Rechnung",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Absenden"
+     }
+    ],
+    "element_count_range": [
+     17,
+     50
+    ],
+    "structural_hash": "fixture:AXButton=1,AXGroup=8,AXLink=3,AXRadioButton=3,AXStaticText=12,AXTextField=2",
+    "role_frequency": {
+     "AXTextField": 2,
+     "AXRadioButton": 3,
+     "AXButton": 1,
+     "AXStaticText": 12,
+     "AXGroup": 8,
+     "AXLink": 3
+    }
+   }
+  },
+  "wf2": {
+   "state_id": "wf2",
+   "app": "Safari",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXTextField",
+      "title": "Name"
+     },
+     {
+      "role": "AXTextField",
+      "title": "Betrag"
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Überweisung",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Lastschrift",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Rechnung",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Absenden"
+     }
+    ],
+    "element_count_range": [
+     17,
+     50
+    ],
+    "structural_hash": "fixture:AXButton=1,AXGroup=8,AXLink=3,AXRadioButton=3,AXStaticText=12,AXTextField=2",
+    "role_frequency": {
+     "AXTextField": 2,
+     "AXRadioButton": 3,
+     "AXButton": 1,
+     "AXStaticText": 12,
+     "AXGroup": 8,
+     "AXLink": 3
+    }
+   }
+  },
+  "wf3": {
+   "state_id": "wf3",
+   "app": "Safari",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXTextField",
+      "title": "Name"
+     },
+     {
+      "role": "AXTextField",
+      "title": "Betrag"
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Überweisung",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Lastschrift",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Rechnung",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Absenden"
+     }
+    ],
+    "element_count_range": [
+     17,
+     50
+    ],
+    "structural_hash": "fixture:AXButton=1,AXGroup=8,AXLink=3,AXRadioButton=3,AXStaticText=12,AXTextField=2",
+    "role_frequency": {
+     "AXTextField": 2,
+     "AXRadioButton": 3,
+     "AXButton": 1,
+     "AXStaticText": 12,
+     "AXGroup": 8,
+     "AXLink": 3
+    }
+   }
+  },
+  "wf4": {
+   "state_id": "wf4",
+   "app": "Safari",
+   "fingerprint": {
+    "required_elements": [
+     {
+      "role": "AXTextField",
+      "title": "Name"
+     },
+     {
+      "role": "AXTextField",
+      "title": "Betrag"
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Überweisung",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Lastschrift",
+      "identifier": ""
+     },
+     {
+      "role": "AXRadioButton",
+      "title": "Rechnung",
+      "identifier": ""
+     },
+     {
+      "role": "AXButton",
+      "title": "Absenden"
+     }
+    ],
+    "element_count_range": [
+     17,
+     50
+    ],
+    "structural_hash": "fixture:AXButton=1,AXGroup=8,AXLink=3,AXRadioButton=3,AXStaticText=12,AXTextField=2",
+    "role_frequency": {
+     "AXTextField": 2,
+     "AXRadioButton": 3,
+     "AXButton": 1,
+     "AXStaticText": 12,
+     "AXGroup": 8,
+     "AXLink": 3
+    }
+   }
+  }
+ }
+}
